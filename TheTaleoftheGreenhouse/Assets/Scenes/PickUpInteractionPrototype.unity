@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 596522207}
   - component: {fileID: 596522206}
+  - component: {fileID: 596522208}
   m_Layer: 0
   m_Name: PlayerDummy
   m_TagString: Untagged
@@ -235,6 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be3ef4e97a042d98a88825eb0edfcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryItem: {fileID: 0}
+  mouseOverItem: {fileID: 0}
 --- !u!4 &596522207
 Transform:
   m_ObjectHideFlags: 0
@@ -249,6 +252,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596522208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596522205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0e3366fa7b03c46a028b03723681a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentInteractState: 0
 --- !u!1 &1388050878
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +420,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.085
 --- !u!1 &1982409351
 GameObject:
   m_ObjectHideFlags: 0
