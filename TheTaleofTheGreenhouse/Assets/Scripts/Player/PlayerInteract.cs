@@ -7,9 +7,9 @@ public class PlayerInteract : MonoBehaviour
     public static PlayerInteract instance;
     
     public GameObject inventoryItem;
-    public GameObject mouseOverItem;
-    
-    private RaycastHit2D hit;
+    public GameObject interactObject;
+
+    private bool leftMouseButtonLock = false;
     
     void Start()
     {
@@ -24,28 +24,35 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-
-        if (Input.GetMouseButtonDown(0))
+        
+        if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false)
         {
-            if (mouseOverItem != null)
+            if(interactObject != null && inventoryItem == null && leftMouseButtonLock == false)
             {
-                inventoryItem = mouseOverItem;
-                inventoryItem.SetActive(false);
-                mouseOverItem = null;
+                inventoryItem = interactObject.GetComponent<ObjectSlot>().GetThisObject();
+                PlayerState.instance.currentInteractState = PlayerState.InteractState.placement;
+                leftMouseButtonLock = true;
+            }
+            
+            if(interactObject != null && inventoryItem != null && leftMouseButtonLock == false)
+            {
+                interactObject.GetComponent<ObjectSlot>().FillSlot(inventoryItem);
+                inventoryItem = null;
+                PlayerState.instance.currentInteractState = PlayerState.InteractState.@select;
+                leftMouseButtonLock = true;
             }
         }
-    }
 
-    void FixedUpdate()
-    {
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        
-        if(hit.collider != null && hit.transform.CompareTag("Interactable"))
+        if(inventoryItem != null)
         {
-            Debug.Log(hit.collider.name);
-
-            hit.transform.GetComponent<MouseOver>();
+            Vector3 newObjectPosition = new Vector3(mousePosition.x, mousePosition.y, 10);
+            inventoryItem.transform.position =
+                Camera.main.ScreenToWorldPoint(newObjectPosition);
+        }
+        
+        if(Input.GetMouseButtonUp(0))
+        {
+            leftMouseButtonLock = false;
         }
     }
 }
