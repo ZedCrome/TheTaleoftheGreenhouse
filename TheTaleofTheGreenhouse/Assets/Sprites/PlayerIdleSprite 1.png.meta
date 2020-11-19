@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -7205072593511527719
     second: PlayerIdleSprite 1_7
+  - first:
+      213: 5099114757565115825
+    second: PlayerIdleSprite 1_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -156,8 +159,8 @@ TextureImporter:
         y: 0
         width: 180
         height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,8 +180,8 @@ TextureImporter:
         y: 0
         width: 180
         height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,8 +201,8 @@ TextureImporter:
         y: 0
         width: 180
         height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -219,8 +222,8 @@ TextureImporter:
         y: 0
         width: 180
         height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,8 +243,8 @@ TextureImporter:
         y: 0
         width: 180
         height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +260,12 @@ TextureImporter:
       name: PlayerIdleSprite 1_5
       rect:
         serializedVersion: 2
-        x: 900
+        x: 901
         y: 0
         width: 180
         height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -282,8 +285,8 @@ TextureImporter:
         y: 0
         width: 180
         height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -303,8 +306,8 @@ TextureImporter:
         y: 0
         width: 180
         height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,6 +315,27 @@ TextureImporter:
       bones: []
       spriteID: 9dac7da76a0720c90800000000000000
       internalID: -7205072593511527719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerIdleSprite 1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1440
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bdee911bd1b3c640800000000000000
+      internalID: 5099114757565115825
       vertices: []
       indices: 
       edges: []
