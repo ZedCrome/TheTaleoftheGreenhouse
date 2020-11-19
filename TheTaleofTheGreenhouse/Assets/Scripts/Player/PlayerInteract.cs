@@ -31,6 +31,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 inventoryItem = interactObject.GetComponent<ObjectSlot>().GetThisObject();
                 PlayerState.instance.currentInteractState = PlayerState.InteractState.placement;
+                
                 leftMouseButtonLock = true;
             }
             
@@ -39,6 +40,7 @@ public class PlayerInteract : MonoBehaviour
                 interactObject.GetComponent<ObjectSlot>().FillSlot(inventoryItem);
                 inventoryItem = null;
                 PlayerState.instance.currentInteractState = PlayerState.InteractState.@select;
+                
                 leftMouseButtonLock = true;
             }
         }
