@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.GameLoop:
-                SceneManager.LoadScene("MainScene");
+                
                 break;
 
             case GameState.PauseGame:
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
 
         if( newGameState == GameState.GameLoop ) 
         {
-
+            SceneManager.LoadScene("MainScene");
         }
 
         if ( newGameState == GameState.PauseGame ) 
