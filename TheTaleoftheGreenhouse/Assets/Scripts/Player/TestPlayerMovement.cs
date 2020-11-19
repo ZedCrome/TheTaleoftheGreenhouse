@@ -5,6 +5,7 @@ public class TestPlayerMovement : MonoBehaviour
     [SerializeField] private int speed = 5;
     private TestPlayerRenderer playerRenderer;
     private Rigidbody2D rb2d;
+    [SerializeField] private Vector2 rotationOffset;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class TestPlayerMovement : MonoBehaviour
         
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInpunt = Input.GetAxis("Vertical");
-        
+
         Vector2 inputVector = new Vector2(horizontalInput, verticalInpunt);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         

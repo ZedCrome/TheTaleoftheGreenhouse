@@ -29,15 +29,10 @@ public class TestPlayerRenderer : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
-    {
-        Debug.Log(lastDirection);
-    }
-
 
     public void SetDirection(Vector2 direction)
     {
-        string[] directionArray = null;
+        string[] directionArray;
         int directionValue;
 
         if (direction.magnitude < 0.01f)
