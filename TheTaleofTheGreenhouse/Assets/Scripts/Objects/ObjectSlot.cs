@@ -11,6 +11,8 @@ public class ObjectSlot : MonoBehaviour
     
     [Header("Options")] 
     public bool allowPot;
+
+    public GameObject objectToPut;    
     
     void Start()
     {
@@ -20,6 +22,11 @@ public class ObjectSlot : MonoBehaviour
         if (objectInSlot == null)
         {
             isFree = true;
+        }
+
+        if (objectToPut != null)
+        {
+            FillSlot(objectToPut);
         }
     }
     
