@@ -28,8 +28,7 @@ public class ObjectSlot : MonoBehaviour
         if(isFree)
         {
             objectInSlot = newObject;
-            objectInSlot.transform.parent = transform;
-            objectInSlot.transform.position = new Vector3(0, 0, 0);
+            objectInSlot.transform.position = transform.position;
             
             isFree = false;
         }
