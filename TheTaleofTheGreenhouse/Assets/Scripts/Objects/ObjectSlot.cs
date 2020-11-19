@@ -39,6 +39,8 @@ public class ObjectSlot : MonoBehaviour
         GameObject returnObject = objectInSlot;
         objectInSlot = null;
         
+        isFree = true;
+        
         return returnObject;
     }
     
