@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
-public class TestPlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private int speed = 5;
-    private TestPlayerRenderer playerRenderer;
-    private Rigidbody2D rb2d;
     [SerializeField] private Vector2 rotationOffset;
+    private PlayerRenderer playerRenderer;
+    private Rigidbody2D rb2d;
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        playerRenderer = GetComponentInChildren<TestPlayerRenderer>();
+        playerRenderer = GetComponentInChildren<PlayerRenderer>();
     }
     
     

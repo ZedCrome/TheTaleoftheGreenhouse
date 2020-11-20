@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
@@ -16,8 +12,7 @@ public class GameManager : MonoBehaviour
     {
 
         Menu,
-        LoadLevel,
-        LevelLoaded,
+        GameNight,
         GameLoop,
         PauseGame,
         GameOver,
@@ -45,6 +40,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    
     void Update() 
     {
 
@@ -55,11 +51,7 @@ public class GameManager : MonoBehaviour
 
                 break;
 
-            case GameState.LoadLevel:
-
-                break;
-
-            case GameState.LevelLoaded:
+            case GameState.GameNight:
 
                 break;
 
@@ -91,9 +83,9 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
-        
     }
 
+    
     public void ChangeGameState( GameState newGameState ) 
     {
 
@@ -107,16 +99,11 @@ public class GameManager : MonoBehaviour
             
         }
 
-        if ( newGameState == GameState.LoadLevel ) 
+        if ( newGameState == GameState.GameNight ) 
         {
 
         }
-
-        if ( newGameState == GameState.LevelLoaded ) 
-        {
-            
-        }
-
+        
         if( newGameState == GameState.GameLoop ) 
         {
             mainMenu.SetActive(false);
@@ -141,6 +128,7 @@ public class GameManager : MonoBehaviour
         currentGameState = newGameState;
     }
 
+    
     public string GetActiveScene() 
     {
 

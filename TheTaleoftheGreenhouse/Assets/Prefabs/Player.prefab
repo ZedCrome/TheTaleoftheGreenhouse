@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3258783260372278888}
   - component: {fileID: 3258783260372278889}
-  - component: {fileID: 3258783260372278902}
   - component: {fileID: 3258783260372278903}
   - component: {fileID: 3258783260372278900}
   - component: {fileID: 3258783260372278901}
   - component: {fileID: 8191242752735989757}
+  - component: {fileID: 1312291490961482040}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -50,18 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationOffset: {x: 0, y: 45}
---- !u!114 &3258783260372278902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3258783260372278890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07671a1c4f350ca4cbbd5f4bbeae3348, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &3258783260372278903
 Rigidbody2D:
   serializedVersion: 4
@@ -169,3 +157,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.31}
   m_Size: {x: 1, y: 0.64}
   m_Direction: 1
+--- !u!114 &1312291490961482040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258783260372278890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07671a1c4f350ca4cbbd5f4bbeae3348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,8 +1,7 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class TestPlayerRenderer : MonoBehaviour
+public class PlayerRenderer : MonoBehaviour
 {
     public static readonly string[] staticDirections =
     {

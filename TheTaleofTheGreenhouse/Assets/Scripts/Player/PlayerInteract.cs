@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    
     public static PlayerInteract instance;
     
     public GameObject inventoryItem;
     public GameObject interactObject;
 
-    private bool leftMouseButtonLock = false;
-
     public float maxInteractDistance = 1.0f;
+
     public bool allowedTointeract = false;
+    private bool leftMouseButtonLock = false;
     
     void Start()
     {
@@ -24,6 +23,8 @@ public class PlayerInteract : MonoBehaviour
             Destroy( this );
         }
     }
+    
+    
     void Update()
     {
         Vector3 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
