@@ -23,7 +23,8 @@ public class ObjectSlot : MonoBehaviour
         {
             isFree = true;
         }
-
+        
+        // Temporary solution to fill item slots
         if (objectToPut != null)
         {
             FillSlot(objectToPut);
@@ -36,6 +37,8 @@ public class ObjectSlot : MonoBehaviour
         {
             objectInSlot = newObject;
             objectInSlot.transform.position = transform.position;
+            
+            renderer.enabled = false;
             
             isFree = false;
         }
