@@ -13,7 +13,7 @@ public class HoverEffect : MonoBehaviour
     {
         renderer = GetComponent<SpriteRenderer>();
         
-        mouseOverColor = Color.red;
+        mouseOverColor = Color.green;
         standardColor = renderer.material.color;
     }
 
