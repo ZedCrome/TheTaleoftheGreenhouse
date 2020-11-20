@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -56,6 +57,11 @@ public class ObjectSlot : MonoBehaviour
     
     void OnMouseEnter()
     {
+        if (PlayerInteract.instance.allowedTointeract == false)
+        {
+            return;
+        }
+        
         if (PlayerState.instance.currentInteractState == PlayerState.InteractState.@select)
         {
             if (isFree == false && objectInSlot != null)
@@ -69,6 +75,29 @@ public class ObjectSlot : MonoBehaviour
         {
             PlayerInteract.instance.interactObject = this.gameObject;
             renderer.enabled = true;
+        }
+    }
+
+    private void OnMouseOver()
+    {
+        if (PlayerInteract.instance.allowedTointeract)
+        {
+            if (isFree == false && objectInSlot != null)
+            {
+                objectInSlot.GetComponent<HoverEffect>().Enable(true);
+            } 
+            else if (isFree == true && objectInSlot != null)
+            {
+                renderer.enabled = true;
+            }
+        }
+        else
+        {
+            renderer.enabled = false;
+            if (isFree == false && objectInSlot != null)
+            {
+                objectInSlot.GetComponent<HoverEffect>().Enable(false);
+            }
         }
     }
 

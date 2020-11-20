@@ -12,6 +12,7 @@ public class PlayerInteract : MonoBehaviour
     private bool leftMouseButtonLock = false;
 
     public float maxInteractDistance = 1.0f;
+    public bool allowedTointeract = false;
     
     void Start()
     {
@@ -28,6 +29,15 @@ public class PlayerInteract : MonoBehaviour
         Vector3 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
         float currentDistance = Vector3.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePosition));
+
+        if (currentDistance <= maxInteractDistance)
+        {
+            allowedTointeract = true;
+        }
+        else
+        {
+            allowedTointeract = false;
+        }
         
         if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false && currentDistance <= maxInteractDistance)
         {
