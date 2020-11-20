@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
 
     public static GameManager instance;
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject pauseMenu;
     
     public enum GameState 
     {
@@ -60,10 +64,19 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.GameLoop:
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    ChangeGameState(GameState.PauseGame);
+                }
                 
                 break;
 
             case GameState.PauseGame:
+                
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    ChangeGameState(GameState.GameLoop);
+                }
 
                 break;
 
@@ -78,6 +91,7 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+        
     }
 
     public void ChangeGameState( GameState newGameState ) 
@@ -105,12 +119,13 @@ public class GameManager : MonoBehaviour
 
         if( newGameState == GameState.GameLoop ) 
         {
-            SceneManager.LoadScene("MainScene");
+            mainMenu.SetActive(false);
+            pauseMenu.SetActive(false);
         }
 
         if ( newGameState == GameState.PauseGame ) 
         {
-
+            pauseMenu.SetActive(true);
         }
 
         if( newGameState == GameState.GameOver ) 
