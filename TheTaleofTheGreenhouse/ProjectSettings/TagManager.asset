@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - GameManager
+  - ManaStorage
   layers:
   - Default
   - TransparentFX
