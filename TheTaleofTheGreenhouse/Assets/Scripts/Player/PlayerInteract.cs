@@ -27,6 +27,11 @@ public class PlayerInteract : MonoBehaviour
     
     void Update()
     {
+        if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
+        {
+            return;
+        }
+        
         Vector3 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
         float currentDistance = Vector3.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePosition));

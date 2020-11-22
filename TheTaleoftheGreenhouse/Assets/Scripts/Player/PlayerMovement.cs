@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
+        {
+            return;
+        }
+        
         Vector2 currentPosition = rb2d.position;
         
         float horizontalInput = Input.GetAxis("Horizontal");
