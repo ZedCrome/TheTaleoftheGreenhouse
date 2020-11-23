@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 3258783260372278901}
   - component: {fileID: 8191242752735989757}
   - component: {fileID: 1312291490961482040}
+  - component: {fileID: 123942521}
+  - component: {fileID: 123942522}
+  - component: {fileID: 123942523}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -129,7 +132,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5653349596199337289, guid: 1b681090ea2b13644b1fdc1819be9af8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -169,3 +172,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07671a1c4f350ca4cbbd5f4bbeae3348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &123942521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258783260372278890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf2f3e2a0e7b1546b353073001ee650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryItem: {fileID: 0}
+--- !u!114 &123942522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258783260372278890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0e3366fa7b03c46a028b03723681a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentInteractState: 0
+--- !u!114 &123942523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258783260372278890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be3ef4e97a042d98a88825eb0edfcf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactSound: {fileID: 0}
+  inventoryItem: {fileID: 0}
+  interactObject: {fileID: 0}
+  maxInteractDistance: 2.6
+  allowedTointeract: 0

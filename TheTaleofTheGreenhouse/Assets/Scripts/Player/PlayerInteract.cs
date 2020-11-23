@@ -4,6 +4,7 @@ public class PlayerInteract : MonoBehaviour
 {
     
     public static PlayerInteract instance;
+    public AudioSource interactSound;
     
     public GameObject inventoryItem;
     public GameObject interactObject;
@@ -42,7 +43,7 @@ public class PlayerInteract : MonoBehaviour
         }
         else
         {
-            allowedTointeract = false;
+            allowedTointeract = false;            
         }
         
         if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false && currentDistance <= maxInteractDistance)
@@ -53,6 +54,7 @@ public class PlayerInteract : MonoBehaviour
                 PlayerState.instance.currentInteractState = PlayerState.InteractState.placement;
                 
                 leftMouseButtonLock = true;
+                interactSound.Play();
             }
             
             if(interactObject != null && inventoryItem != null && leftMouseButtonLock == false)
@@ -62,6 +64,7 @@ public class PlayerInteract : MonoBehaviour
                 PlayerState.instance.currentInteractState = PlayerState.InteractState.@select;
                 
                 leftMouseButtonLock = true;
+                interactSound.Play();
             }
         }
 
@@ -70,6 +73,7 @@ public class PlayerInteract : MonoBehaviour
             Vector3 newObjectPosition = new Vector3(mousePosition.x, mousePosition.y, 10);
             inventoryItem.transform.position =
                 Camera.main.ScreenToWorldPoint(newObjectPosition);
+            
         }
         
         if(Input.GetMouseButtonUp(0))
