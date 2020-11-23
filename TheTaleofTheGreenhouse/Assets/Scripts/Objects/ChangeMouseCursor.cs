@@ -22,15 +22,36 @@ public class ChangeMouseCursor : MonoBehaviour
     {
         get { return _objectTag; }
         set 
-        { 
-            if(value == "ManaStorage")
-            {
-                Cursor.SetCursor(manaTexture, hotSpot, cursMode);
-            }
+        {
             if (value == "Default")
             {
                 Cursor.SetCursor(defaultTexture, hotSpot, cursMode);
             }
+            if (value == "PickUpable")
+            {
+                Cursor.SetCursor(pickupTexture, hotSpot, cursMode);
+            }
+            if (value == "Waterable")
+            {
+                Cursor.SetCursor(watertTexture, hotSpot, cursMode);
+            }
+            if (value == "ManaStorage")
+            {
+                Cursor.SetCursor(manaTexture, hotSpot, cursMode);
+            }
+            if (value == "Placeable")
+            {
+                Cursor.SetCursor(placementTexture, hotSpot, cursMode);
+            }
+            if (value == "Compost")
+            {
+                Cursor.SetCursor(compostTexture, hotSpot, cursMode);
+            }
+            if (value == "Shop")
+            {
+                Cursor.SetCursor(shopTexture, hotSpot, cursMode);
+            }
+
             _objectTag = value;
         }
     }
