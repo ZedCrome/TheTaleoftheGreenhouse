@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4960520131541898960}
   - component: {fileID: 4960520131541898973}
   - component: {fileID: 4960520131541898972}
-  - component: {fileID: 4960520131541898975}
   - component: {fileID: 4960520131541898974}
   m_Layer: 0
   m_Name: Rectangle
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4960520131541898961}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2588191, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.058, y: 0.694, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 794f3b66a5b6aec43a34d17e6fb39644, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be07dea9a7371f24ca3dfd1e6e56269d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5254902}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,35 +99,6 @@ MonoBehaviour:
   objectInSlot: {fileID: 0}
   allowPot: 0
   objectToPut: {fileID: 0}
---- !u!60 &4960520131541898975
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4960520131541898961}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.10666667, y: 0.10666667}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.052617595, y: 0.066832}
-      - {x: -0.1344058, y: 0.077075176}
-      - {x: -0.031629324, y: -0.07352173}
-      - {x: 0.15405674, y: -0.08628458}
 --- !u!60 &4960520131541898974
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -146,7 +116,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.10666667, y: 0.10666667}
+    oldSize: {x: 0.3325, y: 0.17875}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -154,10 +124,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.052617595, y: 0.066832}
-      - {x: -0.1344058, y: 0.077075176}
-      - {x: -0.031629324, y: -0.07352173}
-      - {x: 0.15405674, y: -0.08628458}
+    - - {x: 0.0053863563, y: 0.08307712}
+      - {x: -0.15672944, y: 0.0009418521}
+      - {x: 0.0016305894, y: -0.076218486}
+      - {x: 0.15585457, y: 0.0072025578}
 --- !u!1 &4960520131735256008
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +465,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4960520133228835502}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2588191, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.063, y: 0.805, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
@@ -542,7 +512,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 794f3b66a5b6aec43a34d17e6fb39644, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be07dea9a7371f24ca3dfd1e6e56269d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5254902}
   m_FlipX: 0
   m_FlipY: 0
@@ -585,7 +555,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.10666667, y: 0.10666667}
+    oldSize: {x: 0.3325, y: 0.17875}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -593,7 +563,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.052617595, y: 0.066832}
-      - {x: -0.1344058, y: 0.077075176}
-      - {x: -0.031629324, y: -0.07352173}
-      - {x: 0.15405674, y: -0.08628458}
+    - - {x: 0.0053863563, y: 0.08307712}
+      - {x: -0.15672944, y: 0.0009418521}
+      - {x: 0.0016305894, y: -0.076218486}
+      - {x: 0.15585457, y: 0.0072025578}
