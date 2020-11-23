@@ -28,6 +28,11 @@ public class MenuStates : MonoBehaviour
         Application.Quit();
     }
 
+    public void Back()
+    {
+        GameManager.instance.ChangeGameState(GameManager.instance.previousGameState);
+    }
+
 
     public void ToggleFullscreen()
     {

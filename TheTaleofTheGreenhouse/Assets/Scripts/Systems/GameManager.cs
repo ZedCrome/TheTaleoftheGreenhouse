@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject optionsMenu;
     
+    
     public enum GameState 
     {
 
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     [Header("GameState")]
     [Space(20)]
     public GameState currentGameState;
+    public GameState previousGameState;
     [Space(10)]
     [Header("Options")]
     public bool debugActive;
@@ -60,6 +62,7 @@ public class GameManager : MonoBehaviour
             case GameState.GameLoop:
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
+                    previousGameState = GameState.GameLoop;
                     ChangeGameState(GameState.PauseGame);
                 }
                 
@@ -70,12 +73,14 @@ public class GameManager : MonoBehaviour
                 {
                     ChangeGameState(GameState.Options);
                 }
+                
                 break;
 
             case GameState.PauseGame:
                 
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
+                    previousGameState = GameState.PauseGame;
                     ChangeGameState(GameState.GameLoop);
                 }
 
@@ -108,6 +113,7 @@ public class GameManager : MonoBehaviour
             mainMenu.SetActive(true);
             pauseMenu.SetActive(false);
             optionsMenu.SetActive(false);
+            previousGameState = GameState.Menu;
         }
 
         if ( newGameState == GameState.GameNight ) 
@@ -120,6 +126,7 @@ public class GameManager : MonoBehaviour
             mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
             optionsMenu.SetActive(false);
+            
         }
 
         if ( newGameState == GameState.Options )
@@ -134,6 +141,7 @@ public class GameManager : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             optionsMenu.SetActive(false);
+            previousGameState = GameState.PauseGame;
         }
 
         if( newGameState == GameState.GameOver ) 
