@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject optionsMenu;
     
     public enum GameState 
     {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
         Menu,
         GameNight,
         GameLoop,
+        Options,
         PauseGame,
         GameOver,
         Victory
@@ -62,6 +64,13 @@ public class GameManager : MonoBehaviour
                 }
                 
                 break;
+            
+            case GameState.Options:
+                if (currentGameState == GameState.Options)
+                {
+                    ChangeGameState(GameState.Options);
+                }
+                break;
 
             case GameState.PauseGame:
                 
@@ -96,7 +105,9 @@ public class GameManager : MonoBehaviour
 
         if( newGameState == GameState.Menu ) 
         {
-            
+            mainMenu.SetActive(true);
+            pauseMenu.SetActive(false);
+            optionsMenu.SetActive(false);
         }
 
         if ( newGameState == GameState.GameNight ) 
@@ -108,11 +119,21 @@ public class GameManager : MonoBehaviour
         {
             mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
+            optionsMenu.SetActive(false);
+        }
+
+        if ( newGameState == GameState.Options )
+        {
+            mainMenu.SetActive(false);
+            pauseMenu.SetActive(false);
+            optionsMenu.SetActive(true);
+
         }
 
         if ( newGameState == GameState.PauseGame ) 
         {
             pauseMenu.SetActive(true);
+            optionsMenu.SetActive(false);
         }
 
         if( newGameState == GameState.GameOver ) 
