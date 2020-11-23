@@ -60,8 +60,8 @@ public class ObjectSlot : MonoBehaviour
         if (PlayerInteract.instance.allowedTointeract == false)
         {
             return;
-        }
-        
+        }      
+
         if (PlayerState.instance.currentInteractState == PlayerState.InteractState.@select)
         {
             if (isFree == false && objectInSlot != null)
@@ -99,6 +99,7 @@ public class ObjectSlot : MonoBehaviour
                 objectInSlot.GetComponent<HoverEffect>().Enable(false);
             }
         }
+        ChangeMouseCursor.instance.objectTag = objectInSlot.tag;
     }
 
     private void OnMouseExit()
@@ -111,10 +112,12 @@ public class ObjectSlot : MonoBehaviour
                 PlayerInteract.instance.interactObject = null;
             }
         }
-        
+
         if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement)
         {
             renderer.enabled = false;
         }
+
+        ChangeMouseCursor.instance.objectTag = "Default";
     }
 }
