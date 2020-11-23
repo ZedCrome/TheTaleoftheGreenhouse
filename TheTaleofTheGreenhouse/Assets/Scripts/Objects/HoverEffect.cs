@@ -8,7 +8,7 @@ public class HoverEffect : MonoBehaviour
     
     private Color mouseOverColor;
     private Color standardColor;
-    
+
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();

@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: 90c9731eb928dc9468c2756f49307219
+guid: c1c1d044703b0cf48aada5f83cad5e71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 978942612559604503
-    second: PlayerIdle_0
+      213: 6521393709934704127
+    second: PlaceholderPlants_0
   - first:
-      213: 3499389992042037492
-    second: PlayerIdle_1
+      213: -7795345401701920465
+    second: PlaceholderPlants_1
   - first:
-      213: 6272215952258405886
-    second: PlayerIdle_2
+      213: -2468997662613838795
+    second: PlaceholderPlants_2
   - first:
-      213: 5525604288434156929
-    second: PlayerIdle_3
+      213: -6063073905319151646
+    second: PlaceholderPlants_3
   - first:
-      213: -9128658973605758887
-    second: PlayerIdle_4
-  - first:
-      213: 6624957032425983090
-    second: PlayerIdle_5
-  - first:
-      213: -8746356715637407356
-    second: PlayerIdle_6
-  - first:
-      213: -3390621440731453550
-    second: PlayerIdle_7
-  - first:
-      213: -7875682809517558336
-    second: PlayerIdle_8
+      213: 5246422538781446536
+    second: PlaceholderPlants_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,190 +104,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerIdle_0
+      name: PlaceholderPlants_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 122
-        width: 225
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71bab159e17e59d00800000000000000
-      internalID: 978942612559604503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdle_1
-      rect:
-        serializedVersion: 2
-        x: 394
+        x: 121
         y: 156
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 134
+        height: 197
+      alignment: 9
+      pivot: {x: 0.48359087, y: 0.049087603}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f0093e38a4509030800000000000000
-      internalID: 3499389992042037492
+      spriteID: ff5ff110705a08a50800000000000000
+      internalID: 6521393709934704127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdle_2
+      name: PlaceholderPlants_1
       rect:
         serializedVersion: 2
-        x: 430
-        y: 124
-        width: 222
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 468
+        y: 156
+        width: 141
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5022457, y: 0.042445406}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef596ec4d236b0750800000000000000
-      internalID: 6272215952258405886
+      spriteID: f21151e98ae51d390800000000000000
+      internalID: -7795345401701920465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdle_3
+      name: PlaceholderPlants_2
       rect:
         serializedVersion: 2
-        x: 780
-        y: 124
-        width: 207
-        height: 482
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 813
+        y: 156
+        width: 192
+        height: 337
+      alignment: 9
+      pivot: {x: 0.45826784, y: 0.022616876}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1853e7d03d3eeac40800000000000000
-      internalID: 5525604288434156929
+      spriteID: 534e1a805bb5cbdd0800000000000000
+      internalID: -2468997662613838795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdle_4
+      name: PlaceholderPlants_3
       rect:
         serializedVersion: 2
-        x: 1134
-        y: 120
-        width: 207
-        height: 482
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1139
+        y: 156
+        width: 248
+        height: 455
+      alignment: 9
+      pivot: {x: 0.45439097, y: 0.017771827}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 958fb8a770d705180800000000000000
-      internalID: -9128658973605758887
+      spriteID: 2e7f28a1862abdba0800000000000000
+      internalID: -6063073905319151646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdle_5
+      name: PlaceholderPlants_4
       rect:
         serializedVersion: 2
-        x: 1510
-        y: 124
-        width: 211
-        height: 482
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1499
+        y: 132
+        width: 263
+        height: 208
+      alignment: 9
+      pivot: {x: 0.4122138, y: 0.13743085}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27c0af9025390fb50800000000000000
-      internalID: 6624957032425983090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdle_6
-      rect:
-        serializedVersion: 2
-        x: 1864
-        y: 120
-        width: 211
-        height: 482
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 481849548e2be9680800000000000000
-      internalID: -8746356715637407356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdle_7
-      rect:
-        serializedVersion: 2
-        x: 2214
-        y: 124
-        width: 203
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 297e06193c712f0d0800000000000000
-      internalID: -3390621440731453550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdle_8
-      rect:
-        serializedVersion: 2
-        x: 2557
-        y: 124
-        width: 203
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c53e0f3634f3b290800000000000000
-      internalID: -7875682809517558336
+      spriteID: 881dba590890fc840800000000000000
+      internalID: 5246422538781446536
       vertices: []
       indices: 
       edges: []
