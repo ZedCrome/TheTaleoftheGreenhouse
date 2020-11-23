@@ -492,11 +492,6 @@ MonoBehaviour:
   interactObject: {fileID: 0}
   maxInteractDistance: 2.6
   allowedTointeract: 0
---- !u!223 &136482369 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 892827601, guid: 6694df1751e42154494e73999a352af1, type: 3}
-  m_PrefabInstance: {fileID: 1264878969}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &218798004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,26 +1897,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 892827598, guid: 6694df1751e42154494e73999a352af1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 892827602, guid: 6694df1751e42154494e73999a352af1, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
-      propertyPath: currentGameState
-      value: 3
+    - target: {fileID: 1352778574, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_Pitch
+      value: 1.44
       objectReference: {fileID: 0}
     - target: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6397684761286527009, guid: 6694df1751e42154494e73999a352af1, type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 136482369}
     - target: {fileID: 6455221381640956469, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1964,6 +1947,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6455221381640956469, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618364260633724462, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
