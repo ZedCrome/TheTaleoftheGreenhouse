@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - GameManager
   - ManaStorage
+  - WaterCan
   layers:
   - Default
   - TransparentFX
