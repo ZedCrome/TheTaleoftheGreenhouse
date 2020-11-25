@@ -46,13 +46,40 @@ public class PlayerInteract : MonoBehaviour
             allowedTointeract = false;            
         }
         
-        if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false && currentDistance <= maxInteractDistance)
+        
+        if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false && allowedTointeract)
         {
+            if (PlayerState.instance.currentInteractState == PlayerState.InteractState.tool)
+            {
+                if(PlayerState.instance.currentHandState == PlayerState.HandState.WaterCan)
+                {
+                    if(interactObject.GetComponent<ObjectSlot>().objectInSlot != null)
+                    {
+                        if(interactObject.GetComponent<ObjectSlot>().objectInSlot.CompareTag("Pot"))
+                        {
+                            interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PotBehaviour>().FillWater();
+                            // Play watering sound here
+                        }
+                    }
+                
+                    leftMouseButtonLock = true;
+                }
+            }
+            
+            
             if(interactObject != null && inventoryItem == null && leftMouseButtonLock == false)
             {
                 inventoryItem = interactObject.GetComponent<ObjectSlot>().GetThisObject();
-                PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
-                //PlayerState.instance.currentInteractState = PlayerState.InteractState.placement;
+
+                if (inventoryItem.tag == "WaterCan")
+                {
+                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.tool);
+                    PlayerState.instance.ChangeHandState(PlayerState.HandState.WaterCan);
+                }
+                else
+                {
+                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
+                }
                 
                 leftMouseButtonLock = true;
                 interactSound.Play();
@@ -66,11 +93,13 @@ public class PlayerInteract : MonoBehaviour
                 {
                     inventoryItem = null;
                     PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
-                    //PlayerState.instance.currentInteractState = PlayerState.InteractState.@select;
-                
-                    leftMouseButtonLock = true;
+                    PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
+                    
+                    
                     interactSound.Play();
                 }
+                
+                leftMouseButtonLock = true;
             }
         }
 
