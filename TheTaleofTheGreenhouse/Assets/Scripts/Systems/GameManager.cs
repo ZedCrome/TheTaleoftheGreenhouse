@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
         }
 
         currentGameState = newGameState;
+        onChangeGameSate?.Invoke(newGameState);
     }
 
     
