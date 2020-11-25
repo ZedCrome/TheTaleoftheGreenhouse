@@ -16,6 +16,7 @@ public class ObjectSlot : MonoBehaviour
     [Header("Options")] 
 
     public bool allowPot;
+    public bool allowWaterCan;
 
     public SlotType slotType;
 
@@ -41,6 +42,11 @@ public class ObjectSlot : MonoBehaviour
     
     public bool FillSlot(GameObject newObject)
     {
+        if(CheckAllowObject(newObject.tag) == false)
+        {
+            return false;
+        }
+        
         if(isFree)
         {
             objectInSlot = newObject;
@@ -75,6 +81,26 @@ public class ObjectSlot : MonoBehaviour
         {
             return false;
         }
+    }
+
+    private bool CheckAllowObject(string tag)
+    {
+        switch (tag)
+        {
+            case "Pot":
+
+                if (allowWaterCan)
+                    return true;
+                break;
+            
+            case "WaterCan":
+
+                if (allowWaterCan)
+                    return true;
+                break;
+        }
+
+        return false;
     }
 
     
