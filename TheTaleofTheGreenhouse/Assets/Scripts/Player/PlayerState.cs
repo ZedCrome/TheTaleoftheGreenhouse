@@ -22,8 +22,9 @@ public class PlayerState : MonoBehaviour
         WaterCan
     }
 
-    public HandState leftHandState;
+    public HandState currentHandState;
 
+    
     void Awake()
     {
         if( instance == null ) {
@@ -35,12 +36,21 @@ public class PlayerState : MonoBehaviour
         }
            
         currentInteractState = InteractState.select;
+        currentHandState = HandState.None;
     }
 
     public event Action<InteractState> onChangeInteractState;
     public void ChangeInteractState( InteractState newInteractState ) 
     {
+        Debugger.instance.Log("InteractState: ", newInteractState);
         currentInteractState = newInteractState;
         onChangeInteractState?.Invoke(newInteractState);
+    }
+    
+    public event Action<HandState> onChangeHandState;
+    public void ChangeHandState( HandState newHandState ) 
+    {
+        currentHandState = newHandState;
+        onChangeHandState?.Invoke(newHandState);
     }
 }
