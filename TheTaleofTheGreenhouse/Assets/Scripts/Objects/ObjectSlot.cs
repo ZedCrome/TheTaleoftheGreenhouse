@@ -123,7 +123,11 @@ public class ObjectSlot : MonoBehaviour
                 objectInSlot.GetComponent<InteractableEffect>().Enable(false);
             }
         }
-        ChangeMouseCursor.instance.inputObjectTag = objectInSlot.tag;
+
+        if (objectInSlot != null)
+        {
+            ChangeMouseCursor.instance.inputObjectTag = objectInSlot.tag;
+        }
     }
 
     
