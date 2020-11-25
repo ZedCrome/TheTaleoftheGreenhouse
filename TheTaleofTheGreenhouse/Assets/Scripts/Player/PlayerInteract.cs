@@ -60,13 +60,17 @@ public class PlayerInteract : MonoBehaviour
             
             if(interactObject != null && inventoryItem != null && leftMouseButtonLock == false)
             {
-                interactObject.GetComponent<ObjectSlot>().FillSlot(inventoryItem);
-                inventoryItem = null;
-                PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
-                //PlayerState.instance.currentInteractState = PlayerState.InteractState.@select;
+                bool result = interactObject.GetComponent<ObjectSlot>().FillSlot(inventoryItem);
+
+                if(result)
+                {
+                    inventoryItem = null;
+                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
+                    //PlayerState.instance.currentInteractState = PlayerState.InteractState.@select;
                 
-                leftMouseButtonLock = true;
-                interactSound.Play();
+                    leftMouseButtonLock = true;
+                    interactSound.Play();
+                }
             }
         }
 

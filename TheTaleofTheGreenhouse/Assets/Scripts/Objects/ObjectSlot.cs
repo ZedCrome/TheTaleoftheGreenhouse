@@ -38,7 +38,7 @@ public class ObjectSlot : MonoBehaviour
     }
     
     
-    public void FillSlot(GameObject newObject)
+    public bool FillSlot(GameObject newObject)
     {
         if(isFree)
         {
@@ -63,6 +63,11 @@ public class ObjectSlot : MonoBehaviour
             renderer.enabled = false;
             
             isFree = false;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
