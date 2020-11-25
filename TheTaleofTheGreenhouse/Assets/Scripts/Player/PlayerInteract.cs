@@ -51,7 +51,8 @@ public class PlayerInteract : MonoBehaviour
             if(interactObject != null && inventoryItem == null && leftMouseButtonLock == false)
             {
                 inventoryItem = interactObject.GetComponent<ObjectSlot>().GetThisObject();
-                PlayerState.instance.currentInteractState = PlayerState.InteractState.placement;
+                PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
+                //PlayerState.instance.currentInteractState = PlayerState.InteractState.placement;
                 
                 leftMouseButtonLock = true;
                 interactSound.Play();
@@ -61,7 +62,8 @@ public class PlayerInteract : MonoBehaviour
             {
                 interactObject.GetComponent<ObjectSlot>().FillSlot(inventoryItem);
                 inventoryItem = null;
-                PlayerState.instance.currentInteractState = PlayerState.InteractState.@select;
+                PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
+                //PlayerState.instance.currentInteractState = PlayerState.InteractState.@select;
                 
                 leftMouseButtonLock = true;
                 interactSound.Play();

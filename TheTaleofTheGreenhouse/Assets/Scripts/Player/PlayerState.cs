@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
+[DefaultExecutionOrder(-10)]
 public class PlayerState : MonoBehaviour
 {
     public static PlayerState instance;
@@ -13,7 +15,7 @@ public class PlayerState : MonoBehaviour
 
     public InteractState currentInteractState;
     
-    void Start()
+    void Awake()
     {
         if( instance == null ) {
 
@@ -24,5 +26,12 @@ public class PlayerState : MonoBehaviour
         }
         
         currentInteractState = InteractState.select;
+    }
+    
+    public event Action<InteractState> onChangeInteractState;
+    public void ChangeInteractState( InteractState newInteractState ) 
+    {
+        currentInteractState = newInteractState;
+        onChangeInteractState?.Invoke(newInteractState);
     }
 }
