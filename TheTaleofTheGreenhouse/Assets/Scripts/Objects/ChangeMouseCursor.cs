@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ChangeMouseCursor : MonoBehaviour
 {
@@ -8,7 +6,7 @@ public class ChangeMouseCursor : MonoBehaviour
 
     public Texture2D defaultTexture;
     public Texture2D pickupTexture;
-    public Texture2D watertTexture;
+    public Texture2D waterTexture;
     public Texture2D manaTexture;
     public Texture2D placementTexture;
     public Texture2D compostTexture;
@@ -17,10 +15,11 @@ public class ChangeMouseCursor : MonoBehaviour
     public CursorMode cursMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
-    private string _objectTag;
-    public string objectTag
+    private string objectTag;
+    
+    public string inputObjectTag
     {
-        get { return _objectTag; }
+        get { return objectTag; }
         set 
         {
             if (value == "Default")
@@ -33,7 +32,7 @@ public class ChangeMouseCursor : MonoBehaviour
             }
             if (value == "Waterable")
             {
-                Cursor.SetCursor(watertTexture, hotSpot, cursMode);
+                Cursor.SetCursor(waterTexture, hotSpot, cursMode);
             }
             if (value == "ManaStorage")
             {
@@ -52,10 +51,11 @@ public class ChangeMouseCursor : MonoBehaviour
                 Cursor.SetCursor(shopTexture, hotSpot, cursMode);
             }
 
-            _objectTag = value;
+            objectTag = value;
         }
     }
 
+    
     private void Awake()
     {
         if (instance == null)
@@ -68,6 +68,7 @@ public class ChangeMouseCursor : MonoBehaviour
         }
     }
 
+    
     void Start()
     {
         Cursor.SetCursor(defaultTexture, hotSpot, cursMode);

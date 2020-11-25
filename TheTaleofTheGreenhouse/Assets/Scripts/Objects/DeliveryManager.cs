@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class DeliveryManager : MonoBehaviour
@@ -20,6 +19,7 @@ public class DeliveryManager : MonoBehaviour
         }
     }
     
+    
     void Update()
     {
         if (spawnPot)
@@ -39,7 +39,5 @@ public class DeliveryManager : MonoBehaviour
 
             spawnPot = false;
         }
-        
-        
     }
 }

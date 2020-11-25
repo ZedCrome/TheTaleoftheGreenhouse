@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 550155291078534945}
   - component: {fileID: 6321324243978134283}
   m_Layer: 0
-  m_Name: ItemSpot
+  m_Name: ItemSlot
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,3 +114,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
   allowPot: 0
+  objectToPut: {fileID: 0}

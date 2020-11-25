@@ -50,6 +50,8 @@ public class PlayerRenderer : MonoBehaviour
     }
 
 
+    
+    //Not written by Robin, kinda stole it from the webs.
     public static int DirectionToIndex(Vector2 direction, int directionCount)
     {
         Vector2 normalizedDirection = direction.normalized;

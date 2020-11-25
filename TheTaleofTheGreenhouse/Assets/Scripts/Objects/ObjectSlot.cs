@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObjectSlot : MonoBehaviour
 {
@@ -32,6 +29,7 @@ public class ObjectSlot : MonoBehaviour
         }
     }
     
+    
     public void FillSlot(GameObject newObject)
     {
         if(isFree)
@@ -45,6 +43,7 @@ public class ObjectSlot : MonoBehaviour
         }
     }
 
+    
     public GameObject GetThisObject()
     {
         GameObject returnObject = objectInSlot;
@@ -54,6 +53,7 @@ public class ObjectSlot : MonoBehaviour
         
         return returnObject;
     }
+    
     
     void OnMouseEnter()
     {
@@ -66,7 +66,7 @@ public class ObjectSlot : MonoBehaviour
         {
             if (isFree == false && objectInSlot != null)
             {
-                objectInSlot.GetComponent<HoverEffect>().Enable(true);
+                objectInSlot.GetComponent<InteractableEffect>().Enable(true);
                 PlayerInteract.instance.interactObject = this.gameObject;
             }
         }
@@ -78,13 +78,14 @@ public class ObjectSlot : MonoBehaviour
         }
     }
 
+    
     private void OnMouseOver()
     {
         if (PlayerInteract.instance.allowedTointeract)
         {
             if (isFree == false && objectInSlot != null)
             {
-                objectInSlot.GetComponent<HoverEffect>().Enable(true);
+                objectInSlot.GetComponent<InteractableEffect>().Enable(true);
             } 
             else if (isFree == true && objectInSlot != null)
             {
@@ -96,19 +97,20 @@ public class ObjectSlot : MonoBehaviour
             renderer.enabled = false;
             if (isFree == false && objectInSlot != null)
             {
-                objectInSlot.GetComponent<HoverEffect>().Enable(false);
+                objectInSlot.GetComponent<InteractableEffect>().Enable(false);
             }
         }
-        ChangeMouseCursor.instance.objectTag = objectInSlot.tag;
+        ChangeMouseCursor.instance.inputObjectTag = objectInSlot.tag;
     }
 
+    
     private void OnMouseExit()
     {
         if (PlayerState.instance.currentInteractState == PlayerState.InteractState.@select)
         {
             if (isFree == false && objectInSlot != null)
             {
-                objectInSlot.GetComponent<HoverEffect>().Enable(false);
+                objectInSlot.GetComponent<InteractableEffect>().Enable(false);
                 PlayerInteract.instance.interactObject = null;
             }
         }
@@ -118,6 +120,6 @@ public class ObjectSlot : MonoBehaviour
             renderer.enabled = false;
         }
 
-        ChangeMouseCursor.instance.objectTag = "Default";
+        ChangeMouseCursor.instance.inputObjectTag = "Default";
     }
 }

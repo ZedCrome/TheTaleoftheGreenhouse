@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultTexture: {fileID: 0}
   pickupTexture: {fileID: 0}
-  watertTexture: {fileID: 0}
+  waterTexture: {fileID: 0}
   manaTexture: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
   placementTexture: {fileID: 0}
   compostTexture: {fileID: 0}
@@ -354,6 +354,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &106508735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106508737}
+  - component: {fileID: 106508736}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &106508736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106508735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: dbdd8fb36bebe0f449be7003589f80c1, type: 2}
+--- !u!4 &106508737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106508735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158365315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,11 +1340,11 @@ PrefabInstance:
       objectReference: {fileID: 1820908318}
     - target: {fileID: 4960520132897738092, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 1.0126438
       objectReference: {fileID: 0}
     - target: {fileID: 4960520132897738092, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -2.0590904
       objectReference: {fileID: 0}
     - target: {fileID: 4960520132897738092, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1715,7 +1763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228012928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.04, y: 0.46, z: 0}
+  m_LocalPosition: {x: 1.0050111, y: -0.2091085, z: -0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 384217277}
@@ -1986,7 +2034,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2721,7 +2769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820908318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.983, y: 0.806, z: 0}
+  m_LocalPosition: {x: -0.005977392, y: 0.16269147, z: -0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1880034133}
@@ -2922,6 +2970,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2069431544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
+  m_PrefabInstance: {fileID: 1720163033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2069431548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069431544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b591060fccdb645977ee287a48ba80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultTexture: {fileID: 2800000, guid: c73702b1fabc3284e85f7d4aa17c97be, type: 3}
+  pickupTexture: {fileID: 0}
+  waterTexture: {fileID: 0}
+  manaTexture: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
+  placementTexture: {fileID: 0}
+  compostTexture: {fileID: 0}
+  shopTexture: {fileID: 0}
+  cursMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!1 &2122014500
 GameObject:
   m_ObjectHideFlags: 0

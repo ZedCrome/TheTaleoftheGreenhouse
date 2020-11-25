@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class HoverEffect : MonoBehaviour
+public class InteractableEffect : MonoBehaviour
 {
     private SpriteRenderer renderer;
     
@@ -17,6 +15,7 @@ public class HoverEffect : MonoBehaviour
         standardColor = renderer.material.color;
     }
 
+    
     public void Enable(bool isEnabled)
     {
         if (isEnabled)

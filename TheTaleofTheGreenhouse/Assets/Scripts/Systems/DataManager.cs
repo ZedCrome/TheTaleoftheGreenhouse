@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class DataManager : MonoBehaviour
@@ -51,6 +50,7 @@ public class DataManager : MonoBehaviour
 
         return 1;
     }
+    
     
     private int CheckForFreeIndexSlot()
     {
