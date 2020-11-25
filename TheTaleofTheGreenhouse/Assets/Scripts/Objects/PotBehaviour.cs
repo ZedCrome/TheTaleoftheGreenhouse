@@ -2,6 +2,7 @@
 
 public class PotBehaviour : MonoBehaviour
 {
+    [SerializeField]
     private bool isWatered = false;
     
     public void FillWater()
