@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
@@ -100,6 +101,7 @@ public class GameManager : MonoBehaviour
     }
 
     
+    public event Action<GameState> onChangeGameSate;
     public void ChangeGameState( GameState newGameState ) 
     {
 
