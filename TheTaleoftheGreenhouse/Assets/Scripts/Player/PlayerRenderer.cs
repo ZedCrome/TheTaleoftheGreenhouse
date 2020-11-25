@@ -23,7 +23,9 @@ public class PlayerRenderer : MonoBehaviour
     private int lastDirection;
     private int lastDirectionCache;
 
-    private float speed;
+    private float verticalMove;
+    private float horizontalMove;
+    private bool moving = false;
     
     void Start()
     {
@@ -32,16 +34,33 @@ public class PlayerRenderer : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        verticalMove = Input.GetAxisRaw("Vertical");
+        horizontalMove = Input.GetAxisRaw("Horizontal");
+
+        if (verticalMove != 0 || horizontalMove != 0)
+        {
+            moving = true;
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            moving = false;
+            animator.SetBool("Moving", false);
+        }
+        Debug.Log(moving);
+        Debug.Log("VericalMove: " + verticalMove);
+        Debug.Log("HorizontalMove: " + horizontalMove);
+        
+    }
+
     public void SetDirection(Vector2 direction)
     {
-        speed = direction.magnitude;
-        Debug.Log(speed);
-        
+
         string[] directionArray;
         int directionValue;
 
-        animator.SetFloat(Velocity, speed);
-        
         if (direction.magnitude < 0.01f)
         {
             directionArray = staticDirections;
@@ -61,7 +80,7 @@ public class PlayerRenderer : MonoBehaviour
 
     void DirectionChange()
     {
-        if (speed > 0.01f)
+        if (moving)
         {
             switch (lastDirection)
             {
@@ -95,7 +114,7 @@ public class PlayerRenderer : MonoBehaviour
             }
         }
 
-        if (speed < 0.01f)
+        if (!moving)
         {
             switch (lastDirection)
             {
@@ -128,7 +147,6 @@ public class PlayerRenderer : MonoBehaviour
                     break;
             }
         }
-        
     }
 
 

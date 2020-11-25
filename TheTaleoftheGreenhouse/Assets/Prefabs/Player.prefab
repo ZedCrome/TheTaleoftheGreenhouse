@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 123942521}
   - component: {fileID: 123942522}
   - component: {fileID: 123942523}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a69bcfddd49f3b94bbc2de198d984353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   rotationOffset: {x: 0, y: 45}
 --- !u!50 &3258783260372278903
 Rigidbody2D:
@@ -133,7 +133,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1078966458833235107, guid: 49ec4fd0e747560478519c2e9994350b, type: 3}
+  m_Sprite: {fileID: -4561785871059343576, guid: 0e86bf7e630be2441bae040bed87c577, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03, y: 0.18}
   m_Size: {x: 1, y: 0.48}
   m_Direction: 1
 --- !u!114 &1312291490961482040
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInteractState: 0
+  leftHandState: 0
 --- !u!114 &123942523
 MonoBehaviour:
   m_ObjectHideFlags: 0
