@@ -6,6 +6,7 @@ public class ObjectSlot : MonoBehaviour
 
     public GameObject objectInSlot;
     private bool isFree;
+    public Vector3 positionOffset = new Vector3(0, -0.25f, -0.7f);
     
     [Header("Options")] 
     public bool allowPot;
@@ -36,7 +37,9 @@ public class ObjectSlot : MonoBehaviour
         {
             objectInSlot = newObject;
             objectInSlot.transform.position = transform.position;
-            
+            objectInSlot.transform.position = objectInSlot.transform.position + positionOffset;
+
+
             renderer.enabled = false;
             
             isFree = false;
