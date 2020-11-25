@@ -6,10 +6,17 @@ public class ObjectSlot : MonoBehaviour
 
     public GameObject objectInSlot;
     private bool isFree;
-    public Vector3 positionOffset = new Vector3(0, -0.25f, -0.7f);
-    
+
+    public Vector3 positionOffset;
+    public enum SlotType { Table, Pot };
+    private Vector3 tablePositionOffset = new Vector3(0, -0.25f, -0.7f);
+    private Vector3 potPositionOffset = new Vector3(0, 0, -0.7f);
+
     [Header("Options")] 
+
     public bool allowPot;
+
+    public SlotType slotType;
 
     public GameObject objectToPut;    
     
@@ -36,6 +43,19 @@ public class ObjectSlot : MonoBehaviour
         if(isFree)
         {
             objectInSlot = newObject;
+            switch (slotType)
+            {
+                case SlotType.Table:
+                    {
+                        positionOffset = tablePositionOffset;
+                        break;
+                    }
+                case SlotType.Pot:
+                    {
+                        positionOffset = potPositionOffset;
+                        break;
+                    }
+            }
             objectInSlot.transform.position = transform.position;
             objectInSlot.transform.position = objectInSlot.transform.position + positionOffset;
 
