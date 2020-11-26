@@ -13,9 +13,9 @@ public class ObjectSlot : MonoBehaviour
     private Vector3 potPositionOffset = new Vector3(0, 0, -0.7f);
     private Vector3 floorPositionOffset = new Vector3(0, -0.25f, 0);
 
-    [Header("Options")] 
+    [Header("Options")]
 
-    public bool allowPot;
+    public bool allowPot = true;
     public bool allowWaterCan;
 
     public SlotType slotType;
@@ -55,16 +55,18 @@ public class ObjectSlot : MonoBehaviour
                 case SlotType.Table:
                     {
                         positionOffset = tablePositionOffset;
+                        allowWaterCan = true;
                         break;
                     }
                 case SlotType.Pot:
                     {
-                        positionOffset = potPositionOffset;
+                        positionOffset = potPositionOffset;                   
                         break;
                     }
                 case SlotType.Floor:
                     {
                         positionOffset = floorPositionOffset;
+                        allowWaterCan = true;
                         break;
                     }
             }
