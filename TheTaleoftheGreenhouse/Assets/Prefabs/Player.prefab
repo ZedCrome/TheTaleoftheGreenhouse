@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInteractState: 0
-  leftHandState: 0
+  currentHandState: 0
 --- !u!114 &123942523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,5 +214,5 @@ MonoBehaviour:
   interactSound: {fileID: 0}
   inventoryItem: {fileID: 0}
   interactObject: {fileID: 0}
-  maxInteractDistance: 2.6
+  maxInteractDistance: 8.8
   allowedTointeract: 0
