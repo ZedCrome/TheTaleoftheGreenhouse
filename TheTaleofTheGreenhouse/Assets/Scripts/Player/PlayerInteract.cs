@@ -2,9 +2,12 @@
 
 public class PlayerInteract : MonoBehaviour
 {
+
+    private AudioSource audioSource;
     
     public static PlayerInteract instance;
     public AudioSource interactSound;
+    public AudioClip wateringSound;
     
     public GameObject inventoryItem;
     public GameObject interactObject;
@@ -24,6 +27,8 @@ public class PlayerInteract : MonoBehaviour
 
             Destroy( this );
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
     
     
@@ -93,6 +98,7 @@ public class PlayerInteract : MonoBehaviour
                     {
                         if (interactObject.CompareTag("PotSlot"))
                         {
+                            audioSource.PlayOneShot(wateringSound);
                             interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();
                         }
                     }
