@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
-  positionOffset: {x: 0, y: -0.25, z: -0.7}
   allowPot: 0
+  allowWaterCan: 0
+  slotType: 1
   objectToPut: {fileID: 0}
 --- !u!70 &3834041468695749191
 CapsuleCollider2D:
