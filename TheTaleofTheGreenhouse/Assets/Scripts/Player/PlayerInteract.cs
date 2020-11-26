@@ -13,6 +13,7 @@ public class PlayerInteract : MonoBehaviour
 
     public bool allowedTointeract = false;
     private bool leftMouseButtonLock = false;
+    private bool rightMouseButtonLock = false;
     
     void Start()
     {
@@ -45,10 +46,59 @@ public class PlayerInteract : MonoBehaviour
         {
             allowedTointeract = false;            
         }
-        
-        
-        if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false && allowedTointeract)
+
+
+        if (allowedTointeract)
         {
+            if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false)
+            {
+                if(interactObject != null && inventoryItem == null && leftMouseButtonLock == false)
+                {
+                    inventoryItem = interactObject.GetComponent<ObjectSlot>().GetThisObject();
+
+                    if (inventoryItem.tag == "WaterCan")
+                    {
+                        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.tool);
+                        PlayerState.instance.ChangeHandState(PlayerState.HandState.WaterCan);
+                    }
+                    else
+                    {
+                        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
+                    }
+                
+                    leftMouseButtonLock = true;
+                    interactSound.Play();
+                }
+            
+                if(interactObject != null && inventoryItem != null && leftMouseButtonLock == false)
+                {
+                    bool result = interactObject.GetComponent<ObjectSlot>().FillSlot(inventoryItem);
+
+                    if(result)
+                    {
+                        inventoryItem = null;
+                        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
+                        PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
+                    
+                    
+                        interactSound.Play();
+                    }
+                
+                    leftMouseButtonLock = true;
+                }   
+            }
+
+            if (Input.GetMouseButtonDown(1) && rightMouseButtonLock == false)
+            {
+                
+            }
+        }
+        
+        /*
+        
+        if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false)
+        {
+            
             if (PlayerState.instance.currentInteractState == PlayerState.InteractState.tool)
             {
                 if(PlayerState.instance.currentHandState == PlayerState.HandState.WaterCan)
@@ -65,49 +115,15 @@ public class PlayerInteract : MonoBehaviour
                     leftMouseButtonLock = true;
                 }
             }
-            
-            
-            if(interactObject != null && inventoryItem == null && leftMouseButtonLock == false)
-            {
-                inventoryItem = interactObject.GetComponent<ObjectSlot>().GetThisObject();
-
-                if (inventoryItem.tag == "WaterCan")
-                {
-                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.tool);
-                    PlayerState.instance.ChangeHandState(PlayerState.HandState.WaterCan);
-                }
-                else
-                {
-                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
-                }
-                
-                leftMouseButtonLock = true;
-                interactSound.Play();
-            }
-            
-            if(interactObject != null && inventoryItem != null && leftMouseButtonLock == false)
-            {
-                bool result = interactObject.GetComponent<ObjectSlot>().FillSlot(inventoryItem);
-
-                if(result)
-                {
-                    inventoryItem = null;
-                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
-                    PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
-                    
-                    
-                    interactSound.Play();
-                }
-                
-                leftMouseButtonLock = true;
-            }
         }
+        */
 
         if(inventoryItem != null)
         {
             Vector3 newObjectPosition = new Vector3(mousePosition.x, mousePosition.y, 10);
-            inventoryItem.transform.position =
-                Camera.main.ScreenToWorldPoint(newObjectPosition);
+            newObjectPosition = Camera.main.ScreenToWorldPoint(newObjectPosition);
+            inventoryItem.transform.position = new Vector3(newObjectPosition.x, newObjectPosition.y, -0.7f);
+      
             
         }
         
