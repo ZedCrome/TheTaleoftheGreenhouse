@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4960520131541898960
 Transform:
   m_ObjectHideFlags: 0
@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
-  positionOffset: {x: 0, y: -0.25, z: -0.7}
   allowPot: 0
+  allowWaterCan: 0
+  slotType: 0
   objectToPut: {fileID: 0}
 --- !u!60 &4960520131541898974
 PolygonCollider2D:
@@ -201,12 +202,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7c7d4e379a6044a40a2db00d182a42e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56f27e91fe8622e4598bb02bf7222e17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.0514286, y: 1.3371428}
+  m_Size: {x: 2.0857143, y: 1.3142858}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -284,7 +285,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e13107cc99348894a8709ad1a6e69ef3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e1a2d6d272fc1b41b9535a6fdbd6cb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -458,7 +459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4960520132506860275
 Transform:
   m_ObjectHideFlags: 0
@@ -537,8 +538,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
-  positionOffset: {x: 0, y: -0.25, z: -0.7}
   allowPot: 0
+  allowWaterCan: 0
+  slotType: 0
   objectToPut: {fileID: 0}
 --- !u!60 &4960520133228835503
 PolygonCollider2D:
