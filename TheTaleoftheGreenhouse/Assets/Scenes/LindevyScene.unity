@@ -2073,8 +2073,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0
-  m_Color: {r: 0.9121687, g: 0.9150943, b: 0.8330811, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.82
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -2377,7 +2377,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2069431548, guid: 6694df1751e42154494e73999a352af1, type: 3}
+    - {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6694df1751e42154494e73999a352af1, type: 3}
 --- !u!1 &1776367919
 GameObject:
@@ -2904,6 +2906,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
   m_PrefabInstance: {fileID: 1720163033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2069431545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069431544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee54f35dc5e8154bb02aa1587b07289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 1489905942}
+  hoursPerDay: 24
+  minutesPerHour: 60
 --- !u!114 &2069431548
 MonoBehaviour:
   m_ObjectHideFlags: 0

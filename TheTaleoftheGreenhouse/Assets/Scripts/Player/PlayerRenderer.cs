@@ -49,10 +49,7 @@ public class PlayerRenderer : MonoBehaviour
             moving = false;
             animator.SetBool("Moving", false);
         }
-        Debug.Log(moving);
-        Debug.Log("VericalMove: " + verticalMove);
-        Debug.Log("HorizontalMove: " + horizontalMove);
-        
+
     }
 
     public void SetDirection(Vector2 direction)

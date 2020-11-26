@@ -2131,7 +2131,6 @@ GameObject:
   - component: {fileID: 2518050415119969928}
   - component: {fileID: 6397684761286527009}
   - component: {fileID: 813255391}
-  - component: {fileID: 2069431548}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -2187,27 +2186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &813255391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4045832010462871539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b591060fccdb645977ee287a48ba80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultTexture: {fileID: 2800000, guid: c73702b1fabc3284e85f7d4aa17c97be, type: 3}
-  pickupTexture: {fileID: 0}
-  waterTexture: {fileID: 0}
-  manaTexture: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
-  placementTexture: {fileID: 0}
-  compostTexture: {fileID: 0}
-  shopTexture: {fileID: 0}
-  cursMode: 0
-  hotSpot: {x: 0, y: 0}
---- !u!114 &2069431548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
