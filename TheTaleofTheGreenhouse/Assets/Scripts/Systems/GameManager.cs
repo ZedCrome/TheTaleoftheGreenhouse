@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject HUD;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject optionsMenu;
     
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour
         if( newGameState == GameState.Menu ) 
         {
             mainMenu.SetActive(true);
+            HUD.SetActive(false);
             pauseMenu.SetActive(false);
             optionsMenu.SetActive(false);
             previousGameState = GameState.Menu;
@@ -126,14 +128,16 @@ public class GameManager : MonoBehaviour
         if( newGameState == GameState.GameLoop ) 
         {
             mainMenu.SetActive(false);
+            HUD.SetActive(true);
             pauseMenu.SetActive(false);
             optionsMenu.SetActive(false);
-            
+
         }
 
         if ( newGameState == GameState.Options )
         {
             mainMenu.SetActive(false);
+            HUD.SetActive(false);
             pauseMenu.SetActive(false);
             optionsMenu.SetActive(true);
 
@@ -141,6 +145,7 @@ public class GameManager : MonoBehaviour
 
         if ( newGameState == GameState.PauseGame ) 
         {
+            HUD.SetActive(true);
             pauseMenu.SetActive(true);
             optionsMenu.SetActive(false);
             previousGameState = GameState.PauseGame;

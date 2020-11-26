@@ -328,6 +328,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: currentGameState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3226015050271529701, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -419,6 +423,14 @@ PrefabInstance:
     - target: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150138269896258076, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797602689258236994, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: timeDisplay
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5857662236432678981, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
