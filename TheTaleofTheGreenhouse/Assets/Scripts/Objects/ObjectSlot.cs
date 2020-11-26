@@ -42,10 +42,12 @@ public class ObjectSlot : MonoBehaviour
     
     public bool FillSlot(GameObject newObject)
     {
+        /*
         if(CheckAllowObject(newObject.tag) == false)
         {
             return false;
         }
+        */
         
         if(isFree)
         {
