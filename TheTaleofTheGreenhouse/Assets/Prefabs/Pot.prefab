@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6869750827156483128}
   m_Layer: 0
   m_Name: Pot
-  m_TagString: Untagged
+  m_TagString: Pot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,11 +119,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 470301668440039455, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.006
       objectReference: {fileID: 0}
     - target: {fileID: 470301668440039455, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.75
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 470301668440039455, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -164,6 +164,10 @@ PrefabInstance:
     - target: {fileID: 2268901697707906360, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_Name
       value: PotSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901697707906360, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_TagString
+      value: Pot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
