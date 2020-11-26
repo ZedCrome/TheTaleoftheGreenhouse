@@ -1120,6 +1120,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 72830480}
     m_Modifications:
+    - target: {fileID: 4960520131735256009, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960520131735256009, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960520132161339815, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.58799994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960520132161339815, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0020000115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960520132506860275, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.654
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960520132506860275, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.002
+      objectReference: {fileID: 0}
     - target: {fileID: 4960520132897738092, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1798,6 +1822,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 72830480}
     m_Modifications:
+    - target: {fileID: 4126961699609909208, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126961699609909208, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.029
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322338268310615277, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.519
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322338268310615277, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.054
+      objectReference: {fileID: 0}
     - target: {fileID: 7322338269019238888, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
       propertyPath: m_Name
       value: LoweredTableFlipped
