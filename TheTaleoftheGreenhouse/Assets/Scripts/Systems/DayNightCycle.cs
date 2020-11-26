@@ -6,7 +6,7 @@ public class DayNightCycle : MonoBehaviour
 {
     public static DayNightCycle instance;
     public Light2D light;
-    private float realSecondsPerIngameDay = 20;
+    public float realSecondsPerIngameDay = 20;
 
     public static float day;
     public float hoursPerDay = 24f;
@@ -14,6 +14,10 @@ public class DayNightCycle : MonoBehaviour
 
     private string hourString;
     private string minutesString;
+
+    public Color dayColor;
+    public Color nightColor;
+    public float transitionTime = 2;
 
     
     private void Awake()
@@ -26,6 +30,11 @@ public class DayNightCycle : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    void Start()
+    {
+        light = FindObjectOfType<Light2D>();
     }
     
     
@@ -46,15 +55,12 @@ public class DayNightCycle : MonoBehaviour
 
     void lightChange()
     {
-        var lightColor = light.color;
         if (float.Parse(hourString) < 20 && float.Parse(hourString) > 6f)
         {
             if (light.intensity < 1)
             {
                 light.intensity += (float) 0.1 * Time.deltaTime;
-                lightColor.r += (float) 0.1;
-                lightColor.g += (float) 0.1;
-                lightColor.b += (float) 0.1;
+                //light.color = Color.Lerp(dayColor, nightColor, Time.deltaTime * transitionTime);
                 
             }
         }
@@ -64,9 +70,7 @@ public class DayNightCycle : MonoBehaviour
             if (light.intensity > (float) 0.75)
             {
                 light.intensity -= (float)0.1 * Time.deltaTime;
-                lightColor.r -= (float) 0.1;
-                lightColor.g -= (float) 0.1;
-                lightColor.b -= (float) 0.1;
+                //light.color = Color.Lerp(nightColor, dayColor, Time.deltaTime * transitionTime);
             } 
         }
     }
