@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWatered: 0
+  potDry: {fileID: 4366964281426810755, guid: b1330feed77990f408aa7cc5fe75adb1, type: 3}
+  potWet: {fileID: -6771828102280464785, guid: a3b82d3cf7979d5458f9323a6d83e418, type: 3}
 --- !u!114 &6869750827156483128
 MonoBehaviour:
   m_ObjectHideFlags: 0
