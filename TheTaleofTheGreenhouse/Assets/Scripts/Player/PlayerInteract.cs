@@ -58,14 +58,11 @@ public class PlayerInteract : MonoBehaviour
 
                     if (inventoryItem.tag == "WaterCan")
                     {
-                        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.tool);
                         PlayerState.instance.ChangeHandState(PlayerState.HandState.WaterCan);
                     }
-                    else
-                    {
-                        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
-                    }
-                
+
+                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
+                    
                     leftMouseButtonLock = true;
                     interactSound.Play();
                 }
@@ -90,34 +87,21 @@ public class PlayerInteract : MonoBehaviour
 
             if (Input.GetMouseButtonDown(1) && rightMouseButtonLock == false)
             {
-                
-            }
-        }
-        
-        /*
-        
-        if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false)
-        {
-            
-            if (PlayerState.instance.currentInteractState == PlayerState.InteractState.tool)
-            {
                 if(PlayerState.instance.currentHandState == PlayerState.HandState.WaterCan)
                 {
-                    if(interactObject.GetComponent<ObjectSlot>().objectInSlot != null)
+                    if(interactObject != null)
                     {
-                        if(interactObject.GetComponent<ObjectSlot>().objectInSlot.CompareTag("Pot"))
+                        if (interactObject.CompareTag("PotSlot"))
                         {
-                            interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PotBehaviour>().FillWater();
-                            // Play watering sound here
+                            interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();
                         }
                     }
-                
-                    leftMouseButtonLock = true;
+        
+                    rightMouseButtonLock = true;
                 }
             }
         }
-        */
-
+        
         if(inventoryItem != null)
         {
             Vector3 newObjectPosition = new Vector3(mousePosition.x, mousePosition.y, 10);
@@ -130,6 +114,10 @@ public class PlayerInteract : MonoBehaviour
         if(Input.GetMouseButtonUp(0))
         {
             leftMouseButtonLock = false;
+        }
+        if(Input.GetMouseButtonUp(1))
+        {
+            rightMouseButtonLock = false;
         }
     }
 }

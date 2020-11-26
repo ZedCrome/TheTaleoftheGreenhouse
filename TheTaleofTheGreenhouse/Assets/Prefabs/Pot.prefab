@@ -167,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268901697707906360, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_TagString
-      value: Pot
+      value: PotSlot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
