@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2268901697707906360}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2588191, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: -0.87829983, y: 0.021196097, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
 --- !u!212 &6174817494622209168
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 794f3b66a5b6aec43a34d17e6fb39644, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be07dea9a7371f24ca3dfd1e6e56269d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5254902}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
   allowPot: 0
+  allowWaterCan: 0
+  slotType: 0
   objectToPut: {fileID: 0}
 --- !u!60 &7908054417849291425
 PolygonCollider2D:
@@ -109,14 +111,14 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.10666667, y: 0.10666667}
+    oldSize: {x: 0.3325, y: 0.17875}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -124,7 +126,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.052617595, y: 0.066832}
-      - {x: -0.1344058, y: 0.077075176}
-      - {x: -0.031629324, y: -0.07352173}
-      - {x: 0.15405674, y: -0.08628458}
+    - - {x: -0.0024513556, y: 0.08481149}
+      - {x: -0.15891333, y: -0.001115419}
+      - {x: 0.0033813342, y: -0.086358994}
+      - {x: 0.15942988, y: -0.0015537716}
