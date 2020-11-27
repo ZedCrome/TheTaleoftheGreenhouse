@@ -108,9 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5969eb4b0c3cd439beea92153189d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadSprite: {fileID: -5445424832060668780, guid: 061331339ab57cf45890dc433d425a87, type: 3}
-  fullGrownSprite: {fileID: -1982876869122748666, guid: 061331339ab57cf45890dc433d425a87, type: 3}
+  deadSprite: {fileID: 842238172451944131, guid: 061331339ab57cf45890dc433d425a87, type: 3}
+  fullGrownSprite: {fileID: -1472077784152280170, guid: 061331339ab57cf45890dc433d425a87, type: 3}
   adultSprite: {fileID: -8706243810674129020, guid: 061331339ab57cf45890dc433d425a87, type: 3}
-  youngSprite: {fileID: -1472077784152280170, guid: 061331339ab57cf45890dc433d425a87, type: 3}
-  sproutSprite: {fileID: 842238172451944131, guid: 061331339ab57cf45890dc433d425a87, type: 3}
+  youngSprite: {fileID: -1982876869122748666, guid: 061331339ab57cf45890dc433d425a87, type: 3}
+  sproutSprite: {fileID: -5445424832060668780, guid: 061331339ab57cf45890dc433d425a87, type: 3}
   currenState: 2
