@@ -10,4 +10,16 @@ public class BedBehavior : MonoBehaviour
             DayNightCycle.instance.Sleep();
         }
     }
+
+
+    private void OnMouseEnter()
+    {
+        ChangeMouseCursor.instance.inputObjectTag = gameObject.tag;
+    }
+
+    private void OnMouseExit()
+    {
+        ChangeMouseCursor.instance.inputObjectTag = "Default";
+    }
+
 }

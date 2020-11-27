@@ -225,6 +225,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: bedTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
     - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: debugActive
       value: 1
@@ -2727,7 +2731,7 @@ GameObject:
   - component: {fileID: 1839820423}
   m_Layer: 0
   m_Name: Bed
-  m_TagString: Untagged
+  m_TagString: Bed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

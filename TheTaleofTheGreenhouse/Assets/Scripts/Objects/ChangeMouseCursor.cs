@@ -11,6 +11,7 @@ public class ChangeMouseCursor : MonoBehaviour
     public Texture2D placementTexture;
     public Texture2D compostTexture;
     public Texture2D shopTexture;
+    public Texture2D bedTexture;
 
     public CursorMode cursMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
@@ -49,6 +50,10 @@ public class ChangeMouseCursor : MonoBehaviour
             if (value == "Shop")
             {
                 Cursor.SetCursor(shopTexture, hotSpot, cursMode);
+            }
+            if (value == "Bed")
+            {
+                Cursor.SetCursor(bedTexture, hotSpot, cursMode);
             }
 
             objectTag = value;
