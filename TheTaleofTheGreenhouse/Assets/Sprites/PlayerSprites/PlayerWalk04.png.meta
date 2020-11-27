@@ -314,8 +314,8 @@ TextureImporter:
       name: PlayerWalk04_7
       rect:
         serializedVersion: 2
-        x: 2184
-        y: 0
+        x: 2073
+        y: 946
         width: 152
         height: 388
       alignment: 9
