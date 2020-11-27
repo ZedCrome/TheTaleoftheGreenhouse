@@ -80,7 +80,7 @@ public class PlantStates : MonoBehaviour
 
     void OnSleep()
     {
-        IsWatered = transform.parent.parent.GetComponent<PotBehaviour>().isWatered;
+        IsWatered = transform.parent.parent.GetComponent<PotBehaviour>().GetWatered();
 
         if (isWatered == false)
         {
@@ -94,7 +94,7 @@ public class PlantStates : MonoBehaviour
                 if (isWatered)
                 {
                     currentState = PlantState.Young;
-                    transform.parent.parent.GetComponent<PotBehaviour>().isWatered = false;
+                    transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
                 }
                 else if (daysWithoutWater == daysWithoutWaterLimit)
                 {
@@ -108,7 +108,7 @@ public class PlantStates : MonoBehaviour
                 if (isWatered)
                 {
                     currentState = PlantState.Adult;
-                    transform.parent.parent.GetComponent<PotBehaviour>().isWatered = false;
+                    transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
                 }
                 else if (daysWithoutWater == daysWithoutWaterLimit)
                 {
@@ -122,7 +122,7 @@ public class PlantStates : MonoBehaviour
                 if (isWatered)
                 {
                     currentState = PlantState.FullGrown;
-                    transform.parent.parent.GetComponent<PotBehaviour>().isWatered = false;
+                    transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
                 }
                 else if (daysWithoutWater == daysWithoutWaterLimit)
                 {
@@ -133,7 +133,7 @@ public class PlantStates : MonoBehaviour
             }
             case PlantState.FullGrown:
             {
-                transform.parent.parent.GetComponent<PotBehaviour>().isWatered = false;
+                transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
 
                 if (daysWithoutWater == daysWithoutWaterLimit)
                 {
