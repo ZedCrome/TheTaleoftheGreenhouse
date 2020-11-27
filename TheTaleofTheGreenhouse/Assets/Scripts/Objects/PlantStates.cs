@@ -12,7 +12,21 @@ public class PlantStates : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     public enum PlantState { Sprout, Young, Adult, FullGrown, Dead};
-    public PlantState currenState = 0;
+    public PlantState currentState = 0;
+
+    private int daysWithoutWater;
+    private int daysWithoutWaterLimit = 2;
+    private bool isWatered;
+
+    public bool IsWatered
+    {
+        get { return isWatered;}
+        set
+        {
+            isWatered = value;
+            daysWithoutWater = 0;
+        }
+    }
 
     private void Start()
     {
@@ -33,7 +47,7 @@ public class PlantStates : MonoBehaviour
     private void Update()
     {
         spriteRenderer.sprite = currentSprite;
-        switch (currenState)
+        switch (currentState)
         {
             case PlantState.Sprout:
                 {
@@ -66,7 +80,69 @@ public class PlantStates : MonoBehaviour
 
     void OnSleep()
     {
-        
+        IsWatered = transform.parent.parent.GetComponent<PotBehaviour>().isWatered;
+
+        if (isWatered == false)
+        {
+            daysWithoutWater++;
+        }
+
+        switch (currentState)
+        {
+            case PlantState.Sprout:
+            {
+                if (isWatered)
+                {
+                    currentState = PlantState.Young;
+                    transform.parent.parent.GetComponent<PotBehaviour>().isWatered = false;
+                }
+                else if (daysWithoutWater == daysWithoutWaterLimit)
+                {
+                    currentState = PlantState.Dead;
+                }
+
+                break;
+            }
+            case PlantState.Young:
+            {
+                if (isWatered)
+                {
+                    currentState = PlantState.Adult;
+                    transform.parent.parent.GetComponent<PotBehaviour>().isWatered = false;
+                }
+                else if (daysWithoutWater == daysWithoutWaterLimit)
+                {
+                    currentState = PlantState.Dead;
+                }
+
+                break;
+            }
+            case PlantState.Adult:
+            {
+                if (isWatered)
+                {
+                    currentState = PlantState.FullGrown;
+                    transform.parent.parent.GetComponent<PotBehaviour>().isWatered = false;
+                }
+                else if (daysWithoutWater == daysWithoutWaterLimit)
+                {
+                    currentState = PlantState.Dead;
+                }
+
+                break;
+            }
+            case PlantState.FullGrown:
+            {
+                transform.parent.parent.GetComponent<PotBehaviour>().isWatered = false;
+
+                if (daysWithoutWater == daysWithoutWaterLimit)
+                {
+                    currentState = PlantState.Dead;
+                }
+
+                break;
+            }
+        }
     }
 
     //take information of the night state

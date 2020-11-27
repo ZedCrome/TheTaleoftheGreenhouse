@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class PotBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private bool isWatered = false;
+    public bool isWatered = false;
 
     private SpriteRenderer renderer;
 
