@@ -234,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4340752410127216994, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: realSecondsPerIngameDay
-      value: 60
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 4340752410127216994, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: transitionTime
@@ -1528,6 +1528,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7786478845608756234, guid: d9d6ddb67aaeba64fbc52e2b7bd0e0a1, type: 3}
   m_PrefabInstance: {fileID: 7786478844446554288}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1321506167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1321506168}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1321506168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321506167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4215006, y: -1.0114825, z: -1.8186498}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1378753725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7322338269019238889, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
