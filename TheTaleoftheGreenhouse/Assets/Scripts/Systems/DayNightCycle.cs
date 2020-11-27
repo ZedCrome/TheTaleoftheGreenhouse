@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 
-[DefaultExecutionOrder(-10)]
+[DefaultExecutionOrder(-9)]
 public class DayNightCycle : MonoBehaviour
 {
     
