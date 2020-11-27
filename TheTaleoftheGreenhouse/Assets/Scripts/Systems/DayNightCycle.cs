@@ -30,6 +30,7 @@ public class DayNightCycle : MonoBehaviour
 
     private bool firstMorning = true;
     private bool allowedToSleep = false;
+    private bool isSleeping = false;
     
     private float timer = 0;
 
@@ -82,6 +83,8 @@ public class DayNightCycle : MonoBehaviour
     void lightChange()
     {
         
+        
+        
         if (float.Parse(hourString) > 18 && float.Parse(hourString) < 24f)
         {
             
@@ -90,6 +93,10 @@ public class DayNightCycle : MonoBehaviour
             light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
+            // if (isSleeping)
+            // {
+            //     realSecondsPerIngameDay *= 4;
+            // }
         } 
         
         else if (float.Parse(hourString) > 6 && float.Parse(hourString) < 11f && !firstMorning)
@@ -101,6 +108,11 @@ public class DayNightCycle : MonoBehaviour
             allowedToSleep = false;
             light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
             light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
+            // if(isSleeping)
+            // {
+            //     realSecondsPerIngameDay /= 4;
+            //     isSleeping = false;
+            // }
         }
         else
         {
@@ -118,6 +130,8 @@ public class DayNightCycle : MonoBehaviour
             sleepText.text = "Sleeping";
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<PlayerRenderer>().enabled = false;
+            
+            isSleeping = true;
             onSleep?.Invoke();
         }
             
