@@ -10,7 +10,7 @@ public class ObjectSlot : MonoBehaviour
     private Vector3 positionOffset;
     public enum SlotType { Table, Pot, Floor };
     private Vector3 tablePositionOffset = new Vector3(0, -0.25f, -0.7f);
-    private Vector3 potPositionOffset = new Vector3(0, 0, -0.7f);
+    private Vector3 potPositionOffset = new Vector3(0, 0, -0.8f);
     private Vector3 floorPositionOffset = new Vector3(0, -0.25f, 0);
 
     [Header("Options")]
