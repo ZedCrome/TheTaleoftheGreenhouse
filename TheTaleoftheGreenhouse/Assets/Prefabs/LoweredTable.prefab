@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4960520132897738092}
   - component: {fileID: 4960520132897738093}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LoweredTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}

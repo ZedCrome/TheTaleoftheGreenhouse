@@ -2168,7 +2168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 8618364260633724462}
-  HUD: {fileID: 0}
   pauseMenu: {fileID: 5977968203977770608}
   optionsMenu: {fileID: 7002069600776117982}
   currentGameState: 2
@@ -2200,7 +2199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultTexture: {fileID: 2800000, guid: c73702b1fabc3284e85f7d4aa17c97be, type: 3}
   pickupTexture: {fileID: 0}
-  waterTexture: {fileID: 0}
+  waterTexture: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
   manaTexture: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
   placementTexture: {fileID: 0}
   compostTexture: {fileID: 0}
