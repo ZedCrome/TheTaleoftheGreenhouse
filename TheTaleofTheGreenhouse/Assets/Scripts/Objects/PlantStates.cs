@@ -19,6 +19,16 @@ public class PlantStates : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
        
     }
+    
+    private void OnEnable()
+    {
+        DayNightCycle.instance.onSleep += OnSleep;
+    }
+    
+    private void OnDisable()
+    {
+        DayNightCycle.instance.onSleep -= OnSleep;
+    }
 
     private void Update()
     {
@@ -52,6 +62,11 @@ public class PlantStates : MonoBehaviour
                     break;
                 }
         }
+    }
+
+    void OnSleep()
+    {
+        
     }
 
     //take information of the night state
