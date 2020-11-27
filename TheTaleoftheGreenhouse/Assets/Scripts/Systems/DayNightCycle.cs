@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 
 public class DayNightCycle : MonoBehaviour
@@ -88,5 +89,12 @@ public class DayNightCycle : MonoBehaviour
         {
             timer = 0f;
         }
+    }
+    
+    public event Action onSleep;
+
+    public void Sleep()
+    {
+        onSleep?.Invoke();
     }
 }

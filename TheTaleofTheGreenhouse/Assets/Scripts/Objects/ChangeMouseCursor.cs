@@ -30,7 +30,7 @@ public class ChangeMouseCursor : MonoBehaviour
             {
                 Cursor.SetCursor(pickupTexture, hotSpot, cursMode);
             }
-            if (value == "Waterable")
+            if (value == "WaterCan")
             {
                 Cursor.SetCursor(waterTexture, hotSpot, cursMode);
             }
