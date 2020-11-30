@@ -82,7 +82,7 @@ public class PlayerInteract : MonoBehaviour
         {
             Vector3 newObjectPosition = new Vector3(mousePosition.x, mousePosition.y, 10);
             newObjectPosition = Camera.main.ScreenToWorldPoint(newObjectPosition);
-            inventoryItem.transform.position = new Vector3(newObjectPosition.x, newObjectPosition.y, -0.7f);
+            inventoryItem.transform.position = new Vector3(newObjectPosition.x, newObjectPosition.y, -1.4f);
         }
         
         if(Input.GetMouseButtonUp(0))
