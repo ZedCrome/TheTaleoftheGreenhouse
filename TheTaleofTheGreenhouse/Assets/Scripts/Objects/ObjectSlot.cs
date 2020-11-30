@@ -74,7 +74,8 @@ public class ObjectSlot : MonoBehaviour
                     }
                 case SlotType.Pot:
                     {
-                        positionOffset = potPositionOffset;                   
+                        positionOffset = potPositionOffset;
+                        allowWaterCan = false;
                         break;
                     }
                 case SlotType.Floor:
@@ -210,5 +211,6 @@ public class ObjectSlot : MonoBehaviour
         }
 
         ChangeMouseCursor.instance.inputObjectTag = "Default";
+        objectInSlot.GetComponent<InteractableEffect>().Enable(false);
     }
 }

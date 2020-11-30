@@ -125,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 470301668440039455, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54
+      value: 0.669
       objectReference: {fileID: 0}
     - target: {fileID: 470301668440039455, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -170,6 +170,26 @@ PrefabInstance:
     - target: {fileID: 2268901697707906360, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_TagString
       value: PotSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_Offset.x
+      value: 7.1641126e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0060096937
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.13667831
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.13667831
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
