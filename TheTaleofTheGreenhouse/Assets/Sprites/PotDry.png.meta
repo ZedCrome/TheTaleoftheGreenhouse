@@ -95,12 +95,12 @@ TextureImporter:
       name: PotDry_0
       rect:
         serializedVersion: 2
-        x: 76
-        y: 46
-        width: 148
-        height: 178
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 60
+        y: 26
+        width: 180
+        height: 220
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
