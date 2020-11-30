@@ -138,7 +138,20 @@ public class ObjectSlot : MonoBehaviour
     
     void OnChangeHandState(PlayerState.HandState state)
     {
-        
+        if (state == PlayerState.HandState.WaterCan && objectInSlot != null)
+        {
+            if (slotType == SlotType.Table)
+            {
+                gameObject.layer = 2;
+            }          
+        }
+        if (state == PlayerState.HandState.None)
+        {
+            if (slotType == SlotType.Table)
+            {
+                gameObject.layer = 0;
+            }
+        }
     }
     
     void OnMouseEnter()
