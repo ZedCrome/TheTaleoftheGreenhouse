@@ -165,6 +165,11 @@ public class ObjectSlot : MonoBehaviour
     
     void OnMouseEnter()
     {
+        if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
+        {
+            return;
+        }
+        
         if (PlayerInteract.instance.allowedTointeract == false)
         {
             return;
@@ -189,6 +194,11 @@ public class ObjectSlot : MonoBehaviour
     
     private void OnMouseOver()
     {
+        if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
+        {
+            return;
+        }
+        
         if (PlayerInteract.instance.allowedTointeract)
         {
             if (isFree == false && objectInSlot != null)
@@ -218,6 +228,11 @@ public class ObjectSlot : MonoBehaviour
     
     private void OnMouseExit()
     {
+        if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
+        {
+            return;
+        }
+        
         if (PlayerState.instance.currentInteractState == PlayerState.InteractState.@select)
         {
             if (isFree == false && objectInSlot != null)
