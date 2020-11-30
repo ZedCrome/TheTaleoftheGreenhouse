@@ -32,7 +32,7 @@ public class PotBehaviour : MonoBehaviour
         Debug.Log("Watered");
     }
 
-    public bool GetWatered()
+    public bool GetIsWatered()
     {
         return isWatered;
     }

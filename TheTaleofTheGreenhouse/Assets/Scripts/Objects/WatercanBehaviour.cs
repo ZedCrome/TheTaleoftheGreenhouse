@@ -25,14 +25,14 @@ public class WatercanBehaviour : MonoBehaviour
             {
                 if (AllowedToDoAction())
                 {
-                    if (PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().potDry)
+                    if (PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().GetIsWatered())
                     {
-                        audioSource.PlayOneShot(wateringSound);
-                        PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();
+                        audioSource.PlayOneShot(alreadyWatered);
                     }
                     else
                     {
-                        audioSource.PlayOneShot(alreadyWatered);
+                        audioSource.PlayOneShot(wateringSound);
+                        PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();
                     }
                     
                 }

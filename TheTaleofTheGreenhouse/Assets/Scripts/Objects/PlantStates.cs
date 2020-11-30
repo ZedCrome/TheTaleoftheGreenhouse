@@ -80,7 +80,7 @@ public class PlantStates : MonoBehaviour
 
     void OnSleep()
     {
-        IsWatered = transform.parent.parent.GetComponent<PotBehaviour>().GetWatered();
+        IsWatered = transform.parent.parent.GetComponent<PotBehaviour>().GetIsWatered();
 
         if (isWatered == false)
         {
