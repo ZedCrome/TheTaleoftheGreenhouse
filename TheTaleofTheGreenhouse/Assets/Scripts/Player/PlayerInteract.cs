@@ -16,8 +16,7 @@ public class PlayerInteract : MonoBehaviour
 
     public bool allowedTointeract = false;
     private bool leftMouseButtonLock = false;
-    private bool rightMouseButtonLock = false;
-    
+
     void Start()
     {
         if( instance == null ) {
@@ -55,75 +54,79 @@ public class PlayerInteract : MonoBehaviour
 
         if (allowedTointeract)
         {
-            if(Input.GetMouseButtonDown(0) && leftMouseButtonLock == false)
+            if(Input.GetMouseButtonDown(0))
             {
-                if(interactObject != null && inventoryItem == null && leftMouseButtonLock == false)
+                if (PlayerState.instance.currentInteractState == PlayerState.InteractState.@select && leftMouseButtonLock == false)
                 {
-                    inventoryItem = interactObject.GetComponent<ObjectSlot>().GetThisObject();
-
-                    if (inventoryItem.tag == "WaterCan")
+                    if (interactObject != null && inventoryItem == null)
                     {
-                        PlayerState.instance.ChangeHandState(PlayerState.HandState.WaterCan);
+                        PickUp(interactObject.GetComponent<ObjectSlot>().GetThisObject());
                     }
-
-                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
                     
                     leftMouseButtonLock = true;
-                    interactSound.Play();
                 }
-            
-                if(interactObject != null && inventoryItem != null && leftMouseButtonLock == false)
+                else if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement && leftMouseButtonLock == false)
                 {
-                    bool result = interactObject.GetComponent<ObjectSlot>().FillSlot(inventoryItem);
-
-                    if(result)
+                    if (interactObject != null && inventoryItem != null)
                     {
-                        inventoryItem = null;
-                        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
-                        PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
-                    
-                    
-                        interactSound.Play();
+                        Place(inventoryItem);
                     }
-                
+                    
                     leftMouseButtonLock = true;
-                }   
-            }
-
-            if (Input.GetMouseButtonDown(1) && rightMouseButtonLock == false)
-            {
-                if(PlayerState.instance.currentHandState == PlayerState.HandState.WaterCan)
-                {
-                    if(interactObject != null)
-                    {
-                        if (interactObject.CompareTag("PotSlot"))
-                        {
-                            audioSource.PlayOneShot(wateringSound);
-                            interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();
-                        }
-                    }
-        
-                    rightMouseButtonLock = true;
                 }
             }
         }
         
+        // Follow cursor, removed later?
         if(inventoryItem != null)
         {
             Vector3 newObjectPosition = new Vector3(mousePosition.x, mousePosition.y, 10);
             newObjectPosition = Camera.main.ScreenToWorldPoint(newObjectPosition);
             inventoryItem.transform.position = new Vector3(newObjectPosition.x, newObjectPosition.y, -0.7f);
-      
-            
         }
         
         if(Input.GetMouseButtonUp(0))
         {
             leftMouseButtonLock = false;
         }
-        if(Input.GetMouseButtonUp(1))
+    }
+
+    private void PickUp(GameObject pickedObject)
+    {
+        inventoryItem = pickedObject;
+        
+        switch (pickedObject.tag)
         {
-            rightMouseButtonLock = false;
+            case "WaterCan":
+            
+                PlayerState.instance.ChangeHandState(PlayerState.HandState.WaterCan);
+                break;
+            
+            default:
+                
+                PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
+                break;
+        }
+        
+        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.placement);
+        interactSound.Play();
+    }
+
+    private void Place(GameObject placeObject)
+    {
+        bool result = interactObject.GetComponent<ObjectSlot>().FillSlot(placeObject);
+
+        if(result)
+        {
+            inventoryItem = null;
+            PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
+            PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
+            
+            interactSound.Play();
+        }
+        else
+        {
+            //Feedback sound not able to place
         }
     }
 }

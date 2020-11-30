@@ -10,7 +10,6 @@ public class PlayerState : MonoBehaviour
     public enum InteractState
     {
         select,
-        tool,
         placement
     }
 
