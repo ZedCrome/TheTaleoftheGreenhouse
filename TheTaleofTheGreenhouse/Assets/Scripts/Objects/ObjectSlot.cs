@@ -224,6 +224,9 @@ public class ObjectSlot : MonoBehaviour
         }
 
         ChangeMouseCursor.instance.inputObjectTag = "Default";
-        objectInSlot.GetComponent<InteractableEffect>().Enable(false);
+        if (gameObject.HasComponent<InteractableEffect>())
+        {
+            objectInSlot.GetComponent<InteractableEffect>().Enable(false);
+        }       
     }
 }
