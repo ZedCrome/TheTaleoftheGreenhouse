@@ -167,34 +167,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotSlot
       objectReference: {fileID: 0}
-    - target: {fileID: 2268901697707906360, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
-      propertyPath: m_TagString
-      value: PotSlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0025535624
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.015098493
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
-      propertyPath: m_Size.x
-      value: 0.09914305
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
-      propertyPath: m_Size.y
-      value: 0.10169661
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
 --- !u!4 &443216915136311847 stripped

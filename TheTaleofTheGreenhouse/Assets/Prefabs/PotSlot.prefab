@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3834041468695749191}
   m_Layer: 0
   m_Name: PotSlot
-  m_TagString: Interactable
+  m_TagString: PotSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030622482, y: 0.0155663695}
-  m_Size: {x: 0.121643186, y: 0.1911329}
+  m_Offset: {x: -0.0020084232, y: 0.0036505065}
+  m_Size: {x: 0.13730314, y: 0.13730314}
   m_Direction: 0
