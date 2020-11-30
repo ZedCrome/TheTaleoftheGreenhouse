@@ -5,7 +5,18 @@ using UnityEngine;
 
 public class WatercanBehaviour : MonoBehaviour
 {
+    public AudioClip wateringSound;
+    public AudioClip alreadyWatered;
+
+    private AudioSource audioSource;
+    
     private bool rightMouseButtonLock = false;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         if (PlayerState.instance.currentHandState == PlayerState.HandState.WaterCan)
@@ -14,7 +25,16 @@ public class WatercanBehaviour : MonoBehaviour
             {
                 if (AllowedToDoAction())
                 {
-                    PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();
+                    if (PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().potDry)
+                    {
+                        audioSource.PlayOneShot(wateringSound);
+                        PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();
+                    }
+                    else
+                    {
+                        audioSource.PlayOneShot(alreadyWatered);
+                    }
+                    
                 }
 
                 rightMouseButtonLock = true;
