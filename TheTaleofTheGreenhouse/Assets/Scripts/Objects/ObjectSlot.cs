@@ -39,6 +39,16 @@ public class ObjectSlot : MonoBehaviour
         }
     }
     
+    private void OnEnable()
+    {
+        PlayerState.instance.onChangeInteractState += OnChangeInteractiveState;
+    }
+    
+    private void OnDisable()
+    {
+        PlayerState.instance.onChangeInteractState -= OnChangeInteractiveState;
+    }
+    
     
     public bool FillSlot(GameObject newObject)
     {
@@ -117,7 +127,11 @@ public class ObjectSlot : MonoBehaviour
         
         return returnObject;
     }
-    
+
+    void OnChangeInteractiveState(PlayerState.InteractState state)
+    {
+        
+    }
     
     void OnMouseEnter()
     {
