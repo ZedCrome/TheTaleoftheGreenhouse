@@ -42,11 +42,13 @@ public class ObjectSlot : MonoBehaviour
     private void OnEnable()
     {
         PlayerState.instance.onChangeInteractState += OnChangeInteractiveState;
+        PlayerState.instance.onChangeHandState += OnChangeHandState;
     }
     
     private void OnDisable()
     {
         PlayerState.instance.onChangeInteractState -= OnChangeInteractiveState;
+        PlayerState.instance.onChangeHandState -= OnChangeHandState;
     }
     
     
@@ -129,6 +131,11 @@ public class ObjectSlot : MonoBehaviour
     }
 
     void OnChangeInteractiveState(PlayerState.InteractState state)
+    {
+        
+    }
+    
+    void OnChangeHandState(PlayerState.HandState state)
     {
         
     }
