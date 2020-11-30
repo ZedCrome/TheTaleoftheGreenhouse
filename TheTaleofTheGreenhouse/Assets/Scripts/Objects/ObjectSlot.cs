@@ -142,14 +142,23 @@ public class ObjectSlot : MonoBehaviour
         {
             if (slotType == SlotType.Table)
             {
-                gameObject.layer = 2;
+                this.gameObject.layer = 2;
             }          
         }
-        if (state == PlayerState.HandState.None)
+
+        else if(state == PlayerState.HandState.Pot && objectInSlot != null)
         {
             if (slotType == SlotType.Table)
             {
-                gameObject.layer = 0;
+                this.gameObject.layer = 2;
+            }
+        }
+
+        else
+        {
+            if (slotType == SlotType.Table)
+            {
+                this.gameObject.layer = 0;
             }
         }
     }
@@ -213,7 +222,7 @@ public class ObjectSlot : MonoBehaviour
         {
             if (isFree == false && objectInSlot != null)
             {
-                objectInSlot.GetComponent<InteractableEffect>().Enable(false);
+               objectInSlot.GetComponent<InteractableEffect>().Enable(false);
                 PlayerInteract.instance.interactObject = null;
             }
         }
@@ -225,9 +234,9 @@ public class ObjectSlot : MonoBehaviour
 
         ChangeMouseCursor.instance.inputObjectTag = "Default";
 
-        if (gameObject.HasComponent<InteractableEffect>())
+        if (objectInSlot.HasComponent<InteractableEffect>())
         {
             objectInSlot.GetComponent<InteractableEffect>().Enable(false);
-        }       
+        }
     }
 }

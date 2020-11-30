@@ -29,7 +29,6 @@ public class PotBehaviour : MonoBehaviour
     {
         isWatered = true;
         renderer.sprite = potWet;
-        Debug.Log("Watered");
     }
 
     public bool GetIsWatered()

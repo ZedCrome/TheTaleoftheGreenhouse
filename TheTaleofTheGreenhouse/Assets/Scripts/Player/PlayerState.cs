@@ -18,7 +18,8 @@ public class PlayerState : MonoBehaviour
     public enum HandState
     {
         None,
-        WaterCan
+        WaterCan,
+        Pot
     }
 
     public HandState currentHandState;

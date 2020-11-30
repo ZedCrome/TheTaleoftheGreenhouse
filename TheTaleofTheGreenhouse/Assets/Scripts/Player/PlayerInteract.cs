@@ -97,13 +97,15 @@ public class PlayerInteract : MonoBehaviour
         
         switch (pickedObject.tag)
         {
-            case "WaterCan":
-            
+            case "WaterCan":           
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.WaterCan);
                 break;
-            
-            default:
-                
+
+            case "Pot":
+                PlayerState.instance.ChangeHandState(PlayerState.HandState.Pot);
+                break;
+
+            default:               
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
                 break;
         }
