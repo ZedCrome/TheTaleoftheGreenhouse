@@ -2,6 +2,11 @@
 
 public class InteractableEffect : MonoBehaviour
 {
+    public bool useShader = false;
+
+    public Material outlineActive;
+    public Material outliveNotActive;
+    
     private SpriteRenderer renderer;
     
     private Color mouseOverColor;
@@ -20,11 +25,39 @@ public class InteractableEffect : MonoBehaviour
     {
         if (isEnabled)
         {
-            renderer.material.color = mouseOverColor;
+            if (useShader)
+            {
+                if (outlineActive != null)
+                {
+                    renderer.material = outlineActive;
+                }
+                else
+                {
+                    Debug.LogError("Material not set");
+                }
+            }
+            else
+            {
+                renderer.material.color = mouseOverColor;
+            }
         }
         else
         {
-            renderer.material.color = standardColor;
+            if (useShader)
+            {
+                if (outliveNotActive != null)
+                {
+                    renderer.material = outliveNotActive;
+                }
+                else
+                {
+                    Debug.LogError("Material not set");
+                }
+            }
+            else
+            {
+                renderer.material.color = standardColor;
+            }
         }
     }
 }
