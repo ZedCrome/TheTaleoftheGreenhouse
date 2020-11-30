@@ -112,6 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980a23ae39d947a48ad2721475314d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useShader: 1
+  outlineActive: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+  outliveNotActive: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
 --- !u!1001 &45114678153613880
 PrefabInstance:
   m_ObjectHideFlags: 0
