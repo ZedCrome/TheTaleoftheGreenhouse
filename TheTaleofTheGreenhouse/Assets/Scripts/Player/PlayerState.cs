@@ -19,7 +19,8 @@ public class PlayerState : MonoBehaviour
     {
         None,
         WaterCan,
-        Pot
+        Pot,
+        Shears
     }
 
     public HandState currentHandState;
