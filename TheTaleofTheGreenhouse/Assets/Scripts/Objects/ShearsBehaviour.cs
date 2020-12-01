@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShearsBehaviour : MonoBehaviour
 {
-    public AudioClip cutSound;
+    public AudioClip[] cutSound;
     public AudioClip alreadyCut;
 
     private AudioSource audioSource;
@@ -27,7 +27,7 @@ public class ShearsBehaviour : MonoBehaviour
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().CutPlant() == true)
                     {
                         PlayerInventory.instance.AddSapling();
-                        audioSource.PlayOneShot(cutSound);
+                        PlayRandomSound();
                     }
                     else
                     {
@@ -69,5 +69,12 @@ public class ShearsBehaviour : MonoBehaviour
         }
 
         return false;
+    }
+
+    void PlayRandomSound()
+    {
+        int random = Random.Range(0, cutSound.Length);
+        
+        audioSource.PlayOneShot(cutSound[random]);
     }
 }
