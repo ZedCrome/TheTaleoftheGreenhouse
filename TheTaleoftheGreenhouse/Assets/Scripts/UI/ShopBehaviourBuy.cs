@@ -48,6 +48,8 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Slider plantAlreadyBought1;
     [SerializeField] private Slider plantCurrentyBuy2;
     [SerializeField] private Slider plantAlreadyBought2;
+    [SerializeField] private Slider plantCurrentlyBuy3;
+    [SerializeField] private Slider plantAlreadyBought3;
     [SerializeField] private int maxPlants = 10;
     [SerializeField] private int plantCost = 2;
     private int plantTotalCost;
@@ -59,10 +61,6 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button manaPlantReduce;
     [SerializeField] private TMP_Text manaPlantAmount;
     [SerializeField] private TMP_Text manaPlantPriceDisplay;
-    [SerializeField] private Slider manaPlantCurrentyBuy1;
-    [SerializeField] private Slider manaPlantAlreadyBought1;
-    [SerializeField] private Slider manaPlantCurrentyBuy2;
-    [SerializeField] private Slider manaPlantAlreadyBought2;
     [SerializeField] private int maxManaPlants = 10;
     [SerializeField] private int manaPlantCost = 5;
     private int manaPlantTotalCost;
@@ -74,10 +72,6 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button manaStorageItemReduce;
     [SerializeField] private TMP_Text manaStorageItemAmount;
     [SerializeField] private TMP_Text manaStorageItemPriceDisplay;
-    [SerializeField] private Slider manaStorageItemCurrentyBuy1;
-    [SerializeField] private Slider manaStorageItemAlreadyBought1;
-    [SerializeField] private Slider manaStorageItemCurrentyBuy2;
-    [SerializeField] private Slider manaStorageItemAlreadyBought2;
     [SerializeField] private int maxManaStorageItems;
     [SerializeField] private int manaStorageItemCost = 4;
     private int manaStorageItemTotalCost;
@@ -205,11 +199,6 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             amountOfManaPlants++;
 
-            if (amountOfManaPlants <= 5)
-                manaPlantCurrentyBuy1.value += 1;
-
-            if (amountOfManaPlants > 5)
-                manaPlantCurrentyBuy2.value += 1;
             manaPlantTotalCost += manaPlantCost;
             totalCost += manaPlantCost;
         }
@@ -222,12 +211,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (amountOfManaPlants > 0)
         {
             amountOfManaPlants--;
-
-            if (amountOfManaPlants < 5)
-                manaPlantCurrentyBuy1.value -= 1;
-
-            if (amountOfManaPlants >= 5)
-                manaPlantCurrentyBuy2.value -= 1;
+            
             manaPlantTotalCost -= manaPlantCost;
             totalCost -= manaPlantCost;
         }
@@ -243,11 +227,6 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             amountOfManaStorageItems++;
             
-            if (amountOfManaStorageItems <= 5)
-                manaStorageItemCurrentyBuy1.value += 1;
-
-            if (amountOfManaStorageItems > 5)
-                manaStorageItemCurrentyBuy2.value += 1;
             manaStorageItemTotalCost += manaStorageItemCost;
             totalCost += manaStorageItemCost;
         }
@@ -260,12 +239,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (amountOfManaStorageItems > 0)
         {
             amountOfManaStorageItems--;
-
-            if (amountOfManaStorageItems < 5)
-                manaStorageItemCurrentyBuy1.value -= 1;
-
-            if (amountOfManaStorageItems >= 5)
-                manaStorageItemCurrentyBuy2.value -= 1;
+            
             manaStorageItemTotalCost -= manaStorageItemCost;
             totalCost -= manaStorageItemCost;
         }
