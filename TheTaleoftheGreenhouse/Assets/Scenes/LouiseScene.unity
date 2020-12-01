@@ -347,6 +347,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &408476481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+  m_PrefabInstance: {fileID: 1582872641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &508292171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1220,6 +1225,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779476711}
   m_CullTransparentMesh: 0
+--- !u!1 &799935660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+  m_PrefabInstance: {fileID: 1426005925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &860712906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1274,7 +1284,7 @@ PrefabInstance:
     - target: {fileID: 7109801632415630886, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: objectInSlot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1255462058}
     - target: {fileID: 7619255260594604707, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Name
       value: PotWithPlant (3)
@@ -2236,6 +2246,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7322338269019238889, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
   m_PrefabInstance: {fileID: 1138872072}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1139878380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+  m_PrefabInstance: {fileID: 1736275379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1144908285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,6 +2505,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7322338269019238889, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
   m_PrefabInstance: {fileID: 1243371714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1255462058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+  m_PrefabInstance: {fileID: 860712906}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1312244549
 PrefabInstance:
@@ -7637,7 +7657,7 @@ PrefabInstance:
     - target: {fileID: 7109801632415630886, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: objectInSlot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 799935660}
     - target: {fileID: 7619255260594604707, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Name
       value: PotWithPlant
@@ -7810,7 +7830,7 @@ PrefabInstance:
     - target: {fileID: 7109801632415630886, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: objectInSlot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 408476481}
     - target: {fileID: 7619255260594604707, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Name
       value: PotWithPlant (2)
@@ -8382,7 +8402,7 @@ PrefabInstance:
     - target: {fileID: 7109801632415630886, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: objectInSlot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1139878380}
     - target: {fileID: 7619255260594604707, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Name
       value: PotWithPlant (5)

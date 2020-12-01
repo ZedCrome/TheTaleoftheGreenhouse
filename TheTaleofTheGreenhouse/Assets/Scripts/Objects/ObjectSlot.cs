@@ -90,7 +90,7 @@ public class ObjectSlot : MonoBehaviour
 
             if (slotType == SlotType.Pot)
             {
-                objectInSlot.transform.parent = transform.parent;
+                objectInSlot.transform.parent = transform;
             }
 
             renderer.enabled = false;
