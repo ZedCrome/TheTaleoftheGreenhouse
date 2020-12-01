@@ -119,10 +119,10 @@ TextureImporter:
       name: 02PlaceholderManaPlants_0
       rect:
         serializedVersion: 2
-        x: 87
+        x: 70
         y: 175
-        width: 83
-        height: 147
+        width: 126
+        height: 191
       alignment: 9
       pivot: {x: 0.47350752, y: 0.04376989}
       border: {x: 0, y: 0, z: 0, w: 0}
