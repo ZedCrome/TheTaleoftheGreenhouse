@@ -104,6 +104,10 @@ public class PlayerInteract : MonoBehaviour
             case "Pot":
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.Pot);
                 break;
+            
+            case "Shears":
+                PlayerState.instance.ChangeHandState(PlayerState.HandState.Shears);
+                break;
 
             default:               
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
