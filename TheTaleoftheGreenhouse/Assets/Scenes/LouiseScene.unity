@@ -1625,8 +1625,8 @@ GameObject:
   - component: {fileID: 1086020605}
   - component: {fileID: 1086020604}
   m_Layer: 0
-  m_Name: Mana Catcher Unlit
-  m_TagString: ManaStorage
+  m_Name: Mana Catcher
+  m_TagString: ManaCatcher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -20,7 +20,8 @@ public class PlayerState : MonoBehaviour
         None,
         WaterCan,
         Pot,
-        Shears
+        Shears,
+        ManaCatcher
     }
 
     public HandState currentHandState;

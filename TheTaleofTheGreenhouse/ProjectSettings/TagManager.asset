@@ -13,6 +13,7 @@ TagManager:
   - Bed
   - PlantNormal
   - PlantMana
+  - ManaCatcher
   layers:
   - Default
   - TransparentFX
