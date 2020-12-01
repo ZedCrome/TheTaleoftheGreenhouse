@@ -11,6 +11,8 @@ TagManager:
   - Pot
   - PotSlot
   - Bed
+  - PlantNormal
+  - PlantMana
   layers:
   - Default
   - TransparentFX

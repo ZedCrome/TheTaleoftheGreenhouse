@@ -88,6 +88,10 @@ public class ObjectSlot : MonoBehaviour
             objectInSlot.transform.position = transform.position;
             objectInSlot.transform.position = objectInSlot.transform.position + positionOffset;
 
+            if (slotType == SlotType.Pot)
+            {
+                objectInSlot.transform.parent = transform.parent;
+            }
 
             renderer.enabled = false;
             

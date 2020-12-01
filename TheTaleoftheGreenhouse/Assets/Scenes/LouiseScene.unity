@@ -181,7 +181,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390811739
 GameObject:
@@ -696,6 +696,7 @@ Transform:
   - {fileID: 1736275380}
   - {fileID: 1086020606}
   - {fileID: 2030937032}
+  - {fileID: 1312244554}
   m_Father: {fileID: 1668071922}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1278,6 +1279,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotWithPlant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: useShader
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: outlineActive
+      value: 
+      objectReference: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: outliveNotActive
+      value: 
+      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
+    - target: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: m_TagString
+      value: PlantMana
+      objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: currenState
       value: 4
@@ -1509,7 +1526,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1083979865
 GameObject:
@@ -2479,7 +2496,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 610668611}
     m_Modifications:
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2487,7 +2504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5459728
+      value: -0.5459728
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2495,15 +2512,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2511,7 +2528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2525,6 +2542,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448486, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_TagString
+      value: PlantNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 7109801632415630886, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: objectInSlot
       value: 
@@ -2533,11 +2554,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotNormalPlant
       objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: useShader
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: outlineActive
+      value: 
+      objectReference: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+    - target: {fileID: 7702503877078866733, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: outliveNotActive
+      value: 
+      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
 --- !u!1 &1312244550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7619255260594604707, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+  m_PrefabInstance: {fileID: 1312244549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1312244554 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
   m_PrefabInstance: {fileID: 1312244549}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1335810958
@@ -7416,7 +7454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1421899729
 GameObject:
@@ -7604,6 +7642,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotWithPlant
       objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: useShader
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: outlineActive
+      value: 
+      objectReference: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: outliveNotActive
+      value: 
+      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
+    - target: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: m_TagString
+      value: PlantMana
+      objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: currenState
       value: 3
@@ -7761,6 +7815,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotWithPlant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: useShader
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: outlineActive
+      value: 
+      objectReference: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: outliveNotActive
+      value: 
+      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
+    - target: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: m_TagString
+      value: PlantMana
+      objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: currenState
       value: 2
@@ -7898,7 +7968,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1605263264
 PrefabInstance:
@@ -8007,7 +8077,7 @@ RectTransform:
   m_Children:
   - {fileID: 779476712}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8183,7 +8253,7 @@ Transform:
   - {fileID: 610668611}
   - {fileID: 1113615147}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &1668071923
 Grid:
@@ -8234,7 +8304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4039021870531704218, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4039021870531704218, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8316,6 +8386,22 @@ PrefabInstance:
     - target: {fileID: 7619255260594604707, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Name
       value: PotWithPlant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: useShader
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: outlineActive
+      value: 
+      objectReference: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+    - target: {fileID: 7702503877078866733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: outliveNotActive
+      value: 
+      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
+    - target: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: m_TagString
+      value: PlantMana
       objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: currenState
@@ -8502,6 +8588,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448486, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_TagString
+      value: PlantNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 7109801632415630886, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: objectInSlot
       value: 
@@ -8510,6 +8600,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotNormalPlant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: useShader
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: outlineActive
+      value: 
+      objectReference: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+    - target: {fileID: 7702503877078866733, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: outliveNotActive
+      value: 
+      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
 --- !u!1 &1946797301 stripped
@@ -8623,7 +8725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6455221381640956469, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6455221381640956469, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8903,5 +9005,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
