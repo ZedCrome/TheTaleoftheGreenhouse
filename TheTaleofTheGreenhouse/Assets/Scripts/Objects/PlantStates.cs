@@ -44,6 +44,17 @@ public class PlantStates : MonoBehaviour
         DayNightCycle.instance.onSleep -= OnSleep;
     }
 
+    public bool CutPlant()
+    {
+        if (currentState == PlantState.FullGrown)
+        {
+            currentState = PlantState.Adult;
+            return true;
+        }
+        
+        return false;
+    }
+
     private void Update()
     {
         spriteRenderer.sprite = currentSprite;
