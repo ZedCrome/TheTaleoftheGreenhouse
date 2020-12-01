@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 833e81550d0a4904d91ed4edc009fd10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7293285127796703798
+    second: Greenhouse klutter first iteration_0
+  - first:
+      213: -2328225178248314338
+    second: Greenhouse klutter first iteration_1
+  - first:
+      213: -3088333672324261802
+    second: Greenhouse klutter first iteration_2
+  - first:
+      213: -9168917765387065085
+    second: Greenhouse klutter first iteration_3
+  - first:
+      213: 7490292900619718813
+    second: Greenhouse klutter first iteration_4
+  - first:
+      213: 7044450257993088409
+    second: Greenhouse klutter first iteration_5
+  - first:
+      213: 860303645225582801
+    second: Greenhouse klutter first iteration_6
+  - first:
+      213: -4767338713623594833
+    second: Greenhouse klutter first iteration_7
+  - first:
+      213: 6837767300986838437
+    second: Greenhouse klutter first iteration_8
+  - first:
+      213: 5734219580917711292
+    second: Greenhouse klutter first iteration_9
+  - first:
+      213: 5222877742254968959
+    second: Greenhouse klutter first iteration_10
+  - first:
+      213: -4307224957517240212
+    second: Greenhouse klutter first iteration_11
+  - first:
+      213: -8730726291945012852
+    second: Greenhouse klutter first iteration_12
+  - first:
+      213: 2438422027709976216
+    second: Greenhouse klutter first iteration_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 175
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1036
+        width: 226
+        height: 729
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdb90851db09ca90800000000000000
+      internalID: -7293285127796703798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1235
+        width: 789
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12836d298b70bfd0800000000000000
+      internalID: -2328225178248314338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_2
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 1492
+        width: 549
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6581c3143e80425d0800000000000000
+      internalID: -3088333672324261802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_3
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 1357
+        width: 444
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309e5531fd571c080800000000000000
+      internalID: -9168917765387065085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_4
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 645
+        width: 322
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90911535bdd2f760800000000000000
+      internalID: 7490292900619718813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_5
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 1166
+        width: 113
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d3691cf2ae2c160800000000000000
+      internalID: 7044450257993088409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_6
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 1038
+        width: 444
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d005a47b9960fb00800000000000000
+      internalID: 860303645225582801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 536
+        width: 154
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa87f7ac2b207ddb0800000000000000
+      internalID: -4767338713623594833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_8
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 868
+        width: 146
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad1a18d121a4ee50800000000000000
+      internalID: 6837767300986838437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_9
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 870
+        width: 128
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb180b0e35a049f40800000000000000
+      internalID: 5734219580917711292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_10
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 904
+        width: 82
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70d66472a36b7840800000000000000
+      internalID: 5222877742254968959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_11
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 719
+        width: 444
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68ec77c8b9a934c0800000000000000
+      internalID: -4307224957517240212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_12
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 202
+        width: 409
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c814471e1ba36d680800000000000000
+      internalID: -8730726291945012852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greenhouse klutter first iteration_13
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 18
+        width: 563
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e04263ae307d120800000000000000
+      internalID: 2438422027709976216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
