@@ -17,6 +17,7 @@ public class ManaCatcherBehavior : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        manaCubeBehavior = new ManaCubeBehavior();
     }
 
     private void Update()
@@ -28,16 +29,14 @@ public class ManaCatcherBehavior : MonoBehaviour
                 if (AllowedToDoAction())
                 {
                     //Make a new cool Action to be able to move around mana
-                    if (PlayerInteract.instance.interactObject.transform.GetComponent<ManaCubeBehavior>().GetMana() == manaCubeBehavior.maxMana)
+                    if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().GetMana() == manaCubeBehavior.maxMana)
                     {
-                        Debug.Log("Dont add mana cuz the cube is full");
-                        audioSource.PlayOneShot(alreadyFull);
+                        //audioSource.PlayOneShot(alreadyFull);
                     }
                     else
                     {
-                        Debug.Log("Trying ti add mana to mana cube");
-                        audioSource.PlayOneShot(storeManaSound);
-                        PlayerInteract.instance.interactObject.transform.GetComponent<ManaCubeBehavior>().AddMana(currentMana);
+                        //audioSource.PlayOneShot(storeManaSound);
+                        PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().AddMana(currentMana);
                     }
 
                 }
@@ -60,9 +59,12 @@ public class ManaCatcherBehavior : MonoBehaviour
         {
             if (PlayerInteract.instance.interactObject != null)
             {
-                if (PlayerInteract.instance.interactObject.CompareTag("ManaStorage"))
+                if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot != null)
                 {
-                    return true;
+                    if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.CompareTag("ManaStorage"))
+                    {
+                        return true;
+                    }
                 }
             }
         }
