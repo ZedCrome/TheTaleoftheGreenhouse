@@ -20,8 +20,10 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Slider tableAlreadyBought2;
     [SerializeField] private int maxTables = 8;
     [SerializeField] private int tableCost = 6;
+    [SerializeField] private int maxBuyTablesAtATime = 3;
+    private int currentlyBuyingTables = 0;
     private int tableTotalCost;
-    private int amountOfTables = 0;
+    private int amountOfTables;
     private int ownedTables = 0;
 
     [Header("Pot")] [Space(5)]
@@ -29,12 +31,16 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button potReduce;
     [SerializeField] private TMP_Text potAmount;
     [SerializeField] private TMP_Text potPriceDisplay;
-    [SerializeField] private Slider potCurrentyBuy1;
+    [SerializeField] private Slider potCurrentBuy1;
     [SerializeField] private Slider potAlreadyBought1;
-    [SerializeField] private Slider potCurrentyBuy2;
+    [SerializeField] private Slider potCurrentBuy2;
     [SerializeField] private Slider potAlreadyBought2;
+    [SerializeField] private Slider potCurrentBuy3;
+    [SerializeField] private Slider potAlreadyBought3;
     [SerializeField] private int maxPots = 10;
     [SerializeField] private int potCost = 1;
+    [SerializeField] private int maxBuyPotsAtATime = 3;
+    private int currentlyBuyingPots = 0;
     private int potTotalCost;
     private int amountOfPots = 0;
     private int ownedPots = 0;
@@ -44,12 +50,6 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button plantReduce;
     [SerializeField] private TMP_Text plantAmount;
     [SerializeField] private TMP_Text plantPriceDisplay;
-    [SerializeField] private Slider plantCurrentyBuy1;
-    [SerializeField] private Slider plantAlreadyBought1;
-    [SerializeField] private Slider plantCurrentyBuy2;
-    [SerializeField] private Slider plantAlreadyBought2;
-    [SerializeField] private Slider plantCurrentlyBuy3;
-    [SerializeField] private Slider plantAlreadyBought3;
     [SerializeField] private int maxPlants = 10;
     [SerializeField] private int plantCost = 2;
     private int plantTotalCost;
@@ -72,24 +72,31 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button manaStorageItemReduce;
     [SerializeField] private TMP_Text manaStorageItemAmount;
     [SerializeField] private TMP_Text manaStorageItemPriceDisplay;
-    [SerializeField] private int maxManaStorageItems;
+    [SerializeField] private Slider manaStorageItemCurrentBuy1;
+    [SerializeField] private Slider manaStorageItemAlreadyBought1;
+    [SerializeField] private Slider manaStorageItemCurrentBuy2;
+    [SerializeField] private Slider manaStorageItemAlreadyBought2;
+    [SerializeField] private int maxManaStorageItems = 9;
     [SerializeField] private int manaStorageItemCost = 4;
+    [SerializeField] private int maxBuyManaStorageItemsAtATime = 3;
+    private int currentlyBuyingManaStorageItems = 0;
     private int manaStorageItemTotalCost;
     private int amountOfManaStorageItems = 0;
     private int ownedManaStorageItems = 0;
-
-
+    
     public void addTable()
     {
-        if (amountOfTables < maxTables)
+        if (currentlyBuyingTables < maxBuyTablesAtATime && amountOfTables < maxTables)
         {
             amountOfTables++;
+            currentlyBuyingTables++;
             
             if (amountOfTables <= 5)
-                tableCurrentyBuy1.value += 1;
+                tableCurrentyBuy1.value++;
             
             if (amountOfTables > 5)
-                tableCurrentyBuy2.value += 1;
+                tableCurrentyBuy2.value++;
+            
             tableTotalCost += tableCost;
             totalCost += tableCost;
         }
@@ -99,15 +106,17 @@ public class ShopBehaviourBuy : MonoBehaviour
     }
     public void reduceTable()
     {
-        if (amountOfTables > 0)
+        if (currentlyBuyingTables > 0)
         {
             amountOfTables--;
-            
+            currentlyBuyingTables--;
+
             if (amountOfTables < 5)
                 tableCurrentyBuy1.value -= 1;
             
             if (amountOfTables >= 5)
                 tableCurrentyBuy2.value -= 1;
+            
             tableTotalCost -= tableCost;
             totalCost -= tableCost;
         }
@@ -119,34 +128,43 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void addPot()
     {
-        if (amountOfPots < maxPots)
+        if (currentlyBuyingPots < maxBuyPotsAtATime && amountOfPots < maxPots)
         {
             amountOfPots++;
+            currentlyBuyingPots++;
             
             if (amountOfPots <= 5)
-                potCurrentyBuy1.value += 1;
+                potCurrentBuy1.value++;
+
+            if (amountOfPots > 5 && amountOfPots <= 11)
+                potCurrentBuy2.value++;
             
-            if (amountOfPots > 5)
-                potCurrentyBuy2.value += 1;
+            if (amountOfPots > 11)
+                potCurrentBuy3.value++;
+            
             potTotalCost += potCost;
             totalCost += potCost;
         }
-
         potPriceDisplay.text = potTotalCost + " Gold";
         totalCostText.text = "Price: " + totalCost + " Gold";
         potAmount.text = amountOfPots.ToString();
     }
     public void reducePot()
     {
-        if (amountOfPots > 0)
+        if (currentlyBuyingPots > 0)
         {
             amountOfPots--;
+            currentlyBuyingPots--;
             
             if (amountOfPots < 5)
-                potCurrentyBuy1.value -= 1;
+                potCurrentBuy1.value -= 1;
             
-            if (amountOfPots >= 5)
-                potCurrentyBuy2.value -= 1;
+            if (amountOfPots >= 5 && amountOfPots < 11)
+                potCurrentBuy2.value -= 1;
+
+            if (amountOfPots >= 11)
+                potCurrentBuy3.value -= 1;
+            
             potTotalCost -= potCost;
             totalCost -= potCost;
         }
@@ -161,12 +179,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (amountOfPlants < maxPlants)
         {
             amountOfPlants++;
-
-            if (amountOfPlants <= 5)
-                plantCurrentyBuy1.value += 1;
-
-            if (amountOfPlants > 5)
-                plantCurrentyBuy2.value += 1;
+            
             plantTotalCost += plantCost;
             totalCost += plantCost;
         }
@@ -179,11 +192,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (amountOfPlants > 0)
         {
             amountOfPlants--;
-            if (amountOfPlants < 5)
-                plantCurrentyBuy1.value -= 1;
-            
-            if (amountOfPlants >= 5)
-                plantCurrentyBuy2.value -= 1;
+
             plantTotalCost -= plantCost;
             totalCost -= plantCost;
         }
@@ -223,9 +232,16 @@ public class ShopBehaviourBuy : MonoBehaviour
     
     public void addManaStorageItem()
     {
-        if (amountOfManaStorageItems < maxManaStorageItems)
+        if (currentlyBuyingManaStorageItems < maxBuyManaStorageItemsAtATime && amountOfManaStorageItems < maxManaStorageItems)
         {
             amountOfManaStorageItems++;
+            currentlyBuyingManaStorageItems++;
+            
+            if (amountOfManaStorageItems <= 4)
+                manaStorageItemCurrentBuy1.value++;
+            
+            if (amountOfManaStorageItems > 4)
+                manaStorageItemCurrentBuy2.value++;
             
             manaStorageItemTotalCost += manaStorageItemCost;
             totalCost += manaStorageItemCost;
@@ -236,14 +252,20 @@ public class ShopBehaviourBuy : MonoBehaviour
     }
     public void reduceManaStorageItem()
     {
-        if (amountOfManaStorageItems > 0)
+        if (currentlyBuyingManaStorageItems > 0)
         {
             amountOfManaStorageItems--;
+            currentlyBuyingManaStorageItems--;
             
+            if (amountOfManaStorageItems < 4)
+                manaStorageItemCurrentBuy1.value -= 1;
+            
+            if (amountOfManaStorageItems >= 4)
+                manaStorageItemCurrentBuy2.value -= 1;
+
             manaStorageItemTotalCost -= manaStorageItemCost;
             totalCost -= manaStorageItemCost;
         }
-
         manaStorageItemPriceDisplay.text = manaStorageItemTotalCost + " Gold";
         totalCostText.text = "Price: " + totalCost + " Gold";
         manaStorageItemAmount.text = amountOfManaStorageItems.ToString();
@@ -251,8 +273,22 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void buy()
     {
-        Debug.Log(playerMoney);
+        tableAlreadyBought1.value = tableCurrentyBuy1.value; 
+        tableAlreadyBought2.value = tableCurrentyBuy2.value;
+        currentlyBuyingTables = 0;
+        currentlyBuyingPots = 0;
+        currentlyBuyingManaStorageItems = 0;
+
+        potAlreadyBought1.value = potCurrentBuy1.value;
+        potAlreadyBought2.value = potCurrentBuy2.value;
+        potAlreadyBought3.value = potCurrentBuy3.value;
+
+        manaStorageItemAlreadyBought1.value = manaStorageItemCurrentBuy1.value;
+        manaStorageItemAlreadyBought2.value = manaStorageItemCurrentBuy2.value;
+        
         playerMoney = playerMoney - totalCost;
+        totalCost = 0;
+        totalCostText.text = "Price: " + totalCost + " Gold";
         playerMoneyText.text = "Purse: " + playerMoney;
     }
 }
