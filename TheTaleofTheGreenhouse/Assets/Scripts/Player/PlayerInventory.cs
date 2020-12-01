@@ -3,8 +3,9 @@
 public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory instance;
-    
-    public GameObject inventoryItem;
+
+    private GameObject item;
+    private bool saplingInInventory;
     
     void Start()
     {
@@ -15,5 +16,23 @@ public class PlayerInventory : MonoBehaviour
 
             Destroy( this );
         }
+    }
+
+    public void AddSapling()
+    {
+        if (saplingInInventory == false)
+        {
+            saplingInInventory = true;
+        }
+    }
+
+    public bool CanCarryMoreSaplings()
+    {
+        if (saplingInInventory == true)
+        {
+            return false;
+        }
+
+        return true;
     }
 }

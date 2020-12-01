@@ -92,6 +92,12 @@ public class ObjectSlot : MonoBehaviour
             {
                 objectInSlot.transform.parent = transform;
             }
+            //Else code is for Table only.
+            //May create bugs for floor. Import table and floor transforms later.
+            else
+            {
+                objectInSlot.transform.parent = transform.parent;
+            }
 
             renderer.enabled = false;
             

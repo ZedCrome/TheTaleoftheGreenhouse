@@ -109,6 +109,10 @@ public class PlayerInteract : MonoBehaviour
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.Shears);
                 break;
 
+            case "ManaCatcher":
+                PlayerState.instance.ChangeHandState(PlayerState.HandState.ManaCatcher);
+                break;
+
             default:               
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
                 break;
