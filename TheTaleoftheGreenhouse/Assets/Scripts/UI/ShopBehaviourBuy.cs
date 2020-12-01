@@ -5,7 +5,8 @@ public class ShopBehaviourBuy : MonoBehaviour
 {
     [Header("Other")] [Space(5)]
     [SerializeField] private TMP_Text totalCostText;
-
+    [SerializeField] private TMP_Text playerMoneyText;
+    public int playerMoney = 99999;
     private int totalCost;
     
     [Header("Table")] [Space(5)]
@@ -83,7 +84,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     private int amountOfManaStorageItems = 0;
     private int ownedManaStorageItems = 0;
 
-    
+
     public void addTable()
     {
         if (amountOfTables < maxTables)
@@ -276,6 +277,8 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void buy()
     {
-        
+        Debug.Log(playerMoney);
+        playerMoney = playerMoney - totalCost;
+        playerMoneyText.text = "Purse: " + playerMoney;
     }
 }
