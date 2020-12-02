@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 128128333139485837}
   m_Layer: 0
   m_Name: Cutting
-  m_TagString: Untagged
+  m_TagString: Cutting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   useShader: 0
   outlineActive: {fileID: 0}
   outliveNotActive: {fileID: 0}
+  manaOutlineActive: {fileID: 0}
 --- !u!114 &128128333139485837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,3 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38344280c693cec44856c8d39f780515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantCutting: []
+  alreadyPlantInPot: {fileID: 0}
