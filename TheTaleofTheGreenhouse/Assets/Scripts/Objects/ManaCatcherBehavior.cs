@@ -25,8 +25,8 @@ public class ManaCatcherBehavior : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        manaCubeBehavior = new ManaCubeBehavior();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        manaCubeBehavior = new ManaCubeBehavior();
     }
 
     private void Update()
