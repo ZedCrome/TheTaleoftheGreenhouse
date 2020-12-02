@@ -27,6 +27,7 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] float eveningIntensity = 0.75f;
     [SerializeField] float nightIntensity = 0f;
     [SerializeField] float transitionTime = 2;
+    private float currentIntensity;
 
     private bool firstMorning = true;
     private bool allowedToSleep = false;
@@ -88,30 +89,47 @@ public class DayNightCycle : MonoBehaviour
     void lightChange()
     {
         
-        
-        
-        if (float.Parse(hourString) > 18 && float.Parse(hourString) < 24f)
+        if (float.Parse(hourString) > 18f && float.Parse(hourString) < 24f)
         {
             
             timer += Time.deltaTime;
             allowedToSleep = true;
-            light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
+            if(!isSleeping)
+                light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
+            else
+                light.intensity = Mathf.Lerp(currentIntensity, nightIntensity, transitionTime * timer);
+            
+            
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
-        } 
-        
-        else if (float.Parse(hourString) > 6 && float.Parse(hourString) < 11f && !firstMorning)
+        }
+        else if (float.Parse(hourString) > 0f && float.Parse(hourString) < 5f)
+        {
+            timer += Time.deltaTime;
+            if (isSleeping)
+            {
+                light.intensity = Mathf.Lerp(currentIntensity, nightIntensity, transitionTime * timer);
+            }
+        }
+
+        else if (float.Parse(hourString) > 6f && float.Parse(hourString) < 11f && !firstMorning)
         {
             sleepText.text = "";
             player.GetComponent<PlayerMovement>().enabled = true;
             player.GetComponent<PlayerRenderer>().enabled = true;
             timer += Time.deltaTime;
             allowedToSleep = false;
-            light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
+            if (!isSleeping)
+            {
+                light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
+            }
+            
             light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
             if(isSleeping)
             {
-                realSecondsPerIngameDay *= 4f;
+                
+                GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
+                realSecondsPerIngameDay *= 8f;
                 isSleeping = false;
             }
         }
@@ -136,8 +154,10 @@ public class DayNightCycle : MonoBehaviour
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPlants = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaPlants = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
+            
+            GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
 
-            realSecondsPerIngameDay /= 4f;
+            realSecondsPerIngameDay /= 8f;
             
             isSleeping = true;
             onSleep?.Invoke();

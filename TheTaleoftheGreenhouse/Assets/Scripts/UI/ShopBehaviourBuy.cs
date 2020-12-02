@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ShopBehaviourBuy : MonoBehaviour
 {
     [Header("Other")] [Space(5)] 
-    [SerializeField] private GameObject buyMenu;
+    [SerializeField] private RectTransform buyMenu;
     [SerializeField] private TMP_Text totalCostText;
     [SerializeField] private TMP_Text playerMoneyText;
     public int playerMoney = 99999;
