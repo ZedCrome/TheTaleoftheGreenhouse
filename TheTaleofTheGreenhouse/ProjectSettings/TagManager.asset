@@ -15,6 +15,7 @@ TagManager:
   - PlantMana
   - ManaCatcher
   - Shears
+  - Cutting
   layers:
   - Default
   - TransparentFX
