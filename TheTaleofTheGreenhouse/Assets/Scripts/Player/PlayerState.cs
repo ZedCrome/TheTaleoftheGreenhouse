@@ -56,6 +56,7 @@ public class PlayerState : MonoBehaviour
         if (newHandState == HandState.None && PlayerInventory.instance.GetCuttingsExist())
         {
             newHandState = HandState.Cutting;
+            ChangeInteractState(InteractState.placement);
         }
         currentHandState = newHandState;
         onChangeHandState?.Invoke(newHandState);

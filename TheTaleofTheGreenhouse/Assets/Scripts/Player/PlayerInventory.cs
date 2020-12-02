@@ -4,6 +4,8 @@ public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory instance;
 
+    public GameObject cuttingPrefab;
+    
     private GameObject item;
     private int cuttingsInInventory;
     public int MaxCuttings = 2;
@@ -18,7 +20,34 @@ public class PlayerInventory : MonoBehaviour
             Destroy( this );
         }
     }
+    
+    private void OnEnable()
+    {
+        PlayerState.instance.onChangeHandState += OnChangeHandState;
+    }
+    
+    private void OnDisable()
+    {
+        PlayerState.instance.onChangeHandState -= OnChangeHandState;
+    }
 
+    void OnChangeHandState(PlayerState.HandState newHandState)
+    {
+        if (newHandState == PlayerState.HandState.Cutting)
+        {
+            SpawnCutting();
+        }
+    }
+
+    public void SpawnCutting()
+    {
+        GameObject newCutting;
+
+        newCutting = Instantiate(cuttingPrefab);
+
+        PlayerInteract.instance.inventoryItem = newCutting;
+    }
+    
     public void AddCutting()
     {
         if (cuttingsInInventory < MaxCuttings)
