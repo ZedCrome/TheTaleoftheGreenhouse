@@ -10,11 +10,11 @@ public class ManaCatcherBehavior : MonoBehaviour
     private AudioSource audioSource;
     private ManaCubeBehavior manaCubeBehavior;
 
-    public int currentMana;
-
     public Sprite emptyCatcher;
     public Sprite firstStageCatcher;
     public Sprite fullStageCatcher;
+
+    public int currentMana;
 
     private bool rightMouseButtonLock = false;
 
@@ -32,19 +32,16 @@ public class ManaCatcherBehavior : MonoBehaviour
             {
                 if (AllowedToDoAction())
                 {
-                    //Make a new cool Action to be able to move around mana
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().GetMana() == manaCubeBehavior.maxMana)
                     {
-                        //audioSource.PlayOneShot(alreadyFull);
+                        audioSource.PlayOneShot(alreadyFull);
                     }
                     else
                     {
-                        //audioSource.PlayOneShot(storeManaSound);
+                        audioSource.PlayOneShot(storeManaSound);
                         PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().AddMana(currentMana);
                     }
-
                 }
-
                 rightMouseButtonLock = true;
             }
         }
