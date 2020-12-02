@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Security.AccessControl;
+using UnityEngine;
 
 public class ManaCatcherBehavior : MonoBehaviour
 {
@@ -7,7 +8,6 @@ public class ManaCatcherBehavior : MonoBehaviour
 
     private AudioSource audioSource;
     private ManaCubeBehavior manaCubeBehavior;
-
 
     private SpriteRenderer spriteRenderer;
     public Sprite emptyCatcher;
@@ -51,7 +51,7 @@ public class ManaCatcherBehavior : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(1) && rightMouseButtonLock == false)
             {
-                if (AllowedToDoAction())
+                if (AllowedToDoCubeAction())
                 {
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().GetMana() == manaCubeBehavior.maxMana)
                     {
@@ -62,6 +62,24 @@ public class ManaCatcherBehavior : MonoBehaviour
                         audioSource.PlayOneShot(storeManaSound);
                         PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().AddMana(giveMana);
                         LoseMana();
+                    }
+                    else
+                    {
+                        audioSource.PlayOneShot(noManaAction);
+                    }
+                }
+
+                if (AllowedToDoPlantAction())
+                {
+                    if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().lostMana)
+                    {
+                        audioSource.PlayOneShot(noManaAction);
+                    }
+                    else if (currentMana < fullValue)
+                    {
+                        audioSource.PlayOneShot(storeManaSound);
+                        currentMana = PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaPlantBehavior>().GiveMana(currentMana);
+                        PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().lostMana = true;
                     }
                     else
                     {
@@ -79,7 +97,7 @@ public class ManaCatcherBehavior : MonoBehaviour
     }
 
     //Only works on ManaStorage right now.
-    private bool AllowedToDoAction()
+    private bool AllowedToDoCubeAction()
     {
         if (PlayerInteract.instance.allowedTointeract)
         {
@@ -88,6 +106,24 @@ public class ManaCatcherBehavior : MonoBehaviour
                 if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot != null)
                 {
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.CompareTag("ManaStorage"))
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private bool AllowedToDoPlantAction()
+    {
+        if (PlayerInteract.instance.allowedTointeract)
+        {
+            if (PlayerInteract.instance.interactObject != null)
+            {
+                if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot != null)
+                {
+                    if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.CompareTag("PlantMana"))
                     {
                         return true;
                     }
