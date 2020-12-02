@@ -185,6 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf2f3e2a0e7b1546b353073001ee650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cuttingPrefab: {fileID: 5854508913341120964, guid: c9f23c372ef1af248b9bc0f1c9e8b4b3, type: 3}
+  MaxCuttings: 2
 --- !u!114 &123942522
 MonoBehaviour:
   m_ObjectHideFlags: 0
