@@ -55,7 +55,7 @@ public class DayNightCycle : MonoBehaviour
 
     void Start()
     {
-        buyMenuCanvas = GameObject.Find("PlaceholderShop");
+        buyMenuCanvas = GameObject.Find("Shop");
 
         if (light == null)
         {
@@ -80,6 +80,7 @@ public class DayNightCycle : MonoBehaviour
         hourHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
         minuteHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay * hoursPerDay);
         
+
         lightChange();
     }
 
@@ -91,12 +92,12 @@ public class DayNightCycle : MonoBehaviour
         
         if (float.Parse(hourString) > 18 && float.Parse(hourString) < 24f)
         {
+            
             timer += Time.deltaTime;
             allowedToSleep = true;
             light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
-            
         } 
         
         else if (float.Parse(hourString) > 6 && float.Parse(hourString) < 11f && !firstMorning)
@@ -109,8 +110,8 @@ public class DayNightCycle : MonoBehaviour
             light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
             light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
             if(isSleeping)
-            { 
-                realSecondsPerIngameDay *= 4;
+            {
+                realSecondsPerIngameDay *= 4f;
                 isSleeping = false;
             }
         }
