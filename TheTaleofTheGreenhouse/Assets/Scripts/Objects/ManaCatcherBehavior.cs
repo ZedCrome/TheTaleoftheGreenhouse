@@ -12,6 +12,10 @@ public class ManaCatcherBehavior : MonoBehaviour
 
     public int currentMana;
 
+    public Sprite emptyCatcher;
+    public Sprite firstStageCatcher;
+    public Sprite fullStageCatcher;
+
     private bool rightMouseButtonLock = false;
 
     private void Start()
