@@ -4,6 +4,11 @@ public class BedBehavior : MonoBehaviour
 {
     private void OnMouseOver()
     {
+        if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
+        {
+            return;
+        }
+        
         if (Input.GetMouseButtonDown(1))
         {
 
