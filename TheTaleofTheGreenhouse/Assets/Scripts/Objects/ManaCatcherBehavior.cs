@@ -79,7 +79,7 @@ public class ManaCatcherBehavior : MonoBehaviour
                     {
                         audioSource.PlayOneShot(storeManaSound);
                         currentMana = PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaPlantBehavior>().GiveMana(currentMana);
-                        PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().lostMana = true;
+                        PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().hasMana = false;
                     }
                     else
                     {

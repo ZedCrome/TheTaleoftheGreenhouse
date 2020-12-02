@@ -20,7 +20,7 @@ public class PlantStates : MonoBehaviour
     private int daysWithoutWaterLimit = 2;
     private bool isWatered;
 
-    private bool hasMana;
+    public bool hasMana;
     public bool lostMana;
 
     public bool IsWatered
@@ -68,16 +68,19 @@ public class PlantStates : MonoBehaviour
             case PlantState.Sprout:
                 {
                     currentSprite = sproutSprite;
+                    lostMana = true;
                     break;
                 }
             case PlantState.Young:
                 {
                     currentSprite = youngSprite;
+                    lostMana = true;
                     break;
                 }
             case PlantState.Adult:
                 {
                     currentSprite = adultSprite;
+                    lostMana = true;
                     break;
                 }
             case PlantState.FullGrown:
@@ -85,13 +88,13 @@ public class PlantStates : MonoBehaviour
                     currentSprite = fullGrownSprite;
                     if (gameObject.tag == "PlantMana")
                     {
-                        if (lostMana == false)
+                        if (hasMana == true)
                         {
-                            hasMana = true;
+                            lostMana = false;
                         }
                         else
                         {
-                            hasMana = false;
+                            lostMana = true;
                         }
                     }
                     break;
@@ -148,7 +151,7 @@ public class PlantStates : MonoBehaviour
             {
                 if (isWatered)
                 {
-                    lostMana = false;
+                    hasMana = true;
                     currentState = PlantState.FullGrown;
                     transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
                 }
