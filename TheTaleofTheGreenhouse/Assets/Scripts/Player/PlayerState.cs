@@ -21,6 +21,7 @@ public class PlayerState : MonoBehaviour
         WaterCan,
         Pot,
         Shears,
+        Cutting,
         ManaCatcher
     }
 
@@ -52,6 +53,10 @@ public class PlayerState : MonoBehaviour
     public event Action<HandState> onChangeHandState;
     public void ChangeHandState( HandState newHandState ) 
     {
+        if (newHandState == HandState.None && PlayerInventory.instance.GetCuttingsExist())
+        {
+            newHandState = HandState.Cutting;
+        }
         currentHandState = newHandState;
         onChangeHandState?.Invoke(newHandState);
     }

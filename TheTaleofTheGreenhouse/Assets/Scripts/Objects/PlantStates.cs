@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Security.AccessControl;
+using UnityEngine;
 
 public class PlantStates : MonoBehaviour
 {
+    private Sprite currentSprite;
+
     public Sprite deadSprite;
     public Sprite fullGrownSprite;
     public Sprite adultSprite;
     public Sprite youngSprite;
     public Sprite sproutSprite;
-    private Sprite currentSprite;
 
     SpriteRenderer spriteRenderer;
 
@@ -17,6 +19,9 @@ public class PlantStates : MonoBehaviour
     private int daysWithoutWater;
     private int daysWithoutWaterLimit = 2;
     private bool isWatered;
+
+    private bool hasMana;
+    public bool lostMana;
 
     public bool IsWatered
     {
@@ -77,13 +82,24 @@ public class PlantStates : MonoBehaviour
                 }
             case PlantState.FullGrown:
                 {
-                    //Can give Cuttings OR Mana
                     currentSprite = fullGrownSprite;
+                    if (gameObject.tag == "PlantMana")
+                    {
+                        if (lostMana == false)
+                        {
+                            hasMana = true;
+                        }
+                        else
+                        {
+                            hasMana = false;
+                        }
+                    }
                     break;
                 }
             case PlantState.Dead:
                 {
                     currentSprite = deadSprite;
+                    hasMana = false;
                     break;
                 }
         }
@@ -132,6 +148,7 @@ public class PlantStates : MonoBehaviour
             {
                 if (isWatered)
                 {
+                    lostMana = false;
                     currentState = PlantState.FullGrown;
                     transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
                 }
@@ -146,16 +163,13 @@ public class PlantStates : MonoBehaviour
             {
                 transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
 
+
                 if (daysWithoutWater == daysWithoutWaterLimit)
                 {
                     currentState = PlantState.Dead;
-                }
-
+                }               
                 break;
             }
         }
     }
-
-    //take information of the night state
-    //update renderer
 }

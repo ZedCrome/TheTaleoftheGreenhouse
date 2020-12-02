@@ -26,7 +26,7 @@ public class ShearsBehaviour : MonoBehaviour
                 {
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().CutPlant() == true)
                     {
-                        PlayerInventory.instance.AddSapling();
+                        PlayerInventory.instance.AddCutting();
                         PlayRandomSound();
                     }
                     else
@@ -49,7 +49,7 @@ public class ShearsBehaviour : MonoBehaviour
     {
         if (PlayerInteract.instance.allowedTointeract)
         {
-            if (PlayerInventory.instance.CanCarryMoreSaplings()) 
+            if (PlayerInventory.instance.CanCarryMoreCuttings()) 
             {
                 if (PlayerInteract.instance.interactObject != null)
                 {

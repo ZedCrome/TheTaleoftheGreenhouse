@@ -112,6 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980a23ae39d947a48ad2721475314d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useShader: 1
+  outlineActive: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+  outliveNotActive: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
 --- !u!1001 &2068466461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,6 +172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d6ddb67aaeba64fbc52e2b7bd0e0a1, type: 3}
+--- !u!1 &7786478844085587732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7786478845608756233, guid: d9d6ddb67aaeba64fbc52e2b7bd0e0a1, type: 3}
+  m_PrefabInstance: {fileID: 2068466461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3824343343287100717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -239,7 +247,7 @@ PrefabInstance:
     - target: {fileID: 6321324243978134283, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: objectInSlot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7786478844085587732}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
 --- !u!4 &3716618553506759986 stripped

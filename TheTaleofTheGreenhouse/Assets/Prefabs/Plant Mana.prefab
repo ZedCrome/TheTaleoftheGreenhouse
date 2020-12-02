@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7786478845608756237}
   - component: {fileID: 7786478845608756236}
   - component: {fileID: 7786478845608756235}
+  - component: {fileID: 4819839988224401999}
   m_Layer: 0
   m_Name: Plant Mana
   m_TagString: PlantMana
@@ -116,4 +117,17 @@ MonoBehaviour:
   adultSprite: {fileID: -8706243810674129020, guid: 061331339ab57cf45890dc433d425a87, type: 3}
   youngSprite: {fileID: -1982876869122748666, guid: 061331339ab57cf45890dc433d425a87, type: 3}
   sproutSprite: {fileID: -5445424832060668780, guid: 061331339ab57cf45890dc433d425a87, type: 3}
-  currentState: 0
+  currentState: 3
+  lostMana: 0
+--- !u!114 &4819839988224401999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7786478845608756233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b409f96d40d694293114341bd3406c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

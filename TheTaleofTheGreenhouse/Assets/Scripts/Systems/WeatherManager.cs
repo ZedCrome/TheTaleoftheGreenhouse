@@ -10,6 +10,8 @@ public class WeatherManager : MonoBehaviour
 
     public AudioClip audioClip;
     public bool fire;
+
+    public float counter = 0;
     
     private void Start()
     {
@@ -18,11 +20,21 @@ public class WeatherManager : MonoBehaviour
     }
     private void Update()
     {
+
+        if (counter >= 20)
+        {
+            fire = true;
+            counter = 0;
+        }
+        
+        
         if (fire)
         {
             animator.SetTrigger("PlayLightning");
             audioSource.PlayOneShot(audioClip);
             fire = false;
-        }   
+        }
+
+        counter += Time.deltaTime;
     }
 }
