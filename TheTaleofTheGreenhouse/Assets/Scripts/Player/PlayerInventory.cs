@@ -41,10 +41,8 @@ public class PlayerInventory : MonoBehaviour
 
     public void SpawnCutting()
     {
-        GameObject newCutting;
-
-        newCutting = Instantiate(cuttingPrefab);
-
+        GameObject newCutting = PrefabManager.instance.CreateNewObjectInstance("Cutting");
+        
         PlayerInteract.instance.inventoryItem = newCutting;
     }
     
