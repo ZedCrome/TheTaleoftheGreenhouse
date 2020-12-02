@@ -8416,13 +8416,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4039021870531704219, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: potPrefab
+      value: 
+      objectReference: {fileID: 6288598847472336667, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
+    - target: {fileID: 4039021870531704219, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: spawnPot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4039021870531704220, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
       propertyPath: m_Name
       value: Delivery
       objectReference: {fileID: 0}
     - target: {fileID: 4039021870531704220, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
@@ -9038,6 +9046,14 @@ PrefabInstance:
       propertyPath: storeManaSound
       value: 
       objectReference: {fileID: 8300000, guid: 4f50f9939b7bb3043b44fb6f6eb84f48, type: 3}
+    - target: {fileID: 1548467761439843992, guid: 671572ddcabca834b925ab567a13a727, type: 3}
+      propertyPath: noManaAction
+      value: 
+      objectReference: {fileID: 8300000, guid: 9503fa9ac24187444a5d4002e140df64, type: 3}
+    - target: {fileID: 1548467761439843992, guid: 671572ddcabca834b925ab567a13a727, type: 3}
+      propertyPath: currentMana
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1548467761439843993, guid: 671572ddcabca834b925ab567a13a727, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
