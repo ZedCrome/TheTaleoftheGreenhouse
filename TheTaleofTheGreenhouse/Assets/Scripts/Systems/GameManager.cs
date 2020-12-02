@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
         GameLoop,
         Options,
         PauseGame,
+        ShopMenu,
         GameOver,
         Victory
     }
@@ -87,6 +88,10 @@ public class GameManager : MonoBehaviour
 
                 break;
 
+            case GameState.ShopMenu:
+
+                break;
+
             case GameState.GameOver:
 
                 break;
@@ -128,7 +133,6 @@ public class GameManager : MonoBehaviour
             mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
             optionsMenu.SetActive(false);
-
         }
 
         if ( newGameState == GameState.Options )
@@ -146,7 +150,12 @@ public class GameManager : MonoBehaviour
             previousGameState = GameState.PauseGame;
         }
 
-        if( newGameState == GameState.GameOver ) 
+        if (newGameState == GameState.ShopMenu)
+        {
+            previousGameState = GameState.ShopMenu;
+        }
+
+        if ( newGameState == GameState.GameOver ) 
         {
             
         }

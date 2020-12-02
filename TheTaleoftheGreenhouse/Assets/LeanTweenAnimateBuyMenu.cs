@@ -10,5 +10,6 @@ public class LeanTweenAnimateBuyMenu : MonoBehaviour
     void closeShop()
     {
         gameObject.SetActive(false);
+        GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
     }
 }

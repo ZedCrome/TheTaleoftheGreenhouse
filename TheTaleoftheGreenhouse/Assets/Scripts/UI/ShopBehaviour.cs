@@ -18,6 +18,7 @@ public class ShopBehaviour : MonoBehaviour
     void activateShop()
     {
         buyMenu.SetActive(true);
+        GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
     }
 
 
