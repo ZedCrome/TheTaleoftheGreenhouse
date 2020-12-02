@@ -5,7 +5,8 @@ public class PlayerInventory : MonoBehaviour
     public static PlayerInventory instance;
 
     private GameObject item;
-    private bool saplingInInventory;
+    private int cuttingsInInventory;
+    public int MaxCuttings = 2;
     
     void Start()
     {
@@ -18,21 +19,31 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    public void AddSapling()
+    public void AddCutting()
     {
-        if (saplingInInventory == false)
+        if (cuttingsInInventory < MaxCuttings)
         {
-            saplingInInventory = true;
+            cuttingsInInventory += 1;
         }
     }
 
-    public bool CanCarryMoreSaplings()
+    public bool CanCarryMoreCuttings()
     {
-        if (saplingInInventory == true)
+        if (cuttingsInInventory == MaxCuttings)
         {
             return false;
         }
 
         return true;
+    }
+
+    public bool GetCuttingsExist()
+    {
+        if (cuttingsInInventory > 0)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
