@@ -2,9 +2,11 @@
 
 public class LeanTweenAnimateBuyMenu : MonoBehaviour
 {
+    public RectTransform buyMenu;
     public void exit()
     {
-        LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.5f).setOnComplete(closeShop);
+        
+        LeanTween.scale(buyMenu, new Vector3(0, 0, 0), 0.5f).setOnComplete(closeShop);
     }
 
     void closeShop()

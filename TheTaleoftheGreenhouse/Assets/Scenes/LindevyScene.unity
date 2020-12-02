@@ -1332,6 +1332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
+--- !u!224 &1033913235 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3097841064373663089, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+  m_PrefabInstance: {fileID: 3097841062476880545}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1041565895
 GameObject:
   m_ObjectHideFlags: 0
@@ -8788,6 +8793,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3097841064373663093, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: buyMenu
+      value: 
+      objectReference: {fileID: 1033913235}
     - target: {fileID: 3097841064511172186, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.752
