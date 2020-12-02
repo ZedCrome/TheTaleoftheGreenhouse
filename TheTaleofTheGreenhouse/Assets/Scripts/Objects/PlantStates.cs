@@ -148,6 +148,7 @@ public class PlantStates : MonoBehaviour
             {
                 if (isWatered)
                 {
+                    lostMana = false;
                     currentState = PlantState.FullGrown;
                     transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
                 }
@@ -162,7 +163,6 @@ public class PlantStates : MonoBehaviour
             {
                 transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
 
-                lostMana = false;
 
                 if (daysWithoutWater == daysWithoutWaterLimit)
                 {
