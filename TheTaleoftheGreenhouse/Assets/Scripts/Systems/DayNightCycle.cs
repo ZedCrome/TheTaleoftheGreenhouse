@@ -55,7 +55,10 @@ public class DayNightCycle : MonoBehaviour
 
     void Start()
     {
-        light = FindObjectOfType<Light2D>();
+        if (light == null)
+        {
+            light = FindObjectOfType<Light2D>();
+        }
     }
     
     
