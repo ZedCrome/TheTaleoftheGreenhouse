@@ -6,7 +6,7 @@ using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 [DefaultExecutionOrder(-9)]
 public class DayNightCycle : MonoBehaviour
 {
-    
+    private GameObject buyMenuCanvas;
     public static DayNightCycle instance;
     public Light2D light;
     public float realSecondsPerIngameDay;
@@ -55,6 +55,8 @@ public class DayNightCycle : MonoBehaviour
 
     void Start()
     {
+        buyMenuCanvas = GameObject.Find("PlaceholderShop");
+
         if (light == null)
         {
             light = FindObjectOfType<Light2D>();
@@ -78,7 +80,6 @@ public class DayNightCycle : MonoBehaviour
         hourHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
         minuteHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay * hoursPerDay);
         
-
         lightChange();
     }
 
@@ -90,16 +91,12 @@ public class DayNightCycle : MonoBehaviour
         
         if (float.Parse(hourString) > 18 && float.Parse(hourString) < 24f)
         {
-            
             timer += Time.deltaTime;
             allowedToSleep = true;
             light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
-            // if (isSleeping)
-            // {
-            //     realSecondsPerIngameDay *= 4;
-            // }
+            
         } 
         
         else if (float.Parse(hourString) > 6 && float.Parse(hourString) < 11f && !firstMorning)
@@ -111,11 +108,11 @@ public class DayNightCycle : MonoBehaviour
             allowedToSleep = false;
             light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
             light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
-            // if(isSleeping)
-            // {
-            //     realSecondsPerIngameDay /= 4;
-            //     isSleeping = false;
-            // }
+            if(isSleeping)
+            { 
+                realSecondsPerIngameDay *= 4;
+                isSleeping = false;
+            }
         }
         else
         {
@@ -133,6 +130,13 @@ public class DayNightCycle : MonoBehaviour
             sleepText.text = "Sleeping";
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<PlayerRenderer>().enabled = false;
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingTables = 0;
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPots = 0;
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPlants = 0;
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaPlants = 0;
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
+
+            realSecondsPerIngameDay /= 4f;
             
             isSleeping = true;
             onSleep?.Invoke();

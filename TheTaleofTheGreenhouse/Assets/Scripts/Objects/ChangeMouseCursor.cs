@@ -12,6 +12,7 @@ public class ChangeMouseCursor : MonoBehaviour
     public Texture2D compostTexture;
     public Texture2D shopTexture;
     public Texture2D bedTexture;
+    
 
     public CursorMode cursMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
