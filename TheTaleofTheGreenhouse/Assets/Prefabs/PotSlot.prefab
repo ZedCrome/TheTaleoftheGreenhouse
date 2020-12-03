@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
-  allowPot: 0
-  allowWaterCan: 0
+  blockPot: 0
+  blockWaterCan: 0
+  blockCutting: 1
   slotType: 1
   objectToPut: {fileID: 0}
 --- !u!70 &3834041468695749191

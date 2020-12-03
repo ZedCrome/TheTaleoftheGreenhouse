@@ -15,8 +15,9 @@ public class ObjectSlot : MonoBehaviour
 
     [Header("Options")]
 
-    public bool allowPot = true;
-    public bool allowWaterCan;
+    public bool blockPot = true;
+    public bool blockWaterCan;
+    public bool blockCutting;
 
     public SlotType slotType;
 
@@ -54,13 +55,11 @@ public class ObjectSlot : MonoBehaviour
     
     public bool FillSlot(GameObject newObject)
     {
-        /*
-        if(CheckAllowObject(newObject.tag) == false)
+        if(CheckBlockObject(newObject.tag))
         {
             return false;
         }
-        */
-        
+
         if(isFree)
         {
             objectInSlot = newObject;
@@ -69,19 +68,19 @@ public class ObjectSlot : MonoBehaviour
                 case SlotType.Table:
                     {
                         positionOffset = tablePositionOffset;
-                        allowWaterCan = true;
+                        blockWaterCan = true;
                         break;
                     }
                 case SlotType.Pot:
                     {
                         positionOffset = potPositionOffset;
-                        allowWaterCan = false;
+                        blockWaterCan = false;
                         break;
                     }
                 case SlotType.Floor:
                     {
                         positionOffset = floorPositionOffset;
-                        allowWaterCan = true;
+                        blockWaterCan = true;
                         break;
                     }
             }
@@ -110,19 +109,25 @@ public class ObjectSlot : MonoBehaviour
         }
     }
 
-    private bool CheckAllowObject(string tag)
+    private bool CheckBlockObject(string tag)
     {
         switch (tag)
         {
             case "Pot":
 
-                if (allowWaterCan)
+                if (blockPot)
                     return true;
                 break;
             
             case "WaterCan":
 
-                if (allowWaterCan)
+                if (blockWaterCan)
+                    return true;
+                break;
+            
+            case "Cutting":
+
+                if (blockCutting)
                     return true;
                 break;
         }
