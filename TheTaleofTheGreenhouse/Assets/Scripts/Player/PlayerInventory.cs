@@ -42,7 +42,7 @@ public class PlayerInventory : MonoBehaviour
     public void SpawnCutting()
     {
         GameObject newCutting = PrefabManager.instance.CreateNewObjectInstance("Cutting");
-        
+        cuttingsInInventory -= 1;
         PlayerInteract.instance.inventoryItem = newCutting;
     }
     

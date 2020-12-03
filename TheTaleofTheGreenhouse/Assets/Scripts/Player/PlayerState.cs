@@ -57,6 +57,10 @@ public class PlayerState : MonoBehaviour
         {
             newHandState = HandState.Cutting;
             ChangeInteractState(InteractState.placement);
+        } 
+        else if (newHandState == HandState.None)
+        {
+            ChangeInteractState(InteractState.@select);
         }
         currentHandState = newHandState;
         onChangeHandState?.Invoke(newHandState);
