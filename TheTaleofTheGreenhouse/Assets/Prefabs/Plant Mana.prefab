@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5969eb4b0c3cd439beea92153189d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadSprite: {fileID: 842238172451944131, guid: 061331339ab57cf45890dc433d425a87, type: 3}
+  deadSprite: {fileID: 356298416488667711, guid: d6703a388f776d248b8b771224868a9e, type: 3}
   fullGrownSprite: {fileID: 879394335079051125, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   adultSprite: {fileID: -6268252528135226146, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   youngSprite: {fileID: -2349953502984988040, guid: 442d71d55774f0a43b292e172e77608d, type: 3}

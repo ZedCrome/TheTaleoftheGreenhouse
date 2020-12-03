@@ -135,6 +135,7 @@ public class DayNightCycle : MonoBehaviour
                 realSecondsPerIngameDay *= 8f;
                 isAlreadySleeping = false;
                 isSleeping = false;
+                nightCanvas.SetActive(false);
             }
         }
         else
