@@ -8,6 +8,8 @@ public class ManaManager : MonoBehaviour
     public GameObject seccondLitRune;
     public GameObject finalLitRune;
 
+    public GameObject askPanel;
+
     private float firstRuneValue = 0.27f;
     private float seccondRuneValue = 0.63f;
     private float finalRuneValue = 0.98f;
@@ -21,19 +23,19 @@ public class ManaManager : MonoBehaviour
     private ManaCubeBehavior[] manaCubes;
     public int numberOfCubes;
 
+    private GameObject[] manaCubesFound;
+
     private void Start()
     {
         knifeSlider = knifeSlider.GetComponent<Slider>();
         knifeSlider.value = 0;
 
-        numberOfCubes = GameObject.FindGameObjectsWithTag("ManaStorage").Length;
         manaCubes = new ManaCubeBehavior[9];
     }
 
 
     private void Update()
     {
-        //Just testing a math values now to tweek later
         knifeSlider.value = currentMana / 70;
 
         switch(currentRuneState)
@@ -86,26 +88,28 @@ public class ManaManager : MonoBehaviour
         }
     }
 
-
-    public void AddCube()
-    {
-        numberOfCubes++;
-    }
-
-
     public void AskToExtractMana()
     {
-        //Make a ask panel
-        //You wanna extract mana from all cubes? YES / NO ?
-        //No go back
-        //Yes do ExtractCubeMana();
+        askPanel.SetActive(true);
+    }
+
+    public void ExitAskPanel()
+    {
+        askPanel.SetActive(false);
     }
 
     public void ExtractCubeMana()
     {
+        numberOfCubes = GameObject.FindGameObjectsWithTag("ManaStorage").Length;
+        manaCubesFound = GameObject.FindGameObjectsWithTag("ManaStorage");
+
         for (int i = 0; i < numberOfCubes; i++)
         {
+            manaCubes[i] = manaCubesFound[i].GetComponent<ManaCubeBehavior>();
             currentMana += manaCubes[i].storedMana;
+            manaCubesFound[i].GetComponent<ManaCubeBehavior>().storedMana = 0;
         }
+
+        askPanel.SetActive(false);
     }
 }
