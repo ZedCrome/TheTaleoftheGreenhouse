@@ -7,16 +7,14 @@ using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 [DefaultExecutionOrder(-9)]
 public class DayNightCycle : MonoBehaviour
 {
+    [SerializeField] GameObject nightCanvas;
     private GameObject buyMenuCanvas;
     public static DayNightCycle instance;
-    public Light2D light;
     public float realSecondsPerIngameDay;
-    [SerializeField] GameObject nightCanvas;
-    public RectTransform nightPanel;
     public float nightFadeDuration;
-
-    [Header("Day-Settings")]
-    [Space(20)]
+    public Light2D light;
+    public RectTransform nightPanel;
+    
     public static float day;
     public float hoursPerDay = 24f;
     public float minutesPerHour = 60f;
@@ -60,8 +58,7 @@ public class DayNightCycle : MonoBehaviour
     void Start()
     {
         buyMenuCanvas = GameObject.Find("Shop");
-
-
+        
         if (light == null)
         {
             light = FindObjectOfType<Light2D>();
@@ -93,9 +90,9 @@ public class DayNightCycle : MonoBehaviour
     {
         if (float.Parse(hourString) > 18f && float.Parse(hourString) < 24f)
         {
-            
             timer += Time.deltaTime;
             allowedToSleep = true;
+            
             if(!isSleeping)
                 light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
 
@@ -111,6 +108,7 @@ public class DayNightCycle : MonoBehaviour
         else if (float.Parse(hourString) > 0f && float.Parse(hourString) < 5 && !firstMorning)
         {
             allowedToSleep = true;
+            
             if (isSleeping)
                 nightFadeIn();
         }
@@ -122,12 +120,14 @@ public class DayNightCycle : MonoBehaviour
             player.GetComponent<PlayerRenderer>().enabled = true;
             timer += Time.deltaTime;
             allowedToSleep = false;
+            
             if (!isSleeping)
             {
                 light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
             }
             
             light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
+            
             if(isSleeping)
             {
                 nightFadeOut();
@@ -143,18 +143,21 @@ public class DayNightCycle : MonoBehaviour
         }
     }
 
+    
     void nightFadeIn()
     {
         LeanTween.alpha(nightPanel, 1f, nightFadeDuration).setEase(LeanTweenType.linear);
     }
 
+    
     void nightFadeOut()
     {
         LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
     }
     
+    
     public event Action onSleep;
-
+    
     public void Sleep()
     {
         
