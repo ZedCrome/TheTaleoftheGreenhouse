@@ -170,7 +170,9 @@ public class DayNightCycle : MonoBehaviour
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingTables = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPots = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPlants = 0;
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().plantCurrentBuy1.value = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaPlants = 0;
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().manaPlantCurrentBuy1.value = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
             
             GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);

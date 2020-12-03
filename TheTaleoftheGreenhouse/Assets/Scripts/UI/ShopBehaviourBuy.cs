@@ -51,6 +51,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button plantReduce;
     [SerializeField] private TMP_Text plantAmount;
     [SerializeField] private TMP_Text plantPriceDisplay;
+    public Slider plantCurrentBuy1;
     [SerializeField] private int maxPlants = 10;
     [SerializeField] private int plantCost = 2;
     [SerializeField] private int maxBuyPlantsAtATime = 3;
@@ -64,6 +65,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button manaPlantReduce;
     [SerializeField] private TMP_Text manaPlantAmount;
     [SerializeField] private TMP_Text manaPlantPriceDisplay;
+    public Slider manaPlantCurrentBuy1;
     [SerializeField] private int maxManaPlants = 10;
     [SerializeField] private int manaPlantCost = 5;
     [SerializeField] private int maxBuyManaPlantsAtATime = 3;
@@ -184,10 +186,11 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (currentlyBuyingPlants < maxBuyPlantsAtATime && amountOfPlants < maxPlants) {
 
             amountOfPlants++;
-        currentlyBuyingPlants++;
+            currentlyBuyingPlants++;
+            plantCurrentBuy1.value++;
 
-        plantTotalCost += plantCost;
-        totalCost += plantCost;
+            plantTotalCost += plantCost;
+            totalCost += plantCost;
         }
 
     plantPriceDisplay.text = plantTotalCost + " Gold";
@@ -200,6 +203,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             amountOfPlants--;
             currentlyBuyingPlants--;
+            plantCurrentBuy1.value--;
             
             plantTotalCost -= plantCost;
             totalCost -= plantCost;
@@ -216,6 +220,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             amountOfManaPlants++;
             currentlyBuyingManaPlants++;
+            manaPlantCurrentBuy1.value++;
 
             manaPlantTotalCost += manaPlantCost;
             totalCost += manaPlantCost;
@@ -230,6 +235,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             amountOfManaPlants--;
             currentlyBuyingManaPlants--;
+            manaPlantCurrentBuy1.value--;
             
             manaPlantTotalCost -= manaPlantCost;
             totalCost -= manaPlantCost;
@@ -289,6 +295,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         potAlreadyBought1.value = potCurrentBuy1.value;
         potAlreadyBought2.value = potCurrentBuy2.value;
         potAlreadyBought3.value = potCurrentBuy3.value;
+
+        //plantCurrentBuy1.value = 0;
+
+        //manaPlantCurrentBuy1.value = 0;
 
         manaStorageItemAlreadyBought1.value = manaStorageItemCurrentBuy1.value;
         manaStorageItemAlreadyBought2.value = manaStorageItemCurrentBuy2.value;
