@@ -27,16 +27,24 @@ public class CuttingBehaviour : MonoBehaviour
                 {
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot == null)
                     {
+                        GameObject objectToDestroy;
+
+                        GameObject newPlantObject = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
+
+                        if (newPlantObject != null)
+                        {
+                            objectToDestroy = PlayerInteract.instance.inventoryItem;
+                            PlayerInteract.instance.inventoryItem = null;
+                            Destroy(objectToDestroy);
+                            PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().FillSlot(newPlantObject);
                         
+                            PlayerState.instance.currentHandState = PlayerState.HandState.None;
+                            audioSource.PlayOneShot(Tools.GetRandomSound(plantCutting));
+                        }
                     }
                     else
                     {
-                        
-                    }
-                    if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().CutPlant() == true)
-                    {
-                        PlayerInventory.instance.AddCutting();
-                        PlayRandomSound();
+                        audioSource.PlayOneShot(alreadyPlantInPot);
                     }
                 }
 
@@ -64,12 +72,5 @@ public class CuttingBehaviour : MonoBehaviour
         }
 
         return false;
-    }
-
-    void PlayRandomSound()
-    {
-        //int random = Random.Range(0, cutSound.Length);
-        
-        //audioSource.PlayOneShot(cutSound[random]);
     }
 }

@@ -26,7 +26,7 @@ public class ShearsBehaviour : MonoBehaviour
                 {
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().CutPlant() == true)
                     {
-                        //PlayerInventory.instance.AddCutting();
+                        PlayerInventory.instance.AddCutting();
                         audioSource.PlayOneShot(Tools.GetRandomSound(cutSound));
                     }
                     else
@@ -69,12 +69,5 @@ public class ShearsBehaviour : MonoBehaviour
         }
 
         return false;
-    }
-
-    void PlayRandomSound()
-    {
-        int random = Random.Range(0, cutSound.Length);
-        
-        audioSource.PlayOneShot(cutSound[random]);
     }
 }
