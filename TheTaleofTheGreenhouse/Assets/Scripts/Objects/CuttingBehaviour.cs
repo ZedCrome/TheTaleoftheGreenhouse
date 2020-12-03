@@ -36,9 +36,10 @@ public class CuttingBehaviour : MonoBehaviour
                             objectToDestroy = PlayerInteract.instance.inventoryItem;
                             PlayerInteract.instance.inventoryItem = null;
                             Destroy(objectToDestroy);
+                            newPlantObject.transform.localScale = new Vector3(1,1,1);
                             PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().FillSlot(newPlantObject);
                         
-                            PlayerState.instance.currentHandState = PlayerState.HandState.None;
+                            PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
                             audioSource.PlayOneShot(Tools.GetRandomSound(plantCutting));
                         }
                     }
