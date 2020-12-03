@@ -15,7 +15,7 @@ public class ObjectSlot : MonoBehaviour
 
     [Header("Options")]
 
-    public bool blockPot = true;
+    public bool blockPot;
     public bool blockWaterCan;
     public bool blockCutting;
 
