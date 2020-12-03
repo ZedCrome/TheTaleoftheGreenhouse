@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5445424832060668780, guid: 061331339ab57cf45890dc433d425a87, type: 3}
+  m_Sprite: {fileID: 5346046493363410607, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,11 +114,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadSprite: {fileID: 842238172451944131, guid: 061331339ab57cf45890dc433d425a87, type: 3}
-  fullGrownSprite: {fileID: -1472077784152280170, guid: 061331339ab57cf45890dc433d425a87, type: 3}
-  adultSprite: {fileID: -8706243810674129020, guid: 061331339ab57cf45890dc433d425a87, type: 3}
-  youngSprite: {fileID: -1982876869122748666, guid: 061331339ab57cf45890dc433d425a87, type: 3}
-  sproutSprite: {fileID: -5445424832060668780, guid: 061331339ab57cf45890dc433d425a87, type: 3}
+  fullGrownSprite: {fileID: 879394335079051125, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
+  adultSprite: {fileID: -6268252528135226146, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
+  youngSprite: {fileID: -2349953502984988040, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
+  sproutSprite: {fileID: 5346046493363410607, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   currentState: 3
+  hasMana: 0
   lostMana: 0
 --- !u!114 &4819839988224401999
 MonoBehaviour:
