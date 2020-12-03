@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: d54e3fb9ea679b3498e2e636dc751236
+guid: 442d71d55774f0a43b292e172e77608d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3364676934462373349
-    second: manaplant dry_0
+      213: 5346046493363410607
+    second: manaplant 02_0
   - first:
-      213: -679225173708505958
-    second: manaplant dry_1
+      213: -2349953502984988040
+    second: manaplant 02_1
   - first:
-      213: 1071166470419260413
-    second: manaplant dry_2
+      213: -6268252528135226146
+    second: manaplant 02_2
   - first:
-      213: -8414047034864048830
-    second: manaplant dry_3
-  - first:
-      213: 5483262247722120833
-    second: manaplant dry_4
-  - first:
-      213: 7848529589867504631
-    second: manaplant dry_5
+      213: 879394335079051125
+    second: manaplant 02_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,106 +101,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: manaplant dry_0
+      name: manaplant 02_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 153
-        width: 136
+        x: 27
+        y: 152
+        width: 138
         height: 117
       alignment: 9
-      pivot: {x: 0.56, y: 0.33}
+      pivot: {x: 0.5493898, y: 0.3585243}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ed749658dbb1be20800000000000000
-      internalID: 3364676934462373349
+      spriteID: fa616ad06f8f03a40800000000000000
+      internalID: 5346046493363410607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: manaplant dry_1
+      name: manaplant 02_1
       rect:
         serializedVersion: 2
-        x: 375
+        x: 374
         y: 87
-        width: 172
-        height: 174
+        width: 173
+        height: 175
       alignment: 9
-      pivot: {x: 0.47878835, y: 0.57181436}
+      pivot: {x: 0.47748685, y: 0.59458643}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9cf99e9d48e296f0800000000000000
-      internalID: -679225173708505958
+      spriteID: 87a15e75db9436fd0800000000000000
+      internalID: -2349953502984988040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: manaplant dry_2
+      name: manaplant 02_2
       rect:
         serializedVersion: 2
-        x: 706
+        x: 704
         y: 62
-        width: 193
-        height: 252
+        width: 195
+        height: 253
       alignment: 9
-      pivot: {x: 0.5, y: 0.5182531}
+      pivot: {x: 0.4750338, y: 0.5153943}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df326a4ca3c8dde00800000000000000
-      internalID: 1071166470419260413
+      spriteID: edc3e0a4981b209a0800000000000000
+      internalID: -6268252528135226146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: manaplant dry_3
+      name: manaplant 02_3
       rect:
         serializedVersion: 2
-        x: 900
-        y: 202
-        width: 4
-        height: 8
+        x: 1065
+        y: 61
+        width: 206
+        height: 338
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4527333, y: 0.38477108}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 245ef732dcc4b3b80800000000000000
-      internalID: -8414047034864048830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: manaplant dry_4
-      rect:
-        serializedVersion: 2
-        x: 1067
-        y: 58
-        width: 204
-        height: 339
-      alignment: 9
-      pivot: {x: 0.4633795, y: 0.40383726}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18679c576f5781c40800000000000000
-      internalID: 5483262247722120833
+      spriteID: 57fa0ef0d7c343c00800000000000000
+      internalID: 879394335079051125
       vertices: []
       indices: 
       edges: []

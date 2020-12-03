@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 18c7b0c16ac74b846a7516417f1f5388
+guid: d6703a388f776d248b8b771224868a9e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4583448054439774863
-    second: manaplant_0
+      213: -1131669711182684302
+    second: manaplant dry 02_0
   - first:
-      213: 2637545464596222666
-    second: manaplant_1
+      213: 356298416488667711
+    second: manaplant dry 02_1
   - first:
-      213: -1396361701792062573
-    second: manaplant_2
+      213: -4893288330032946871
+    second: manaplant dry 02_2
   - first:
-      213: -4280841690231949063
-    second: manaplant_3
+      213: 6153498109927345619
+    second: manaplant dry 02_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,85 +101,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: manaplant_0
+      name: manaplant dry 02_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 152
-        width: 138
-        height: 117
+        x: 26
+        y: 151
+        width: 139
+        height: 119
       alignment: 9
-      pivot: {x: 0.54559666, y: 0.35158518}
+      pivot: {x: 0.57004917, y: 0.34453768}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8a865ba8bdab9f30800000000000000
-      internalID: 4583448054439774863
+      spriteID: 27f13edb4608b40f0800000000000000
+      internalID: -1131669711182684302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: manaplant_1
+      name: manaplant dry 02_1
       rect:
         serializedVersion: 2
-        x: 374
+        x: 372
         y: 87
-        width: 173
-        height: 175
+        width: 177
+        height: 176
       alignment: 9
-      pivot: {x: 0.46986327, y: 0.57944196}
+      pivot: {x: 0.4669936, y: 0.555323}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac2533030a17a9420800000000000000
-      internalID: 2637545464596222666
+      spriteID: f3a57d4a583d1f400800000000000000
+      internalID: 356298416488667711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: manaplant_2
+      name: manaplant dry 02_2
       rect:
         serializedVersion: 2
-        x: 704
-        y: 62
-        width: 195
-        height: 253
-      alignment: 9
-      pivot: {x: 0.48007655, y: 0.5225323}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39369b23e602f9ce0800000000000000
-      internalID: -1396361701792062573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: manaplant_3
-      rect:
-        serializedVersion: 2
-        x: 1065
+        x: 702
         y: 61
-        width: 206
-        height: 338
+        width: 202
+        height: 254
       alignment: 9
-      pivot: {x: 0.45810914, y: 0.39414725}
+      pivot: {x: 0.48071894, y: 0.5115002}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f8ba02e9256794c0800000000000000
-      internalID: -4280841690231949063
+      spriteID: 94162d8803c871cb0800000000000000
+      internalID: -4893288330032946871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manaplant dry 02_3
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 58
+        width: 207
+        height: 340
+      alignment: 9
+      pivot: {x: 0.45766577, y: 0.3883127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddc148aded956550800000000000000
+      internalID: 6153498109927345619
       vertices: []
       indices: 
       edges: []
