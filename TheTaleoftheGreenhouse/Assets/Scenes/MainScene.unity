@@ -1117,6 +1117,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7786478844085587732, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
   m_PrefabInstance: {fileID: 1674213479}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &475375145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475375147}
+  - component: {fileID: 475375146}
+  m_Layer: 0
+  m_Name: Post Processing (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &475375146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475375145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c182a50730cff6d49b992b701f3a3293, type: 2}
+--- !u!4 &475375147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475375145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.055999, y: -0.49889654, z: -24.819637}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &595596920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1497,7 +1545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &720413165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,7 +2157,7 @@ GameObject:
   - component: {fileID: 1050136572}
   - component: {fileID: 1050136574}
   - component: {fileID: 1050136573}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: Fireflies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7715,7 +7763,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455384886
 GameObject:
@@ -7855,7 +7903,7 @@ GameObject:
   - component: {fileID: 1479316034}
   - component: {fileID: 1479316036}
   - component: {fileID: 1479316035}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Compost Flies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12667,7 +12715,7 @@ GameObject:
   - component: {fileID: 1488402350}
   - component: {fileID: 1488402352}
   - component: {fileID: 1488402351}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17770,7 +17818,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1606504693 stripped
 GameObject:
@@ -17833,8 +17881,8 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 257
-  m_VolumeTrigger: {fileID: 720413166}
-  m_RenderPostProcessing: 0
+  m_VolumeTrigger: {fileID: 475375147}
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -17922,6 +17970,10 @@ PrefabInstance:
     - target: {fileID: 7261686874708260484, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: m_Name
       value: TimeManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261686874708260484, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: light
@@ -18145,6 +18197,10 @@ PrefabInstance:
     - target: {fileID: 1989935360096772072, guid: ce70f30d70cebff4e8649fcf052f4b51, type: 3}
       propertyPath: m_Name
       value: WeatherManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989935360096772072, guid: ce70f30d70cebff4e8649fcf052f4b51, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1989935360096772074, guid: ce70f30d70cebff4e8649fcf052f4b51, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18818,7 +18874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1923925112}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19094,6 +19150,10 @@ PrefabInstance:
     - target: {fileID: 4294054427765634960, guid: 11fdcc1b1124009459edef28718c81e9, type: 3}
       propertyPath: m_Name
       value: ManaManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294054427765634960, guid: 11fdcc1b1124009459edef28718c81e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4294054427765634961, guid: 11fdcc1b1124009459edef28718c81e9, type: 3}
       propertyPath: unlitRunes
@@ -19459,6 +19519,10 @@ PrefabInstance:
     - target: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4340752410127216994, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: realSecondsPerIngameDay
