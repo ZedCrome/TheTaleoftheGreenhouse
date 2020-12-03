@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e1766c94b3e35a14f904cccb049da381, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3604c1dac52ebce498174540d25eaa92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   useShader: 1
   outlineActive: {fileID: 2100000, guid: b17ac974bd2a2b840b3b7d9784b26a3b, type: 2}
   outliveNotActive: {fileID: 2100000, guid: f69180e3cee4acb4fb06085b0bedaac7, type: 2}
+  manaOutlineActive: {fileID: 0}
 --- !u!114 &6458013563326544172
 MonoBehaviour:
   m_ObjectHideFlags: 0
