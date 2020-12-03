@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: dabf0ed9f85a43f4fa07c1dbd7e447ea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8591533231565066105
+    second: plant_0
+  - first:
+      213: -7955193268978623404
+    second: plant_1
+  - first:
+      213: 897878412386164280
+    second: plant_2
+  - first:
+      213: -8035952563824040590
+    second: plant_3
+  - first:
+      213: -4807000962642994248
+    second: plant_4
+  - first:
+      213: -1834414038415029590
+    second: plant_5
+  - first:
+      213: 3563450211287396523
+    second: plant_6
+  - first:
+      213: 7050161957002004369
+    second: plant_7
+  - first:
+      213: 2362167693445892924
+    second: plant_8
+  - first:
+      213: 1974747534596792872
+    second: plant_9
+  - first:
+      213: 2081129612548366391
+    second: plant_10
+  - first:
+      213: -6336453194232770394
+    second: plant_11
+  - first:
+      213: -6588013064155580756
+    second: plant_12
+  - first:
+      213: 1569793652351610587
+    second: plant_13
+  - first:
+      213: 628617045051657192
+    second: plant_14
+  - first:
+      213: 4973239524936225076
+    second: plant_15
+  - first:
+      213: 6245811245539080203
+    second: plant_16
+  - first:
+      213: 5121536010671198940
+    second: plant_17
+  - first:
+      213: -125952973741506531
+    second: plant_18
+  - first:
+      213: 7746865604754763627
+    second: plant_19
+  - first:
+      213: 1410139835946021562
+    second: plant_20
+  - first:
+      213: -4836406465060539216
+    second: plant_21
+  - first:
+      213: -4447449169076639181
+    second: plant_22
+  - first:
+      213: -5520831902606502547
+    second: plant_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 175
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: plant_0
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 44
+        width: 283
+        height: 339
+      alignment: 9
+      pivot: {x: 0.5303144, y: 0.022425188}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f466744f14b3770800000000000000
+      internalID: 8591533231565066105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plant_3
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 56
+        width: 282
+        height: 403
+      alignment: 9
+      pivot: {x: 0.53507704, y: 0.02008545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275e06138bf8a7090800000000000000
+      internalID: -8035952563824040590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plant_4
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 41
+        width: 285
+        height: 465
+      alignment: 9
+      pivot: {x: 0.5330961, y: 0.018869732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb14b2d71a1a4db0800000000000000
+      internalID: -4807000962642994248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plant_19
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 27
+        width: 201
+        height: 193
+      alignment: 9
+      pivot: {x: 0.45929083, y: 0.03708186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f691e0935628b60800000000000000
+      internalID: 7746865604754763627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
