@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 
 [DefaultExecutionOrder(-9)]
@@ -10,6 +11,9 @@ public class DayNightCycle : MonoBehaviour
     public static DayNightCycle instance;
     public Light2D light;
     public float realSecondsPerIngameDay;
+    [SerializeField] GameObject nightCanvas;
+    public RectTransform nightPanel;
+    public float nightFadeDuration;
 
     [Header("Day-Settings")]
     [Space(20)]
@@ -22,16 +26,15 @@ public class DayNightCycle : MonoBehaviour
 
     [SerializeField] Color dayColor;
     [SerializeField] Color eveningColor;
-    [SerializeField] Color nightColor;
     [SerializeField] float dayIntensity = 1f;
     [SerializeField] float eveningIntensity = 0.75f;
-    [SerializeField] float nightIntensity = 0f;
     [SerializeField] float transitionTime = 2;
     private float currentIntensity;
 
     private bool firstMorning = true;
     private bool allowedToSleep = false;
     private bool isSleeping = false;
+    private bool isAlreadySleeping = false;
     
     private float timer = 0;
 
@@ -58,6 +61,7 @@ public class DayNightCycle : MonoBehaviour
     {
         buyMenuCanvas = GameObject.Find("Shop");
 
+
         if (light == null)
         {
             light = FindObjectOfType<Light2D>();
@@ -81,14 +85,12 @@ public class DayNightCycle : MonoBehaviour
         hourHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
         minuteHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay * hoursPerDay);
         
-
         lightChange();
     }
 
 
     void lightChange()
     {
-        
         if (float.Parse(hourString) > 18f && float.Parse(hourString) < 24f)
         {
             
@@ -96,20 +98,21 @@ public class DayNightCycle : MonoBehaviour
             allowedToSleep = true;
             if(!isSleeping)
                 light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
-            else
-                light.intensity = Mathf.Lerp(currentIntensity, nightIntensity, transitionTime * timer);
-            
+
+            if (isSleeping)
+            {
+                nightCanvas.SetActive(true);
+                nightFadeIn();
+            }
             
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
         }
-        else if (float.Parse(hourString) > 0f && float.Parse(hourString) < 5f)
+        else if (float.Parse(hourString) > 0f && float.Parse(hourString) < 5 && !firstMorning)
         {
-            timer += Time.deltaTime;
+            allowedToSleep = true;
             if (isSleeping)
-            {
-                light.intensity = Mathf.Lerp(currentIntensity, nightIntensity, transitionTime * timer);
-            }
+                nightFadeIn();
         }
 
         else if (float.Parse(hourString) > 6f && float.Parse(hourString) < 11f && !firstMorning)
@@ -127,9 +130,10 @@ public class DayNightCycle : MonoBehaviour
             light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
             if(isSleeping)
             {
-                
+                nightFadeOut();
                 GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
                 realSecondsPerIngameDay *= 8f;
+                isAlreadySleeping = false;
                 isSleeping = false;
             }
         }
@@ -137,6 +141,16 @@ public class DayNightCycle : MonoBehaviour
         {
             timer = 0f;
         }
+    }
+
+    void nightFadeIn()
+    {
+        LeanTween.alpha(nightPanel, 1f, nightFadeDuration).setEase(LeanTweenType.linear);
+    }
+
+    void nightFadeOut()
+    {
+        LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
     }
     
     public event Action onSleep;
@@ -160,6 +174,7 @@ public class DayNightCycle : MonoBehaviour
             realSecondsPerIngameDay /= 8f;
             
             isSleeping = true;
+            
             onSleep?.Invoke();
         }
             

@@ -464,6 +464,10 @@ PrefabInstance:
       propertyPath: currenState
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7972109991216438733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8441495157108865422, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -625,6 +629,10 @@ PrefabInstance:
       propertyPath: currenState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7972109991216438733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
 --- !u!4 &400144621 stripped
@@ -1528,7 +1536,7 @@ PrefabInstance:
     - target: {fileID: 6561766927265245912, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6633665670527974838, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
       propertyPath: m_Name
       value: Pot (5)
@@ -2272,6 +2280,10 @@ PrefabInstance:
       propertyPath: currentState
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7972109991216438733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
 --- !u!1 &1396677892
@@ -2459,7 +2471,7 @@ PrefabInstance:
     - target: {fileID: 7972109991216438733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
 --- !u!1 &1424980738 stripped
@@ -2893,6 +2905,10 @@ PrefabInstance:
       propertyPath: currentState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7972109991216438733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8441495157108865422, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3357,7 +3373,7 @@ PrefabInstance:
     - target: {fileID: 6561766927265245912, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6633665670527974838, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
       propertyPath: m_Name
       value: Pot (4)
@@ -3434,7 +3450,7 @@ PrefabInstance:
     - target: {fileID: 7972109991216438733, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
 --- !u!1001 &1906375577
@@ -8858,6 +8874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 1006554520}
     - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: hourHandTransform
       value: 
