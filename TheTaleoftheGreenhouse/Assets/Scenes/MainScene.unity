@@ -5704,8 +5704,8 @@ Transform:
   m_Children:
   - {fileID: 1606504694}
   - {fileID: 1376506933}
-  - {fileID: 1568383563}
   - {fileID: 1029974638}
+  - {fileID: 1568383563}
   - {fileID: 1564116378}
   - {fileID: 967523565}
   - {fileID: 363156387}
@@ -6188,10 +6188,22 @@ PrefabInstance:
       propertyPath: isWatered
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3825320173428252734, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
+      propertyPath: potDry
+      value: 
+      objectReference: {fileID: 21300000, guid: 7cec81c61ac88d94dbda3101b446be3b, type: 3}
+    - target: {fileID: 3825320173428252734, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
+      propertyPath: potWet
+      value: 
+      objectReference: {fileID: 21300000, guid: 6687cdc8f421e5445a9495fa382826bf, type: 3}
     - target: {fileID: 6276220625549865267, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
       propertyPath: slotType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6561766927265245912, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7cec81c61ac88d94dbda3101b446be3b, type: 3}
     - target: {fileID: 6633665670527974838, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
       propertyPath: m_Name
       value: Pot (2)
@@ -11414,7 +11426,7 @@ Transform:
   - {fileID: 831186345}
   - {fileID: 1109898744}
   m_Father: {fileID: 375123948}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1051093723 stripped
 Transform:

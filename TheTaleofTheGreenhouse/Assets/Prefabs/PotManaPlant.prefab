@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4366964281426810755, guid: b1330feed77990f408aa7cc5fe75adb1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7cec81c61ac88d94dbda3101b446be3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWatered: 0
-  potDry: {fileID: 4366964281426810755, guid: b1330feed77990f408aa7cc5fe75adb1, type: 3}
-  potWet: {fileID: -6771828102280464785, guid: a3b82d3cf7979d5458f9323a6d83e418, type: 3}
+  potDry: {fileID: 21300000, guid: 7cec81c61ac88d94dbda3101b446be3b, type: 3}
+  potWet: {fileID: 21300000, guid: 6687cdc8f421e5445a9495fa382826bf, type: 3}
 --- !u!114 &7702503877078866733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   useShader: 1
   outlineActive: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
   outliveNotActive: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
+  manaOutlineActive: {fileID: 0}
 --- !u!1001 &2068466461
 PrefabInstance:
   m_ObjectHideFlags: 0
