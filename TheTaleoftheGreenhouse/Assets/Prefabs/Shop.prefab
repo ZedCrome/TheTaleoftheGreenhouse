@@ -9034,6 +9034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51934d1714298b34d8d0b12be88b8997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyMenu: {fileID: 0}
 --- !u!1 &3097841064440994368
 GameObject:
   m_ObjectHideFlags: 0
@@ -9496,7 +9497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3775137312368484a94b3dd984d67a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyMenu: {fileID: 3097841064373663086}
+  buyMenu: {fileID: 3097841064373663089}
   totalCostText: {fileID: 3097841063228425397}
   playerMoneyText: {fileID: 3097841062966606809}
   playerMoney: 99999
