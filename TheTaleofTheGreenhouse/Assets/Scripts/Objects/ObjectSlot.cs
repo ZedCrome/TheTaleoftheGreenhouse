@@ -68,19 +68,19 @@ public class ObjectSlot : MonoBehaviour
                 case SlotType.Table:
                     {
                         positionOffset = tablePositionOffset;
-                        blockWaterCan = true;
+                        blockWaterCan = false;
                         break;
                     }
                 case SlotType.Pot:
                     {
                         positionOffset = potPositionOffset;
-                        blockWaterCan = false;
+                        blockWaterCan = true;
                         break;
                     }
                 case SlotType.Floor:
                     {
                         positionOffset = floorPositionOffset;
-                        blockWaterCan = true;
+                        blockWaterCan = false;
                         break;
                     }
             }
