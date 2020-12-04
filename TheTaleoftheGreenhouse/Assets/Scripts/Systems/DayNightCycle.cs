@@ -71,11 +71,9 @@ public class DayNightCycle : MonoBehaviour
         Debugger.instance.Log("Allowed To Sleep: ", allowedToSleep);
         
         day += Time.deltaTime / realSecondsPerIngameDay;
-        
         float dayNormalized = day % 1f;
         
         hourString = Mathf.Floor(dayNormalized * hoursPerDay).ToString("00");
-
         minutesString = Mathf.Floor(((dayNormalized * hoursPerDay) % 1f) * minutesPerHour).ToString("00");
 
         float rotationDegreesPerDay = 360f;
@@ -135,6 +133,7 @@ public class DayNightCycle : MonoBehaviour
                 isAlreadySleeping = false;
                 isSleeping = false;
                 DelayCoroutine();
+                nightCanvas.SetActive(false);
             }
         }
         else
@@ -158,7 +157,6 @@ public class DayNightCycle : MonoBehaviour
     IEnumerator DelayCoroutine()
     {
         yield return new WaitForSeconds(1);
-        nightCanvas.SetActive(false);
     }
     
     public event Action onSleep;
@@ -187,6 +185,5 @@ public class DayNightCycle : MonoBehaviour
             
             onSleep?.Invoke();
         }
-            
     }
 }
