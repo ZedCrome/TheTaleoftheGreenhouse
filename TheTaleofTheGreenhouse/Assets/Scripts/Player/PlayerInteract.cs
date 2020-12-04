@@ -93,6 +93,11 @@ public class PlayerInteract : MonoBehaviour
 
     private void PickUp(GameObject pickedObject)
     {
+        if (pickedObject == null)
+        {
+            return;
+        }
+        
         inventoryItem = pickedObject;
         
         switch (pickedObject.tag)
