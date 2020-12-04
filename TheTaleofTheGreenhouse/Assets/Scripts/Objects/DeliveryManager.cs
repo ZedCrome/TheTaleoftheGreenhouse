@@ -4,11 +4,17 @@ using UnityEngine;
 public class DeliveryManager : MonoBehaviour
 {
     public GameObject potPrefab;
-    public GameObject plantPrefab;
-    
+    public GameObject planManatPrefab;
+    public GameObject plantNormalPrefab;
+    public GameObject manaCubePrefab;
+    public GameObject tablePrefab;
+
     public bool spawnPot;
-    public bool spawnPlant;
-    
+    public bool spawnPlantMana;
+    public bool spawnPlantNormal;
+    public bool spawnPlantCube;
+    public bool spawnPlantTable;
+
     private List<ObjectSlot> objectSlot = new List<ObjectSlot>();
     
     void Start()
