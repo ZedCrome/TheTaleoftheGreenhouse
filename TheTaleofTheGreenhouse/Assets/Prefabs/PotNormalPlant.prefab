@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4366964281426810755, guid: b1330feed77990f408aa7cc5fe75adb1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7cec81c61ac88d94dbda3101b446be3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWatered: 0
-  potDry: {fileID: 4366964281426810755, guid: b1330feed77990f408aa7cc5fe75adb1, type: 3}
-  potWet: {fileID: -6771828102280464785, guid: a3b82d3cf7979d5458f9323a6d83e418, type: 3}
+  potDry: {fileID: 21300000, guid: 7cec81c61ac88d94dbda3101b446be3b, type: 3}
+  potWet: {fileID: 21300000, guid: 6687cdc8f421e5445a9495fa382826bf, type: 3}
 --- !u!114 &7702503877078866733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980a23ae39d947a48ad2721475314d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useShader: 1
+  outlineActive: {fileID: 2100000, guid: aa6ace6caae3fe14e9400b6493d1cc1b, type: 2}
+  outliveNotActive: {fileID: 2100000, guid: 152938080539b2f4bb23a22c86c0f6f3, type: 2}
+  manaOutlineActive: {fileID: 2100000, guid: 0f73c38430b13164abb31fd026de4067, type: 2}
 --- !u!1001 &3824343343287100717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -197,6 +201,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3716618553506759986}
     m_Modifications:
+    - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 356298416488667711, guid: d6703a388f776d248b8b771224868a9e, type: 3}
+    - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
+      propertyPath: fullGrownSprite
+      value: 
+      objectReference: {fileID: -4807000962642994248, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
+    - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
+      propertyPath: adultSprite
+      value: 
+      objectReference: {fileID: -8035952563824040590, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
+    - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
+      propertyPath: youngSprite
+      value: 
+      objectReference: {fileID: 8591533231565066105, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
+    - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
+      propertyPath: sproutSprite
+      value: 
+      objectReference: {fileID: 7746865604754763627, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
     - target: {fileID: 8910795290822507585, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -241,6 +265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8910795290822507586, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7746865604754763627, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
     - target: {fileID: 8910795290822507590, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
       propertyPath: m_Name
       value: Plant Normal
