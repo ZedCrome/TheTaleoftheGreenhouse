@@ -92,6 +92,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     public int currentlyBuyingManaStorageItems = 0;
 
     public GameObject delivery;
+    public bool hasOrderedItems;
 
     public void addTable()
     {
@@ -291,11 +292,16 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void buy()
     {
-        delivery = GameObject.FindGameObjectWithTag("Delivery");
-        delivery.GetComponent<DeliveryManager>().spawnPot = currentlyBuyingPots;
-        delivery.GetComponent<DeliveryManager>().spawnPlantMana = currentlyBuyingManaPlants;
-        delivery.GetComponent<DeliveryManager>().spawnPlantNormal = currentlyBuyingPlants;
-        delivery.GetComponent<DeliveryManager>().spawnManaCube = currentlyBuyingManaStorageItems;
+        if (hasOrderedItems == false)
+        {
+            delivery = GameObject.FindGameObjectWithTag("Delivery");
+            delivery.GetComponent<DeliveryManager>().spawnPot = currentlyBuyingPots;
+            delivery.GetComponent<DeliveryManager>().spawnPlantMana = currentlyBuyingManaPlants;
+            delivery.GetComponent<DeliveryManager>().spawnPlantNormal = currentlyBuyingPlants;
+            delivery.GetComponent<DeliveryManager>().spawnManaCube = currentlyBuyingManaStorageItems;
+        }
+
+        hasOrderedItems = true;
 
         tableAlreadyBought1.value = tableCurrentyBuy1.value; 
         tableAlreadyBought2.value = tableCurrentyBuy2.value;
@@ -311,7 +317,6 @@ public class ShopBehaviourBuy : MonoBehaviour
         totalCost = 0;
         totalCostText.text = "Price: " + totalCost + " Gold";
         playerMoneyText.text = "Purse: " + playerMoney + " Gold";
-    }
 
-    
+    }  
 }
