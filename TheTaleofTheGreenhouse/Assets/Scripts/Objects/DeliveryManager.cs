@@ -5,10 +5,10 @@ public class DeliveryManager : MonoBehaviour
 {
     public GameObject shopItems;
     
-    public bool spawnPot;
-    public bool spawnPlantMana;
-    public bool spawnPlantNormal;
-    public bool spawnManaCube;
+    public int spawnPot;
+    public int spawnPlantMana;
+    public int spawnPlantNormal;
+    public int spawnManaCube;
     //public bool spawnPlantTable;
 
     private List<ObjectSlot> objectSlot = new List<ObjectSlot>();
@@ -26,29 +26,30 @@ public class DeliveryManager : MonoBehaviour
     
     void Update()
     {
-        if (spawnPot)
+        if (spawnPot > 0)
         {
             foreach (ObjectSlot slot in objectSlot)
             {
                 if (slot.objectInSlot == null)
                 {
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("Pot");
-                    for (int i = 0; i < shopItems.GetComponent<ShopBehaviourBuy>().currentlyBuyingPots; i++)
-                    {                                             
-                       
-                        Debug.Log("Trying to add a pot");
-                        slot.FillSlot(clone);
+                    
+                    bool result = slot.FillSlot(clone);
+
+                    if (result == false)
+                    {
+                        Debug.LogError("Object seems to be blocked in ObjectSlot");
                     }
-                    spawnPot = false;
+                    
                     break;
                 }
             }
-
-            spawnPot = false;
+            
+            spawnPot -= 1;
         }
 
 
-        if (spawnPlantMana)
+        if (spawnPlantMana > 0)
         {
             foreach (ObjectSlot slot in objectSlot)
             {
@@ -57,18 +58,22 @@ public class DeliveryManager : MonoBehaviour
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("PlantMana");
 
                     clone.transform.localScale = new Vector3(1, 1, 1);
-                    slot.FillSlot(clone);
+                    bool result = slot.FillSlot(clone);
 
-                    spawnPlantMana = false;
+                    if (result == false)
+                    {
+                        Debug.LogError("Object seems to be blocked in ObjectSlot");
+                    }
+                    
                     break;
                 }
             }
-
-            spawnPlantNormal = false;
+            
+            spawnPlantMana -= 1;
         }
 
 
-        if (spawnPlantNormal)
+        if (spawnPlantNormal > 0)
         {
             foreach (ObjectSlot slot in objectSlot)
             {
@@ -77,18 +82,23 @@ public class DeliveryManager : MonoBehaviour
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
 
                     clone.transform.localScale = new Vector3(1, 1, 1);
-                    slot.FillSlot(clone);
+                    bool result = slot.FillSlot(clone);
 
-                    spawnPlantNormal = false;
+                    if (result == false)
+                    {
+                        Debug.LogError("Object seems to be blocked in ObjectSlot");
+                    }
+                    
+                    
                     break;
                 }
             }
-
-            spawnPlantNormal = false;
+            
+            spawnPlantNormal -= 1;
         }
 
 
-        if (spawnManaCube)
+        if (spawnManaCube > 0)
         {
             foreach (ObjectSlot slot in objectSlot)
             {
@@ -96,14 +106,18 @@ public class DeliveryManager : MonoBehaviour
                 {
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("ManaStorage");
 
-                    slot.FillSlot(clone);
+                    bool result = slot.FillSlot(clone);
 
-                    spawnPlantNormal = false;
+                    if (result == false)
+                    {
+                        Debug.LogError("Object seems to be blocked in ObjectSlot");
+                    }
+
                     break;
                 }
             }
-
-            spawnManaCube = false;
+            
+            spawnPlantNormal -= 1;
         }
     }
 }
