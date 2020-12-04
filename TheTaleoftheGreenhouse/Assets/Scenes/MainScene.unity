@@ -7980,10 +7980,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delivery
       objectReference: {fileID: 0}
-    - target: {fileID: 4039021870531704220, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
-      propertyPath: m_TagString
-      value: Delivery
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
 --- !u!1 &1376506932
@@ -18772,6 +18768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shears
       objectReference: {fileID: 0}
+    - target: {fileID: 5077505152491622232, guid: b7cad5972e6b4654a8903ac43e3ac2a5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3884506354a2ea4489e538df93f2b8b0, type: 3}
     - target: {fileID: 7075636870562919177, guid: b7cad5972e6b4654a8903ac43e3ac2a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06536734
@@ -18828,10 +18828,6 @@ PrefabInstance:
     - target: {fileID: 1989935360096772072, guid: ce70f30d70cebff4e8649fcf052f4b51, type: 3}
       propertyPath: m_Name
       value: WeatherManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1989935360096772072, guid: ce70f30d70cebff4e8649fcf052f4b51, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1989935360096772074, guid: ce70f30d70cebff4e8649fcf052f4b51, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19664,30 +19660,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6276220625549865267, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
-      propertyPath: allowWaterCan
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6561766927265245912, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 6633665670527974838, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
       propertyPath: m_Name
       value: Pot (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 6869750827156483128, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
-      propertyPath: useShader
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6869750827156483128, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
-      propertyPath: outlineActive
-      value: 
-      objectReference: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
-    - target: {fileID: 6869750827156483128, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
-      propertyPath: outliveNotActive
-      value: 
-      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
 --- !u!1001 &1994839985

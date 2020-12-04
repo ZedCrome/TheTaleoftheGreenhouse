@@ -293,7 +293,10 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         delivery = GameObject.FindGameObjectWithTag("Delivery");
         delivery.GetComponent<DeliveryManager>().spawnPot = currentlyBuyingPots;
-        
+        delivery.GetComponent<DeliveryManager>().spawnPlantMana = currentlyBuyingManaPlants;
+        delivery.GetComponent<DeliveryManager>().spawnPlantNormal = currentlyBuyingPlants;
+        delivery.GetComponent<DeliveryManager>().spawnManaCube = currentlyBuyingManaStorageItems;
+
         tableAlreadyBought1.value = tableCurrentyBuy1.value; 
         tableAlreadyBought2.value = tableCurrentyBuy2.value;
 

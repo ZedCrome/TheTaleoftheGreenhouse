@@ -116,8 +116,8 @@ public class DeliveryManager : MonoBehaviour
                     break;
                 }
             }
-            
-            spawnPlantNormal -= 1;
+
+            spawnManaCube -= 1;
         }
     }
 }
