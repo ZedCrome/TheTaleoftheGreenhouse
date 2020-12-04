@@ -10,7 +10,7 @@ public class ShopBehaviour : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            LeanTween.scale(buyMenu, new Vector3(1, 1, 1), 0.5f).setOnComplete(activateShop);
+            LeanTween.scale(buyMenu, new Vector3(1, 1, 1), 0f).setOnComplete(activateShop);
         }
     }
     

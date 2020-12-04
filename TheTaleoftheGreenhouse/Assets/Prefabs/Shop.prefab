@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 3097841062448297437}
   - component: {fileID: 3097841062448297434}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: Sell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2356,7 +2356,7 @@ GameObject:
   - component: {fileID: 3097841062917383662}
   - component: {fileID: 3097841062917383663}
   m_Layer: 0
-  m_Name: Sell
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3428,8 +3428,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5387,7 +5387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -371.6, y: 33.28}
+  m_AnchoredPosition: {x: -240.91, y: 34}
   m_SizeDelta: {x: 491.64655, y: 757.2744}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3097841063675867427
@@ -7634,8 +7634,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 306.4, y: -39.911}
-  m_SizeDelta: {x: 612.74854, y: 920.17737}
+  m_AnchoredPosition: {x: 243.4, y: -39.911}
+  m_SizeDelta: {x: 486.73657, y: 920.17737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3097841064064400205
 CanvasRenderer:
@@ -7710,8 +7710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -356.00003, y: 45.88396}
-  m_SizeDelta: {x: 613.6737, y: 828.4094}
+  m_AnchoredPosition: {x: -240.91, y: 34}
+  m_SizeDelta: {x: 491.64673, y: 757.2742}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3097841064066644345
 CanvasRenderer:
@@ -8130,8 +8130,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9606,7 +9606,7 @@ MonoBehaviour:
   plantAmount: {fileID: 3097841063231151955}
   plantPriceDisplay: {fileID: 3097841063629452315}
   plantCurrentBuy1: {fileID: 2619406623616160781}
-  maxPlants: 10
+  maxPlants: 1000000
   plantCost: 2
   maxBuyPlantsAtATime: 3
   currentlyBuyingPlants: 0
@@ -9615,7 +9615,7 @@ MonoBehaviour:
   manaPlantAmount: {fileID: 3097841062706618563}
   manaPlantPriceDisplay: {fileID: 3097841062420216985}
   manaPlantCurrentBuy1: {fileID: 6231172391196580423}
-  maxManaPlants: 10
+  maxManaPlants: 100000
   manaPlantCost: 5
   maxBuyManaPlantsAtATime: 3
   currentlyBuyingManaPlants: 0

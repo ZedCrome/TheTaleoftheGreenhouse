@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -135,7 +136,7 @@ public class DayNightCycle : MonoBehaviour
                 realSecondsPerIngameDay *= 8f;
                 isAlreadySleeping = false;
                 isSleeping = false;
-                nightCanvas.SetActive(false);
+                DelayCoroutine();
             }
         }
         else
@@ -155,7 +156,12 @@ public class DayNightCycle : MonoBehaviour
     {
         LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
     }
-    
+
+    IEnumerator DelayCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        nightCanvas.SetActive(false);
+    }
     
     public event Action onSleep;
     
