@@ -306,6 +306,5 @@ MonoBehaviour:
   eveningIntensity: 0.75
   transitionTime: 0.5
   hourHandTransform: {fileID: 0}
-  minuteHandTransform: {fileID: 0}
   sleepText: {fileID: 0}
   player: {fileID: 0}

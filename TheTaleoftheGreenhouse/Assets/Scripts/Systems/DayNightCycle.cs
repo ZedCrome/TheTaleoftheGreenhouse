@@ -38,7 +38,6 @@ public class DayNightCycle : MonoBehaviour
     private float timer = 0;
 
     [SerializeField] Transform hourHandTransform;
-    [SerializeField] Transform minuteHandTransform;
     [SerializeField] TMP_Text sleepText;
 
     [SerializeField] GameObject player;
@@ -81,8 +80,7 @@ public class DayNightCycle : MonoBehaviour
 
         float rotationDegreesPerDay = 360f;
         hourHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
-        minuteHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay * hoursPerDay);
-        
+
         lightChange();
     }
 
