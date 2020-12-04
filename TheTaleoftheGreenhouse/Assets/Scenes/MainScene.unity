@@ -1265,6 +1265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Compost Base (Placeholder) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5319477428933453249, guid: 987cdbbe5570fb941a9f1a2505a6b4db, type: 3}
+      propertyPath: m_TagString
+      value: Compost
+      objectReference: {fileID: 0}
     - target: {fileID: 5319477428933453251, guid: 987cdbbe5570fb941a9f1a2505a6b4db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.067
@@ -20177,15 +20181,35 @@ PrefabInstance:
     - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: waterTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
+      objectReference: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
     - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: bedTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
+      objectReference: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
     - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: shopTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 31bdea802738e0c42b580e0c74daa741, type: 3}
+      objectReference: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
+    - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: defaultTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: e49826b495e6e3c458de3a89f0293d67, type: 3}
+    - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: manaTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 208c77c09ba9c6b4f85fc5cc3c605a29, type: 3}
+    - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: compostTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
+    - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: pickupTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: e49826b495e6e3c458de3a89f0293d67, type: 3}
+    - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: placementTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
     - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: debugActive
       value: 0

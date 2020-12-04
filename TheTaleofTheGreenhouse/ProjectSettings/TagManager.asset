@@ -18,6 +18,7 @@ TagManager:
   - Cutting
   - Shop
   - Delivery
+  - Compost
   layers:
   - Default
   - TransparentFX
