@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class DeliveryManager : MonoBehaviour
 {
+    public GameObject shopItems;
+    
     public bool spawnPot;
     public bool spawnPlantMana;
     public bool spawnPlantNormal;
@@ -17,6 +19,8 @@ public class DeliveryManager : MonoBehaviour
         {
             objectSlot.Add(child.GetComponent<ObjectSlot>());
         }
+
+        shopItems = GameObject.FindGameObjectWithTag("Shop");
     }
     
     
@@ -29,9 +33,12 @@ public class DeliveryManager : MonoBehaviour
                 if (slot.objectInSlot == null)
                 {
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("Pot");
-
-                    slot.FillSlot(clone);
-
+                    for (int i = 0; i < shopItems.GetComponent<ShopBehaviourBuy>().currentlyBuyingPots; i++)
+                    {                                             
+                       
+                        Debug.Log("Trying to add a pot");
+                        slot.FillSlot(clone);
+                    }
                     spawnPot = false;
                     break;
                 }

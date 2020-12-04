@@ -90,7 +90,9 @@ public class ShopBehaviourBuy : MonoBehaviour
     private int amountOfManaStorageItems = 0;
     private int ownedManaStorageItems = 0;
     public int currentlyBuyingManaStorageItems = 0;
-    
+
+    public GameObject delivery;
+
     public void addTable()
     {
         if (currentlyBuyingTables < maxBuyTablesAtATime && amountOfTables < maxTables)
@@ -289,16 +291,15 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void buy()
     {
+        delivery = GameObject.FindGameObjectWithTag("Delivery");
+        delivery.GetComponent<DeliveryManager>().spawnPot = true;
+        
         tableAlreadyBought1.value = tableCurrentyBuy1.value; 
         tableAlreadyBought2.value = tableCurrentyBuy2.value;
 
         potAlreadyBought1.value = potCurrentBuy1.value;
         potAlreadyBought2.value = potCurrentBuy2.value;
         potAlreadyBought3.value = potCurrentBuy3.value;
-
-        //plantCurrentBuy1.value = 0;
-
-        //manaPlantCurrentBuy1.value = 0;
 
         manaStorageItemAlreadyBought1.value = manaStorageItemCurrentBuy1.value;
         manaStorageItemAlreadyBought2.value = manaStorageItemCurrentBuy2.value;

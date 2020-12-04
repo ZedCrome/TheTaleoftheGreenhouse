@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4039021870531704219}
   m_Layer: 0
   m_Name: Delivery
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,16 +55,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe2c622d6f92af4982f3777b3f7008e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potPrefab: {fileID: 6633665670527974838, guid: f8c07a295a7aae44e92317fd755955c7, type: 3}
-  plantManaPrefab: {fileID: 7786478845608756233, guid: d9d6ddb67aaeba64fbc52e2b7bd0e0a1, type: 3}
-  plantNormalPrefab: {fileID: 8910795290822507590, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
-  manaCubePrefab: {fileID: 6288598847472336667, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
-  tablePrefab: {fileID: 4960520132897738095, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+  shopItems: {fileID: 0}
   spawnPot: 0
   spawnPlantMana: 0
   spawnPlantNormal: 0
-  spawnPlantCube: 0
-  spawnPlantTable: 0
+  spawnManaCube: 0
 --- !u!1001 &54110504
 PrefabInstance:
   m_ObjectHideFlags: 0

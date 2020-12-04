@@ -16,6 +16,8 @@ TagManager:
   - ManaCatcher
   - Shears
   - Cutting
+  - Shop
+  - Delivery
   layers:
   - Default
   - TransparentFX
