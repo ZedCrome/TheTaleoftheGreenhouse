@@ -16,9 +16,12 @@ public class InteractableEffect : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
-        
-        mouseOverColor = Color.green;
-        standardColor = renderer.material.color;
+
+        if (useShader == false)
+        {
+            mouseOverColor = Color.green;
+            standardColor = renderer.material.color;
+        }
     }
 
     
