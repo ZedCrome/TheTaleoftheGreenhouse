@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 88.77, y: -1}
-  m_SizeDelta: {x: 192.83377, y: 15.706631}
+  m_SizeDelta: {x: 192.83377, y: 12.03661}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3404747764568042050
 MonoBehaviour:
@@ -76,7 +76,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 3404747765956053584}
   m_HandleRect: {fileID: 0}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.187
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fdc4a9f730f458a4ab8e4ae794617ee6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0cb2314da2b7cd46b2189f82e43bc61, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2159,8 +2159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -2.61, y: 0}
-  m_SizeDelta: {x: -15.216324, y: 0}
+  m_AnchoredPosition: {x: -2.300003, y: 0.61}
+  m_SizeDelta: {x: -15.828003, y: -1.2233734}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3404747766578477467
 GameObject:
