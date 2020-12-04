@@ -22,7 +22,8 @@ public class PlayerState : MonoBehaviour
         Pot,
         Shears,
         Cutting,
-        ManaCatcher
+        ManaCatcher,
+        Plant
     }
 
     public HandState currentHandState;

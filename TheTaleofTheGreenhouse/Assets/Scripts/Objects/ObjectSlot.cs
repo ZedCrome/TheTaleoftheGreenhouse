@@ -169,6 +169,14 @@ public class ObjectSlot : MonoBehaviour
             }
         }
 
+        else if (state == PlayerState.HandState.Plant)
+        {
+            if (slotType == SlotType.Table)
+            {
+                this.gameObject.layer = 2;
+            }
+        }
+
         else
         {
             if (slotType == SlotType.Table)

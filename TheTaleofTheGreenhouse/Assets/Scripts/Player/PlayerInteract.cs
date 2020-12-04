@@ -113,6 +113,14 @@ public class PlayerInteract : MonoBehaviour
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.ManaCatcher);
                 break;
 
+            case "PlantNormal":
+                PlayerState.instance.ChangeHandState(PlayerState.HandState.Plant);
+                break;
+
+            case "PlantMana":
+                PlayerState.instance.ChangeHandState(PlayerState.HandState.Plant);
+                break;
+
             default:               
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
                 break;
