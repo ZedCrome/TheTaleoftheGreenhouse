@@ -176,7 +176,8 @@ public class DayNightCycle : MonoBehaviour
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaPlants = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().manaPlantCurrentBuy1.value = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
-            
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasOrderedItems = false;
+
             GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
 
             realSecondsPerIngameDay /= 8f;
