@@ -44,6 +44,7 @@ public class SellBoxBehaviour : MonoBehaviour
                 {
                     GameObject sellItem = PlayerInteract.instance.inventoryItem;
                     PlayerInteract.instance.inventoryItem = null;
+
                     if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
                     {
                         sellItem.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
@@ -60,6 +61,8 @@ public class SellBoxBehaviour : MonoBehaviour
                             if (itemsToSell[i] == null)
                             {
                                 itemsToSell[i] = sellItem;
+                                sellItem.GetComponentInParent<ObjectSlot>().objectInSlot = null;
+                                sellItem.transform.parent = gameObject.transform;
                                 currentSlot++;
                             }
                             break;
