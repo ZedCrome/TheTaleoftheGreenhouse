@@ -23,8 +23,8 @@ public class DayNightCycle : MonoBehaviour
     public float hoursPerDay = 24f;
     public float minutesPerHour = 60f;
 
-    private string hourString;
-    private string minutesString;
+    public string hourString;
+    public string minutesString;
 
     [SerializeField] Color dayColor;
     [SerializeField] Color eveningColor;
@@ -95,21 +95,23 @@ public class DayNightCycle : MonoBehaviour
         {
             timer += Time.deltaTime;
             allowedToSleep = true;
-            
-            if(!isSleeping)
+
+            if (!isSleeping)
+            {
                 light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
-            
+            }
             
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
         }
+        
         else if (float.Parse(hourString) > 0f && float.Parse(hourString) < 5 && !firstMorning)
         {
             allowedToSleep = true;
             
         }
 
-        else if (float.Parse(hourString) > 6f && float.Parse(hourString) < 11f && !firstMorning)
+        else if (float.Parse(hourString) > 6f && float.Parse(hourString) < 8f && !firstMorning)
         {
             timer += Time.deltaTime;
             allowedToSleep = false;
@@ -126,14 +128,9 @@ public class DayNightCycle : MonoBehaviour
             
             if(isSleeping)
             {
-                
-                GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
-                realSecondsPerIngameDay *= 8f;
                 isAlreadySleeping = false;
                 isSleeping = false;
-                nightFadeOut();
-                StartCoroutine(DelayCoroutine());
-                nightCanvas.SetActive(false);
+                StartCoroutine(WakeUpRoutine());
             }
         }
         else
@@ -142,20 +139,20 @@ public class DayNightCycle : MonoBehaviour
         }
     }
     
-    void nightFadeOut()
-    {
-        LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
-    }
-
-    IEnumerator DelayCoroutine()
-    {
-        yield return new WaitForSeconds(1f);
-        
-    }
     
     public event Action onSleep;
-    
+
+
     public void Sleep()
+    {
+        realSecondsPerIngameDay /= 8f;
+        StartCoroutine(GoToSleepRoutine());
+        
+        onSleep?.Invoke();
+    }
+    
+    
+    public IEnumerator GoToSleepRoutine()
     {
         isSleeping = true;
         if (allowedToSleep)
@@ -163,6 +160,9 @@ public class DayNightCycle : MonoBehaviour
             nightCanvas.SetActive(true);
             LeanTween.alpha(nightPanel, 1f, nightFadeDuration).setEase(LeanTweenType.linear);
             sleepText.text = "Sleeping";
+
+            yield return new WaitForSeconds(1);
+            
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<PlayerRenderer>().enabled = false;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingTables = 0;
@@ -179,17 +179,7 @@ public class DayNightCycle : MonoBehaviour
             
             GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
 
-            realSecondsPerIngameDay /= 8f;
-            if (buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething == true)
-            {
-                deliverySound.Play();
-                buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething = false;
-            }
             
-            for (int i = 0; i < 3; i++)
-            {
-                deliveryManager.GetComponent<DeliveryManager>().Delivery();
-            }
 
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
             playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
@@ -204,8 +194,34 @@ public class DayNightCycle : MonoBehaviour
                     break;
                 }
             }
-
-            onSleep?.Invoke();
+            
         }
+
+        yield return null;
+    }
+
+    public IEnumerator WakeUpRoutine()
+    {
+        realSecondsPerIngameDay *= 8f;
+        
+        for (int i = 0; i < 3; i++)
+        {
+            deliveryManager.GetComponent<DeliveryManager>().Delivery();
+        }
+        
+        if (buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething)
+        {
+            deliverySound.Play();
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething = false;
+        }
+        
+        yield return new WaitForSeconds(1);
+        
+        GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
+        
+        LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
+        nightCanvas.SetActive(true);
+        
+        yield return null;
     }
 }
