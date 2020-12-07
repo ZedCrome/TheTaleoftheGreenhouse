@@ -36,8 +36,7 @@ public class SellBoxBehaviour : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (PlayerInteract.instance.inventoryItem.CompareTag("Cutting") ||
-                    PlayerInteract.instance.inventoryItem.CompareTag("PlantMana") ||
+                if (PlayerInteract.instance.inventoryItem.CompareTag("PlantMana") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("PlantNormal") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("Pot") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("ManaStorage"))

@@ -419,15 +419,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee54f35dc5e8154bb02aa1587b07289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nightCanvas: {fileID: 545974321740895728}
   deliverySound: {fileID: 1982643471}
+  nightCanvas: {fileID: 545974321740895728}
   alreadyBoughtCanvas: {fileID: 0}
+  nightPanel: {fileID: 931818890005706853}
   realSecondsPerIngameDay: 50
   nightFadeDuration: 1
   light: {fileID: 1006554520}
-  nightPanel: {fileID: 931818890005706853}
   hoursPerDay: 24
   minutesPerHour: 60
+  hourString: 
+  minutesString: 
   dayColor: {r: 1, g: 1, b: 1, a: 0}
   eveningColor: {r: 0.9528302, g: 0.4719206, b: 0.6897291, a: 0}
   dayIntensity: 1
