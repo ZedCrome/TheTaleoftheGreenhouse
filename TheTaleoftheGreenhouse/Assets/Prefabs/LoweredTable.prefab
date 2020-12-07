@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
-  allowPot: 0
-  allowWaterCan: 0
+  blockPot: 0
+  blockWaterCan: 0
+  blockCutting: 0
   slotType: 0
   objectToPut: {fileID: 0}
 --- !u!60 &4960520131541898974
@@ -354,10 +355,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.012745, y: 0.9976933}
-      - {x: 0.0013461411, y: -0.0020862818}
-      - {x: 1.0068605, y: 0.5036554}
-      - {x: -1.0002948, y: 1.4978695}
+    - - {x: -1.0672822, y: 1.464776}
+      - {x: -1.8981481, y: 1.0425358}
+      - {x: -1.8800325, y: 0.9320986}
+      - {x: -0.09216572, y: 0.048423946}
+      - {x: 0.12162146, y: 0.04842871}
+      - {x: 0.92311203, y: 0.4710648}
+      - {x: 0.8723335, y: 0.5609538}
+      - {x: -0.9380138, y: 1.4629922}
 --- !u!1 &4960520133228835502
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,8 +460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
-  allowPot: 0
-  allowWaterCan: 0
+  blockPot: 0
+  blockWaterCan: 0
+  blockCutting: 0
   slotType: 0
   objectToPut: {fileID: 0}
 --- !u!60 &4960520133228835503
