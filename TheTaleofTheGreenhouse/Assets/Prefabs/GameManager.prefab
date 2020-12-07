@@ -2199,13 +2199,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultTexture: {fileID: 2800000, guid: e49826b495e6e3c458de3a89f0293d67, type: 3}
+  defaultTextureTransparent: {fileID: 2800000, guid: ba28c71f1e4d0254f856a6f80cfa482f, type: 3}
   pickupTexture: {fileID: 2800000, guid: e49826b495e6e3c458de3a89f0293d67, type: 3}
+  pickupTextureTransparent: {fileID: 2800000, guid: ba28c71f1e4d0254f856a6f80cfa482f, type: 3}
   waterTexture: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
+  waterTextureTransparent: {fileID: 2800000, guid: 26312fd9529cd7145abc12525c66570c, type: 3}
   manaTexture: {fileID: 2800000, guid: 208c77c09ba9c6b4f85fc5cc3c605a29, type: 3}
+  manaTextureTransparent: {fileID: 2800000, guid: 55bb9597ecf88c84caf5b3596fc0ae4e, type: 3}
   placementTexture: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
+  placementTextureTransparent: {fileID: 2800000, guid: 26312fd9529cd7145abc12525c66570c, type: 3}
   compostTexture: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
+  compostTextureTransparent: {fileID: 2800000, guid: 26312fd9529cd7145abc12525c66570c, type: 3}
   shopTexture: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
+  shopTextureTransparent: {fileID: 2800000, guid: 26312fd9529cd7145abc12525c66570c, type: 3}
   bedTexture: {fileID: 2800000, guid: 69e302cc90edec64c814b4fa1c9558cd, type: 3}
+  bedTextureTransparent: {fileID: 2800000, guid: 26312fd9529cd7145abc12525c66570c, type: 3}
   cursMode: 0
   hotSpot: {x: 0, y: 0}
 --- !u!114 &3949053604962983956

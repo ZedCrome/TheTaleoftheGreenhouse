@@ -52,10 +52,12 @@ public class PlayerInteract : MonoBehaviour
         if (directionBorder.sqrMagnitude > distanceToMouse)
         {
             allowedTointeract = true;
+            ChangeMouseCursor.instance.ChangeAlpha(true);
         }
         else
         {
-            allowedTointeract = false; 
+            allowedTointeract = false;
+            ChangeMouseCursor.instance.ChangeAlpha(false);
         }
         
         if (allowedTointeract)
