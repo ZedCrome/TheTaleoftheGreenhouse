@@ -91,7 +91,8 @@ public class ShopBehaviourBuy : MonoBehaviour
     private int amountOfManaStorageItems = 0;
     private int ownedManaStorageItems = 0;
     public int currentlyBuyingManaStorageItems = 0;
-
+    
+    [Header("Delivery")] [Space(5)]
     public GameObject delivery;
     public bool hasOrderedItems;
 
@@ -302,49 +303,48 @@ public class ShopBehaviourBuy : MonoBehaviour
             delivery.GetComponent<DeliveryManager>().spawnManaCube = currentlyBuyingManaStorageItems;
         }
 
+        if (amountOfTables > 0 || amountOfPots > 0 || amountOfPlants > 0 || amountOfManaPlants > 0 || amountOfManaStorageItems > 0)
+        {
+            alreadyBoughtOverlay.SetActive(true);
+        }
+        
         amountOfTables = 0;
         tableTotalCost = 0;
-        tablePriceDisplay.text = tableTotalCost.ToString();
+        tablePriceDisplay.text = tableTotalCost + " Gold";
         tableAmount.text = amountOfTables.ToString();
+        tableAlreadyBought1.value = tableCurrentyBuy1.value; 
+        tableAlreadyBought2.value = tableCurrentyBuy2.value;
         
         amountOfPots = 0;
         potTotalCost = 0;
-        potPriceDisplay.text = potTotalCost.ToString();
+        potPriceDisplay.text = potTotalCost + " Gold";
         potAmount.text = amountOfPots.ToString();
+        potAlreadyBought1.value = potCurrentBuy1.value;
+        potAlreadyBought2.value = potCurrentBuy2.value;
+        potAlreadyBought3.value = potCurrentBuy3.value;
         
         amountOfPlants = 0;
         plantTotalCost = 0;
-        plantPriceDisplay.text = plantTotalCost.ToString();
+        plantPriceDisplay.text = plantTotalCost + " Gold";
         plantAmount.text = amountOfPlants.ToString();
         
         amountOfManaPlants = 0;
         manaPlantTotalCost = 0;
-        manaPlantPriceDisplay.text = manaPlantTotalCost.ToString();
+        manaPlantPriceDisplay.text = manaPlantTotalCost + " Gold";
         manaPlantAmount.text = amountOfManaPlants.ToString();
         
         amountOfManaStorageItems = 0;
         manaStorageItemTotalCost = 0;
-        manaStorageItemPriceDisplay.text = manaStorageItemTotalCost.ToString();
+        manaStorageItemPriceDisplay.text = manaStorageItemTotalCost + " Gold";
         manaStorageItemAmount.text = amountOfManaStorageItems.ToString();
-        
-        alreadyBoughtOverlay.SetActive(true);
-
-        hasOrderedItems = true;
-
-        tableAlreadyBought1.value = tableCurrentyBuy1.value; 
-        tableAlreadyBought2.value = tableCurrentyBuy2.value;
-
-        potAlreadyBought1.value = potCurrentBuy1.value;
-        potAlreadyBought2.value = potCurrentBuy2.value;
-        potAlreadyBought3.value = potCurrentBuy3.value;
-
         manaStorageItemAlreadyBought1.value = manaStorageItemCurrentBuy1.value;
         manaStorageItemAlreadyBought2.value = manaStorageItemCurrentBuy2.value;
+
+        hasOrderedItems = true;
         
         playerMoney = playerMoney - totalCost;
         totalCost = 0;
         totalCostText.text = "Price: " + totalCost + " Gold";
         playerMoneyText.text = playerMoney + " Gold";
-
     }  
 }

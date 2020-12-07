@@ -11,6 +11,7 @@ public class ShopBehaviour : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 buyMenu.SetActive(false);
+                GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
             }
         }
     }
