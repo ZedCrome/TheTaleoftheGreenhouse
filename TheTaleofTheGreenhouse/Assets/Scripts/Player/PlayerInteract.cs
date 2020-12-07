@@ -12,7 +12,12 @@ public class PlayerInteract : MonoBehaviour
     public GameObject inventoryItem;
     public GameObject interactObject;
 
+    public Transform reachAnchor;
+    public GameObject reachPoint;
+    
     public float maxInteractDistance = 1.0f;
+    public Vector2 maxInteractDistanceModifier;
+    public Vector2 resultDistance;
 
     public bool allowedTointeract = false;
     private bool leftMouseButtonLock = false;
@@ -28,29 +33,37 @@ public class PlayerInteract : MonoBehaviour
         }
 
         audioSource = GetComponent<AudioSource>();
+        reachAnchor = GameObject.Find("ReachAnchor").transform;
     }
     
     
     void Update()
     {
+        resultDistance = new Vector2(maxInteractDistanceModifier.x * maxInteractDistance, maxInteractDistanceModifier.y * maxInteractDistance);
+        
         if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
         {
             return;
         }
         
-        Vector3 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-
-        float currentDistance = Vector3.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePosition));
-
-        if (currentDistance <= maxInteractDistance)
+        Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector2 direction = mouseWorldPosition - new Vector2(reachAnchor.position.x, reachAnchor.position.y);
+        float distanceToMouse = direction.sqrMagnitude;
+        Vector2 directionBorder = direction.normalized * maxInteractDistance;
+        directionBorder = Vector2.Scale(directionBorder, maxInteractDistanceModifier);
+        if (directionBorder.sqrMagnitude > distanceToMouse)
         {
             allowedTointeract = true;
         }
         else
         {
-            allowedTointeract = false;            
+            allowedTointeract = false; 
         }
+        
+        float currentDistance = Vector3.Distance(reachAnchor.position, Camera.main.ScreenToWorldPoint(mousePosition));
 
+        reachPoint.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(mousePosition).x, Camera.main.ScreenToWorldPoint(mousePosition).y, reachPoint.transform.position.z);
 
         if (allowedTointeract)
         {
