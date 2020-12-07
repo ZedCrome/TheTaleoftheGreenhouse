@@ -2,22 +2,21 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 
 [DefaultExecutionOrder(-9)]
 public class DayNightCycle : MonoBehaviour
 {
+    [SerializeField] private AudioSource deliverySound;
     [SerializeField] GameObject nightCanvas;
+    [SerializeField] GameObject alreadyBoughtCanvas;
     private GameObject buyMenuCanvas;
     private GameObject deliveryManager;
-    [SerializeField] private AudioSource deliverySound;
-    [SerializeField] GameObject alreadyBoughtCanvas;
+    public RectTransform nightPanel;
     public static DayNightCycle instance;
     public float realSecondsPerIngameDay;
     public float nightFadeDuration;
     public Light2D light;
-    public RectTransform nightPanel;
     
     public static float day;
     public float hoursPerDay = 24f;
@@ -97,12 +96,7 @@ public class DayNightCycle : MonoBehaviour
             
             if(!isSleeping)
                 light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
-
-            if (isSleeping)
-            {
-                nightCanvas.SetActive(true);
-                nightFadeIn();
-            }
+            
             
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
@@ -111,17 +105,15 @@ public class DayNightCycle : MonoBehaviour
         {
             allowedToSleep = true;
             
-            if (isSleeping)
-                nightFadeIn();
         }
 
         else if (float.Parse(hourString) > 6f && float.Parse(hourString) < 11f && !firstMorning)
         {
+            timer += Time.deltaTime;
+            allowedToSleep = false;
             sleepText.text = "";
             player.GetComponent<PlayerMovement>().enabled = true;
             player.GetComponent<PlayerRenderer>().enabled = true;
-            timer += Time.deltaTime;
-            allowedToSleep = false;
             
             if (!isSleeping)
             {
@@ -138,7 +130,7 @@ public class DayNightCycle : MonoBehaviour
                 isAlreadySleeping = false;
                 isSleeping = false;
                 nightFadeOut();
-                DelayCoroutine();
+                StartCoroutine(DelayCoroutine());
                 nightCanvas.SetActive(false);
             }
         }
@@ -147,13 +139,6 @@ public class DayNightCycle : MonoBehaviour
             timer = 0f;
         }
     }
-
-    
-    void nightFadeIn()
-    {
-        LeanTween.alpha(nightPanel, 1f, nightFadeDuration).setEase(LeanTweenType.linear);
-    }
-
     
     void nightFadeOut()
     {
@@ -162,8 +147,7 @@ public class DayNightCycle : MonoBehaviour
 
     IEnumerator DelayCoroutine()
     {
-        yield return new WaitForSeconds(1);
-
+        yield return new WaitForSeconds(1f);
         
     }
     
@@ -174,6 +158,8 @@ public class DayNightCycle : MonoBehaviour
         isSleeping = true;
         if (allowedToSleep)
         {
+            nightCanvas.SetActive(true);
+            LeanTween.alpha(nightPanel, 1f, nightFadeDuration).setEase(LeanTweenType.linear);
             sleepText.text = "Sleeping";
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<PlayerRenderer>().enabled = false;
