@@ -5,6 +5,7 @@ public class ShopBehaviourBuy : MonoBehaviour
 {
     [Header("Other")] [Space(5)] 
     [SerializeField] private RectTransform buyMenu;
+    [SerializeField] private GameObject alreadyBoughtOverlay;
     [SerializeField] private TMP_Text totalCostText;
     [SerializeField] private TMP_Text playerMoneyText;
     public int playerMoney = 99999;
@@ -196,7 +197,7 @@ public class ShopBehaviourBuy : MonoBehaviour
             totalCost += plantCost;
         }
 
-    plantPriceDisplay.text = plantTotalCost + " Gold";
+        plantPriceDisplay.text = plantTotalCost + " Gold";
         totalCostText.text = "Price: " + totalCost + " Gold";
         plantAmount.text = amountOfPlants.ToString();
     }
@@ -301,6 +302,33 @@ public class ShopBehaviourBuy : MonoBehaviour
             delivery.GetComponent<DeliveryManager>().spawnManaCube = currentlyBuyingManaStorageItems;
         }
 
+        amountOfTables = 0;
+        tableTotalCost = 0;
+        tablePriceDisplay.text = tableTotalCost.ToString();
+        tableAmount.text = amountOfTables.ToString();
+        
+        amountOfPots = 0;
+        potTotalCost = 0;
+        potPriceDisplay.text = potTotalCost.ToString();
+        potAmount.text = amountOfPots.ToString();
+        
+        amountOfPlants = 0;
+        plantTotalCost = 0;
+        plantPriceDisplay.text = plantTotalCost.ToString();
+        plantAmount.text = amountOfPlants.ToString();
+        
+        amountOfManaPlants = 0;
+        manaPlantTotalCost = 0;
+        manaPlantPriceDisplay.text = manaPlantTotalCost.ToString();
+        manaPlantAmount.text = amountOfManaPlants.ToString();
+        
+        amountOfManaStorageItems = 0;
+        manaStorageItemTotalCost = 0;
+        manaStorageItemPriceDisplay.text = manaStorageItemTotalCost.ToString();
+        manaStorageItemAmount.text = amountOfManaStorageItems.ToString();
+        
+        alreadyBoughtOverlay.SetActive(true);
+
         hasOrderedItems = true;
 
         tableAlreadyBought1.value = tableCurrentyBuy1.value; 
@@ -316,7 +344,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         playerMoney = playerMoney - totalCost;
         totalCost = 0;
         totalCostText.text = "Price: " + totalCost + " Gold";
-        playerMoneyText.text = "Purse: " + playerMoney + " Gold";
+        playerMoneyText.text = playerMoney + " Gold";
 
     }  
 }

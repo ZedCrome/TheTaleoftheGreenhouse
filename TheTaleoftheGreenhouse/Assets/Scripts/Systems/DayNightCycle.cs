@@ -10,6 +10,7 @@ public class DayNightCycle : MonoBehaviour
 {
     [SerializeField] GameObject nightCanvas;
     private GameObject buyMenuCanvas;
+    [SerializeField] GameObject alreadyBoughtCanvas;
     public static DayNightCycle instance;
     public float realSecondsPerIngameDay;
     public float nightFadeDuration;
@@ -20,8 +21,8 @@ public class DayNightCycle : MonoBehaviour
     public float hoursPerDay = 24f;
     public float minutesPerHour = 60f;
 
-    public string hourString;
-    public string minutesString;
+    private string hourString;
+    private string minutesString;
 
     [SerializeField] Color dayColor;
     [SerializeField] Color eveningColor;
@@ -58,7 +59,7 @@ public class DayNightCycle : MonoBehaviour
     void Start()
     {
         buyMenuCanvas = GameObject.Find("Shop");
-        
+
         if (light == null)
         {
             light = FindObjectOfType<Light2D>();
@@ -178,6 +179,7 @@ public class DayNightCycle : MonoBehaviour
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasOrderedItems = false;
 
+            alreadyBoughtCanvas.SetActive(false);
             GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
 
             realSecondsPerIngameDay /= 8f;
