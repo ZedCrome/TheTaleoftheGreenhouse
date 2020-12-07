@@ -74,8 +74,6 @@ public class DayNightCycle : MonoBehaviour
     
     void Update()
     {
-        Debugger.instance.Log("Allowed To Sleep: ", allowedToSleep);
-        
         day += Time.deltaTime / realSecondsPerIngameDay;
         float dayNormalized = day % 1f;
         
@@ -91,24 +89,23 @@ public class DayNightCycle : MonoBehaviour
 
     void lightChange()
     {
+        allowedToSleep = true;
+        
+        if (float.Parse(hourString) > 0f && float.Parse(hourString) < 24f)
+        {
+            timer += Time.deltaTime;
+        }
+        
         if (float.Parse(hourString) > 18f && float.Parse(hourString) < 24f)
         {
             timer += Time.deltaTime;
-            allowedToSleep = true;
-
+            
             if (!isSleeping)
             {
                 light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
             }
-            
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
-        }
-        
-        else if (float.Parse(hourString) > 0f && float.Parse(hourString) < 5 && !firstMorning)
-        {
-            allowedToSleep = true;
-            
         }
 
         else if (float.Parse(hourString) > 6f && float.Parse(hourString) < 8f && !firstMorning)
@@ -146,14 +143,12 @@ public class DayNightCycle : MonoBehaviour
 
     public void Sleep()
     {
-        
         if (allowedToSleep && !isAlreadySleeping)
         {
             realSecondsPerIngameDay /= 8f;
             StartCoroutine(GoToSleepRoutine());
             isAlreadySleeping = true;
         }
-        
         
         onSleep?.Invoke();
     }
@@ -185,9 +180,7 @@ public class DayNightCycle : MonoBehaviour
             alreadyBoughtCanvas.SetActive(false);
             
             GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
-
-
-
+            
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
             playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
             for (int i = 0; i < sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell; i++)
@@ -228,7 +221,7 @@ public class DayNightCycle : MonoBehaviour
         GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
         
         LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
-        nightCanvas.SetActive(true);
+        nightCanvas.SetActive(false);
         
         yield return null;
     }
