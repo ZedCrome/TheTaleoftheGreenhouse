@@ -5,6 +5,7 @@ public class DeliveryManager : MonoBehaviour
 {
     public GameObject shopItems;
     
+    
     public int spawnPot;
     public int spawnPlantMana;
     public int spawnPlantNormal;
@@ -22,10 +23,9 @@ public class DeliveryManager : MonoBehaviour
 
         shopItems = GameObject.FindGameObjectWithTag("Shop");
     }
-    
-    
-    void Update()
-    {
+
+    public void Delivery()
+    { 
         if (spawnPot > 0)
         {
             foreach (ObjectSlot slot in objectSlot)

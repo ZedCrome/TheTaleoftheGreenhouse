@@ -10,6 +10,8 @@ public class DayNightCycle : MonoBehaviour
 {
     [SerializeField] GameObject nightCanvas;
     private GameObject buyMenuCanvas;
+    private GameObject deliveryManager;
+    [SerializeField] private AudioSource deliverySound;
     [SerializeField] GameObject alreadyBoughtCanvas;
     public static DayNightCycle instance;
     public float realSecondsPerIngameDay;
@@ -59,6 +61,8 @@ public class DayNightCycle : MonoBehaviour
     void Start()
     {
         buyMenuCanvas = GameObject.Find("Shop");
+        deliveryManager = GameObject.Find("Delivery");
+
 
         if (light == null)
         {
@@ -128,11 +132,12 @@ public class DayNightCycle : MonoBehaviour
             
             if(isSleeping)
             {
-                nightFadeOut();
+                
                 GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
                 realSecondsPerIngameDay *= 8f;
                 isAlreadySleeping = false;
                 isSleeping = false;
+                nightFadeOut();
                 DelayCoroutine();
                 nightCanvas.SetActive(false);
             }
@@ -158,13 +163,15 @@ public class DayNightCycle : MonoBehaviour
     IEnumerator DelayCoroutine()
     {
         yield return new WaitForSeconds(1);
+
+        
     }
     
     public event Action onSleep;
     
     public void Sleep()
     {
-        
+        isSleeping = true;
         if (allowedToSleep)
         {
             sleepText.text = "Sleeping";
@@ -179,12 +186,22 @@ public class DayNightCycle : MonoBehaviour
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasOrderedItems = false;
 
+            LeanTween.scale(alreadyBoughtCanvas, new Vector3(1f, 1f, 1f), 0.01f);
             alreadyBoughtCanvas.SetActive(false);
+            
             GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
 
             realSecondsPerIngameDay /= 8f;
+            if (buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething == true)
+            {
+                deliverySound.Play();
+                buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething = false;
+            }
             
-            isSleeping = true;
+            for (int i = 0; i < 3; i++)
+            {
+                deliveryManager.GetComponent<DeliveryManager>().Delivery();
+            }
             
             onSleep?.Invoke();
         }

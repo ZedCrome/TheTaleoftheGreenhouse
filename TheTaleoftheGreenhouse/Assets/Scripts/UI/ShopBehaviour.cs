@@ -21,17 +21,11 @@ public class ShopBehaviour : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            LeanTween.scale(buyMenu, new Vector3(1, 1, 1), 0f).setOnComplete(activateShop);
+            buyMenu.SetActive(true);
+            GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
+            LeanTween.scale(buyMenu, new Vector3(1, 1, 1), 0.25f);
         }
     }
-    
-
-    void activateShop()
-    {
-        buyMenu.SetActive(true);
-        GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
-    }
-
 
     private void OnMouseEnter()
     {
