@@ -186,50 +186,31 @@ public class ObjectSlot : MonoBehaviour
         }
     }
     
-    void OnMouseEnter()
-    {
-        if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
-        {
-            return;
-        }
-        
-        if (PlayerInteract.instance.allowedTointeract == false)
-        {
-            return;
-        }      
-
-        if (PlayerState.instance.currentInteractState == PlayerState.InteractState.@select)
-        {
-            if (isFree == false && objectInSlot != null)
-            {
-                objectInSlot.GetComponent<InteractableEffect>().Enable(true);
-                PlayerInteract.instance.interactObject = this.gameObject;
-            }
-        }
-        
-        if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement)
-        {
-            PlayerInteract.instance.interactObject = this.gameObject;
-            renderer.enabled = true;
-        }
-    }
-
-    
     private void OnMouseOver()
     {
         if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
         {
             return;
         }
-        
+
         if (PlayerInteract.instance.allowedTointeract)
         {
-            if (isFree == false && objectInSlot != null)
+            if (PlayerState.instance.currentInteractState == PlayerState.InteractState.@select)
             {
-                objectInSlot.GetComponent<InteractableEffect>().Enable(true);
-            } 
-            else if (isFree == true && objectInSlot != null)
+                if (isFree == false && objectInSlot != null)
+                {
+                    objectInSlot.GetComponent<InteractableEffect>().Enable(true);
+                    PlayerInteract.instance.interactObject = this.gameObject;
+                }
+                else if (isFree == true && objectInSlot != null)
+                {
+                    renderer.enabled = true;
+                }
+            }
+            
+            if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement)
             {
+                PlayerInteract.instance.interactObject = this.gameObject;
                 renderer.enabled = true;
             }
         }
