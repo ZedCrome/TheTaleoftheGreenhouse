@@ -135,6 +135,7 @@ public class DayNightCycle : MonoBehaviour
         }
         else
         {
+            allowedToSleep = false;
             timer = 0f;
         }
     }
@@ -145,8 +146,14 @@ public class DayNightCycle : MonoBehaviour
 
     public void Sleep()
     {
-        realSecondsPerIngameDay /= 8f;
-        StartCoroutine(GoToSleepRoutine());
+        
+        if (allowedToSleep && !isAlreadySleeping)
+        {
+            realSecondsPerIngameDay /= 8f;
+            StartCoroutine(GoToSleepRoutine());
+            isAlreadySleeping = true;
+        }
+        
         
         onSleep?.Invoke();
     }
@@ -154,9 +161,9 @@ public class DayNightCycle : MonoBehaviour
     
     public IEnumerator GoToSleepRoutine()
     {
-        isSleeping = true;
         if (allowedToSleep)
         {
+            isSleeping = true;
             nightCanvas.SetActive(true);
             LeanTween.alpha(nightPanel, 1f, nightFadeDuration).setEase(LeanTweenType.linear);
             sleepText.text = "Sleeping";
@@ -179,7 +186,7 @@ public class DayNightCycle : MonoBehaviour
             
             GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
 
-            
+
 
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
             playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
@@ -216,7 +223,8 @@ public class DayNightCycle : MonoBehaviour
         }
         
         yield return new WaitForSeconds(1);
-        
+
+        isAlreadySleeping = false;
         GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
         
         LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
