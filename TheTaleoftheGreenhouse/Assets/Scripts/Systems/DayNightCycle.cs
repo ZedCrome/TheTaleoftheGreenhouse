@@ -12,6 +12,7 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] GameObject alreadyBoughtCanvas;
     private GameObject buyMenuCanvas;
     private GameObject deliveryManager;
+    private GameObject sellBox;
     public RectTransform nightPanel;
     public static DayNightCycle instance;
     public float realSecondsPerIngameDay;
@@ -61,6 +62,7 @@ public class DayNightCycle : MonoBehaviour
     {
         buyMenuCanvas = GameObject.Find("Shop");
         deliveryManager = GameObject.Find("Delivery");
+        sellBox = GameObject.Find("SellBox");
 
 
         if (light == null)
@@ -188,7 +190,10 @@ public class DayNightCycle : MonoBehaviour
             {
                 deliveryManager.GetComponent<DeliveryManager>().Delivery();
             }
-            
+
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
+            playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
+
             onSleep?.Invoke();
         }
     }

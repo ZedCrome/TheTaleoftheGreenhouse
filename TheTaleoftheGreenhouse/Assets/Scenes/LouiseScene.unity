@@ -17223,6 +17223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1072723470}
   - component: {fileID: 1072723469}
+  - component: {fileID: 1072723472}
   - component: {fileID: 1072723468}
   - component: {fileID: 1072723471}
   m_Layer: 0
@@ -17345,21 +17346,25 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.0285714, y: 0.8342857}
-      - {x: 1.0285714, y: 1.1771429}
-      - {x: 0.9142857, y: 1.2857143}
-      - {x: 0.12571429, y: 1.9828571}
-      - {x: 0.06285714, y: 2.0571427}
-      - {x: 0.011428571, y: 2.0914285}
-      - {x: 0, y: 2.0914285}
-      - {x: -0.9828571, y: 1.6}
-      - {x: -0.9828571, y: 1.6114285}
-      - {x: -1.0285714, y: 1.6057143}
-      - {x: -1.005022, y: 0.46237528}
-      - {x: 0.011428571, y: 0}
-      - {x: 0.045714285, y: 0.022857143}
-      - {x: 1.0057143, y: 0.5142857}
-      - {x: 1.0228572, y: 0.5485714}
+    - - {x: 0.4116891, y: 0.9302196}
+      - {x: 0.023919106, y: 1.0226653}
+      - {x: -0.12258434, y: 0.9636519}
+      - {x: -0.5479877, y: 0.586439}
+      - {x: -0.5170363, y: 0.28751713}
+      - {x: -0.089128345, y: -0.06295197}
+      - {x: 0.63058615, y: 0.25436944}
+--- !u!114 &1072723472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072723467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34e2ef561c35064f860585cc5b8d712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1076865382
 PrefabInstance:
   m_ObjectHideFlags: 0
