@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SellBoxBehaviour : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
 
-    public GameObject[] itemsToSell;
-    public int maxNumbertoSell = 9;
-   
     private Color standardColor;
     private Color interactableColor;
 
+    public GameObject[] itemsToSell;
+    public int maxNumbertoSell = 9;
+    private int currentSlot;
 
     private void Start()
     {
@@ -38,19 +38,36 @@ public class SellBoxBehaviour : MonoBehaviour
             {
                 if (PlayerInteract.instance.inventoryItem.CompareTag("Cutting") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("PlantMana") ||
-                    PlayerInteract.instance.inventoryItem.CompareTag("PlantNormal"))
+                    PlayerInteract.instance.inventoryItem.CompareTag("PlantNormal") ||
+                    PlayerInteract.instance.inventoryItem.CompareTag("Pot") ||
+                    PlayerInteract.instance.inventoryItem.CompareTag("ManaStorage"))
                 {
                     GameObject sellItem = PlayerInteract.instance.inventoryItem;
                     PlayerInteract.instance.inventoryItem = null;
-                    sellItem.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
-
-                    for (int i = 0; i < maxNumbertoSell; i++)
+                    if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
                     {
-                        if (itemsToSell[i] == null)
+                        sellItem.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
+                    }
+                    else
+                    {
+                        sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    }
+
+                    if (currentSlot < maxNumbertoSell)
+                    {
+                        for (int i = currentSlot; i < maxNumbertoSell;)
                         {
-                            itemsToSell[i] = sellItem;
+                            if (itemsToSell[i] == null)
+                            {
+                                itemsToSell[i] = sellItem;
+                                currentSlot++;
+                            }
+                            break;
                         }
-                        break;
+                    }
+                    else
+                    {
+                        Debug.Log("Can't sell more items today");
                     }
 
                     PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
@@ -68,4 +85,10 @@ public class SellBoxBehaviour : MonoBehaviour
     {
         spriteRenderer.color = standardColor;
     }
+
+    private void SellItems()
+    {
+
+    }
+
 }
