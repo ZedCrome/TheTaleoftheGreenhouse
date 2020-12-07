@@ -13,11 +13,9 @@ public class PlayerInteract : MonoBehaviour
     public GameObject interactObject;
 
     public Transform reachAnchor;
-    public GameObject reachPoint;
-    
+
     public float maxInteractDistance = 1.0f;
     public Vector2 maxInteractDistanceModifier;
-    public Vector2 resultDistance;
 
     public bool allowedTointeract = false;
     private bool leftMouseButtonLock = false;
@@ -39,8 +37,6 @@ public class PlayerInteract : MonoBehaviour
     
     void Update()
     {
-        resultDistance = new Vector2(maxInteractDistanceModifier.x * maxInteractDistance, maxInteractDistanceModifier.y * maxInteractDistance);
-        
         if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
         {
             return;
@@ -52,6 +48,7 @@ public class PlayerInteract : MonoBehaviour
         float distanceToMouse = direction.sqrMagnitude;
         Vector2 directionBorder = direction.normalized * maxInteractDistance;
         directionBorder = Vector2.Scale(directionBorder, maxInteractDistanceModifier);
+        
         if (directionBorder.sqrMagnitude > distanceToMouse)
         {
             allowedTointeract = true;
@@ -61,10 +58,6 @@ public class PlayerInteract : MonoBehaviour
             allowedTointeract = false; 
         }
         
-        float currentDistance = Vector3.Distance(reachAnchor.position, Camera.main.ScreenToWorldPoint(mousePosition));
-
-        reachPoint.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(mousePosition).x, Camera.main.ScreenToWorldPoint(mousePosition).y, reachPoint.transform.position.z);
-
         if (allowedTointeract)
         {
             if(Input.GetMouseButtonDown(0))
