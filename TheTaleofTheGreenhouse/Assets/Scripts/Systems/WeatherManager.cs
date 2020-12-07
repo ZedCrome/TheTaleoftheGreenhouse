@@ -7,8 +7,9 @@ using Random = UnityEngine.Random;
 public class WeatherManager : MonoBehaviour
 {
     private AudioSource audioSource;
-    private Animator animator;
-
+    private Animator animatorGlobal;
+    private Animator[] animatorWindows;
+    
     public AudioClip audioClip;
     public bool fire;
 
@@ -18,8 +19,8 @@ public class WeatherManager : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        animator = GetComponent<Animator>();
-        
+        animatorGlobal = GetComponent<Animator>();
+        animatorWindows = GetComponentsInChildren<Animator>();
         counterGoal = Random.Range(20f, 40f);
     }
     private void Update()
@@ -35,7 +36,12 @@ public class WeatherManager : MonoBehaviour
         
         if (fire)
         {
-            animator.SetTrigger("PlayLightning");
+            //animatorGlobal.SetTrigger("PlayLightning");
+            foreach (Animator anim in animatorWindows)
+            {
+                anim.SetTrigger("PlayLightning");
+            }
+            
             audioSource.PlayOneShot(audioClip);
             fire = false;
         }
