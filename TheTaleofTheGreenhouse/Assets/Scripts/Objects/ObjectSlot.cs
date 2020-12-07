@@ -210,6 +210,11 @@ public class ObjectSlot : MonoBehaviour
             
             if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement)
             {
+                if (objectInSlot != null && PlayerState.instance.currentHandState != PlayerState.HandState.None)
+                {
+                    objectInSlot.GetComponent<InteractableEffect>().Enable(true);
+                }
+                
                 PlayerInteract.instance.interactObject = this.gameObject;
                 renderer.enabled = true;
             }
