@@ -4,6 +4,16 @@ public class ShopBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject buyMenu;
 
+    public void Update()
+    {
+        if (buyMenu.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                buyMenu.SetActive(false);
+            }
+        }
+    }
     
     
     private void OnMouseOver()
