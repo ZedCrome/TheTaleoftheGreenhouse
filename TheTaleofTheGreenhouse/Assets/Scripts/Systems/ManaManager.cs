@@ -13,10 +13,18 @@ public class ManaManager : MonoBehaviour
     private float firstRuneValue = 0.27f;
     private float seccondRuneValue = 0.63f;
     private float finalRuneValue = 0.98f;
+
+    public AudioClip extractMana;
+    public AudioClip noManaToCollect;
+    public AudioClip clickSound;
+
+    private AudioSource audioSource;
+
     enum RuneState { Empty, FirstRune, SeccondRune, AllRunes}
     RuneState currentRuneState;
 
     public float currentMana = 0;
+    private float collectingMana;
 
     public Slider knifeSlider;
 
@@ -29,6 +37,8 @@ public class ManaManager : MonoBehaviour
     {
         knifeSlider = knifeSlider.GetComponent<Slider>();
         knifeSlider.value = 0;
+
+        audioSource = GetComponent<AudioSource>();
 
         manaCubes = new ManaCubeBehavior[9];
     }
@@ -91,11 +101,13 @@ public class ManaManager : MonoBehaviour
     public void AskToExtractMana()
     {
         askPanel.SetActive(true);
+        audioSource.PlayOneShot(clickSound);
     }
 
     public void ExitAskPanel()
     {
         askPanel.SetActive(false);
+        audioSource.PlayOneShot(clickSound);
     }
 
     public void ExtractCubeMana()
@@ -107,9 +119,20 @@ public class ManaManager : MonoBehaviour
         {
             manaCubes[i] = manaCubesFound[i].GetComponent<ManaCubeBehavior>();
             currentMana += manaCubes[i].storedMana;
+            collectingMana += manaCubes[i].storedMana; ;
             manaCubesFound[i].GetComponent<ManaCubeBehavior>().storedMana = 0;
         }
 
+        if (collectingMana <= 0)
+        {
+            
+            audioSource.PlayOneShot(noManaToCollect);
+        }
+        else
+        {
+            audioSource.PlayOneShot(extractMana);
+        }
+        collectingMana = 0;
         askPanel.SetActive(false);
     }
 }
