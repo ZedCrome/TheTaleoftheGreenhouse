@@ -85,10 +85,4 @@ public class SellBoxBehaviour : MonoBehaviour
     {
         spriteRenderer.color = standardColor;
     }
-
-    private void SellItems()
-    {
-
-    }
-
 }

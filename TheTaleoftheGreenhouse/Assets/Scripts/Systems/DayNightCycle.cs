@@ -193,6 +193,17 @@ public class DayNightCycle : MonoBehaviour
 
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
             playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
+            for (int i = 0; i < sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell; i++)
+            {
+                if (sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] != null)
+                {
+                    Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
+                }
+                else
+                {
+                    break;
+                }
+            }
 
             onSleep?.Invoke();
         }
