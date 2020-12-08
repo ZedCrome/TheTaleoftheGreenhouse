@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7786478845608756236}
   - component: {fileID: 7786478845608756235}
   - component: {fileID: 4819839988224401999}
+  - component: {fileID: 2508503928999361547}
   m_Layer: 0
   m_Name: Plant Mana
   m_TagString: PlantMana
@@ -136,3 +137,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b409f96d40d694293114341bd3406c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2508503928999361547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7786478845608756233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212a3beb14c484a4797b5efc603e8cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexNumber: 0
