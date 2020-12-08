@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tools : MonoBehaviour
 {
+    private string[] tagList = { "WaterCan",  };
     public static AudioClip GetRandomSound(AudioClip[] audioClip)
     {
         if (audioClip.Length == 0)
@@ -60,5 +61,15 @@ public class Tools : MonoBehaviour
         } while (shouldContinue == true);
 
         return stackCounter;
+    }
+
+    public static int GetSplitStackNumber(GameObject trackedObject)
+    {
+        if (trackedObject == null)
+        {
+            return 0;
+        }
+
+        return 1;
     }
 }

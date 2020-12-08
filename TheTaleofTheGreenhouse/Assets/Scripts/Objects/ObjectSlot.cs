@@ -6,7 +6,7 @@ public class ObjectSlot : MonoBehaviour
 
     public GameObject objectInSlot;
     private bool isFree;
-
+    
     private Vector3 positionOffset;
     public enum SlotType { Table, Pot, Floor, ManaCube };
     private Vector3 tablePositionOffset = new Vector3(0, -0.25f, -0.7f);
@@ -99,7 +99,7 @@ public class ObjectSlot : MonoBehaviour
             }
 
             Debug.Log(Tools.GetStackNumber(objectInSlot));
-            
+
             renderer.enabled = false;
             
             isFree = false;
