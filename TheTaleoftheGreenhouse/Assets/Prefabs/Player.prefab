@@ -301,7 +301,7 @@ MonoBehaviour:
   inventoryItem: {fileID: 0}
   interactObject: {fileID: 0}
   reachAnchor: {fileID: 0}
-  maxInteractDistance: 2.5
+  maxInteractDistance: 3
   maxInteractDistanceModifier: {x: 0.8, y: 0.5}
   allowedTointeract: 0
 --- !u!82 &794015941
