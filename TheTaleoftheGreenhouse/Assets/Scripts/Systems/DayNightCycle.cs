@@ -112,11 +112,18 @@ public class DayNightCycle : MonoBehaviour
             
             light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
             light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
+
         }
         else
         {
             timer = 0f;
         }
+        
+        // if (float.Parse(hourString) > 2f && float.Parse(hourString) < 3f)
+        // {
+        //     //Sleep();
+        //     Debug.Log("Hej");
+        // }
 
         if (float.Parse(hourString) > 5f && float.Parse(hourString) < 9f)
         {
@@ -125,7 +132,11 @@ public class DayNightCycle : MonoBehaviour
                 realSecondsPerIngameDay *= 8f;
                 isAlreadySleeping = false;
                 isSleeping = false;
+                player.GetComponent<PlayerMovement>().enabled = true;
+                player.GetComponent<PlayerRenderer>().enabled = true;
+
                 StartCoroutine(WakeUpRoutine());
+                
             }
         }
     }
@@ -170,29 +181,32 @@ public class DayNightCycle : MonoBehaviour
         alreadyBoughtCanvas.SetActive(false);
         
         GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
-        
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
-        playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
-        for (int i = 0; i < sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell; i++)
+
+
+
+        if (sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell > 0)
         {
-            if (sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] != null)
+            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
+                playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
+            for (int i = 0; i < sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell; i++)
             {
-                Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
-            }
-            else
-            {
-                break;
-            }
+                if (sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] != null)
+                {
+                    Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
+                }
+                else
+                {
+                    break;
+                }
+            } 
         }
+        
         yield return null;
         onSleep?.Invoke();
     }
 
     public IEnumerator WakeUpRoutine()
     {
-        
-        player.GetComponent<PlayerMovement>().enabled = true;
-        player.GetComponent<PlayerRenderer>().enabled = true;
 
         for (int i = 0; i < 3; i++)
         {
@@ -219,9 +233,11 @@ public class DayNightCycle : MonoBehaviour
 
     public void SleepPrompt()
     {
-        sleepPromptCanvas.SetActive(true);
-        LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.15f).setEaseLinear();
-        
+        if (!firstMorning)
+        {
+            sleepPromptCanvas.SetActive(true);
+            LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.15f).setEaseLinear();
+        }
     }
 
     public void AcceptSleep()
