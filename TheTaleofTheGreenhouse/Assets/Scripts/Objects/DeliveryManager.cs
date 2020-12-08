@@ -35,7 +35,7 @@ public class DeliveryManager : MonoBehaviour
                 {
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("Pot");
                     
-                    bool result = slot.FillSlot(clone);
+                    bool result = slot.FillSlot(clone, 1);
 
                     if (result == false)
                     {
@@ -59,7 +59,7 @@ public class DeliveryManager : MonoBehaviour
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("PlantMana");
 
                     clone.transform.localScale = new Vector3(1, 1, 1);
-                    bool result = slot.FillSlot(clone);
+                    bool result = slot.FillSlot(clone, 1);
 
                     if (result == false)
                     {
@@ -83,7 +83,7 @@ public class DeliveryManager : MonoBehaviour
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
 
                     clone.transform.localScale = new Vector3(1, 1, 1);
-                    bool result = slot.FillSlot(clone);
+                    bool result = slot.FillSlot(clone, 1);
 
                     if (result == false)
                     {
@@ -107,7 +107,7 @@ public class DeliveryManager : MonoBehaviour
                 {
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("ManaStorage");
 
-                    bool result = slot.FillSlot(clone);
+                    bool result = slot.FillSlot(clone, 1);
 
                     if (result == false)
                     {

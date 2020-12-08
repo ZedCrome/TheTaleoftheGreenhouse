@@ -90,7 +90,7 @@ public class Tools : MonoBehaviour
                         {
                             stackCounter++;
                             nextTrackedObject = obj.gameObject.GetComponent<ObjectSlot>().objectInSlot;
-                            nextTrackedObject.GetComponent<StackIndex>().IndexNumber = stackCounter;
+                            nextTrackedObject.GetComponent<StackIndex>().indexNumber = stackCounter;
                         }
                         else
                         {

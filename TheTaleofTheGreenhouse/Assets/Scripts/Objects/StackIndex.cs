@@ -4,12 +4,5 @@ using UnityEngine;
 
 public class StackIndex : MonoBehaviour
 {
-    [SerializeField]
-    private int indexNumber;
-
-    public int IndexNumber
-    {
-        get { return indexNumber; }
-        set { indexNumber = value; }
-    }
+    public int indexNumber;
 }

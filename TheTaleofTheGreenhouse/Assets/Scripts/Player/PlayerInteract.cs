@@ -150,7 +150,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Place(GameObject placeObject)
     {
-        bool result = interactObject.GetComponent<ObjectSlot>().FillSlot(placeObject);
+        bool result = interactObject.GetComponent<ObjectSlot>().FillSlot(placeObject, 1);
 
         if(result)
         {

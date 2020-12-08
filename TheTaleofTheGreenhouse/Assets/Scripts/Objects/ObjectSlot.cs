@@ -36,7 +36,7 @@ public class ObjectSlot : MonoBehaviour
         // Temporary solution to fill item slots
         if (objectToPut != null)
         {
-            FillSlot(objectToPut);
+            FillSlot(objectToPut, 1);
         }
     }
     
@@ -53,7 +53,7 @@ public class ObjectSlot : MonoBehaviour
     }
     
     
-    public bool FillSlot(GameObject newObject)
+    public bool FillSlot(GameObject newObject, int stackSize)
     {
         if(CheckBlockObject(newObject.tag))
         {
@@ -97,9 +97,9 @@ public class ObjectSlot : MonoBehaviour
             {
                 objectInSlot.transform.parent = transform;
             }
-
-            Debug.Log("Stacknumber towards table: " + Tools.GetStackNumber(objectInSlot));
-            Debug.Log("Split stack number: " + Tools.GetSplitStackSize(objectInSlot));
+            
+            objectInSlot.GetComponent<StackIndex>().indexNumber = Tools.GetStackNumber(objectInSlot);
+            
             renderer.enabled = false;
             
             isFree = false;
