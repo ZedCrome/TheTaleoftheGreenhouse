@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7972109991216438733}
   - component: {fileID: 46390472445450027}
   - component: {fileID: 7702503877078866733}
+  - component: {fileID: 626916750147135289}
   m_Layer: 0
   m_Name: PotNormalPlant
   m_TagString: Pot
@@ -116,6 +117,19 @@ MonoBehaviour:
   outlineActive: {fileID: 2100000, guid: aa6ace6caae3fe14e9400b6493d1cc1b, type: 2}
   outliveNotActive: {fileID: 2100000, guid: 152938080539b2f4bb23a22c86c0f6f3, type: 2}
   manaOutlineActive: {fileID: 0}
+--- !u!114 &626916750147135289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619255260594604707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212a3beb14c484a4797b5efc603e8cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexNumber: 0
 --- !u!1001 &3824343343287100717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,6 +201,10 @@ PrefabInstance:
       propertyPath: objectInSlot
       value: 
       objectReference: {fileID: 3894503349630448486}
+    - target: {fileID: 6321324243978134283, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: blockCutting
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
 --- !u!4 &3716618553506759986 stripped

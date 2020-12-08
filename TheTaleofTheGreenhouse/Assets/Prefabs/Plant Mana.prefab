@@ -113,12 +113,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5969eb4b0c3cd439beea92153189d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadSprite: {fileID: 356298416488667711, guid: d6703a388f776d248b8b771224868a9e, type: 3}
   fullGrownSprite: {fileID: 879394335079051125, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   adultSprite: {fileID: -6268252528135226146, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   youngSprite: {fileID: -2349953502984988040, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   sproutSprite: {fileID: 5346046493363410607, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
-  currentState: 3
+  deadFullGrownSprite: {fileID: 6153498109927345619, guid: d6703a388f776d248b8b771224868a9e, type: 3}
+  deadAdultSprite: {fileID: -4893288330032946871, guid: d6703a388f776d248b8b771224868a9e, type: 3}
+  deadYoungSprite: {fileID: 356298416488667711, guid: d6703a388f776d248b8b771224868a9e, type: 3}
+  deadSproutSprite: {fileID: -1131669711182684302, guid: d6703a388f776d248b8b771224868a9e, type: 3}
+  currentState: 0
   hasMana: 0
   lostMana: 0
 --- !u!114 &4819839988224401999

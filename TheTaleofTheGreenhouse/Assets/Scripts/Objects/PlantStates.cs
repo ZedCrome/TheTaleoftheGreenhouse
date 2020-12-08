@@ -4,12 +4,17 @@ using UnityEngine;
 public class PlantStates : MonoBehaviour
 {
     private Sprite currentSprite;
+    private Sprite deadSprite;
 
-    public Sprite deadSprite;
     public Sprite fullGrownSprite;
     public Sprite adultSprite;
     public Sprite youngSprite;
     public Sprite sproutSprite;
+
+    public Sprite deadFullGrownSprite;
+    public Sprite deadAdultSprite;
+    public Sprite deadYoungSprite;
+    public Sprite deadSproutSprite;
 
     SpriteRenderer spriteRenderer;
 
@@ -68,24 +73,28 @@ public class PlantStates : MonoBehaviour
             case PlantState.Sprout:
                 {
                     currentSprite = sproutSprite;
+                    deadSprite = deadSproutSprite;
                     lostMana = true;
                     break;
                 }
             case PlantState.Young:
                 {
                     currentSprite = youngSprite;
+                    deadSprite = deadYoungSprite;
                     lostMana = true;
                     break;
                 }
             case PlantState.Adult:
                 {
                     currentSprite = adultSprite;
+                    deadSprite = deadAdultSprite;
                     lostMana = true;
                     break;
                 }
             case PlantState.FullGrown:
                 {
                     currentSprite = fullGrownSprite;
+                    deadSprite = deadFullGrownSprite;
                     if (gameObject.tag == "PlantMana")
                     {
                         if (hasMana == true)
