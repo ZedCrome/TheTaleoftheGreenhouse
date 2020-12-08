@@ -19,6 +19,7 @@ TagManager:
   - Shop
   - Delivery
   - Compost
+  - TableSlot
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4960520131541898974}
   m_Layer: 0
   m_Name: Rectangle
-  m_TagString: Interactable
+  m_TagString: TableSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 4960520133228835503}
   m_Layer: 0
   m_Name: Rectangle
-  m_TagString: Interactable
+  m_TagString: TableSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
