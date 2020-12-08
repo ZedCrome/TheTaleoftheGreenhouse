@@ -12,7 +12,7 @@ public class BedBehavior : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && PlayerInteract.instance.allowedTointeract)
         {
 
-            DayNightCycle.instance.Sleep();
+            DayNightCycle.instance.SleepPrompt();
         }
     }
 

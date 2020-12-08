@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 
@@ -9,11 +8,13 @@ public class DayNightCycle : MonoBehaviour
 {
     [SerializeField] private AudioSource deliverySound;
     [SerializeField] GameObject nightCanvas;
+    [SerializeField] GameObject sleepPromptCanvas;
     [SerializeField] GameObject alreadyBoughtCanvas;
     private GameObject buyMenuCanvas;
     private GameObject deliveryManager;
     private GameObject sellBox;
     public RectTransform nightPanel;
+    public RectTransform sleepPrompt;
     public static DayNightCycle instance;
     public float realSecondsPerIngameDay;
     public float nightFadeDuration;
@@ -34,14 +35,13 @@ public class DayNightCycle : MonoBehaviour
     private float currentIntensity;
 
     private bool firstMorning = true;
-    private bool allowedToSleep = false;
     private bool isSleeping = false;
     private bool isAlreadySleeping = false;
+    private bool wantToSleep = false;
     
     private float timer = 0;
 
     [SerializeField] Transform hourHandTransform;
-    [SerializeField] TMP_Text sleepText;
 
     [SerializeField] GameObject player;
 
@@ -74,6 +74,13 @@ public class DayNightCycle : MonoBehaviour
     
     void Update()
     {
+        CalculateTime();
+        lightChange();
+    }
+
+    
+    void CalculateTime()
+    {
         day += Time.deltaTime / realSecondsPerIngameDay;
         float dayNormalized = day % 1f;
         
@@ -82,58 +89,44 @@ public class DayNightCycle : MonoBehaviour
 
         float rotationDegreesPerDay = 360f;
         hourHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
-
-        lightChange();
     }
 
 
     void lightChange()
     {
-        allowedToSleep = true;
         
-        if (float.Parse(hourString) > 0f && float.Parse(hourString) < 24f)
-        {
-            timer += Time.deltaTime;
-        }
-        
-        if (float.Parse(hourString) > 18f && float.Parse(hourString) < 24f)
+        if (float.Parse(hourString) > 18f && float.Parse(hourString) < 21f)
         {
             timer += Time.deltaTime;
             
-            if (!isSleeping)
-            {
-                light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
-            }
+            light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
             light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
             firstMorning = false;
         }
 
-        else if (float.Parse(hourString) > 6f && float.Parse(hourString) < 8f && !firstMorning)
+        else if (float.Parse(hourString) > 5f && float.Parse(hourString) < 8f && !firstMorning)
         {
             timer += Time.deltaTime;
-            allowedToSleep = false;
-            sleepText.text = "";
             player.GetComponent<PlayerMovement>().enabled = true;
             player.GetComponent<PlayerRenderer>().enabled = true;
             
-            if (!isSleeping)
-            {
-                light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
-            }
-            
+            light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
             light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
-            
+        }
+        else
+        {
+            timer = 0f;
+        }
+
+        if (float.Parse(hourString) > 5f && float.Parse(hourString) < 9f)
+        {
             if(isSleeping)
             {
+                realSecondsPerIngameDay *= 8f;
                 isAlreadySleeping = false;
                 isSleeping = false;
                 StartCoroutine(WakeUpRoutine());
             }
-        }
-        else
-        {
-            allowedToSleep = false;
-            timer = 0f;
         }
     }
     
@@ -143,67 +136,64 @@ public class DayNightCycle : MonoBehaviour
 
     public void Sleep()
     {
-        if (allowedToSleep && !isAlreadySleeping)
+        if (!isAlreadySleeping)
         {
             realSecondsPerIngameDay /= 8f;
-            StartCoroutine(GoToSleepRoutine());
             isAlreadySleeping = true;
+            isSleeping = true;
+            StartCoroutine(GoToSleepRoutine());
         }
         
-        onSleep?.Invoke();
     }
     
     
     public IEnumerator GoToSleepRoutine()
     {
-        if (allowedToSleep)
+        
+        nightCanvas.SetActive(true);
+        LeanTween.alpha(nightPanel, 1f, nightFadeDuration).setEase(LeanTweenType.linear);
+
+        yield return new WaitForSeconds(1);
+        
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerRenderer>().enabled = false;
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingTables = 0;
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPots = 0;
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPlants = 0;
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().plantCurrentBuy1.value = 0;
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaPlants = 0;
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().manaPlantCurrentBuy1.value = 0;
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasOrderedItems = false;
+
+        LeanTween.scale(alreadyBoughtCanvas, new Vector3(1f, 1f, 1f), 0.01f);
+        alreadyBoughtCanvas.SetActive(false);
+        
+        GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
+        
+        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
+        playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
+        for (int i = 0; i < sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell; i++)
         {
-            isSleeping = true;
-            nightCanvas.SetActive(true);
-            LeanTween.alpha(nightPanel, 1f, nightFadeDuration).setEase(LeanTweenType.linear);
-            sleepText.text = "Sleeping";
-
-            yield return new WaitForSeconds(1);
-            
-            player.GetComponent<PlayerMovement>().enabled = false;
-            player.GetComponent<PlayerRenderer>().enabled = false;
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingTables = 0;
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPots = 0;
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPlants = 0;
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().plantCurrentBuy1.value = 0;
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaPlants = 0;
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().manaPlantCurrentBuy1.value = 0;
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasOrderedItems = false;
-
-            LeanTween.scale(alreadyBoughtCanvas, new Vector3(1f, 1f, 1f), 0.01f);
-            alreadyBoughtCanvas.SetActive(false);
-            
-            GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
-            
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
-            playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
-            for (int i = 0; i < sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell; i++)
+            if (sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] != null)
             {
-                if (sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] != null)
-                {
-                    Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
-                }
-                else
-                {
-                    break;
-                }
+                Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
             }
-            
+            else
+            {
+                break;
+            }
         }
-
         yield return null;
+        onSleep?.Invoke();
     }
 
     public IEnumerator WakeUpRoutine()
     {
-        realSecondsPerIngameDay *= 8f;
         
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerRenderer>().enabled = true;
+
         for (int i = 0; i < 3; i++)
         {
             deliveryManager.GetComponent<DeliveryManager>().Delivery();
@@ -221,8 +211,34 @@ public class DayNightCycle : MonoBehaviour
         GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
         
         LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
+        yield return new WaitForSeconds(nightFadeDuration);
         nightCanvas.SetActive(false);
         
         yield return null;
+    }
+
+    public void SleepPrompt()
+    {
+        sleepPromptCanvas.SetActive(true);
+        LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.15f).setEaseLinear();
+        
+    }
+
+    public void AcceptSleep()
+    {
+        wantToSleep = true;
+        LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.5f).setEaseLinear().setOnComplete(DeactivateSleep).setOnComplete(Sleep);
+    }
+
+
+    public void DeclineSleep()
+    {
+        wantToSleep = false;
+        LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.5f).setEaseLinear().setOnComplete(DeactivateSleep);
+    }
+
+    public void DeactivateSleep()
+    {
+        sleepPromptCanvas.SetActive(false);
     }
 }
