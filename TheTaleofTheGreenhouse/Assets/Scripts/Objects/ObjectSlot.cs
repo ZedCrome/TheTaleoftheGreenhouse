@@ -36,7 +36,7 @@ public class ObjectSlot : MonoBehaviour
         // Temporary solution to fill item slots
         if (objectToPut != null)
         {
-            FillSlot(objectToPut, 1);
+            FillSlot(objectToPut);
         }
     }
     
@@ -53,7 +53,7 @@ public class ObjectSlot : MonoBehaviour
     }
     
     
-    public bool FillSlot(GameObject newObject, int stackSize)
+    public bool FillSlot(GameObject newObject)
     {
         if(CheckBlockObject(newObject.tag))
         {
