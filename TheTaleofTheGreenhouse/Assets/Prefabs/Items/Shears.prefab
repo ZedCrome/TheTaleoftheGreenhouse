@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2347871630936385711}
   - component: {fileID: 9027909167852213040}
   - component: {fileID: 4727118185715903839}
+  - component: {fileID: 2695822645533024102}
   m_Layer: 0
   m_Name: Shears
   m_TagString: Shears
@@ -224,3 +225,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2695822645533024102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2690574907899805408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212a3beb14c484a4797b5efc603e8cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

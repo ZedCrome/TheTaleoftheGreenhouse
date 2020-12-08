@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6561766927265245912}
   - component: {fileID: 3825320173428252734}
   - component: {fileID: 6869750827156483128}
+  - component: {fileID: 3880217062820342808}
   m_Layer: 0
   m_Name: Pot
   m_TagString: Pot
@@ -116,6 +117,18 @@ MonoBehaviour:
   outlineActive: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
   outliveNotActive: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
   manaOutlineActive: {fileID: 0}
+--- !u!114 &3880217062820342808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633665670527974838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212a3beb14c484a4797b5efc603e8cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &45114678153613880
 PrefabInstance:
   m_ObjectHideFlags: 0

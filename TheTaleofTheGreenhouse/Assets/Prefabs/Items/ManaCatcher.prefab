@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1548467761439843995}
   - component: {fileID: 1548467761439843992}
   - component: {fileID: 1086020604}
+  - component: {fileID: 6709911485367965660}
   m_Layer: 0
   m_Name: ManaCatcher
   m_TagString: ManaCatcher
@@ -100,6 +101,7 @@ MonoBehaviour:
   useShader: 1
   outlineActive: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
   outliveNotActive: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
+  manaOutlineActive: {fileID: 0}
 --- !u!114 &1548467761439843992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +216,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6709911485367965660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548467761439843996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212a3beb14c484a4797b5efc603e8cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
