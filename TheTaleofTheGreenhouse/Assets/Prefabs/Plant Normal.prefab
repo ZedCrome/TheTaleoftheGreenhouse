@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8910795290822507586}
   - component: {fileID: 8910795290822507587}
   - component: {fileID: 8910795290822507584}
+  - component: {fileID: 2190470823627575946}
   m_Layer: 0
   m_Name: Plant Normal
   m_TagString: PlantNormal
@@ -123,3 +124,16 @@ MonoBehaviour:
   currentState: 0
   hasMana: 0
   lostMana: 0
+--- !u!114 &2190470823627575946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8910795290822507590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212a3beb14c484a4797b5efc603e8cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexNumber: 0
