@@ -43,7 +43,7 @@ public class Tools : MonoBehaviour
                 {
                     nextTrackedObject = nextTrackedObject.transform.parent.gameObject;
 
-                    if (nextTrackedObject.HasComponent<ObjectSlot>())
+                    if (nextTrackedObject.HasComponent<StackIndex>())
                     {
                         stackCounter++;
                     }
@@ -63,13 +63,57 @@ public class Tools : MonoBehaviour
         return stackCounter;
     }
 
-    public static int GetSplitStackNumber(GameObject trackedObject)
+    public static int GetSplitStackSize(GameObject trackedObject)
     {
         if (trackedObject == null)
         {
             return 0;
         }
+        
+        bool shouldContinue = true;
+        int operationSteps = 0;
+        int stackCounter = 1;
 
-        return 1;
+        GameObject nextTrackedObject = trackedObject;
+        
+        do
+        {
+            Transform[] childObjects = nextTrackedObject.GetComponentsInChildren<Transform>();
+
+            if (childObjects != null)
+            {
+                foreach (Transform obj in childObjects)
+                {
+                    if (obj.gameObject.HasComponent<ObjectSlot>())
+                    {
+                        if (obj.gameObject.GetComponent<ObjectSlot>().objectInSlot != null)
+                        {
+                            stackCounter++;
+                            nextTrackedObject = obj.gameObject.GetComponent<ObjectSlot>().objectInSlot;
+                            nextTrackedObject.GetComponent<StackIndex>().IndexNumber = stackCounter;
+                        }
+                        else
+                        {
+                            return stackCounter;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                return stackCounter;
+            }
+            
+            if (operationSteps < 20)
+            {
+                operationSteps++;
+            }
+            else
+            {
+                shouldContinue = false;
+            }
+        } while (shouldContinue == true);
+
+        return stackCounter;
     }
 }

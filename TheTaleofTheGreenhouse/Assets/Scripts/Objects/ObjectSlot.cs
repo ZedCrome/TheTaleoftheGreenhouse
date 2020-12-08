@@ -98,8 +98,8 @@ public class ObjectSlot : MonoBehaviour
                 objectInSlot.transform.parent = transform;
             }
 
-            Debug.Log(Tools.GetStackNumber(objectInSlot));
-
+            Debug.Log("Stacknumber towards table: " + Tools.GetStackNumber(objectInSlot));
+            Debug.Log("Split stack number: " + Tools.GetSplitStackSize(objectInSlot));
             renderer.enabled = false;
             
             isFree = false;
