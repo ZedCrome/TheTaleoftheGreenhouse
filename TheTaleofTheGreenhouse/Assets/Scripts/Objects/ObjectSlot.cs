@@ -21,7 +21,9 @@ public class ObjectSlot : MonoBehaviour
 
     public SlotType slotType;
 
-    public GameObject objectToPut;    
+    public GameObject objectToPut;
+
+    public int maxStackAmount = 3;
     
     void Start()
     {
@@ -38,6 +40,8 @@ public class ObjectSlot : MonoBehaviour
         {
             FillSlot(objectToPut);
         }
+
+        maxStackAmount = 3;
     }
     
     private void OnEnable()
@@ -60,6 +64,23 @@ public class ObjectSlot : MonoBehaviour
             return false;
         }
 
+        int totalStack;
+        
+        if (this.transform.parent.gameObject.HasComponent<StackIndex>())
+        {
+            totalStack = this.transform.parent.gameObject.GetComponent<StackIndex>().indexNumber +
+                         Tools.GetSplitStackSize(newObject);
+        }
+        else
+        {
+            totalStack = Tools.GetSplitStackSize(newObject);
+        }
+        
+        if (totalStack > maxStackAmount)
+        {
+            return false;
+        }
+        
         if(isFree)
         {
             objectInSlot = newObject;
