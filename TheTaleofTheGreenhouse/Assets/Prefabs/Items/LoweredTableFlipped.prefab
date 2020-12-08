@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
-  blockPot: 1
+  blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
   slotType: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
-  blockPot: 1
+  blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
   slotType: 0

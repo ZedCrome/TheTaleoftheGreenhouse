@@ -4,7 +4,7 @@ using UnityEngine;
 public class DeliveryManager : MonoBehaviour
 {
     public GameObject shopItems;
-    
+    private float preDistance;
     
     public int spawnPot;
     public int spawnPlantMana;
@@ -22,6 +22,7 @@ public class DeliveryManager : MonoBehaviour
         }
 
         shopItems = GameObject.FindGameObjectWithTag("Shop");
+        preDistance = PlayerInteract.instance.maxInteractDistance;
     }
 
     public void Delivery()
@@ -118,6 +119,32 @@ public class DeliveryManager : MonoBehaviour
             }
 
             spawnManaCube -= 1;
+        }
+    }
+
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Player entered delivery trigger");
+            if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement)
+            {
+                PlayerInteract.instance.allowedTointeract = false;             
+                PlayerInteract.instance.maxInteractDistance = 0;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement)
+            {
+                PlayerInteract.instance.allowedTointeract = true;
+                PlayerInteract.instance.maxInteractDistance = preDistance;
+            }
         }
     }
 }
