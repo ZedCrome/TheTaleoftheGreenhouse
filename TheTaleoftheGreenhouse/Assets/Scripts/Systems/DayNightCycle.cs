@@ -9,12 +9,14 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] private AudioSource deliverySound;
     [SerializeField] GameObject nightCanvas;
     [SerializeField] GameObject sleepPromptCanvas;
+    [SerializeField] GameObject forcedSleepCanvas;
     [SerializeField] GameObject alreadyBoughtCanvas;
     private GameObject buyMenuCanvas;
     private GameObject deliveryManager;
     private GameObject sellBox;
+    public GameObject sleepPrompt;
+    public GameObject forcedSleeppanel;
     public RectTransform nightPanel;
-    public RectTransform sleepPrompt;
     public static DayNightCycle instance;
     public float realSecondsPerIngameDay;
     public float nightFadeDuration;
@@ -35,9 +37,11 @@ public class DayNightCycle : MonoBehaviour
     private float currentIntensity;
 
     private bool firstMorning = true;
+    private bool allowTime = true;
     private bool isSleeping = false;
     private bool isAlreadySleeping = false;
     private bool wantToSleep = false;
+    private bool forcedSleep = false;
     
     private float timer = 0;
 
@@ -74,7 +78,11 @@ public class DayNightCycle : MonoBehaviour
     
     void Update()
     {
-        CalculateTime();
+        if (allowTime)
+        {
+            CalculateTime();
+        }
+        
         lightChange();
     }
 
@@ -94,49 +102,55 @@ public class DayNightCycle : MonoBehaviour
 
     void lightChange()
     {
-        
-        if (float.Parse(hourString) > 18f && float.Parse(hourString) < 21f)
+        if (float.Parse(hourString) > 0f && float.Parse(hourString) < 12f)
         {
-            timer += Time.deltaTime;
-            
-            light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
-            light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
-            firstMorning = false;
-        }
-
-        else if (float.Parse(hourString) > 5f && float.Parse(hourString) < 8f && !firstMorning)
-        {
-            timer += Time.deltaTime;
-            player.GetComponent<PlayerMovement>().enabled = true;
-            player.GetComponent<PlayerRenderer>().enabled = true;
-            
-            light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
-            light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
-
-        }
-        else
-        {
-            timer = 0f;
-        }
-        
-        // if (float.Parse(hourString) > 2f && float.Parse(hourString) < 3f)
-        // {
-        //     //Sleep();
-        //     Debug.Log("Hej");
-        // }
-
-        if (float.Parse(hourString) > 5f && float.Parse(hourString) < 9f)
-        {
-            if(isSleeping)
+            if (float.Parse(hourString) > 1f && float.Parse(hourString) < 3f && !isSleeping && !firstMorning)
             {
-                realSecondsPerIngameDay *= 8f;
-                isAlreadySleeping = false;
-                isSleeping = false;
-                player.GetComponent<PlayerMovement>().enabled = true;
-                player.GetComponent<PlayerRenderer>().enabled = true;
-
-                StartCoroutine(WakeUpRoutine());
+                Sleep();
+                forcedSleep = true;
+            }
+            
+            if (float.Parse(hourString) > 5f && float.Parse(hourString) < 8f && !firstMorning)
+            {
+                timer += Time.deltaTime;
                 
+            
+                light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
+                light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
+            }
+            else
+            {
+                timer = 0;
+            }
+            
+            if (float.Parse(hourString) > 5f && float.Parse(hourString) < 9f)
+            {
+                if(isSleeping)
+                {
+                    realSecondsPerIngameDay *= 8f;
+                    isAlreadySleeping = false;
+                    isSleeping = false;
+
+                    StartCoroutine(WakeUpRoutine());
+                }
+            }
+        }
+        
+
+        
+        if (float.Parse(hourString) > 12f && float.Parse(hourString) < 24f)
+        {
+            if (float.Parse(hourString) > 18f && float.Parse(hourString) < 21f)
+            {
+                timer += Time.deltaTime;
+            
+                light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
+                light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
+                firstMorning = false;
+            }
+            else
+            {
+                timer = 0;
             }
         }
     }
@@ -181,7 +195,13 @@ public class DayNightCycle : MonoBehaviour
         alreadyBoughtCanvas.SetActive(false);
         
         GameManager.instance.ChangeGameState(GameManager.GameState.GameNight);
-
+        
+        if (forcedSleep)
+        {
+            forcedSleepCanvas.SetActive(true);
+            LeanTween.scale(forcedSleeppanel, new Vector3(1f, 1f, 1f), 0.5f);
+            allowTime = false;
+        }
 
 
         if (sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell > 0)
@@ -228,6 +248,12 @@ public class DayNightCycle : MonoBehaviour
         yield return new WaitForSeconds(nightFadeDuration);
         nightCanvas.SetActive(false);
         
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerRenderer>().enabled = true;
+
+        forcedSleep = false;
+        
+        
         yield return null;
     }
 
@@ -235,15 +261,28 @@ public class DayNightCycle : MonoBehaviour
     {
         if (!firstMorning)
         {
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<PlayerRenderer>().enabled = false;
             sleepPromptCanvas.SetActive(true);
+            sleepPrompt.SetActive(true);
             LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.15f).setEaseLinear();
+            allowTime = false;
         }
+    }
+
+    public void AcceptForcedSleep()
+    {
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerRenderer>().enabled = true;
+        LeanTween.scale(forcedSleeppanel, new Vector3(0f, 0f, 0f), 0.15f).setOnComplete(DeactivateSleep);
+        allowTime = true;
     }
 
     public void AcceptSleep()
     {
         wantToSleep = true;
-        LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.5f).setEaseLinear().setOnComplete(DeactivateSleep).setOnComplete(Sleep);
+        LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.15f).setEaseLinear().setOnComplete(DeactivateSleep).setOnComplete(Sleep);
+        allowTime = true;
     }
 
 
@@ -251,10 +290,16 @@ public class DayNightCycle : MonoBehaviour
     {
         wantToSleep = false;
         LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.5f).setEaseLinear().setOnComplete(DeactivateSleep);
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerRenderer>().enabled = true;
+        allowTime = true;
     }
 
     public void DeactivateSleep()
-    {
+    {    
+        forcedSleepCanvas.SetActive(false);
+        sleepPrompt.SetActive(false);
         sleepPromptCanvas.SetActive(false);
+        
     }
 }
