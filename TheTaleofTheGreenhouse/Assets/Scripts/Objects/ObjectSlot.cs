@@ -8,7 +8,7 @@ public class ObjectSlot : MonoBehaviour
     private bool isFree;
 
     private Vector3 positionOffset;
-    public enum SlotType { Table, Pot, Floor };
+    public enum SlotType { Table, Pot, Floor, ManaCube };
     private Vector3 tablePositionOffset = new Vector3(0, -0.25f, -0.7f);
     private Vector3 potPositionOffset = new Vector3(0, 0, -0.8f);
     private Vector3 floorPositionOffset = new Vector3(0, -0.25f, 0);
@@ -170,6 +170,14 @@ public class ObjectSlot : MonoBehaviour
         }
 
         else if (state == PlayerState.HandState.Plant)
+        {
+            if (slotType == SlotType.Table)
+            {
+                this.gameObject.layer = 2;
+            }
+        }
+
+        else if (state == PlayerState.HandState.Cutting)
         {
             if (slotType == SlotType.Table)
             {
