@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlantStates : MonoBehaviour
 {
     private Sprite currentSprite;
-    private Sprite deadSprite;
+    public Sprite deadSprite;
 
     public Sprite fullGrownSprite;
     public Sprite adultSprite;
@@ -108,13 +108,18 @@ public class PlantStates : MonoBehaviour
                         {
                             lostMana = true;
                         }
+
+                        if(lostMana == true)
+                        {
+                            currentState = PlantState.Adult;
+                        }
                     }
                     break;
                 }
             case PlantState.Dead:
                 {
                     currentSprite = deadSprite;
-                    hasMana = false;
+                    lostMana = true;
                     break;
                 }
         }
@@ -126,7 +131,6 @@ public class PlantStates : MonoBehaviour
 
         if (isWatered == false)
         {
-            Debug.Log("Another day witout water");
             daysWithoutWater++;
         }
 
