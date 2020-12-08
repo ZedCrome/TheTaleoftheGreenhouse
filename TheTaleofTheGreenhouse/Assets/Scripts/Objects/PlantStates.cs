@@ -21,7 +21,7 @@ public class PlantStates : MonoBehaviour
     public enum PlantState { Sprout, Young, Adult, FullGrown, Dead};
     public PlantState currentState = 0;
 
-    private int daysWithoutWater;
+    public int daysWithoutWater;
     private int daysWithoutWaterLimit = 2;
     private bool isWatered;
 
@@ -34,7 +34,10 @@ public class PlantStates : MonoBehaviour
         set
         {
             isWatered = value;
-            daysWithoutWater = 0;
+            if (value == true)
+            {
+                daysWithoutWater = 0;
+            }
         }
     }
 
@@ -123,6 +126,7 @@ public class PlantStates : MonoBehaviour
 
         if (isWatered == false)
         {
+            Debug.Log("Another day witout water");
             daysWithoutWater++;
         }
 

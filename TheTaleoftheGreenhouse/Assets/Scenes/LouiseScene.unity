@@ -8460,7 +8460,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0f73c38430b13164abb31fd026de4067, type: 2}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: currentState
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: hasMana
@@ -8522,6 +8522,10 @@ PrefabInstance:
     - target: {fileID: 4039021870531704220, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
       propertyPath: m_Name
       value: Delivery
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039021870531704220, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
@@ -20741,7 +20745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: currentState
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: fullGrownSprite
