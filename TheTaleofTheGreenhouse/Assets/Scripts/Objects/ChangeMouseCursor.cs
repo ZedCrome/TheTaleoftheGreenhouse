@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ChangeMouseCursor : MonoBehaviour
 {
@@ -26,44 +27,47 @@ public class ChangeMouseCursor : MonoBehaviour
     public Vector2 hotSpot = Vector2.zero;
 
     private string objectTag;
+    private string lastObjectTag;
+    private bool lastCanInteract;
+    private bool canInteract;
     
     public string inputObjectTag
     {
         get { return objectTag; }
         set 
         {
-            if (value == "Default")
-            {
-                Cursor.SetCursor(defaultTexture, hotSpot, cursMode);
-            }
-            if (value == "PickUpable")
-            {
-                Cursor.SetCursor(pickupTexture, hotSpot, cursMode);
-            }
-            if (value == "WaterCan")
-            {
-                Cursor.SetCursor(waterTexture, hotSpot, cursMode);
-            }
-            if (value == "ManaStorage")
-            {
-                Cursor.SetCursor(manaTexture, hotSpot, cursMode);
-            }
-            if (value == "Placeable")
-            {
-                Cursor.SetCursor(placementTexture, hotSpot, cursMode);
-            }
-            if (value == "Compost")
-            {
-                Cursor.SetCursor(compostTexture, hotSpot, cursMode);
-            }
-            if (value == "Shop")
-            {
-                Cursor.SetCursor(shopTexture, hotSpot, cursMode);
-            }
-            if (value == "Bed")
-            {
-                Cursor.SetCursor(bedTexture, hotSpot, cursMode);
-            }
+            // if (value == "Default")
+            // {
+            //     Cursor.SetCursor(defaultTexture, hotSpot, cursMode);
+            // }
+            // if (value == "PickUpable")
+            // {
+            //     Cursor.SetCursor(pickupTexture, hotSpot, cursMode);
+            // }
+            // if (value == "WaterCan")
+            // {
+            //     Cursor.SetCursor(waterTexture, hotSpot, cursMode);
+            // }
+            // if (value == "ManaStorage")
+            // {
+            //     Cursor.SetCursor(manaTexture, hotSpot, cursMode);
+            // }
+            // if (value == "Placeable")
+            // {
+            //     Cursor.SetCursor(placementTexture, hotSpot, cursMode);
+            // }
+            // if (value == "Compost")
+            // {
+            //     Cursor.SetCursor(compostTexture, hotSpot, cursMode);
+            // }
+            // if (value == "Shop")
+            // {
+            //     Cursor.SetCursor(shopTexture, hotSpot, cursMode);
+            // }
+            // if (value == "Bed")
+            // {
+            //     Cursor.SetCursor(bedTexture, hotSpot, cursMode);
+            // }
             
             objectTag = value;
         }
@@ -88,96 +92,106 @@ public class ChangeMouseCursor : MonoBehaviour
         Cursor.SetCursor(defaultTexture, hotSpot, cursMode);
     }
 
-    
-    public void ChangeAlpha(bool canInteract)
+    private void Update()
     {
-        if (objectTag == "Default")
+        if (lastCanInteract != canInteract || lastObjectTag != objectTag)
         {
-            if (canInteract)
+            if (objectTag == "Default")
             {
-                Cursor.SetCursor(defaultTexture, hotSpot, cursMode);
+                if (canInteract)
+                {
+                    Cursor.SetCursor(defaultTexture, hotSpot, cursMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(defaultTextureTransparent, hotSpot, cursMode);
+                }
             }
-            else
+            if (objectTag == "PickUpable")
             {
-                Cursor.SetCursor(defaultTextureTransparent, hotSpot, cursMode);
+                if (canInteract)
+                {
+                    Cursor.SetCursor(pickupTexture, hotSpot, cursMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(pickupTextureTransparent, hotSpot, cursMode);
+                }
             }
+            if (objectTag == "WaterCan")
+            {
+                if (canInteract)
+                {
+                    Cursor.SetCursor(waterTexture, hotSpot, cursMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(waterTextureTransparent, hotSpot, cursMode);
+                }
+            }
+            if (objectTag == "ManaStorage")
+            {
+                if (canInteract)
+                {
+                    Cursor.SetCursor(manaTexture, hotSpot, cursMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(manaTextureTransparent, hotSpot, cursMode);
+                }
+            }
+            if (objectTag == "Placeable")
+            {
+                if (canInteract)
+                {
+                    Cursor.SetCursor(placementTexture, hotSpot, cursMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(placementTextureTransparent, hotSpot, cursMode);
+                }
+            }
+            if (objectTag == "Compost")
+            {
+                if (canInteract)
+                {
+                    Cursor.SetCursor(compostTexture, hotSpot, cursMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(compostTextureTransparent, hotSpot, cursMode);
+                }
+            }
+            if (objectTag == "Shop")
+            {
+                if (canInteract)
+                {
+                    Cursor.SetCursor(shopTexture, hotSpot, cursMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(shopTextureTransparent, hotSpot, cursMode);
+                }
+            }
+            if (objectTag == "Bed")
+            {
+                if (canInteract)
+                {
+                    Cursor.SetCursor(bedTexture, hotSpot, cursMode);
+                }
+                else
+                {
+                    Cursor.SetCursor(bedTextureTransparent, hotSpot, cursMode);
+                }
+            }
+        
+            lastCanInteract = canInteract;
+            lastObjectTag = objectTag;
         }
-        if (objectTag == "PickUpable")
-        {
-            if (canInteract)
-            {
-                Cursor.SetCursor(pickupTexture, hotSpot, cursMode);
-            }
-            else
-            {
-                Cursor.SetCursor(pickupTextureTransparent, hotSpot, cursMode);
-            }
-        }
-        if (objectTag == "WaterCan")
-        {
-            if (canInteract)
-            {
-                Cursor.SetCursor(waterTexture, hotSpot, cursMode);
-            }
-            else
-            {
-                Cursor.SetCursor(waterTextureTransparent, hotSpot, cursMode);
-            }
-        }
-        if (objectTag == "ManaStorage")
-        {
-            if (canInteract)
-            {
-                Cursor.SetCursor(manaTexture, hotSpot, cursMode);
-            }
-            else
-            {
-                Cursor.SetCursor(manaTextureTransparent, hotSpot, cursMode);
-            }
-        }
-        if (objectTag == "Placeable")
-        {
-            if (canInteract)
-            {
-                Cursor.SetCursor(placementTexture, hotSpot, cursMode);
-            }
-            else
-            {
-                Cursor.SetCursor(placementTextureTransparent, hotSpot, cursMode);
-            }
-        }
-        if (objectTag == "Compost")
-        {
-            if (canInteract)
-            {
-                Cursor.SetCursor(compostTexture, hotSpot, cursMode);
-            }
-            else
-            {
-                Cursor.SetCursor(compostTextureTransparent, hotSpot, cursMode);
-            }
-        }
-        if (objectTag == "Shop")
-        {
-            if (canInteract)
-            {
-                Cursor.SetCursor(shopTexture, hotSpot, cursMode);
-            }
-            else
-            {
-                Cursor.SetCursor(shopTextureTransparent, hotSpot, cursMode);
-            }
-        }
-        if (objectTag == "Bed")
-        {
-            if (canInteract)
-            {
-                Cursor.SetCursor(bedTexture, hotSpot, cursMode);
-            }
-            else
-            {
-                Cursor.SetCursor(bedTextureTransparent, hotSpot, cursMode);
-            }
-        }
+    }
+
+    public void ChangeAlpha(bool setCanInteract)
+    {
+        canInteract = setCanInteract;
     }
 }

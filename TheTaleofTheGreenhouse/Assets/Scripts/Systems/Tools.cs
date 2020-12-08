@@ -16,4 +16,49 @@ public class Tools : MonoBehaviour
 
         return audioClip[random];
     }
+    
+    public static int GetStackNumber(GameObject trackedObject)
+    {
+        if (trackedObject == null)
+        {
+            return 0;
+        }
+        
+        bool shouldContinue = true;
+        int operationSteps = 0;
+        int stackCounter = 1;
+
+        GameObject nextTrackedObject = trackedObject;
+        
+        do
+        {
+            if (nextTrackedObject.transform.parent != null)
+            {
+                if (nextTrackedObject.transform.parent.CompareTag("TableSlot"))
+                {
+                    shouldContinue = false;
+                }
+                else
+                {
+                    nextTrackedObject = nextTrackedObject.transform.parent.gameObject;
+
+                    if (nextTrackedObject.HasComponent<ObjectSlot>())
+                    {
+                        stackCounter++;
+                    }
+                }
+            }
+            
+            if (operationSteps < 20)
+            {
+                operationSteps++;
+            }
+            else
+            {
+                shouldContinue = false;
+            }
+        } while (shouldContinue == true);
+
+        return stackCounter;
+    }
 }

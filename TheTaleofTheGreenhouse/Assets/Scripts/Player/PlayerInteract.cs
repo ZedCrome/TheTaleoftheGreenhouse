@@ -2,10 +2,9 @@
 
 public class PlayerInteract : MonoBehaviour
 {
-
-    private AudioSource audioSource;
-    
     public static PlayerInteract instance;
+    
+    private AudioSource audioSource;
     public AudioSource interactSound;
     public AudioClip wateringSound;
     
@@ -43,22 +42,8 @@ public class PlayerInteract : MonoBehaviour
         }
         
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        Vector2 direction = mouseWorldPosition - new Vector2(reachAnchor.position.x, reachAnchor.position.y);
-        float distanceToMouse = direction.sqrMagnitude;
-        Vector2 directionBorder = direction.normalized * maxInteractDistance;
-        directionBorder = Vector2.Scale(directionBorder, maxInteractDistanceModifier);
-        
-        if (directionBorder.sqrMagnitude > distanceToMouse)
-        {
-            allowedTointeract = true;
-            ChangeMouseCursor.instance.ChangeAlpha(true);
-        }
-        else
-        {
-            allowedTointeract = false;
-            ChangeMouseCursor.instance.ChangeAlpha(false);
-        }
+
+        CalculateAllowedToInteract(mousePosition);
         
         if (allowedTointeract)
         {
@@ -96,6 +81,26 @@ public class PlayerInteract : MonoBehaviour
         if(Input.GetMouseButtonUp(0))
         {
             leftMouseButtonLock = false;
+        }
+    }
+
+    private void CalculateAllowedToInteract( Vector2 newMousePosition)
+    {
+        Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(newMousePosition);
+        Vector2 direction = mouseWorldPosition - new Vector2(reachAnchor.position.x, reachAnchor.position.y);
+        float distanceToMouse = direction.sqrMagnitude;
+        Vector2 directionBorder = direction.normalized * maxInteractDistance;
+        directionBorder = Vector2.Scale(directionBorder, maxInteractDistanceModifier);
+        
+        if (directionBorder.sqrMagnitude > distanceToMouse)
+        {
+            allowedTointeract = true;
+            ChangeMouseCursor.instance.ChangeAlpha(true);
+        }
+        else
+        {
+            allowedTointeract = false;
+            ChangeMouseCursor.instance.ChangeAlpha(false);
         }
     }
 

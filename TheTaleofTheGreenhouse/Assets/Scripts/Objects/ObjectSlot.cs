@@ -95,9 +95,11 @@ public class ObjectSlot : MonoBehaviour
             //May create bugs for floor. Import table and floor transforms later.
             else
             {
-                objectInSlot.transform.parent = transform.parent;
+                objectInSlot.transform.parent = transform;
             }
 
+            Debug.Log(Tools.GetStackNumber(objectInSlot));
+            
             renderer.enabled = false;
             
             isFree = false;
