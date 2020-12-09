@@ -10044,7 +10044,7 @@ MonoBehaviour:
   alreadyBoughtOverlay: {fileID: 195829175}
   totalCostText: {fileID: 3097841063228425397}
   playerMoneyText: {fileID: 3097841062966606809}
-  playerMoney: 99999
+  playerMoney: 10
   hasBoughtSomething: 0
   tableAdd: {fileID: 3097841064248505151}
   tableReduce: {fileID: 3097841064446730703}

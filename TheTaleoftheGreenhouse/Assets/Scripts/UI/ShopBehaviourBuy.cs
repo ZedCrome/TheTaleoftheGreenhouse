@@ -99,23 +99,27 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void addTable()
     {
-        if (currentlyBuyingTables < maxBuyTablesAtATime && amountOfTables < maxTables)
+        if (playerMoney - (totalCost + tableCost) >= 0)
         {
-            amountOfTables++;
-            currentlyBuyingTables++;
-            
-            if (amountOfTables <= 5)
-                tableCurrentyBuy1.value++;
-            
-            if (amountOfTables > 5)
-                tableCurrentyBuy2.value++;
-            
-            tableTotalCost += tableCost;
-            totalCost += tableCost;
+            if (currentlyBuyingTables < maxBuyTablesAtATime && amountOfTables < maxTables)
+            {
+                amountOfTables++;
+                currentlyBuyingTables++;
+
+                if (amountOfTables <= 5)
+                    tableCurrentyBuy1.value++;
+
+                if (amountOfTables > 5)
+                    tableCurrentyBuy2.value++;
+
+                tableTotalCost += tableCost;
+                totalCost += tableCost;
+            }
+
+            tablePriceDisplay.text = tableTotalCost + " Gold";
+            totalCostText.text = "Price: " + totalCost + " Gold";
+            tableAmount.text = amountOfTables.ToString();
         }
-        tablePriceDisplay.text = tableTotalCost + " Gold";
-        totalCostText.text = "Price: " + totalCost + " Gold";
-        tableAmount.text = amountOfTables.ToString();
     }
     public void reduceTable()
     {
@@ -141,26 +145,30 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void addPot()
     {
-        if (currentlyBuyingPots < maxBuyPotsAtATime && amountOfPots < maxPots)
+        if (playerMoney - (totalCost + potCost) >= 0)
         {
-            amountOfPots++;
-            currentlyBuyingPots++;
-            
-            if (amountOfPots <= 5)
-                potCurrentBuy1.value++;
+            if (currentlyBuyingPots < maxBuyPotsAtATime && amountOfPots < maxPots)
+            {
+                amountOfPots++;
+                currentlyBuyingPots++;
 
-            if (amountOfPots > 5 && amountOfPots <= 11)
-                potCurrentBuy2.value++;
-            
-            if (amountOfPots > 11)
-                potCurrentBuy3.value++;
-            
-            potTotalCost += potCost;
-            totalCost += potCost;
+                if (amountOfPots <= 5)
+                    potCurrentBuy1.value++;
+
+                if (amountOfPots > 5 && amountOfPots <= 11)
+                    potCurrentBuy2.value++;
+
+                if (amountOfPots > 11)
+                    potCurrentBuy3.value++;
+
+                potTotalCost += potCost;
+                totalCost += potCost;
+            }
+
+            potPriceDisplay.text = potTotalCost + " Gold";
+            totalCostText.text = "Price: " + totalCost + " Gold";
+            potAmount.text = amountOfPots.ToString();
         }
-        potPriceDisplay.text = potTotalCost + " Gold";
-        totalCostText.text = "Price: " + totalCost + " Gold";
-        potAmount.text = amountOfPots.ToString();
     }
     public void reducePot()
     {
@@ -189,20 +197,25 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void addPlant()
     {
-        if (currentlyBuyingPlants < maxBuyPlantsAtATime && amountOfPlants < maxPlants) {
+        if (playerMoney - (totalCost + plantCost) >= 0)
+        {
+            if (currentlyBuyingPlants < maxBuyPlantsAtATime && amountOfPlants < maxPlants)
+            {
 
-            amountOfPlants++;
-            currentlyBuyingPlants++;
-            plantCurrentBuy1.value++;
+                amountOfPlants++;
+                currentlyBuyingPlants++;
+                plantCurrentBuy1.value++;
 
-            plantTotalCost += plantCost;
-            totalCost += plantCost;
+                plantTotalCost += plantCost;
+                totalCost += plantCost;
+            }
+
+            plantPriceDisplay.text = plantTotalCost + " Gold";
+            totalCostText.text = "Price: " + totalCost + " Gold";
+            plantAmount.text = amountOfPlants.ToString();
         }
-
-        plantPriceDisplay.text = plantTotalCost + " Gold";
-        totalCostText.text = "Price: " + totalCost + " Gold";
-        plantAmount.text = amountOfPlants.ToString();
     }
+
     public void reducePlant()
     {
         if (currentlyBuyingPlants > 0)
@@ -210,30 +223,36 @@ public class ShopBehaviourBuy : MonoBehaviour
             amountOfPlants--;
             currentlyBuyingPlants--;
             plantCurrentBuy1.value--;
-            
+
             plantTotalCost -= plantCost;
             totalCost -= plantCost;
         }
+
         plantPriceDisplay.text = plantTotalCost + " Gold";
         totalCostText.text = "Price: " + totalCost + " Gold";
         plantAmount.text = amountOfPlants.ToString();
     }
+
     
     
     public void addManaPlant()
     {
-        if (currentlyBuyingManaPlants < maxBuyManaStorageItemsAtATime && amountOfManaPlants < maxManaPlants)
+        if (playerMoney - (totalCost + manaPlantCost) >= 0)
         {
-            amountOfManaPlants++;
-            currentlyBuyingManaPlants++;
-            manaPlantCurrentBuy1.value++;
+            if (currentlyBuyingManaPlants < maxBuyManaStorageItemsAtATime && amountOfManaPlants < maxManaPlants)
+            {
+                amountOfManaPlants++;
+                currentlyBuyingManaPlants++;
+                manaPlantCurrentBuy1.value++;
 
-            manaPlantTotalCost += manaPlantCost;
-            totalCost += manaPlantCost;
+                manaPlantTotalCost += manaPlantCost;
+                totalCost += manaPlantCost;
+            }
+            manaPlantPriceDisplay.text = manaPlantTotalCost + " Gold";
+            totalCostText.text = "Price: " + totalCost + " Gold";
+            manaPlantAmount.text = amountOfManaPlants.ToString(); 
         }
-        manaPlantPriceDisplay.text = manaPlantTotalCost + " Gold";
-        totalCostText.text = "Price: " + totalCost + " Gold";
-        manaPlantAmount.text = amountOfManaPlants.ToString();
+        
     }
     public void reduceManaPlant()
     {
@@ -254,23 +273,26 @@ public class ShopBehaviourBuy : MonoBehaviour
     
     public void addManaStorageItem()
     {
-        if (currentlyBuyingManaStorageItems < maxBuyManaStorageItemsAtATime && amountOfManaStorageItems < maxManaStorageItems)
+        if (playerMoney - (totalCost + manaStorageItemCost) >= 0)
         {
-            amountOfManaStorageItems++;
-            currentlyBuyingManaStorageItems++;
-            
-            if (amountOfManaStorageItems <= 4)
-                manaStorageItemCurrentBuy1.value++;
-            
-            if (amountOfManaStorageItems > 4)
-                manaStorageItemCurrentBuy2.value++;
-            
-            manaStorageItemTotalCost += manaStorageItemCost;
-            totalCost += manaStorageItemCost;
+            if (currentlyBuyingManaStorageItems < maxBuyManaStorageItemsAtATime && amountOfManaStorageItems < maxManaStorageItems)
+            {
+                amountOfManaStorageItems++;
+                currentlyBuyingManaStorageItems++;
+                
+                if (amountOfManaStorageItems <= 4)
+                    manaStorageItemCurrentBuy1.value++;
+                
+                if (amountOfManaStorageItems > 4)
+                    manaStorageItemCurrentBuy2.value++;
+                
+                manaStorageItemTotalCost += manaStorageItemCost;
+                totalCost += manaStorageItemCost;
+            }
+            manaStorageItemPriceDisplay.text = manaStorageItemTotalCost + " Gold";
+            totalCostText.text = "Price: " + totalCost + " Gold";
+            manaStorageItemAmount.text = amountOfManaStorageItems.ToString();
         }
-        manaStorageItemPriceDisplay.text = manaStorageItemTotalCost + " Gold";
-        totalCostText.text = "Price: " + totalCost + " Gold";
-        manaStorageItemAmount.text = amountOfManaStorageItems.ToString();
     }
     public void reduceManaStorageItem()
     {
@@ -278,10 +300,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             amountOfManaStorageItems--;
             currentlyBuyingManaStorageItems--;
-            
+        
             if (amountOfManaStorageItems < 4)
                 manaStorageItemCurrentBuy1.value -= 1;
-            
+        
             if (amountOfManaStorageItems >= 4)
                 manaStorageItemCurrentBuy2.value -= 1;
 
