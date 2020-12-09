@@ -213,6 +213,9 @@ public class DayNightCycle : MonoBehaviour
                 if (sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] != null)
                 {
                     Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
+                    sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] = null;
+                    sellBox.GetComponent<SellItems>().SetGoldBack();
+
                 }
                 else
                 {
