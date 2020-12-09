@@ -2861,6 +2861,10 @@ public class LeanTween : MonoBehaviour {
     }
 
 
+    public static void alpha(double rectTrans, float to)
+    {
+        throw new NotImplementedException();
+    }
 } // End LeanTween class
 
 public class LTUtility {

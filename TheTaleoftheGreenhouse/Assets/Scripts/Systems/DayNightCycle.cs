@@ -11,6 +11,7 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] GameObject sleepPromptCanvas;
     [SerializeField] GameObject forcedSleepCanvas;
     [SerializeField] GameObject alreadyBoughtCanvas;
+    [SerializeField] GameObject shopBuyMenu;
     private GameObject buyMenuCanvas;
     private GameObject deliveryManager;
     private GameObject sellBox;
@@ -80,8 +81,12 @@ public class DayNightCycle : MonoBehaviour
     {
         if (allowTime)
         {
-            CalculateTime();
+            if (!shopBuyMenu.activeInHierarchy)
+            {
+                CalculateTime();
+            }
         }
+        
         
         lightChange();
     }
