@@ -7,7 +7,9 @@ public class CompostBehaviour : MonoBehaviour
 {
     public GameObject lidOpen;
     public GameObject lidClosed;
-
+    
+    public string[] tagArray;
+    
     private void Start()
     {
         lidOpen = transform.Find("LidOpen").gameObject;
@@ -15,6 +17,8 @@ public class CompostBehaviour : MonoBehaviour
         
         lidOpen.SetActive(false);
         lidClosed.SetActive(true);
+
+        tagArray = new[] {"CuttingNormal", "CuttingMana", "PlantMana", "PlantNormal"};
     }
 
     private void OnMouseOver()
@@ -31,10 +35,7 @@ public class CompostBehaviour : MonoBehaviour
 
             if (Input.GetMouseButtonDown(1))
             {
-                if (PlayerInteract.instance.inventoryItem.CompareTag("CuttingNormal") ||
-                    PlayerInteract.instance.inventoryItem.CompareTag("CuttingMana") ||
-                    PlayerInteract.instance.inventoryItem.CompareTag("PlantMana") ||
-                    PlayerInteract.instance.inventoryItem.CompareTag("PlantNormal"))
+                if (Tools.LookForTagInArray(PlayerInteract.instance.inventoryItem.tag, tagArray))
                 {
                     GameObject objectToDestroy = PlayerInteract.instance.inventoryItem;
                     PlayerInteract.instance.inventoryItem = null;
