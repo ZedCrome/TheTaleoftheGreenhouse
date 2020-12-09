@@ -7,22 +7,24 @@ public class SellItems : MonoBehaviour
 {
     SellBoxBehaviour sellBox;
 
-    private int manaPlantPrice = 6;
-    private int normalPlantPrice = 3;
+    //Items price
     private int manaCubePrice = 4;
     private int potPrice = 1;
+    
+    //Plants price
+    PlantStates.PlantState statePrice;
 
-    enum PlantState { Sprout, Young, Adult, FullGrown, Dead };
-    PlantState statePrice;
+    private int manaPlantPrice;
+    private int normalPlantPrice;
 
-    private int manaSproutPrice = 
-    private int normalSpritPrice;
-    private int manaYoungPrice;
-    private int normalYoungPrice;
-    private int manaAdultPrice;
-    private int normalAdultPrice;
-    private int manaFullGrwonPrice;
-    private int normalFullGrownPrice;
+    private int manaSproutPrice = 5;
+    private int normalSproutPrice = 2;
+    private int manaYoungPrice = 7;
+    private int normalYoungPrice = 3;
+    private int manaAdultPrice = 9;
+    private int normalAdultPrice = 4;
+    private int manaFullGrownPrice = 11;
+    private int normalFullGrownPrice = 5;
     private int deadPlantPrice = 0;
 
     private int goldBack;
@@ -51,16 +53,51 @@ public class SellItems : MonoBehaviour
                 break;
             }
 
-            PlantStates.PlantState checkPlantState = gameObjects[i].GetComponent<PlantStates>().currentState;
+            statePrice = gameObjects[i].GetComponent<PlantStates>().currentState;
             switch (gameObjects[i].tag)
                 {
                     case "PlantMana":
-                   
+                        switch(statePrice)
+                    {
+                        case PlantStates.PlantState.Sprout:
+                            manaPlantPrice = manaSproutPrice;
+                            break;
+                        case PlantStates.PlantState.Young:
+                            manaPlantPrice = manaYoungPrice;
+                            break;
+                        case PlantStates.PlantState.Adult:
+                            manaPlantPrice = manaAdultPrice;
+                            break;
+                        case PlantStates.PlantState.FullGrown:
+                            manaPlantPrice = manaFullGrownPrice;
+                            break;
+                        case PlantStates.PlantState.Dead:
+                            manaPlantPrice = deadPlantPrice;
+                            break;
+                    }
                         goldBack += manaPlantPrice;
                         break;
 
                     case "PlantNormal":
-                        goldBack += normalPlantPrice;
+                    switch (statePrice)
+                    {
+                        case PlantStates.PlantState.Sprout:
+                            normalPlantPrice = normalSproutPrice;
+                            break;
+                        case PlantStates.PlantState.Young:
+                            normalPlantPrice = normalYoungPrice;
+                            break;
+                        case PlantStates.PlantState.Adult:
+                            normalPlantPrice = normalAdultPrice;
+                            break;
+                        case PlantStates.PlantState.FullGrown:
+                            normalPlantPrice = normalFullGrownPrice;
+                            break;
+                        case PlantStates.PlantState.Dead:
+                            normalPlantPrice = deadPlantPrice;
+                            break;
+                    }
+                    goldBack += normalPlantPrice;
                         break;
 
                     case "ManaStorage":
