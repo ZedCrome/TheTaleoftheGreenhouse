@@ -36,46 +36,58 @@ public class SellBoxBehaviour : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (PlayerInteract.instance.inventoryItem.CompareTag("PlantMana") ||
+                if (PlayerInteract.instance.inventoryItem != null)
+                {
+                    if (PlayerInteract.instance.inventoryItem.CompareTag("PlantMana") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("PlantNormal") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("Pot") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("ManaStorage"))
-                {
-                    GameObject sellItem = PlayerInteract.instance.inventoryItem;
-                    PlayerInteract.instance.inventoryItem = null;
+                    {
+                        GameObject sellItem = PlayerInteract.instance.inventoryItem;
+                        PlayerInteract.instance.inventoryItem = null;
 
-                    if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
-                    {
-                        sellItem.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
-                    }
-                    else
-                    {
-                        sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                    }
-
-                    if (currentSlot < maxNumbertoSell)
-                    {
-                        for (int i = currentSlot; i < maxNumbertoSell;)
+                        if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
                         {
-                            if (itemsToSell[i] == null)
-                            {
-                                itemsToSell[i] = sellItem;
-                                sellItem.GetComponentInParent<ObjectSlot>().objectInSlot = null;
-                                sellItem.transform.parent = gameObject.transform;
-                                currentSlot++;
-                            }
-                            break;
+                            sellItem.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
                         }
-                    }
-                    else
-                    {
-                        Debug.Log("Can't sell more items today");
-                    }
+                        else if (sellItem.tag == "Pot")
+                        {
+                            sellItem.transform.GetChild(0).gameObject.SetActive(false);
+                            sellItem.GetComponent<InteractableEffect>().enabled = false;
+                            sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                        }
+                        else
+                        {
+                            sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                        }
 
-                    PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
-                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
+                        if (currentSlot < maxNumbertoSell)
+                        {
+                            for (int i = currentSlot; i < maxNumbertoSell;)
+                            {
+                                if (itemsToSell[i] == null)
+                                {
+                                    itemsToSell[i] = sellItem;
+                                    if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
+                                    {
+                                        sellItem.GetComponentInParent<ObjectSlot>().objectInSlot = null;
+                                    }
+                                    sellItem.transform.parent = gameObject.transform;
+                                    currentSlot++;
+                                }
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("Can't sell more items today");
+                        }
+
+                        PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
+                        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
+                    }
                 }
-            }
+            }              
         }
         else
         {

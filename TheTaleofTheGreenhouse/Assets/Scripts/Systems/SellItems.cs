@@ -52,8 +52,11 @@ public class SellItems : MonoBehaviour
             {
                 break;
             }
+            if (gameObjects[i].GetComponent<PlantStates>() != null)
+            {
+                statePrice = gameObjects[i].GetComponent<PlantStates>().currentState;
+            }       
 
-            statePrice = gameObjects[i].GetComponent<PlantStates>().currentState;
             switch (gameObjects[i].tag)
                 {
                     case "PlantMana":
