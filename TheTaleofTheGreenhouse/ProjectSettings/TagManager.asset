@@ -15,11 +15,12 @@ TagManager:
   - PlantMana
   - ManaCatcher
   - Shears
-  - Cutting
   - Shop
   - Delivery
   - Compost
   - TableSlot
+  - CuttingMana
+  - CuttingNormal
   layers:
   - Default
   - TransparentFX
