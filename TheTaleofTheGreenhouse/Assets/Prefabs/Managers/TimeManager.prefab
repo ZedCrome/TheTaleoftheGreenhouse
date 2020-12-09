@@ -1313,6 +1313,7 @@ MonoBehaviour:
   sleepPromptCanvas: {fileID: 2667266417708818684}
   forcedSleepCanvas: {fileID: 1483637288308673277}
   alreadyBoughtCanvas: {fileID: 0}
+  shopBuyMenu: {fileID: 0}
   sleepPrompt: {fileID: 6272742901205777343}
   forcedSleeppanel: {fileID: 1280270429409085759}
   nightPanel: {fileID: 931818890005706853}
