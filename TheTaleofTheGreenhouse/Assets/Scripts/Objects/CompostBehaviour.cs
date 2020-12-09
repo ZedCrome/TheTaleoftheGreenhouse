@@ -31,7 +31,8 @@ public class CompostBehaviour : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (PlayerInteract.instance.inventoryItem.CompareTag("Cutting") ||
+                if (PlayerInteract.instance.inventoryItem.CompareTag("CuttingNormal") ||
+                    PlayerInteract.instance.inventoryItem.CompareTag("CuttingMana") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("PlantMana") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("PlantNormal"))
                 {

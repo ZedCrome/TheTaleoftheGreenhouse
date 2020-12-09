@@ -26,7 +26,7 @@ public class ShearsBehaviour : MonoBehaviour
                 {
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().CutPlant() == true)
                     {
-                        PlayerInventory.instance.AddCutting();
+                        PlayerInventory.instance.AddCutting(PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.tag);
                         audioSource.PlayOneShot(Tools.GetRandomSound(cutSound));
                     }
                     else

@@ -17,6 +17,22 @@ public class Tools : MonoBehaviour
 
         return audioClip[random];
     }
+
+    public static bool CheckListOfTags(string tagToCompare, string[] arrayOfTags)
+    {
+        if (arrayOfTags.Length > 0)
+        {
+            foreach (string tagInArray in arrayOfTags)
+            {
+                if (tagToCompare == tagInArray)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
     
     public static int GetStackNumber(GameObject trackedObject)
     {

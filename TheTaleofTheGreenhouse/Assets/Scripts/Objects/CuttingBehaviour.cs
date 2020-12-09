@@ -28,8 +28,15 @@ public class CuttingBehaviour : MonoBehaviour
                     if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot == null)
                     {
                         GameObject objectToDestroy;
-
-                        GameObject newPlantObject = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
+                        GameObject newPlantObject;
+                        if (this.gameObject.CompareTag("CuttingNormal"))
+                        {
+                            newPlantObject = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
+                        }
+                        else
+                        {
+                            newPlantObject = PrefabManager.instance.CreateNewObjectInstance("PlantMana");
+                        }
 
                         if (newPlantObject != null)
                         {

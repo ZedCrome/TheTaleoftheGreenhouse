@@ -7,7 +7,8 @@ public class PlayerInventory : MonoBehaviour
     public GameObject cuttingPrefab;
     
     private GameObject item;
-    private int cuttingsInInventory;
+    private int normalCuttingsInInventory;
+    private int manaCuttingsInInventory;
     public int MaxCuttings = 2;
     
     void Start()
@@ -41,22 +42,38 @@ public class PlayerInventory : MonoBehaviour
 
     public void SpawnCutting()
     {
-        GameObject newCutting = PrefabManager.instance.CreateNewObjectInstance("Cutting");
-        cuttingsInInventory -= 1;
-        PlayerInteract.instance.inventoryItem = newCutting;
+        if (normalCuttingsInInventory > 0)
+        {
+            GameObject newNormalCutting = PrefabManager.instance.CreateNewObjectInstance("CuttingNormal");
+            normalCuttingsInInventory -= 1;
+            PlayerInteract.instance.inventoryItem = newNormalCutting;            
+        }
+        else if (manaCuttingsInInventory > 0)
+        {
+            GameObject newManaCutting = PrefabManager.instance.CreateNewObjectInstance("CuttingMana");
+            manaCuttingsInInventory -= 1;
+            PlayerInteract.instance.inventoryItem = newManaCutting;  
+        }
     }
     
-    public void AddCutting()
+    public void AddCutting(string plantType)
     {
-        if (cuttingsInInventory < MaxCuttings)
+        if (normalCuttingsInInventory + manaCuttingsInInventory < MaxCuttings)
         {
-            cuttingsInInventory += 1;
+            if (plantType == "PlantNormal")
+            {
+                normalCuttingsInInventory += 1;
+            }
+            else
+            {
+                manaCuttingsInInventory += 1;
+            }
         }
     }
 
     public bool CanCarryMoreCuttings()
     {
-        if (cuttingsInInventory == MaxCuttings)
+        if (normalCuttingsInInventory + manaCuttingsInInventory == MaxCuttings)
         {
             return false;
         }
@@ -66,7 +83,7 @@ public class PlayerInventory : MonoBehaviour
 
     public bool GetCuttingsExist()
     {
-        if (cuttingsInInventory > 0)
+        if (normalCuttingsInInventory + manaCuttingsInInventory > 0)
         {
             return true;
         }
