@@ -1,4 +1,5 @@
 ﻿using System.Security.AccessControl;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class PlantStates : MonoBehaviour
@@ -127,69 +128,73 @@ public class PlantStates : MonoBehaviour
 
     void OnSleep()
     {
-        IsWatered = transform.parent.parent.GetComponent<PotBehaviour>().GetIsWatered();
-
-        if (isWatered == false)
+        if (gameObject.transform.parent.parent.tag == "Pot")
         {
-            daysWithoutWater++;
+            IsWatered = transform.parent.parent.GetComponent<PotBehaviour>().GetIsWatered();
+
+            if (isWatered == false)
+            {
+                daysWithoutWater++;
+            }
+
+            switch (currentState)
+            {
+                case PlantState.Sprout:
+                    {
+                        if (isWatered)
+                        {
+                            currentState = PlantState.Young;
+                            transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
+                        }
+                        else if (daysWithoutWater == daysWithoutWaterLimit)
+                        {
+                            currentState = PlantState.Dead;
+                        }
+
+                        break;
+                    }
+                case PlantState.Young:
+                    {
+                        if (isWatered)
+                        {
+                            currentState = PlantState.Adult;
+                            transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
+                        }
+                        else if (daysWithoutWater == daysWithoutWaterLimit)
+                        {
+                            currentState = PlantState.Dead;
+                        }
+
+                        break;
+                    }
+                case PlantState.Adult:
+                    {
+                        if (isWatered)
+                        {
+                            hasMana = true;
+                            currentState = PlantState.FullGrown;
+                            transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
+                        }
+                        else if (daysWithoutWater == daysWithoutWaterLimit)
+                        {
+                            currentState = PlantState.Dead;
+                        }
+
+                        break;
+                    }
+                case PlantState.FullGrown:
+                    {
+                        transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
+
+
+                        if (daysWithoutWater == daysWithoutWaterLimit)
+                        {
+                            currentState = PlantState.Dead;
+                        }
+                        break;
+                    }
+            }
         }
-
-        switch (currentState)
-        {
-            case PlantState.Sprout:
-            {
-                if (isWatered)
-                {
-                    currentState = PlantState.Young;
-                    transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
-                }
-                else if (daysWithoutWater == daysWithoutWaterLimit)
-                {
-                    currentState = PlantState.Dead;
-                }
-
-                break;
-            }
-            case PlantState.Young:
-            {
-                if (isWatered)
-                {
-                    currentState = PlantState.Adult;
-                    transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
-                }
-                else if (daysWithoutWater == daysWithoutWaterLimit)
-                {
-                    currentState = PlantState.Dead;
-                }
-
-                break;
-            }
-            case PlantState.Adult:
-            {
-                if (isWatered)
-                {
-                    hasMana = true;
-                    currentState = PlantState.FullGrown;
-                    transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
-                }
-                else if (daysWithoutWater == daysWithoutWaterLimit)
-                {
-                    currentState = PlantState.Dead;
-                }
-
-                break;
-            }
-            case PlantState.FullGrown:
-            {
-                transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
-
-
-                if (daysWithoutWater == daysWithoutWaterLimit)
-                {
-                    currentState = PlantState.Dead;
-                }               
-                break;
-            }
-        }
+        
     }
 }

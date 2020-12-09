@@ -366,7 +366,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2268901697351702993
@@ -485,7 +485,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2268901697534130556
@@ -604,7 +604,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2268901697689533456
@@ -723,7 +723,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2268901698212609298
@@ -842,7 +842,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2268901698295545666
@@ -961,7 +961,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2268901698336231169
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2268901698556380087
@@ -1199,7 +1199,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2268901698933031809
@@ -1318,7 +1318,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2501732153718772592
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2842262775320725864
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &2842262775677687706
@@ -1707,7 +1707,7 @@ MonoBehaviour:
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
-  slotType: 0
+  slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
 --- !u!1 &3028455744121958688

@@ -8,10 +8,11 @@ public class ObjectSlot : MonoBehaviour
     private bool isFree;
     
     private Vector3 positionOffset;
-    public enum SlotType { Table, Pot, Floor, ManaCube };
+    public enum SlotType { Table, Pot, Floor, ManaCube, Delivery };
     private Vector3 tablePositionOffset = new Vector3(0, -0.25f, -0.7f);
     private Vector3 potPositionOffset = new Vector3(0, 0, -0.8f);
     private Vector3 floorPositionOffset = new Vector3(0, -0.25f, 0);
+    private Vector3 deliveryPositionOffset = new Vector3(0, 0, -0.8f);
 
     [Header("Options")]
 
@@ -102,6 +103,12 @@ public class ObjectSlot : MonoBehaviour
                     {
                         positionOffset = floorPositionOffset;
                         blockWaterCan = false;
+                        break;
+                    }
+                case SlotType.Delivery:
+                    {
+                        positionOffset = deliveryPositionOffset;
+                        blockWaterCan = true;
                         break;
                     }
             }
