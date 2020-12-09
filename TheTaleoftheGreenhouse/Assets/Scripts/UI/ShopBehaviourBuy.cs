@@ -239,7 +239,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         if (playerMoney - (totalCost + manaPlantCost) >= 0)
         {
-            if (currentlyBuyingManaPlants < maxBuyManaStorageItemsAtATime && amountOfManaPlants < maxManaPlants)
+            if (currentlyBuyingManaPlants < maxBuyManaPlantsAtATime && amountOfManaPlants < maxManaPlants)
             {
                 amountOfManaPlants++;
                 currentlyBuyingManaPlants++;
