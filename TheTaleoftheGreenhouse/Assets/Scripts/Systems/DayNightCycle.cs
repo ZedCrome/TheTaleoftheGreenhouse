@@ -273,7 +273,7 @@ public class DayNightCycle : MonoBehaviour
         player.GetComponent<PlayerRenderer>().enabled = false;
         sleepPromptCanvas.SetActive(true);
         sleepPrompt.SetActive(true);
-        LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.15f).setEaseLinear();
+        LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.5f).setEaseOutBack();
         allowTime = false;
     }
 
@@ -281,14 +281,14 @@ public class DayNightCycle : MonoBehaviour
     {
         player.GetComponent<PlayerMovement>().enabled = true;
         player.GetComponent<PlayerRenderer>().enabled = true;
-        LeanTween.scale(forcedSleeppanel, new Vector3(0f, 0f, 0f), 0.15f).setOnComplete(DeactivateSleep);
+        LeanTween.scale(forcedSleeppanel, new Vector3(0f, 0f, 0f), 0.5f).setEaseInBack().setOnComplete(DeactivateSleep);
         allowTime = true;
     }
 
     public void AcceptSleep()
     {
         wantToSleep = true;
-        LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.15f).setEaseLinear().setOnComplete(DeactivateSleep).setOnComplete(Sleep);
+        LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.5f).setEaseInBack().setOnComplete(DeactivateSleep).setOnComplete(Sleep);
         allowTime = true;
     }
 
@@ -296,7 +296,7 @@ public class DayNightCycle : MonoBehaviour
     public void DeclineSleep()
     {
         wantToSleep = false;
-        LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.5f).setEaseLinear().setOnComplete(DeactivateSleep);
+        LeanTween.scale(sleepPrompt, new Vector3(0, 0, 0), 0.5f).setEaseInBack().setOnComplete(DeactivateSleep);
         player.GetComponent<PlayerMovement>().enabled = true;
         player.GetComponent<PlayerRenderer>().enabled = true;
         allowTime = true;

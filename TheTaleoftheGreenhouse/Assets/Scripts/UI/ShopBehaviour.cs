@@ -24,14 +24,14 @@ public class ShopBehaviour : MonoBehaviour
         {
             buyMenu.SetActive(true);
             GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
-            LeanTween.scale(buyContent, new Vector3(1, 1, 1), 0.25f).setOnComplete(TweenBuyContentBackGroundFadeIn);
+            LeanTween.scale(buyContent, new Vector3(1, 1, 1), 0.5f).setEaseOutBack().setOnComplete(TweenBuyContentBackGroundFadeIn);
         }
     }
     
     
     public void exit()
     {
-        LeanTween.alpha(buyContentBackground, 0f, 0.25f).setOnComplete(TweenBuyContentFadeOut);
+        LeanTween.alpha(buyContentBackground, 0f, 0.15f).setOnComplete(TweenBuyContentFadeOut);
     }
 
     
@@ -48,7 +48,7 @@ public class ShopBehaviour : MonoBehaviour
     }
     private void TweenBuyContentFadeOut()
     {
-        LeanTween.scale(buyContent, new Vector3(0f, 0f, 0f), 0.25f).setOnComplete(closeShop);
+        LeanTween.scale(buyContent, new Vector3(0f, 0f, 0f), 0.5f).setEaseInBack().setOnComplete(closeShop);
     }
 
     
