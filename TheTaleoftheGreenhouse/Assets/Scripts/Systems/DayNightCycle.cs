@@ -107,6 +107,8 @@ public class DayNightCycle : MonoBehaviour
             if (float.Parse(hourString) > 1f && float.Parse(hourString) < 3f && !isSleeping && !firstMorning)
             {
                 Sleep();
+                player.GetComponent<PlayerMovement>().enabled = false;
+                player.GetComponent<PlayerRenderer>().enabled = false;
                 forcedSleep = true;
             }
             
@@ -213,6 +215,9 @@ public class DayNightCycle : MonoBehaviour
                 if (sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] != null)
                 {
                     Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
+                    sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] = null;
+                    sellBox.GetComponent<SellItems>().SetGoldBack();
+
                 }
                 else
                 {
@@ -247,12 +252,14 @@ public class DayNightCycle : MonoBehaviour
         LeanTween.alpha(nightPanel, 0f, nightFadeDuration).setEase(LeanTweenType.linear);
         yield return new WaitForSeconds(nightFadeDuration);
         nightCanvas.SetActive(false);
-        
-        player.GetComponent<PlayerMovement>().enabled = true;
-        player.GetComponent<PlayerRenderer>().enabled = true;
 
-        forcedSleep = false;
+        if (!forcedSleep)
+        {
+            player.GetComponent<PlayerMovement>().enabled = true;
+            player.GetComponent<PlayerRenderer>().enabled = true;
+        }
         
+        forcedSleep = false;
         
         yield return null;
     }
