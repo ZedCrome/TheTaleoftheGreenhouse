@@ -9943,6 +9943,8 @@ GameObject:
   - component: {fileID: 3097841064511172188}
   - component: {fileID: 3097841064511172191}
   - component: {fileID: 3097841064511172190}
+  - component: {fileID: 6147505296521096808}
+  - component: {fileID: 2322349634579043929}
   - component: {fileID: 3097841064511172513}
   m_Layer: 0
   m_Name: Shop
@@ -10121,6 +10123,34 @@ MonoBehaviour:
   buyMenu: {fileID: 3097841064373663086}
   buyContent: {fileID: 849031723602996875}
   buyContentBackground: {fileID: 3097841063191931738}
+--- !u!114 &6147505296521096808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097841064511172187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbf13185c4758b41b4941cc01bfd0be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2322349634579043929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097841064511172187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980a23ae39d947a48ad2721475314d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useShader: 1
+  outlineActive: {fileID: 2100000, guid: 0ca53d070295b77479f90ed0d8b56999, type: 2}
+  outliveNotActive: {fileID: 2100000, guid: f0502669b62f0414f910a372753a6ebd, type: 2}
+  manaOutlineActive: {fileID: 0}
 --- !u!60 &3097841064511172513
 PolygonCollider2D:
   m_ObjectHideFlags: 0
