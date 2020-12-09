@@ -29,7 +29,7 @@ public class CompostBehaviour : MonoBehaviour
             lidOpen.SetActive(true);
             lidClosed.SetActive(false);
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(1))
             {
                 if (PlayerInteract.instance.inventoryItem.CompareTag("CuttingNormal") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("CuttingMana") ||
