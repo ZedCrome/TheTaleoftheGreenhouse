@@ -127,7 +127,6 @@ public class DeliveryManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Player entered delivery trigger");
             if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement)
             {
                 PlayerInteract.instance.allowedTointeract = false;             
