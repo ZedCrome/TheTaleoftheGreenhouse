@@ -298,6 +298,7 @@ public class ObjectSlot : MonoBehaviour
         if (PlayerState.instance.currentInteractState == PlayerState.InteractState.placement)
         {
             renderer.enabled = false;
+            PlayerInteract.instance.interactObject = null;
         }
 
         ChangeMouseCursor.instance.inputObjectTag = "Default";

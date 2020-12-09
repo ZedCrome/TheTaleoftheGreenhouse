@@ -18,7 +18,7 @@ public class Tools : MonoBehaviour
         return audioClip[random];
     }
 
-    public static bool CheckListOfTags(string tagToCompare, string[] arrayOfTags)
+    public static bool LookForTagInArray(string tagToCompare, string[] arrayOfTags)
     {
         if (arrayOfTags.Length > 0)
         {
