@@ -11,8 +11,10 @@ public class BedBehavior : MonoBehaviour
         
         if (Input.GetMouseButtonDown(1) && PlayerInteract.instance.allowedTointeract)
         {
-
-            DayNightCycle.instance.SleepPrompt();
+            if (PlayerState.instance.currentHandState == PlayerState.HandState.None)
+            {
+                DayNightCycle.instance.SleepPrompt();
+            }
         }
     }
 
