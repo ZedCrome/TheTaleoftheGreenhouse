@@ -1,5 +1,7 @@
 ﻿using System.Security.AccessControl;
+#if UNITY_EDITOR
 using UnityEditorInternal;
+#endif
 using UnityEngine;
 
 public class PlantStates : MonoBehaviour
@@ -128,6 +130,10 @@ public class PlantStates : MonoBehaviour
 
     void OnSleep()
     {
+        if (gameObject.transform.parent.parent == null)
+        {
+            return;
+        }
         if (gameObject.transform.parent.parent.tag == "Pot")
         {
             IsWatered = transform.parent.parent.GetComponent<PotBehaviour>().GetIsWatered();

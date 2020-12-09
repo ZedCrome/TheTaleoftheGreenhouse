@@ -97,6 +97,11 @@ public class ShopBehaviourBuy : MonoBehaviour
     public GameObject delivery;
     public bool hasOrderedItems;
 
+    public void Update()
+    {
+        playerMoneyText.text = playerMoney.ToString(); 
+    }
+
     public void addTable()
     {
         if (playerMoney - (totalCost + tableCost) >= 0)

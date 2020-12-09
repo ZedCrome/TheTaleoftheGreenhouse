@@ -83,8 +83,15 @@ public class SellBoxBehaviour : MonoBehaviour
         }
     }
 
+
     private void OnMouseExit()
     {
         spriteRenderer.color = standardColor;
+    }
+
+
+    public void ResetSlots()
+    {
+        currentSlot = 0;
     }
 }
