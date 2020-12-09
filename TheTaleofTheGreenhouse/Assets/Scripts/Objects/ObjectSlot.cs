@@ -148,7 +148,13 @@ public class ObjectSlot : MonoBehaviour
                     return true;
                 break;
             
-            case "Cutting":
+            case "CuttingMana":
+
+                if (blockCutting)
+                    return true;
+                break;
+            
+            case "CuttingNormal":
 
                 if (blockCutting)
                     return true;
