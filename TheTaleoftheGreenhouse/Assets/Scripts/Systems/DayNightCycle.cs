@@ -86,8 +86,6 @@ public class DayNightCycle : MonoBehaviour
                 CalculateTime();
             }
         }
-        
-        
         lightChange();
     }
 
@@ -223,7 +221,6 @@ public class DayNightCycle : MonoBehaviour
                     Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
                     sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] = null;
                     sellBox.GetComponent<SellItems>().SetGoldBack();
-
                 }
                 else
                 {
@@ -272,15 +269,12 @@ public class DayNightCycle : MonoBehaviour
 
     public void SleepPrompt()
     {
-        if (!firstMorning)
-        {
-            player.GetComponent<PlayerMovement>().enabled = false;
-            player.GetComponent<PlayerRenderer>().enabled = false;
-            sleepPromptCanvas.SetActive(true);
-            sleepPrompt.SetActive(true);
-            LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.15f).setEaseLinear();
-            allowTime = false;
-        }
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerRenderer>().enabled = false;
+        sleepPromptCanvas.SetActive(true);
+        sleepPrompt.SetActive(true);
+        LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.15f).setEaseLinear();
+        allowTime = false;
     }
 
     public void AcceptForcedSleep()
