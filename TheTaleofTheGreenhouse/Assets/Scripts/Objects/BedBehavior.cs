@@ -1,7 +1,32 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 
 public class BedBehavior : MonoBehaviour
 {
+    
+    private void OnEnable()
+    {
+        PlayerState.instance.onChangeHandState += OnChangeHandState;
+    }
+    
+    private void OnDisable()
+    {
+        PlayerState.instance.onChangeHandState -= OnChangeHandState;
+    }
+
+    void OnChangeHandState(PlayerState.HandState newHandstate)
+    {
+        if (newHandstate == PlayerState.HandState.None)
+        {
+            gameObject.layer = 0;
+        }
+        else
+        {
+            gameObject.layer = 2;
+        }
+    }
+    
     private void OnMouseOver()
     {
         if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
