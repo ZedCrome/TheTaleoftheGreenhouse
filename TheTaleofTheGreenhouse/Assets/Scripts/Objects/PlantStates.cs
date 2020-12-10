@@ -19,6 +19,10 @@ public class PlantStates : MonoBehaviour
     public Sprite deadYoungSprite;
     public Sprite deadSproutSprite;
 
+    private ParticleSystem particleSystem;
+    public GameObject particelObject;
+    public float numberOfParticles = 0;
+
     SpriteRenderer spriteRenderer;
 
     public enum PlantState { Sprout, Young, Adult, FullGrown, Dead};
@@ -47,7 +51,10 @@ public class PlantStates : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-       
+        if (gameObject.tag == "PlantMana")
+        {
+            particleSystem = particelObject.GetComponent<ParticleSystem>();
+        }       
     }
     
     private void OnEnable()
@@ -74,6 +81,11 @@ public class PlantStates : MonoBehaviour
     private void Update()
     {
         spriteRenderer.sprite = currentSprite;
+        if (particleSystem != null)
+        {
+            var emission = particleSystem.emission;
+            emission.rateOverTime = numberOfParticles;
+        }
         switch (currentState)
         {
             case PlantState.Sprout:
@@ -105,6 +117,7 @@ public class PlantStates : MonoBehaviour
                     {
                         if (hasMana == true)
                         {
+                            numberOfParticles = 20f;
                             lostMana = false;
                         }
                         else
@@ -115,6 +128,7 @@ public class PlantStates : MonoBehaviour
                         if(lostMana == true)
                         {
                             currentState = PlantState.Dead;
+                            numberOfParticles = 0;
                         }
                     }
                     break;
@@ -122,7 +136,7 @@ public class PlantStates : MonoBehaviour
             case PlantState.Dead:
                 {
                     currentSprite = deadSprite;
-                    lostMana = true;
+                    lostMana = true;                   
                     break;
                 }
         }
