@@ -18637,6 +18637,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 545974321740895728, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294850251903744875, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.066037714
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294850251903744875, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.0003114994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294850251903744875, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.0003114994
+      objectReference: {fileID: 0}
     - target: {fileID: 7261686874708260484, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: m_Name
       value: TimeManager
