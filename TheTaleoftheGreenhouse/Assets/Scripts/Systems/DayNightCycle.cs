@@ -108,6 +108,11 @@ public class DayNightCycle : MonoBehaviour
     {
         if (float.Parse(hourString) > 0f && float.Parse(hourString) < 12f)
         {
+            if (float.Parse(hourString) == 0)
+            {
+                GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.SleepWarning);
+            }
+            
             if (float.Parse(hourString) > 1f && float.Parse(hourString) < 3f && !isSleeping && !firstMorning)
             {
                 Sleep();
@@ -142,14 +147,12 @@ public class DayNightCycle : MonoBehaviour
             }
         }
         
-
-        
         if (float.Parse(hourString) > 12f && float.Parse(hourString) < 24f)
         {
             if (float.Parse(hourString) > 18f && float.Parse(hourString) < 21f)
             {
                 timer += Time.deltaTime;
-            
+                
                 light.intensity = Mathf.Lerp(dayIntensity, eveningIntensity, transitionTime * timer);
                 light.color = Color.Lerp(dayColor, eveningColor, transitionTime * timer);
                 firstMorning = false;

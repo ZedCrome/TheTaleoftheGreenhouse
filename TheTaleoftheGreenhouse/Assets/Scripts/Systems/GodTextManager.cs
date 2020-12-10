@@ -19,7 +19,7 @@ public class GodTextManager : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
+            Destroy(this);
         }
     }
 
@@ -92,6 +92,10 @@ public class GodTextManager : MonoBehaviour
         }
     }
 
+    public void ChangeGodTextState(godTextStates newGodTextState)
+    {
+        godTextState = newGodTextState;
+    }
     
     public void BacktoDefault()
     {
