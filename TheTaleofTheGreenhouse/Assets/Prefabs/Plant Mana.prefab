@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 152938080539b2f4bb23a22c86c0f6f3, type: 2}
+  - {fileID: 2100000, guid: f8c53197921bfde4eb5c43f6b86607f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useShader: 1
-  outlineActive: {fileID: 2100000, guid: aa6ace6caae3fe14e9400b6493d1cc1b, type: 2}
-  outliveNotActive: {fileID: 2100000, guid: 152938080539b2f4bb23a22c86c0f6f3, type: 2}
-  manaOutlineActive: {fileID: 2100000, guid: 0f73c38430b13164abb31fd026de4067, type: 2}
+  outlineActive: {fileID: 2100000, guid: 5b21499c8cf63cb4598bfe5e8363a4be, type: 2}
+  outliveNotActive: {fileID: 2100000, guid: f8c53197921bfde4eb5c43f6b86607f6, type: 2}
+  manaOutlineActive: {fileID: 2100000, guid: 73e3dce6136536247853f94f7faaeb98, type: 2}
 --- !u!114 &7786478845608756235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5969eb4b0c3cd439beea92153189d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadSprite: {fileID: 0}
   fullGrownSprite: {fileID: 879394335079051125, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   adultSprite: {fileID: -6268252528135226146, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
   youngSprite: {fileID: -2349953502984988040, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
@@ -123,6 +124,7 @@ MonoBehaviour:
   deadYoungSprite: {fileID: 356298416488667711, guid: d6703a388f776d248b8b771224868a9e, type: 3}
   deadSproutSprite: {fileID: -1131669711182684302, guid: d6703a388f776d248b8b771224868a9e, type: 3}
   currentState: 0
+  daysWithoutWater: 0
   hasMana: 0
   lostMana: 0
 --- !u!114 &4819839988224401999

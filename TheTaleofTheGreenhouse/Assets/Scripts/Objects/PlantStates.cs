@@ -114,7 +114,7 @@ public class PlantStates : MonoBehaviour
 
                         if(lostMana == true)
                         {
-                            currentState = PlantState.Adult;
+                            currentState = PlantState.Dead;
                         }
                     }
                     break;
