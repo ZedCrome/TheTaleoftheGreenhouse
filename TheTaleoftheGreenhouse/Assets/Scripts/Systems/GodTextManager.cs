@@ -104,8 +104,8 @@ public class GodTextManager : MonoBehaviour
     
     public IEnumerator SleepWarning()
     {
-        LeanTween.moveY(godTextTransform, 940, 0.25f).setEaseLinear();
+        LeanTween.moveY(godTextTransform, 0, 0.25f).setEaseLinear();
         yield return new WaitForSeconds(2);
-        LeanTween.moveY(godTextTransform, 1080, 0.25f).setEaseLinear().setOnComplete(BacktoDefault);
+        LeanTween.moveY(godTextTransform, 140, 0.25f).setEaseLinear().setOnComplete(BacktoDefault);
     }
 }
