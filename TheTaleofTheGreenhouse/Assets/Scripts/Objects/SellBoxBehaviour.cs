@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class SellBoxBehaviour : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
-
-    private Color standardColor;
-    private Color interactableColor;
-
     public GameObject[] itemsToSell;
     public int maxNumbertoSell = 9;
     private int currentSlot;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        standardColor = spriteRenderer.material.color;
-        interactableColor = Color.grey;
-
         itemsToSell = new GameObject[maxNumbertoSell];
     }
 
@@ -32,8 +23,6 @@ public class SellBoxBehaviour : MonoBehaviour
 
         if (PlayerInteract.instance.allowedTointeract)
         {
-            spriteRenderer.color = interactableColor;
-
             if (Input.GetMouseButtonDown(0))
             {
                 if (PlayerInteract.instance.inventoryItem != null)
@@ -89,16 +78,6 @@ public class SellBoxBehaviour : MonoBehaviour
                 }
             }              
         }
-        else
-        {
-            spriteRenderer.color = standardColor;
-        }
-    }
-
-
-    private void OnMouseExit()
-    {
-        spriteRenderer.color = standardColor;
     }
 
 

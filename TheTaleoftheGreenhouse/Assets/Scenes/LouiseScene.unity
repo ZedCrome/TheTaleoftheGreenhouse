@@ -12773,6 +12773,10 @@ PrefabInstance:
       propertyPath: playerMoney
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3097841064511172189, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3097841064555654048, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13240,6 +13244,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd1542cd0563db499396c77b23fcec4, type: 3}
+--- !u!1 &1301410534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4737253927363579337, guid: 0fd1542cd0563db499396c77b23fcec4, type: 3}
+  m_PrefabInstance: {fileID: 1259609540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1301410540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301410534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980a23ae39d947a48ad2721475314d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useShader: 1
+  outlineActive: {fileID: 2100000, guid: 0ca53d070295b77479f90ed0d8b56999, type: 2}
+  outliveNotActive: {fileID: 2100000, guid: f0502669b62f0414f910a372753a6ebd, type: 2}
+  manaOutlineActive: {fileID: 0}
+--- !u!114 &1301410541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301410534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbf13185c4758b41b4941cc01bfd0be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1315999225
 GameObject:
   m_ObjectHideFlags: 0
@@ -24541,6 +24578,10 @@ PrefabInstance:
       propertyPath: hoursPerDay
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: TimeAccelerator
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7261686874708260490, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4215006
@@ -25533,6 +25574,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 292331761, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854277351, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142207886, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3404747764753100702, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
