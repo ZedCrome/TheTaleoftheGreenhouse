@@ -1,9 +1,9 @@
-﻿using UnityEngine.SceneManagement;
+﻿using System;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MenuStates : MonoBehaviour
 {
-
     public void StartGame()
     {
         GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
@@ -38,5 +38,9 @@ public class MenuStates : MonoBehaviour
     {
         Screen.fullScreen = !Screen.fullScreen;
     }
-
+    
+    public void MasterVolume(float newVolume)
+    {
+        AudioListener.volume = newVolume;
+    }
 }
