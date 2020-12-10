@@ -33,6 +33,8 @@ public class ManaManager : MonoBehaviour
 
     private GameObject[] manaCubesFound;
 
+    private bool firstTimeUsing = true;
+
     private void Start()
     {
         knifeSlider = knifeSlider.GetComponent<Slider>();
@@ -100,6 +102,12 @@ public class ManaManager : MonoBehaviour
 
     public void AskToExtractMana()
     {
+        if (firstTimeUsing)
+        {
+            NoteManager.instance.ActivateNote(NoteManager.NoteStates.KnifeNote);
+            firstTimeUsing = false;
+        }
+        
         askPanel.SetActive(true);
         audioSource.PlayOneShot(clickSound);
     }

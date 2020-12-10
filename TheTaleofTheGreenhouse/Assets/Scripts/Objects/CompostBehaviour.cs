@@ -9,6 +9,8 @@ public class CompostBehaviour : MonoBehaviour
     public GameObject lidClosed;
     
     public string[] tagArray;
+
+    private bool firstTimeUsing = true;
     
     private void Start()
     {
@@ -33,18 +35,28 @@ public class CompostBehaviour : MonoBehaviour
             lidOpen.SetActive(true);
             lidClosed.SetActive(false);
 
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
-                if (Tools.LookForTagInArray(PlayerInteract.instance.inventoryItem.tag, tagArray))
+                if (firstTimeUsing)
                 {
-                    GameObject objectToDestroy = PlayerInteract.instance.inventoryItem;
-                    PlayerInteract.instance.inventoryItem = null;
-
-                    Destroy(objectToDestroy);
-                    
-                    PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
-                    PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
+                    NoteManager.instance.ActivateNote(NoteManager.NoteStates.CompostNote);
+                    firstTimeUsing = false;
                 }
+
+                if (PlayerInteract.instance.inventoryItem != null)
+                {
+                    if (Tools.LookForTagInArray(PlayerInteract.instance.inventoryItem.tag, tagArray))
+                    {
+                        GameObject objectToDestroy = PlayerInteract.instance.inventoryItem;
+                        PlayerInteract.instance.inventoryItem = null;
+
+                        Destroy(objectToDestroy);
+
+                        PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
+                        PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
+                    }
+                }
+ 
             }
         }
         else

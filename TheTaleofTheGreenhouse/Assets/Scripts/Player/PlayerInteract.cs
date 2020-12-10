@@ -21,6 +21,10 @@ public class PlayerInteract : MonoBehaviour
     public bool allowedTointeract = false;
     private bool leftMouseButtonLock = false;
 
+    private bool firstTimeUsingWatercan = true;
+    private bool firstTimeUsingShears= true;
+    private bool firstTimeUsingMana = true;
+
     void Start()
     {
         if( instance == null ) {
@@ -121,6 +125,11 @@ public class PlayerInteract : MonoBehaviour
         {
             case "WaterCan":           
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.WaterCan);
+                if (firstTimeUsingWatercan)
+                {
+                        NoteManager.instance.ActivateNote(NoteManager.NoteStates.PlantNote);
+                        firstTimeUsingWatercan = false;
+                }
                 break;
 
             case "Pot":
@@ -129,10 +138,20 @@ public class PlayerInteract : MonoBehaviour
             
             case "Shears":
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.Shears);
+                if (firstTimeUsingShears)
+                {
+                    NoteManager.instance.ActivateNote(NoteManager.NoteStates.ShearsNote);
+                    firstTimeUsingShears = false;
+                }
                 break;
 
             case "ManaCatcher":
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.ManaCatcher);
+                if (firstTimeUsingMana)
+                {
+                    NoteManager.instance.ActivateNote(NoteManager.NoteStates.ManaNote);
+                    firstTimeUsingMana = false;
+                }
                 break;
 
             case "PlantNormal":
