@@ -13,7 +13,7 @@ public class PlayerInteract : MonoBehaviour
 
     public Transform reachAnchor;
     
-    private string[] tagArray;
+    private string[] skipSoundTagArray;
 
     public float maxInteractDistance = 1.0f;
     public Vector2 maxInteractDistanceModifier;
@@ -31,7 +31,7 @@ public class PlayerInteract : MonoBehaviour
             Destroy( this );
         }
 
-        tagArray = new[] {"PlantMana", "PlantNormal", "CuttingNormal", "CuttingMana"};
+        skipSoundTagArray = new[] {"PlantMana", "PlantNormal", "CuttingNormal", "CuttingMana", "WaterCan"};
         
         audioSource = GetComponent<AudioSource>();
         reachAnchor = GameObject.Find("ReachAnchor").transform;
@@ -158,7 +158,7 @@ public class PlayerInteract : MonoBehaviour
 
         if(result)
         {
-            if(Tools.LookForTagInArray(inventoryItem.tag, tagArray) == false)
+            if(Tools.LookForTagInArray(inventoryItem.tag, skipSoundTagArray) == false)
             {
                 interactSound.Play();
             }

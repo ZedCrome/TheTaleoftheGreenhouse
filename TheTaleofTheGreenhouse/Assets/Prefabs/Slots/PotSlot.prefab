@@ -98,6 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess:
+  - {fileID: 8300000, guid: 77848f9f75bfa744999847f0c7723db7, type: 3}
+  - {fileID: 8300000, guid: 36e4116874f291842b09d3c6b1fdf0d0, type: 3}
+  - {fileID: 8300000, guid: 3ceb7245ed3391343a1156a4913f7b77, type: 3}
+  - {fileID: 8300000, guid: 1ecf2d98da3c24b49b402f1b68efc48f, type: 3}
   plantSuccess:
   - {fileID: 8300000, guid: 92975dd33dce7cb4b92bb4e3ab3d0fbc, type: 3}
   - {fileID: 8300000, guid: c976d3c229442d647997be09514865c8, type: 3}

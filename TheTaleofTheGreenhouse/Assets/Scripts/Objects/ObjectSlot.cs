@@ -15,11 +15,11 @@ public class ObjectSlot : MonoBehaviour
     private Vector3 floorPositionOffset = new Vector3(0, -0.25f, 0);
     private Vector3 deliveryPositionOffset = new Vector3(0, 0, -0.8f);
 
-    [Header("Planting sounds")] 
-    
+    [Header("Sounds")] 
+    public AudioClip[] waterCanSuccess;
     public AudioClip[] plantSuccess;
     public AudioClip[] plantFail;
-    private string[] tagArray;
+    private string[] plantTagArray;
     
     [Header("Options")]
 
@@ -38,7 +38,7 @@ public class ObjectSlot : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
      
-        tagArray = new[] {"PlantMana", "PlantNormal"};
+        plantTagArray = new[] {"PlantMana", "PlantNormal"};
         
         renderer.enabled = false;
 
@@ -137,9 +137,13 @@ public class ObjectSlot : MonoBehaviour
                 objectInSlot.transform.parent = transform;
             }
 
-            if (Tools.LookForTagInArray(newObject.tag, tagArray))
+            if (Tools.LookForTagInArray(newObject.tag, plantTagArray))
             {
                 audioSource.PlayOneShot(Tools.GetRandomSound(plantSuccess));
+            }
+            else if (newObject.CompareTag("WaterCan"))
+            {
+                audioSource.PlayOneShot(Tools.GetRandomSound(waterCanSuccess));
             }
             
             
@@ -152,11 +156,15 @@ public class ObjectSlot : MonoBehaviour
         }
         else
         {
-            if (Tools.LookForTagInArray(newObject.tag, tagArray))
+            if (Tools.LookForTagInArray(newObject.tag, plantTagArray))
             {
                 audioSource.PlayOneShot(Tools.GetRandomSound(plantFail));    
             }
-            
+            else if (newObject.CompareTag("WaterCan"))
+            {
+                // PLAY FAIL SOUND FOR WATER CAN
+            }
+
             return false;
         }
     }
