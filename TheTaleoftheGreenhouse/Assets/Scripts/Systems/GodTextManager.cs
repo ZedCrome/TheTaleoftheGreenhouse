@@ -99,7 +99,6 @@ public class GodTextManager : MonoBehaviour
     
     public void BacktoDefault()
     {
-        Debug.Log("Done!");
         godTextState = godTextStates.Default;
         godTextEnabled = false;
     }

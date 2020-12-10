@@ -106,10 +106,11 @@ public class DayNightCycle : MonoBehaviour
 
     void lightChange()
     {
-        if (float.Parse(hourString) > 0f && float.Parse(hourString) < 12f)
+        if (float.Parse(hourString) >= 0f && float.Parse(hourString) < 12f)
         {
-            if (float.Parse(hourString) == 0)
+            if (float.Parse(hourString) == 0f && !isSleeping && !firstMorning)
             {
+                
                 GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.SleepWarning);
             }
             
