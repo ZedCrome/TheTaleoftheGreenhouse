@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class WeatherManager : MonoBehaviour
 {
+    public static WeatherManager instance;
+    
     private AudioSource audioSource;
     private Animator animatorGlobal;
     private Animator[] animatorWindows;
@@ -13,19 +15,43 @@ public class WeatherManager : MonoBehaviour
     public AudioClip audioClip;
     public bool fire;
 
+    public bool lightningActive;
     public float counter = 0;
     private float counterGoal;
     
     private void Start()
     {
+        if( instance == null ) {
+
+            instance = this;
+        } else {
+
+            Destroy( this );
+        }
+        
         audioSource = GetComponent<AudioSource>();
         animatorGlobal = GetComponent<Animator>();
         animatorWindows = GetComponentsInChildren<Animator>();
         counterGoal = Random.Range(20f, 40f);
     }
+    
+    private void OnEnable()
+    {
+        DayNightCycle.instance.onSleep += OnSleep;
+    }
+    
+    private void OnDisable()
+    {
+        DayNightCycle.instance.onSleep -= OnSleep;
+    }
+    
     private void Update()
     {
-
+        if (lightningActive == false)
+        {
+            return;
+        }
+        
         if (counter >= 20)
         {
             fire = true;
@@ -47,5 +73,20 @@ public class WeatherManager : MonoBehaviour
         }
 
         counter += Time.deltaTime;
+    }
+
+    void OnSleep()
+    {
+        int randomSeed = Random.Range(0, 4);
+        Debug.Log("Called: " + randomSeed);
+        
+        if (randomSeed == 0)
+        {
+            lightningActive = true;
+        }
+        else
+        {
+            lightningActive = false;
+        }
     }
 }
