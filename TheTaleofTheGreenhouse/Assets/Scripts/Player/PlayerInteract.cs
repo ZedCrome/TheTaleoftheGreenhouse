@@ -12,6 +12,8 @@ public class PlayerInteract : MonoBehaviour
     public GameObject interactObject;
 
     public Transform reachAnchor;
+    
+    private string[] tagArray;
 
     public float maxInteractDistance = 1.0f;
     public Vector2 maxInteractDistanceModifier;
@@ -29,6 +31,8 @@ public class PlayerInteract : MonoBehaviour
             Destroy( this );
         }
 
+        tagArray = new[] {"PlantMana", "PlantNormal", "CuttingNormal", "CuttingMana"};
+        
         audioSource = GetComponent<AudioSource>();
         reachAnchor = GameObject.Find("ReachAnchor").transform;
     }
@@ -154,11 +158,14 @@ public class PlayerInteract : MonoBehaviour
 
         if(result)
         {
+            if(Tools.LookForTagInArray(inventoryItem.tag, tagArray) == false)
+            {
+                interactSound.Play();
+            }
+            
             inventoryItem = null;
             PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
             PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
-            
-            interactSound.Play();
         }
         else
         {
