@@ -7,16 +7,9 @@ public class CuttingBehaviour : MonoBehaviour
 
     public AudioClip[] plantCutting;
     public AudioClip alreadyPlantInPot;
-
-    private AudioSource audioSource;
     
     private bool rightMouseButtonLock = false;
-
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
+    
     private void Update()
     {
         if (PlayerState.instance.currentHandState == PlayerState.HandState.Cutting)
@@ -47,12 +40,7 @@ public class CuttingBehaviour : MonoBehaviour
                             PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().FillSlot(newPlantObject);
                         
                             PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
-                            audioSource.PlayOneShot(Tools.GetRandomSound(plantCutting));
                         }
-                    }
-                    else
-                    {
-                        audioSource.PlayOneShot(alreadyPlantInPot);
                     }
                 }
 
