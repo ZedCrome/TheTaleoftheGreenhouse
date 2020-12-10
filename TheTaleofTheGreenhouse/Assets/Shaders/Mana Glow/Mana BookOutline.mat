@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mana BookOutline
+  m_Shader: {fileID: -6465566751694194690, guid: df7924489c3f4a447a35289e7c081eb2, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Emission:
+        m_Texture: {fileID: 2800000, guid: 1ea74ce52c564434993a9d8eaa4a9da8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 85fa90dfacb4ba34c84f066f8a3d39a3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_D7E2280: 1
+    - Vector1_9B097AB1: 0.03
+    m_Colors:
+    - Color_E8287710: {r: 0, g: 0.6117647, b: 1.0039216, a: 1}
+    - Color_EB9E7419: {r: 0, g: 0.1404968, b: 1.976675, a: 0}
+  m_BuildTextureStacks: []
