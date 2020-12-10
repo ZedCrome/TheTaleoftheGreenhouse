@@ -7,10 +7,12 @@ public class SellBoxBehaviour : MonoBehaviour
     public GameObject[] itemsToSell;
     public int maxNumbertoSell = 9;
     private int currentSlot;
+    bool firstTimeUsing;
 
     private void Start()
     {
         itemsToSell = new GameObject[maxNumbertoSell];
+        firstTimeUsing = true;
     }
 
 
@@ -23,8 +25,14 @@ public class SellBoxBehaviour : MonoBehaviour
 
         if (PlayerInteract.instance.allowedTointeract)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
+                if (firstTimeUsing)
+                {
+                    NoteManager.instance.ActivateNote(NoteManager.NoteStates.SellBasketNote);
+                    firstTimeUsing = false;
+                }
+
                 if (PlayerInteract.instance.inventoryItem != null)
                 {
                     if (PlayerInteract.instance.inventoryItem.CompareTag("PlantMana") ||

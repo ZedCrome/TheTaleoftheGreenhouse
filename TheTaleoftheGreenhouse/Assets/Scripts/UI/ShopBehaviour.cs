@@ -5,6 +5,8 @@ public class ShopBehaviour : MonoBehaviour
     [SerializeField] private GameObject buyMenu;
     [SerializeField] private RectTransform buyContent;
     [SerializeField] private RectTransform buyContentBackground;
+    bool firstTimeUsing = true;
+
     public void Update()
     {
         if (buyMenu.activeInHierarchy)
@@ -22,6 +24,12 @@ public class ShopBehaviour : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
+           if (firstTimeUsing)
+            {
+                NoteManager.instance.ActivateNote(NoteManager.NoteStates.DeliveryNote);
+                firstTimeUsing = false;
+            }
+            
             buyMenu.SetActive(true);
             GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
             LeanTween.scale(buyContent, new Vector3(1, 1, 1), 0.5f).setEaseOutBack().setOnComplete(TweenBuyContentBackGroundFadeIn);

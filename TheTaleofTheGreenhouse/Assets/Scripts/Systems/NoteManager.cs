@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class NoteManager : MonoBehaviour
 {
+    public static NoteManager instance;
+    
     [SerializeField] GameObject plantNote;
     [SerializeField] GameObject compostNote;
     [SerializeField] GameObject manaNote;
@@ -22,6 +24,15 @@ public class NoteManager : MonoBehaviour
 
     private void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+
         currentNote = NoteStates.None;
         visibleNote = plantNote;
     }
