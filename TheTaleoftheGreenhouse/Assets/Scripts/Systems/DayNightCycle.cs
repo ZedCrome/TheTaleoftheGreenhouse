@@ -22,6 +22,7 @@ public class DayNightCycle : MonoBehaviour
     public float realSecondsPerIngameDay;
     public float nightFadeDuration;
     public Light2D light;
+    public int TimeAccelerator = 24;
     
     public static float day;
     public float hoursPerDay = 24f;
@@ -132,7 +133,7 @@ public class DayNightCycle : MonoBehaviour
             {
                 if(isSleeping)
                 {
-                    realSecondsPerIngameDay *= 8f;
+                    realSecondsPerIngameDay *= TimeAccelerator;
                     isAlreadySleeping = false;
                     isSleeping = false;
 
@@ -168,7 +169,7 @@ public class DayNightCycle : MonoBehaviour
     {
         if (!isAlreadySleeping)
         {
-            realSecondsPerIngameDay /= 8f;
+            realSecondsPerIngameDay /= TimeAccelerator;
             isAlreadySleeping = true;
             isSleeping = true;
             StartCoroutine(GoToSleepRoutine());
