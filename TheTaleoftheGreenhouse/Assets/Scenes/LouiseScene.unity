@@ -6133,7 +6133,7 @@ PrefabInstance:
     - target: {fileID: 4960520131541898972, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: objectInSlot
       value: 
-      objectReference: {fileID: 1346694334}
+      objectReference: {fileID: 0}
     - target: {fileID: 4960520131541898972, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: objectToPut
       value: 
@@ -6970,7 +6970,7 @@ PrefabInstance:
     - target: {fileID: 4960520133228835500, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: objectInSlot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1346694334}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
 --- !u!1 &810067809
@@ -12403,6 +12403,26 @@ PrefabInstance:
       propertyPath: playerMoney
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3097841064511172188, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: tableCost
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097841064511172188, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: potCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097841064511172188, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: plantCost
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097841064511172188, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: manaStorageItemCost
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097841064511172188, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: manaPlantCost
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3097841064511172189, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -12906,11 +12926,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.028762
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54694533
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24159,6 +24179,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 545974321740895728, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7261686874708260484, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: m_Name
       value: TimeManager
@@ -24189,7 +24213,7 @@ PrefabInstance:
       objectReference: {fileID: 50891271}
     - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: realSecondsPerIngameDay
-      value: 180
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: alreadyBoughtCanvas
