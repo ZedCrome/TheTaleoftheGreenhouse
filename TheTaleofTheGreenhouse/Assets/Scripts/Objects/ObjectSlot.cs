@@ -137,7 +137,7 @@ public class ObjectSlot : MonoBehaviour
                 objectInSlot.transform.parent = transform;
             }
 
-            if (gameObject.CompareTag("Delivery"))
+            if (gameObject.CompareTag("Delivery") == false)
             {
                 if (Tools.LookForTagInArray(newObject.tag, plantTagArray))
                 {
@@ -158,7 +158,7 @@ public class ObjectSlot : MonoBehaviour
         }
         else
         {
-            if (gameObject.CompareTag("Delivery"))
+            if (gameObject.CompareTag("Delivery") == false)
             {
                 if (Tools.LookForTagInArray(newObject.tag, plantTagArray))
                 {
