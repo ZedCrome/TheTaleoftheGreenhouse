@@ -17,14 +17,14 @@ public class SellItems : MonoBehaviour
     private int manaPlantPrice;
     private int normalPlantPrice;
 
-    private int manaSproutPrice = 5;
-    private int normalSproutPrice = 2;
-    private int manaYoungPrice = 7;
-    private int normalYoungPrice = 3;
-    private int manaAdultPrice = 9;
-    private int normalAdultPrice = 4;
-    private int manaFullGrownPrice = 11;
-    private int normalFullGrownPrice = 5;
+    private int manaSproutPrice = 50;
+    private int normalSproutPrice = 20;
+    private int manaYoungPrice = 70;
+    private int normalYoungPrice = 30;
+    private int manaAdultPrice = 90;
+    private int normalAdultPrice = 40;
+    private int manaFullGrownPrice = 110;
+    private int normalFullGrownPrice = 50;
     private int deadPlantPrice = 0;
 
     private int goldBack;

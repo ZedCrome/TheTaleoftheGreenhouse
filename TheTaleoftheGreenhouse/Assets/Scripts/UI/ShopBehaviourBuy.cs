@@ -22,7 +22,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Slider tableCurrentyBuy2;
     [SerializeField] private Slider tableAlreadyBought2;
     [SerializeField] private int maxTables = 8;
-    [SerializeField] private int tableCost = 6;
+    [SerializeField] private int tableCost = 60;
     [SerializeField] private int maxBuyTablesAtATime = 3;
     private int tableTotalCost;
     private int amountOfTables;
@@ -41,7 +41,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Slider potCurrentBuy3;
     [SerializeField] private Slider potAlreadyBought3;
     [SerializeField] private int maxPots = 10;
-    [SerializeField] private int potCost = 1;
+    [SerializeField] private int potCost = 10;
     [SerializeField] private int maxBuyPotsAtATime = 3;
     private int potTotalCost;
     private int amountOfPots = 0;
@@ -55,7 +55,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private TMP_Text plantPriceDisplay;
     public Slider plantCurrentBuy1;
     [SerializeField] private int maxPlants = 10;
-    [SerializeField] private int plantCost = 2;
+    [SerializeField] private int plantCost = 20;
     [SerializeField] private int maxBuyPlantsAtATime = 3;
     private int plantTotalCost;
     private int amountOfPlants = 0;
@@ -69,7 +69,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private TMP_Text manaPlantPriceDisplay;
     public Slider manaPlantCurrentBuy1;
     [SerializeField] private int maxManaPlants = 10;
-    [SerializeField] private int manaPlantCost = 5;
+    [SerializeField] private int manaPlantCost = 50;
     [SerializeField] private int maxBuyManaPlantsAtATime = 3;
     private int manaPlantTotalCost;
     private int amountOfManaPlants = 0;
@@ -86,7 +86,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Slider manaStorageItemCurrentBuy2;
     [SerializeField] private Slider manaStorageItemAlreadyBought2;
     [SerializeField] private int maxManaStorageItems = 9;
-    [SerializeField] private int manaStorageItemCost = 4;
+    [SerializeField] private int manaStorageItemCost = 40;
     [SerializeField] private int maxBuyManaStorageItemsAtATime = 3;
     private int manaStorageItemTotalCost;
     private int amountOfManaStorageItems = 0;
