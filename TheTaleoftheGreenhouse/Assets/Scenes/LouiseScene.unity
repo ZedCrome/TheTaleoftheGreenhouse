@@ -12970,8 +12970,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3894503349630448480, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: currentState
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448480, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: cuttingSprite
+      value: 
+      objectReference: {fileID: -3119456751628195519, guid: bd2697277267f8d43a046ba25d895966, type: 3}
     - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -25978,7 +25982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: currentState
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: fullGrownSprite
@@ -26000,6 +26004,10 @@ PrefabInstance:
       propertyPath: deadSprite
       value: 
       objectReference: {fileID: 356298416488667711, guid: d6703a388f776d248b8b771224868a9e, type: 3}
+    - target: {fileID: 7786478844085587734, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: hasMana
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8441495157108865422, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Sprite
       value: 
