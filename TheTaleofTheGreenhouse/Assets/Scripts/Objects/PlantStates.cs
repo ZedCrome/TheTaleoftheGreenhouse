@@ -13,6 +13,7 @@ public class PlantStates : MonoBehaviour
     public Sprite adultSprite;
     public Sprite youngSprite;
     public Sprite sproutSprite;
+    public Sprite cuttingSprite;
 
     public Sprite deadFullGrownSprite;
     public Sprite deadAdultSprite;
@@ -25,7 +26,7 @@ public class PlantStates : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
-    public enum PlantState { Sprout, Young, Adult, FullGrown, Dead};
+    public enum PlantState {Cutting, Sprout, Young, Adult, FullGrown, Dead};
     public PlantState currentState = 0;
 
     public int daysWithoutWater;
@@ -88,6 +89,14 @@ public class PlantStates : MonoBehaviour
         }
         switch (currentState)
         {
+            case PlantState.Cutting:
+                {
+                    currentSprite = cuttingSprite;
+                    lostMana = true;
+                    daysWithoutWater = 0;
+                    break;
+                }
+
             case PlantState.Sprout:
                 {
                     currentSprite = sproutSprite;
@@ -159,6 +168,16 @@ public class PlantStates : MonoBehaviour
 
             switch (currentState)
             {
+                case PlantState.Cutting:
+                    {
+                        if (isWatered)
+                        {
+                            currentState = PlantState.Sprout;
+                            transform.parent.parent.GetComponent<PotBehaviour>().EmptyWater();
+                        }
+                        break;
+                    }
+
                 case PlantState.Sprout:
                     {
                         if (isWatered)

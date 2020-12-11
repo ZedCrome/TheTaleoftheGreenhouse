@@ -42,15 +42,19 @@ public class SellBoxBehaviour : MonoBehaviour
                     {
                         GameObject sellItem = PlayerInteract.instance.inventoryItem;
                         PlayerInteract.instance.inventoryItem = null;
+                        sellItem.GetComponent<InteractableEffect>().Enable(false);
 
                         if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
                         {
                             sellItem.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
+                            if (sellItem.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Cutting)
+                            {
+                                sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                            }
                         }
                         else if (sellItem.tag == "Pot")
                         {
-                            sellItem.transform.GetChild(0).gameObject.SetActive(false);
-                            sellItem.GetComponent<InteractableEffect>().enabled = false;
+                            sellItem.transform.GetChild(0).gameObject.SetActive(false);                          
                             sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
                         else
@@ -67,7 +71,14 @@ public class SellBoxBehaviour : MonoBehaviour
                                     itemsToSell[i] = sellItem;
                                     if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
                                     {
-                                        sellItem.GetComponentInParent<ObjectSlot>().objectInSlot = null;
+                                        if (sellItem.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Cutting)
+                                        {
+                                            PlayerInventory.instance.normalCuttingsInInventory -= 1;
+                                        }
+                                        else
+                                        {
+                                            sellItem.GetComponentInParent<ObjectSlot>().objectInSlot = null;
+                                        }                                       
                                     }
                                     sellItem.transform.parent = gameObject.transform;
                                     currentSlot++;

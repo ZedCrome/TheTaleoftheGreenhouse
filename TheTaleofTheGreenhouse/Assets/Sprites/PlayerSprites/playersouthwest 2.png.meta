@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 3f419627eac66d74ab3687acb211e581
+guid: 9676fbd097af77449a477ddcaf0d3272
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4360250855960256017
-    second: playernortheast_0
+      213: -1100072787728208378
+    second: playersouthwest 2_0
   - first:
-      213: 4115021952767494490
-    second: playernortheast_1
+      213: -8538787931530251332
+    second: playersouthwest 2_1
   - first:
-      213: 1804646176836477211
-    second: playernortheast_2
+      213: 6383449925531599523
+    second: playersouthwest 2_2
   - first:
-      213: 5712688839069882192
-    second: playernortheast_3
+      213: -8864985089338699157
+    second: playersouthwest 2_3
   - first:
-      213: 7090630157436112630
-    second: playernortheast_4
+      213: -7589044619639923246
+    second: playersouthwest 2_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,106 +104,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playernortheast_0
+      name: playersouthwest 2_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 43
-        width: 160
-        height: 384
-      alignment: 9
-      pivot: {x: 0.43907768, y: -0.0076920292}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11e9a194d09b28c30800000000000000
-      internalID: 4360250855960256017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playernortheast_1
-      rect:
-        serializedVersion: 2
-        x: 313
-        y: 41
-        width: 151
-        height: 384
-      alignment: 9
-      pivot: {x: 0.4726128, y: -0.0046152174}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5904a9e9ae7b1930800000000000000
-      internalID: 4115021952767494490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playernortheast_2
-      rect:
-        serializedVersion: 2
-        x: 530
-        y: 45
-        width: 180
-        height: 387
-      alignment: 9
-      pivot: {x: 0.39333698, y: 0.000000019714198}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b11ea9be2246b0910800000000000000
-      internalID: 1804646176836477211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playernortheast_3
-      rect:
-        serializedVersion: 2
-        x: 765
-        y: 53
-        width: 155
-        height: 384
-      alignment: 9
-      pivot: {x: 0.4481524, y: -0.0063322983}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05759156b3c874f40800000000000000
-      internalID: 5712688839069882192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playernortheast_4
-      rect:
-        serializedVersion: 2
-        x: 994
-        y: 57
+        x: 123
+        y: 55
         width: 144
-        height: 386
-      alignment: 7
+        height: 380
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fec6a77f8af66260800000000000000
-      internalID: 7090630157436112630
+      spriteID: 60ee264c0a1cbb0f0800000000000000
+      internalID: -1100072787728208378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playersouthwest 2_1
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 55
+        width: 161
+        height: 388
+      alignment: 9
+      pivot: {x: 0.51387244, y: 0.021095207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb33fb0ed91208980800000000000000
+      internalID: -8538787931530251332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playersouthwest 2_2
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 34
+        width: 194
+        height: 398
+      alignment: 9
+      pivot: {x: 0.56976414, y: 0.045087058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a20ec4e2e1969850800000000000000
+      internalID: 6383449925531599523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playersouthwest 2_3
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 54
+        width: 160
+        height: 372
+      alignment: 9
+      pivot: {x: 0.5161438, y: -0.021686247}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6215daa70f39f480800000000000000
+      internalID: -8864985089338699157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playersouthwest 2_4
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 53
+        width: 177
+        height: 373
+      alignment: 9
+      pivot: {x: 0.5631338, y: -0.019351438}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddd5cd702c4ea690800000000000000
+      internalID: -7589044619639923246
       vertices: []
       indices: 
       edges: []

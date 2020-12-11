@@ -57,8 +57,7 @@ public class ShearsBehaviour : MonoBehaviour
                     {
                         if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot != null)
                         {
-                            if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.CompareTag("PlantNormal") ||
-                                PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.CompareTag("PlantMana"))
+                            if (PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.CompareTag("PlantNormal"))
                             {
                                 return true;
                             }

@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 3f419627eac66d74ab3687acb211e581
+guid: 0a9094ae3ab8fae4182c089aa44e1ae9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4360250855960256017
-    second: playernortheast_0
+      213: -438400887963260603
+    second: manaplant dry 03_0
   - first:
-      213: 4115021952767494490
-    second: playernortheast_1
+      213: -1630438680121237527
+    second: manaplant dry 03_1
   - first:
-      213: 1804646176836477211
-    second: playernortheast_2
+      213: 2066518547953246068
+    second: manaplant dry 03_2
   - first:
-      213: 5712688839069882192
-    second: playernortheast_3
-  - first:
-      213: 7090630157436112630
-    second: playernortheast_4
+      213: 1901209753835617149
+    second: manaplant dry 03_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,106 +101,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playernortheast_0
+      name: manaplant dry 03_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 43
-        width: 160
-        height: 384
+        x: 26
+        y: 151
+        width: 139
+        height: 119
       alignment: 9
-      pivot: {x: 0.43907768, y: -0.0076920292}
+      pivot: {x: 0.551221, y: 0.3509679}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11e9a194d09b28c30800000000000000
-      internalID: 4360250855960256017
+      spriteID: 549ebb317bc7ae9f0800000000000000
+      internalID: -438400887963260603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playernortheast_1
+      name: manaplant dry 03_1
       rect:
         serializedVersion: 2
-        x: 313
-        y: 41
-        width: 151
-        height: 384
+        x: 372
+        y: 87
+        width: 177
+        height: 176
       alignment: 9
-      pivot: {x: 0.4726128, y: -0.0046152174}
+      pivot: {x: 0.4549795, y: 0.57251877}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5904a9e9ae7b1930800000000000000
-      internalID: 4115021952767494490
+      spriteID: 9ef115ba8a48f59e0800000000000000
+      internalID: -1630438680121237527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playernortheast_2
+      name: manaplant dry 03_2
       rect:
         serializedVersion: 2
-        x: 530
-        y: 45
-        width: 180
-        height: 387
+        x: 702
+        y: 61
+        width: 202
+        height: 254
       alignment: 9
-      pivot: {x: 0.39333698, y: 0.000000019714198}
+      pivot: {x: 0.4677438, y: 0.53103197}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b11ea9be2246b0910800000000000000
-      internalID: 1804646176836477211
+      spriteID: 47f5284abafbdac10800000000000000
+      internalID: 2066518547953246068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playernortheast_3
+      name: manaplant dry 03_3
       rect:
         serializedVersion: 2
-        x: 765
-        y: 53
-        width: 155
-        height: 384
+        x: 1066
+        y: 58
+        width: 207
+        height: 340
       alignment: 9
-      pivot: {x: 0.4481524, y: -0.0063322983}
+      pivot: {x: 0.44383055, y: 0.40222037}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05759156b3c874f40800000000000000
-      internalID: 5712688839069882192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playernortheast_4
-      rect:
-        serializedVersion: 2
-        x: 994
-        y: 57
-        width: 144
-        height: 386
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fec6a77f8af66260800000000000000
-      internalID: 7090630157436112630
+      spriteID: d7b31e4b234726a10800000000000000
+      internalID: 1901209753835617149
       vertices: []
       indices: 
       edges: []

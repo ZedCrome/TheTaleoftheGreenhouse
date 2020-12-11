@@ -17,6 +17,7 @@ public class SellItems : MonoBehaviour
     private int manaPlantPrice;
     private int normalPlantPrice;
 
+    private int cuttingPrice = 2;
     private int manaSproutPrice = 50;
     private int normalSproutPrice = 20;
     private int manaYoungPrice = 70;
@@ -84,6 +85,9 @@ public class SellItems : MonoBehaviour
                     case "PlantNormal":
                     switch (statePrice)
                     {
+                        case PlantStates.PlantState.Cutting:
+                            normalPlantPrice = cuttingPrice;
+                            break;
                         case PlantStates.PlantState.Sprout:
                             normalPlantPrice = normalSproutPrice;
                             break;
