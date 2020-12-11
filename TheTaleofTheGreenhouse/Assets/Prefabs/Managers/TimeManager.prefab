@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4338576283037586645
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0.066037714, g: 0.0003114994, b: 0.0003114994, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1317,9 +1317,10 @@ MonoBehaviour:
   sleepPrompt: {fileID: 6272742901205777343}
   forcedSleeppanel: {fileID: 1280270429409085759}
   nightPanel: {fileID: 931818890005706853}
-  realSecondsPerIngameDay: 25
+  realSecondsPerIngameDay: 120
   nightFadeDuration: 1
   light: {fileID: 1006554520}
+  TimeAccelerator: 24
   hoursPerDay: 24
   minutesPerHour: 60
   hourString: 
