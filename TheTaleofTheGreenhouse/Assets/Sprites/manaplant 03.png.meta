@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: 570ed40c7234f5c4bab27eda74548176
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 971160392424309024
+    second: manaplant 03_0
+  - first:
+      213: 2407552586101865235
+    second: manaplant 03_1
+  - first:
+      213: -6232380091438710791
+    second: manaplant 03_2
+  - first:
+      213: 7295062791568511870
+    second: manaplant 03_3
+  - first:
+      213: -6434503043663461272
+    second: manaplant 03_4
+  - first:
+      213: -6109644141818609139
+    second: manaplant 03_5
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 175
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: manaplant 03_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 152
+        width: 138
+        height: 117
+      alignment: 9
+      pivot: {x: 0.5486142, y: 0.3464529}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02141624b314a7d00800000000000000
+      internalID: 971160392424309024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manaplant 03_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 106
+        width: 173
+        height: 175
+      alignment: 9
+      pivot: {x: 0.45289233, y: 0.5777985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31bbca04258596120800000000000000
+      internalID: 2407552586101865235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manaplant 03_2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 71
+        width: 195
+        height: 253
+      alignment: 9
+      pivot: {x: 0.47154915, y: 0.5288956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff3490d3532289a0800000000000000
+      internalID: -6232380091438710791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manaplant 03_3
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 61
+        width: 206
+        height: 338
+      alignment: 9
+      pivot: {x: 0.44717288, y: 0.39947975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e735c9145f44d3560800000000000000
+      internalID: 7295062791568511870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manaplant 03_4
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 61
+        width: 206
+        height: 338
+      alignment: 9
+      pivot: {x: 0.44624463, y: 0.40037388}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8640540c29d04b6a0800000000000000
+      internalID: -6434503043663461272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manaplant 03_5
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 214
+        width: 54
+        height: 67
+      alignment: 9
+      pivot: {x: 0.4913217, y: 0.192918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d020bd6f50f263ba0800000000000000
+      internalID: -6109644141818609139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
