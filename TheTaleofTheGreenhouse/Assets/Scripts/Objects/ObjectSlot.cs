@@ -137,15 +137,17 @@ public class ObjectSlot : MonoBehaviour
                 objectInSlot.transform.parent = transform;
             }
 
-            if (Tools.LookForTagInArray(newObject.tag, plantTagArray))
+            if (gameObject.CompareTag("Delivery"))
             {
-                audioSource.PlayOneShot(Tools.GetRandomSound(plantSuccess));
+                if (Tools.LookForTagInArray(newObject.tag, plantTagArray))
+                {
+                    audioSource.PlayOneShot(Tools.GetRandomSound(plantSuccess));
+                }
+                else if (newObject.CompareTag("WaterCan"))
+                {
+                    audioSource.PlayOneShot(Tools.GetRandomSound(waterCanSuccess));
+                }
             }
-            else if (newObject.CompareTag("WaterCan"))
-            {
-                audioSource.PlayOneShot(Tools.GetRandomSound(waterCanSuccess));
-            }
-            
             
             objectInSlot.GetComponent<StackIndex>().indexNumber = Tools.GetStackNumber(objectInSlot);
             
@@ -156,15 +158,18 @@ public class ObjectSlot : MonoBehaviour
         }
         else
         {
-            if (Tools.LookForTagInArray(newObject.tag, plantTagArray))
+            if (gameObject.CompareTag("Delivery"))
             {
-                audioSource.PlayOneShot(Tools.GetRandomSound(plantFail));    
+                if (Tools.LookForTagInArray(newObject.tag, plantTagArray))
+                {
+                    audioSource.PlayOneShot(Tools.GetRandomSound(plantFail));    
+                }
+                else if (newObject.CompareTag("WaterCan"))
+                {
+                    // PLAY FAIL SOUND FOR WATER CAN
+                }
             }
-            else if (newObject.CompareTag("WaterCan"))
-            {
-                // PLAY FAIL SOUND FOR WATER CAN
-            }
-
+            
             return false;
         }
     }
