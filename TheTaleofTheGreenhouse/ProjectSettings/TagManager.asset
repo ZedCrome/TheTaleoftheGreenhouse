@@ -21,6 +21,7 @@ TagManager:
   - TableSlot
   - CuttingMana
   - CuttingNormal
+  - DeliverySlot
   layers:
   - Default
   - TransparentFX
