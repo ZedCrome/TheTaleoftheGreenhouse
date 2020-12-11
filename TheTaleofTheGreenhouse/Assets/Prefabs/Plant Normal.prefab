@@ -125,7 +125,7 @@ MonoBehaviour:
   deadSproutSprite: {fileID: -1188070514666530258, guid: f0af37f47c5e1734eb2f89276f950730, type: 3}
   particelObject: {fileID: 0}
   numberOfParticles: 0
-  currentState: 0
+  currentState: 1
   daysWithoutWater: 0
   hasMana: 0
   lostMana: 0

@@ -8731,6 +8731,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2268901697012904708, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901697351702993, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901697534130556, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901697689533456, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901698212609298, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901698295545666, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901698336231169, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901698556380087, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268901698933031809, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842262774108096033, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842262775320725864, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842262775677687706, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
+      propertyPath: m_TagString
+      value: DeliverySlot
+      objectReference: {fileID: 0}
     - target: {fileID: 4039021870531704218, guid: e878f04bd0720a14c88cdd21e4749d91, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.696
