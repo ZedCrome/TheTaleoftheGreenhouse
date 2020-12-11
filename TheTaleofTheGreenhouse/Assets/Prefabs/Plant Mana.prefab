@@ -4928,14 +4928,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadSprite: {fileID: 0}
-  fullGrownSprite: {fileID: 879394335079051125, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
-  adultSprite: {fileID: -6268252528135226146, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
-  youngSprite: {fileID: -2349953502984988040, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
-  sproutSprite: {fileID: 5346046493363410607, guid: 442d71d55774f0a43b292e172e77608d, type: 3}
-  deadFullGrownSprite: {fileID: 6153498109927345619, guid: d6703a388f776d248b8b771224868a9e, type: 3}
-  deadAdultSprite: {fileID: -4893288330032946871, guid: d6703a388f776d248b8b771224868a9e, type: 3}
-  deadYoungSprite: {fileID: 356298416488667711, guid: d6703a388f776d248b8b771224868a9e, type: 3}
-  deadSproutSprite: {fileID: -1131669711182684302, guid: d6703a388f776d248b8b771224868a9e, type: 3}
+  fullGrownSprite: {fileID: -6434503043663461272, guid: 570ed40c7234f5c4bab27eda74548176, type: 3}
+  adultSprite: {fileID: -6232380091438710791, guid: 570ed40c7234f5c4bab27eda74548176, type: 3}
+  youngSprite: {fileID: 2407552586101865235, guid: 570ed40c7234f5c4bab27eda74548176, type: 3}
+  sproutSprite: {fileID: 971160392424309024, guid: 570ed40c7234f5c4bab27eda74548176, type: 3}
+  cuttingSprite: {fileID: 0}
+  deadFullGrownSprite: {fileID: 1901209753835617149, guid: 0a9094ae3ab8fae4182c089aa44e1ae9, type: 3}
+  deadAdultSprite: {fileID: 2066518547953246068, guid: 0a9094ae3ab8fae4182c089aa44e1ae9, type: 3}
+  deadYoungSprite: {fileID: -1630438680121237527, guid: 0a9094ae3ab8fae4182c089aa44e1ae9, type: 3}
+  deadSproutSprite: {fileID: -438400887963260603, guid: 0a9094ae3ab8fae4182c089aa44e1ae9, type: 3}
   particelObject: {fileID: 5000087475055596699}
   numberOfParticles: 0
   currentState: 0

@@ -12291,6 +12291,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248942542}
     m_Modifications:
+    - target: {fileID: 2322349634579043929, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: outliveNotActive
+      value: 
+      objectReference: {fileID: 2100000, guid: f4499dd41581a64448cf4c41b4f3f7d9, type: 2}
+    - target: {fileID: 2322349634579043929, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: outlineActive
+      value: 
+      objectReference: {fileID: 2100000, guid: d2490d8f95c436f4c892d1605026ef26, type: 2}
     - target: {fileID: 2840232649438441295, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -12427,6 +12435,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3097841064511172189, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f4499dd41581a64448cf4c41b4f3f7d9, type: 2}
     - target: {fileID: 3097841064555654048, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -25416,6 +25428,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1665240302, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.059936523
+      objectReference: {fileID: 0}
     - target: {fileID: 3404747764753100702, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 6321324243350226231}
   m_Layer: 0
   m_Name: ItemSpot (8)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,6 +363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -383,7 +386,7 @@ GameObject:
   - component: {fileID: 6321324243143716834}
   m_Layer: 0
   m_Name: ItemSpot (11)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -482,6 +485,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -502,7 +508,7 @@ GameObject:
   - component: {fileID: 6321324243259084623}
   m_Layer: 0
   m_Name: ItemSpot (2)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -601,6 +607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -621,7 +630,7 @@ GameObject:
   - component: {fileID: 6321324244027836963}
   m_Layer: 0
   m_Name: ItemSpot (7)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,6 +729,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -740,7 +752,7 @@ GameObject:
   - component: {fileID: 6321324242402446113}
   m_Layer: 0
   m_Name: ItemSpot (10)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,6 +851,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -859,7 +874,7 @@ GameObject:
   - component: {fileID: 6321324242485315953}
   m_Layer: 0
   m_Name: ItemSpot (1)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -958,6 +973,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -978,7 +996,7 @@ GameObject:
   - component: {fileID: 6321324242458917170}
   m_Layer: 0
   m_Name: ItemSpot (3)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1077,6 +1095,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -1097,7 +1118,7 @@ GameObject:
   - component: {fileID: 6321324242209305988}
   m_Layer: 0
   m_Name: ItemSpot (9)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1196,6 +1217,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -1216,7 +1240,7 @@ GameObject:
   - component: {fileID: 6321324242518914482}
   m_Layer: 0
   m_Name: ItemSpot (4)
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1315,6 +1339,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -1367,7 +1394,7 @@ GameObject:
   - component: {fileID: 8049241047224496146}
   m_Layer: 0
   m_Name: ItemSpot
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1466,6 +1493,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -1486,7 +1516,7 @@ GameObject:
   - component: {fileID: 8049241046280208219}
   m_Layer: 0
   m_Name: ItemSpot
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1585,6 +1615,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
@@ -1605,7 +1638,7 @@ GameObject:
   - component: {fileID: 8049241046042616233}
   m_Layer: 0
   m_Name: ItemSpot
-  m_TagString: Interactable
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,6 +1737,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInSlot: {fileID: 0}
+  waterCanSuccess: []
+  plantSuccess: []
+  plantFail: []
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
