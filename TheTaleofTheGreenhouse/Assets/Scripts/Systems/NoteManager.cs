@@ -22,6 +22,8 @@ public class NoteManager : MonoBehaviour
 
     public GameObject visibleNote;
 
+    private bool activeNote;
+
     private void Start()
     {
         if (instance == null)
@@ -37,58 +39,84 @@ public class NoteManager : MonoBehaviour
         visibleNote = plantNote;
     }
 
+
     public void Update()
     {
-        switch(currentNote)
+        if (!activeNote)
         {
-            case NoteStates.None:
-                exitNoteButton.SetActive(false);
-                visibleNote.SetActive(false);
-                break;
+            switch (currentNote)
+            {
+                case NoteStates.None:
+                    exitNoteButton.SetActive(false);
+                    visibleNote.SetActive(false);
+                    break;
 
-            case NoteStates.PlantNote:
-                visibleNote = plantNote;
-                exitNoteButton.SetActive(true);
-                visibleNote.SetActive(true);
-                break;
+                case NoteStates.PlantNote:
+                    activeNote = true;
+                    visibleNote = plantNote;
+                    exitNoteButton.SetActive(true);
+                    visibleNote.SetActive(true);
+                    LeanTween.moveY(visibleNote, 350f, 1f);
+                    LeanTween.moveY(exitNoteButton, 180f, 1f);
+                    break;
 
-            case NoteStates.ManaNote:
-                visibleNote = manaNote;
-                exitNoteButton.SetActive(true);
-                visibleNote.SetActive(true);
-                break;
+                case NoteStates.ManaNote:
+                    activeNote = true;
+                    visibleNote = manaNote;
+                    exitNoteButton.SetActive(true);
+                    visibleNote.SetActive(true);
+                    LeanTween.moveY(visibleNote, 350f, 1f);
+                    LeanTween.moveY(exitNoteButton, 180f, 1f);
+                    break;
 
-            case NoteStates.SellBasketNote:
-                visibleNote = sellBasketNote;
-                exitNoteButton.SetActive(true);
-                visibleNote.SetActive(true);
-                break;
+                case NoteStates.SellBasketNote:
+                    activeNote = true;
+                    visibleNote = sellBasketNote;
+                    exitNoteButton.SetActive(true);
+                    visibleNote.SetActive(true);
+                    LeanTween.moveY(visibleNote, 350f, 1f);
+                    LeanTween.moveY(exitNoteButton, 180f, 1f);
+                    break;
 
-            case NoteStates.KnifeNote:
-                visibleNote = knifeNote;
-                exitNoteButton.SetActive(true);
-                visibleNote.SetActive(true);
-                break;
+                case NoteStates.KnifeNote:
+                    activeNote = true;
+                    visibleNote = knifeNote;
+                    exitNoteButton.SetActive(true);
+                    visibleNote.SetActive(true);
+                    LeanTween.moveY(visibleNote, 350f, 1f);
+                    LeanTween.moveY(exitNoteButton, 180f, 1f);
+                    break;
 
-            case NoteStates.CompostNote:
-                visibleNote = compostNote;
-                exitNoteButton.SetActive(true);
-                visibleNote.SetActive(true); 
-                break;
+                case NoteStates.CompostNote:
+                    activeNote = true;
+                    visibleNote = compostNote;
+                    exitNoteButton.SetActive(true);
+                    visibleNote.SetActive(true);
+                    LeanTween.moveY(visibleNote, 350f, 1f);
+                    LeanTween.moveY(exitNoteButton, 180f, 1f);
+                    break;
 
-            case NoteStates.DeliveryNote:
-                visibleNote = deliveryNote;
-                exitNoteButton.SetActive(true);
-                visibleNote.SetActive(true);
-                break;
+                case NoteStates.DeliveryNote:
+                    activeNote = true;
+                    visibleNote = deliveryNote;
+                    exitNoteButton.SetActive(true);
+                    visibleNote.SetActive(true);
+                    LeanTween.moveY(visibleNote, 350f, 1f);
+                    LeanTween.moveY(exitNoteButton, 180f, 1f);
+                    break;
 
-            case NoteStates.ShearsNote:
-                visibleNote = shearsNote;
-                exitNoteButton.SetActive(true);
-                visibleNote.SetActive(true);
-                break;
-        }
+                case NoteStates.ShearsNote:
+                    activeNote = true;
+                    visibleNote = shearsNote;
+                    exitNoteButton.SetActive(true);
+                    visibleNote.SetActive(true);
+                    LeanTween.moveY(visibleNote, 350f, 1f);
+                    LeanTween.moveY(exitNoteButton, 180f, 1f);
+                    break;
+            }
+        }      
     }
+
 
     public void ActivateNote(NoteStates noteState)
     {
@@ -99,7 +127,15 @@ public class NoteManager : MonoBehaviour
 
 
     public void ExitNote()
-    {
+    {            
         ActivateNote(NoteStates.None);
+        activeNote = false;
+    }
+
+
+    public void MoveNote()
+    {
+        LeanTween.moveY(exitNoteButton, -700f, 1f);
+        LeanTween.moveY(visibleNote, -1000f, 1f).setOnComplete(ExitNote);
     }
 }
