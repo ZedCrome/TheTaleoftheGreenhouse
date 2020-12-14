@@ -61,6 +61,7 @@ public class NoteManager : MonoBehaviour
                     visibleNote = plantNote;
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
+                    noteArrival.Play();
                     LeanTween.moveY(visibleNote, Screen.height / 3.75f, 1.5f).setEaseOutBack();
                     LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
                     break;
@@ -70,6 +71,7 @@ public class NoteManager : MonoBehaviour
                     visibleNote = manaNote;
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
+                    noteArrival.Play();
                     LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
                     LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
                     break;
@@ -79,6 +81,7 @@ public class NoteManager : MonoBehaviour
                     visibleNote = sellBasketNote;
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
+                    noteArrival.Play();
                     LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
                     LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
                     break;
@@ -88,6 +91,7 @@ public class NoteManager : MonoBehaviour
                     visibleNote = knifeNote;
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
+                    noteArrival.Play();
                     LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
                     LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
                     break;
@@ -97,6 +101,7 @@ public class NoteManager : MonoBehaviour
                     visibleNote = compostNote;
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
+                    noteArrival.Play();
                     LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
                     LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
                     break;
@@ -106,6 +111,7 @@ public class NoteManager : MonoBehaviour
                     visibleNote = deliveryNote;
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
+                    noteArrival.Play();
                     LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
                     LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
                     break;
@@ -115,6 +121,7 @@ public class NoteManager : MonoBehaviour
                     visibleNote = shearsNote;
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
+                    noteArrival.Play();
                     LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
                     LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
                     break;
@@ -128,7 +135,6 @@ public class NoteManager : MonoBehaviour
         exitNoteButton.SetActive(false);
         visibleNote.SetActive(false);
         LeanTween.moveY(exitNoteButton, -Screen.height/3f, 0.01f);
-        noteArrival.Play();
         activeNote = false;
         currentNote = noteState;
     }

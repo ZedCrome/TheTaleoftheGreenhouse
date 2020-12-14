@@ -100,6 +100,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     public void Update()
     {
         playerMoneyText.text = playerMoney.ToString(); 
+        DeactivateButtons();
     }
 
     public void addTable()
@@ -318,6 +319,16 @@ public class ShopBehaviourBuy : MonoBehaviour
         manaStorageItemPriceDisplay.text = manaStorageItemTotalCost + " Gold";
         totalCostText.text = "Price: " + totalCost + " Gold";
         manaStorageItemAmount.text = amountOfManaStorageItems.ToString();
+    }
+
+
+    public void DeactivateButtons()
+    {
+        if (playerMoney < tableCost)
+        {
+            tableAdd.enabled = false;
+            tableReduce.enabled = false;
+        }
     }
 
     public void buy()

@@ -29,7 +29,6 @@ public class DayNightCycle : MonoBehaviour
     public float minutesPerHour = 60f;
 
     public string hourString;
-    public string minutesString;
 
     [SerializeField] Color dayColor;
     [SerializeField] Color eveningColor;
@@ -97,7 +96,6 @@ public class DayNightCycle : MonoBehaviour
         float dayNormalized = day % 1f;
         
         hourString = Mathf.Floor(dayNormalized * hoursPerDay).ToString("00");
-        minutesString = Mathf.Floor(((dayNormalized * hoursPerDay) % 1f) * minutesPerHour).ToString("00");
 
         float rotationDegreesPerDay = 360f;
         hourHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
@@ -108,25 +106,10 @@ public class DayNightCycle : MonoBehaviour
     {
         if (float.Parse(hourString) >= 0f && float.Parse(hourString) < 12f)
         {
-            if (float.Parse(hourString) == 0f && !isSleeping && !firstMorning)
-            {
-                
-                GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.SleepWarning);
-            }
-            
-            if (float.Parse(hourString) > 1f && float.Parse(hourString) < 3f && !isSleeping && !firstMorning)
-            {
-                Sleep();
-                player.GetComponent<PlayerMovement>().enabled = false;
-                player.GetComponent<PlayerRenderer>().enabled = false;
-                forcedSleep = true;
-            }
-            
-            if (float.Parse(hourString) > 5f && float.Parse(hourString) < 8f && !firstMorning)
+            if (float.Parse(hourString) == 1 && !firstMorning)
             {
                 timer += Time.deltaTime;
                 
-            
                 light.intensity = Mathf.Lerp(eveningIntensity, dayIntensity, transitionTime * timer);
                 light.color = Color.Lerp(eveningColor, dayColor, transitionTime * timer);
             }
@@ -135,7 +118,9 @@ public class DayNightCycle : MonoBehaviour
                 timer = 0;
             }
             
-            if (float.Parse(hourString) > 5f && float.Parse(hourString) < 9f)
+            
+            
+            if (float.Parse(hourString) == 1)
             {
                 if(isSleeping)
                 {
@@ -148,9 +133,9 @@ public class DayNightCycle : MonoBehaviour
             }
         }
         
-        if (float.Parse(hourString) > 12f && float.Parse(hourString) < 24f)
+        if (float.Parse(hourString) >= 12f && float.Parse(hourString) <= 24f)
         {
-            if (float.Parse(hourString) > 18f && float.Parse(hourString) < 21f)
+            if (float.Parse(hourString) == 12f)
             {
                 timer += Time.deltaTime;
                 
@@ -161,6 +146,19 @@ public class DayNightCycle : MonoBehaviour
             else
             {
                 timer = 0;
+            }
+            
+            if (float.Parse(hourString) == 17f && !isSleeping && !firstMorning)
+            {
+                GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.SleepWarning);
+            }
+            
+            if (float.Parse(hourString) == 19 &&!isSleeping && !firstMorning)
+            {
+                Sleep();
+                player.GetComponent<PlayerMovement>().enabled = false;
+                player.GetComponent<PlayerRenderer>().enabled = false;
+                forcedSleep = true;
             }
         }
     }
