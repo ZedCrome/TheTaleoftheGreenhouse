@@ -9,6 +9,10 @@ public class ManaCubeBehavior : MonoBehaviour
     public Sprite seccondStageCube;
     public Sprite fullStageCube;
 
+    public Material firstStageMaterial;
+    public Material seccondStageMaterial;
+    public Material fullStageMaterial;
+
     private int emptyCubeValue = 0;
     private int firstStageCubeValue = 5;
     private int seccondStageCubeValue = 10;
