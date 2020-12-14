@@ -324,11 +324,7 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void DeactivateButtons()
     {
-        if (playerMoney < tableCost)
-        {
-            tableAdd.enabled = false;
-            tableReduce.enabled = false;
-        }
+        
     }
 
     public void buy()
