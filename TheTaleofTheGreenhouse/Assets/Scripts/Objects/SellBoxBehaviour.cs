@@ -46,10 +46,14 @@ public class SellBoxBehaviour : MonoBehaviour
 
                         if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
                         {
-                            sellItem.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
                             if (sellItem.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Cutting)
                             {
                                 sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                                PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
+                            }
+                            else
+                            {
+                                sellItem.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
                             }
                         }
                         else if (sellItem.tag == "Pot")
@@ -69,17 +73,6 @@ public class SellBoxBehaviour : MonoBehaviour
                                 if (itemsToSell[i] == null)
                                 {
                                     itemsToSell[i] = sellItem;
-                                    if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
-                                    {
-                                        if (sellItem.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Cutting)
-                                        {
-                                            PlayerInventory.instance.normalCuttingsInInventory -= 1;
-                                        }
-                                        else
-                                        {
-                                            sellItem.GetComponentInParent<ObjectSlot>().objectInSlot = null;
-                                        }                                       
-                                    }
                                     sellItem.transform.parent = gameObject.transform;
                                     currentSlot++;
                                 }

@@ -119,7 +119,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  maxNumbertoSell: 9
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxNumbertoSell: 14
 --- !u!60 &4737253927363579341
 PolygonCollider2D:
   m_ObjectHideFlags: 0
