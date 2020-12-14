@@ -69,7 +69,6 @@ public class DayNightCycle : MonoBehaviour
         deliveryManager = GameObject.Find("Delivery");
         sellBox = GameObject.Find("SellBox");
 
-
         if (light == null)
         {
             light = FindObjectOfType<Light2D>();
@@ -190,14 +189,16 @@ public class DayNightCycle : MonoBehaviour
         
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<PlayerRenderer>().enabled = false;
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingTables = 0;
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPots = 0;
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingPlants = 0;
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().plantCurrentBuy1.value = 0;
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaPlants = 0;
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().manaPlantCurrentBuy1.value = 0;
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().currentlyBuyingManaStorageItems = 0;
-        buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasOrderedItems = false;
+
+        ShopBehaviourBuy shopBehaviourBuy = buyMenuCanvas.GetComponent<ShopBehaviourBuy>();
+        shopBehaviourBuy.currentlyBuyingTables = 0;
+        shopBehaviourBuy.currentlyBuyingPots = 0;
+        shopBehaviourBuy.currentlyBuyingPlants = 0;
+        shopBehaviourBuy.plantCurrentBuy1.value = 0;
+        shopBehaviourBuy.currentlyBuyingManaPlants = 0;
+        shopBehaviourBuy.manaPlantCurrentBuy1.value = 0;
+        shopBehaviourBuy.currentlyBuyingManaStorageItems = 0;
+        shopBehaviourBuy.hasOrderedItems = false;
 
         LeanTween.scale(alreadyBoughtCanvas, new Vector3(1f, 1f, 1f), 0.01f);
         alreadyBoughtCanvas.SetActive(false);
@@ -214,8 +215,7 @@ public class DayNightCycle : MonoBehaviour
 
         if (sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell > 0)
         {
-            buyMenuCanvas.GetComponent<ShopBehaviourBuy>().
-            playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
+            shopBehaviourBuy.playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
             sellBox.GetComponent<SellBoxBehaviour>().ResetSlots();
             for (int i = 0; i < sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell; i++)
             {
