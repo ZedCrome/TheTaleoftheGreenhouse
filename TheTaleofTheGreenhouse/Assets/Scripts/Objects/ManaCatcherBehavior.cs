@@ -3,19 +3,22 @@ using UnityEngine;
 
 public class ManaCatcherBehavior : MonoBehaviour
 {
+    SpriteRenderer spriteRenderer;
+    InteractableEffect interactableEffect;
+
     public AudioClip storeManaSound;
     public AudioClip noManaAction;
 
     private AudioSource audioSource;
     private ManaCubeBehavior manaCubeBehavior;
 
-    private SpriteRenderer spriteRenderer;
     public Sprite emptyCatcher;
     public Sprite firstStageCatcher;
     public Sprite fullStageCatcher;
 
     public Material firstStageMaterial;
     public Material fullStageMaterial;
+    private Material emptyMaterial;
 
     private int emptyValue = 0;
     private int fullValue = 10;
@@ -29,6 +32,8 @@ public class ManaCatcherBehavior : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        interactableEffect = GetComponent<InteractableEffect>();
+        emptyMaterial = spriteRenderer.material;
         manaCubeBehavior = new ManaCubeBehavior();
     }
 
@@ -37,16 +42,19 @@ public class ManaCatcherBehavior : MonoBehaviour
         if (currentMana > emptyValue && currentMana < fullValue)
         {
             spriteRenderer.sprite = firstStageCatcher;
+            interactableEffect.outliveNotActive = firstStageMaterial;
         }
 
         else if (currentMana >= fullValue)
         {
             spriteRenderer.sprite = fullStageCatcher;
+            interactableEffect.outliveNotActive = fullStageMaterial;
         }
 
         else
         {
             spriteRenderer.sprite = emptyCatcher;
+            interactableEffect.outliveNotActive = emptyMaterial;
         }
 
 

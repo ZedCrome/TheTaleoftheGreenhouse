@@ -3,7 +3,8 @@
 public class ManaCubeBehavior : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
-    
+    InteractableEffect interactableEffect;
+
     public Sprite emptyCube;
     public Sprite firstStageCube;
     public Sprite seccondStageCube;
@@ -12,6 +13,7 @@ public class ManaCubeBehavior : MonoBehaviour
     public Material firstStageMaterial;
     public Material seccondStageMaterial;
     public Material fullStageMaterial;
+    private Material emptyMaterial;
 
     private int emptyCubeValue = 0;
     private int firstStageCubeValue = 5;
@@ -24,6 +26,8 @@ public class ManaCubeBehavior : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        interactableEffect = GetComponent<InteractableEffect>();
+        emptyMaterial = spriteRenderer.material;
     }
 
     private void Update()
@@ -31,22 +35,26 @@ public class ManaCubeBehavior : MonoBehaviour
         if (storedMana > emptyCubeValue && storedMana < seccondStageCubeValue)
         {
             spriteRenderer.sprite = firstStageCube;
+            interactableEffect.outliveNotActive = firstStageMaterial;
         }
 
         else if (storedMana > firstStageCubeValue && storedMana < fullStageCubeValue)
         {
             spriteRenderer.sprite = seccondStageCube;
+            interactableEffect.outliveNotActive = seccondStageMaterial;
         }
 
         else if (storedMana >= fullStageCubeValue)
         {
             spriteRenderer.sprite = fullStageCube;
+            interactableEffect.outliveNotActive = fullStageMaterial;
             storedMana = maxMana;
         }
 
         else
         {
             spriteRenderer.sprite = emptyCube;
+            interactableEffect.outliveNotActive = emptyMaterial;
         }
     }
 
