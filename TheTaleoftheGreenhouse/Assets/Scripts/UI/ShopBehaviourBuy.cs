@@ -103,6 +103,11 @@ public class ShopBehaviourBuy : MonoBehaviour
         DeactivateButtons();
     }
 
+    public void AddGold(int amount)
+    {
+        playerMoney += amount;
+    }
+
     public void addTable()
     {
         if (playerMoney - (totalCost + tableCost) >= 0)
