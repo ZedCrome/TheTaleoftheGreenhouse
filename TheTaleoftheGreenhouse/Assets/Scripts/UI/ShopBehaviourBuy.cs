@@ -333,6 +333,7 @@ public class ShopBehaviourBuy : MonoBehaviour
 
         if (amountOfTables > 0 || amountOfPots > 0 || amountOfPlants > 0 || amountOfManaPlants > 0 || amountOfManaStorageItems > 0)
         {
+            TableManager.instance.unlockedTables = ownedTables;
             alreadyBoughtOverlay.SetActive(true);
             LeanTween.scale(alreadyBoughtOverlay, new Vector3(1f, 1f, 1f), 0.1f).setEaseLinear();
             hasBoughtSomething = true;
