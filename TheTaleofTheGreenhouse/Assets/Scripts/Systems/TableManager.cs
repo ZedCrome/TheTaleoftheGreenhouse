@@ -7,7 +7,7 @@ public class TableManager : MonoBehaviour
 {
     public static TableManager instance;
 
-    public int unlockedTables;
+    public int unlockedTables = 4;
     
     public GameObject[] table;
 
@@ -36,7 +36,7 @@ public class TableManager : MonoBehaviour
     {
         for (int i = 0; i < table.Length; i++)
         {
-            if (i <= unlockedTables)
+            if (i <= unlockedTables - 1)
             {
                 table[i].SetActive(true);
             }
