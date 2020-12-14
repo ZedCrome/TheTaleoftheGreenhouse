@@ -45,6 +45,7 @@ public class PlayerInventory : MonoBehaviour
         if (normalCuttingsInInventory > 0)
         {
             GameObject newNormalCutting = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
+            newNormalCutting.GetComponent<PlantStates>().currentState = PlantStates.PlantState.Cutting;
             newNormalCutting.transform.localScale = new Vector3(1f, 1f, 1f);
             normalCuttingsInInventory -= 1;
             PlayerInteract.instance.inventoryItem = newNormalCutting;            

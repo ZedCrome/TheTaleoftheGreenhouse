@@ -59,7 +59,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private int maxBuyPlantsAtATime = 3;
     private int plantTotalCost;
     private int amountOfPlants = 0;
-    private int ownedPlants = 0;
+    private int ownedPlants = 4;
     public int currentlyBuyingPlants;
     
     [Header("ManaPlant")] [Space(5)] 
@@ -100,6 +100,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     public void Update()
     {
         playerMoneyText.text = playerMoney.ToString(); 
+        DeactivateButtons();
     }
 
     public void addTable()
@@ -318,6 +319,12 @@ public class ShopBehaviourBuy : MonoBehaviour
         manaStorageItemPriceDisplay.text = manaStorageItemTotalCost + " Gold";
         totalCostText.text = "Price: " + totalCost + " Gold";
         manaStorageItemAmount.text = amountOfManaStorageItems.ToString();
+    }
+
+
+    public void DeactivateButtons()
+    {
+        
     }
 
     public void buy()

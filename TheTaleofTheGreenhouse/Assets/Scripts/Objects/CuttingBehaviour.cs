@@ -25,6 +25,7 @@ public class CuttingBehaviour : MonoBehaviour
                         if (this.gameObject.CompareTag("CuttingNormal"))
                         {
                             newPlantObject = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
+                            newPlantObject.GetComponent<PlantStates>().currentState = PlantStates.PlantState.Cutting;
                         }
                         else
                         {
