@@ -34,6 +34,16 @@ public class Debugger : MonoBehaviour
                 indexer++;
             }
         }
+        else
+        {
+            int indexer = 0;
+            
+            foreach (DebugMessage item in debugMessage)
+            {
+                debugTextObjects[indexer].text = "";
+                indexer++;
+            }
+        }
     }
 
     public void Log(string prefix, object message)
