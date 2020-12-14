@@ -59,7 +59,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private int maxBuyPlantsAtATime = 3;
     private int plantTotalCost;
     private int amountOfPlants = 0;
-    private int ownedPlants = 0;
+    private int ownedPlants = 4;
     public int currentlyBuyingPlants;
     
     [Header("ManaPlant")] [Space(5)] 
