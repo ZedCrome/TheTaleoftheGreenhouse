@@ -78,7 +78,6 @@ public class WeatherManager : MonoBehaviour
     void OnSleep()
     {
         int randomSeed = Random.Range(0, 4);
-        Debug.Log("Called: " + randomSeed);
         
         if (randomSeed == 0)
         {
