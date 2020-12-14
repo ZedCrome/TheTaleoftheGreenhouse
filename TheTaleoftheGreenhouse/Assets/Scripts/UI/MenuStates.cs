@@ -22,6 +22,12 @@ public class MenuStates : MonoBehaviour
         GameManager.instance.ChangeGameState(GameManager.GameState.Options);
     }
 
+
+    public void OpenStartMenuScene()
+    {
+        GameManager.instance.ChangeGameState(GameManager.GameState.Menu);
+        SceneManager.LoadScene("MainMenuScene");
+    }
     
     public void ExitGame()
     {
