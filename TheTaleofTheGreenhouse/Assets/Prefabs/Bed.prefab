@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 673699331360182183}
   - component: {fileID: 673699331360182187}
+  - component: {fileID: 673699331360182180}
+  - component: {fileID: 8852187573817076960}
   - component: {fileID: 673699331360182186}
   - component: {fileID: 673699331360182181}
-  - component: {fileID: 673699331360182180}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Bed
@@ -85,6 +86,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &673699331360182180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673699331360182182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da164ac3d628954797614906f184bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8852187573817076960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673699331360182182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980a23ae39d947a48ad2721475314d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useShader: 1
+  outlineActive: {fileID: 2100000, guid: 78a2391ed7824564d85d2a8d29db19d7, type: 2}
+  outliveNotActive: {fileID: 2100000, guid: 5f83e52369c5a9749aed200ffc7164db, type: 2}
+  manaOutlineActive: {fileID: 0}
 --- !u!60 &673699331360182186
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -235,15 +264,3 @@ PolygonCollider2D:
     - - {x: 0.08, y: -0.86}
       - {x: 0.074285716, y: -0.86}
       - {x: 0.08571429, y: -0.87142855}
---- !u!114 &673699331360182180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673699331360182182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da164ac3d628954797614906f184bca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

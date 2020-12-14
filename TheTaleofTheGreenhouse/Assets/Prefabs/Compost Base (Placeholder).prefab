@@ -50,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c849efd469e13af498ebd5206535815f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5319477428894627005
 Transform:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 36a7cdc4f2ceae54e97e938e9ff5accd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 5319477428933453251}
   - component: {fileID: 5319477428933453248}
   - component: {fileID: 5319477428933453250}
+  - component: {fileID: 8592981295237359005}
   m_Layer: 2
   m_Name: Compost Base (Placeholder)
   m_TagString: Compost
@@ -216,7 +217,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 36a7cdc4f2ceae54e97e938e9ff5accd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,6 +278,22 @@ PolygonCollider2D:
       - {x: -0.99859685, y: -1.0066905}
       - {x: 0.012352735, y: -1.5014894}
       - {x: 1.0155404, y: -1.0020007}
+--- !u!114 &8592981295237359005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5319477428933453249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980a23ae39d947a48ad2721475314d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useShader: 1
+  outlineActive: {fileID: 2100000, guid: c849efd469e13af498ebd5206535815f, type: 2}
+  outliveNotActive: {fileID: 2100000, guid: 36a7cdc4f2ceae54e97e938e9ff5accd, type: 2}
+  manaOutlineActive: {fileID: 0}
 --- !u!1 &5319477429221910077
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,5 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55dc93b6978277d46803f10d25c6c4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lidOpen: {fileID: 0}
-  lidClosed: {fileID: 0}
+  lidOpen: {fileID: 5319477428180441487}
+  lidClosed: {fileID: 5319477428894626995}
+  tagArray: []
+  interactEffects:
+  - {fileID: 8592981295237359005}

@@ -10,13 +10,17 @@ public class CompostBehaviour : MonoBehaviour
     
     public string[] tagArray;
 
+    public InteractableEffect interactEffect;
+
     private bool firstTimeUsing = true;
     
     private void Start()
     {
         lidOpen = transform.Find("LidOpen").gameObject;
         lidClosed = transform.Find("LidClosed").gameObject;
+        interactEffect = transform.parent.GetComponent<InteractableEffect>();
         
+        interactEffect.Enable(false);
         lidOpen.SetActive(false);
         lidClosed.SetActive(true);
 
@@ -32,6 +36,7 @@ public class CompostBehaviour : MonoBehaviour
         
         if (PlayerInteract.instance.allowedTointeract)
         {
+            interactEffect.Enable(true);
             lidOpen.SetActive(true);
             lidClosed.SetActive(false);
 
@@ -61,6 +66,8 @@ public class CompostBehaviour : MonoBehaviour
         }
         else
         {
+
+            interactEffect.Enable(false);
             lidOpen.SetActive(false);
             lidClosed.SetActive(true);
         }
@@ -68,6 +75,7 @@ public class CompostBehaviour : MonoBehaviour
 
     private void OnMouseExit()
     {
+        interactEffect.Enable(false);
         lidOpen.SetActive(false);
         lidClosed.SetActive(true);
     }
