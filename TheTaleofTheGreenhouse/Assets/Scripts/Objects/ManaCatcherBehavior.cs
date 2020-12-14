@@ -14,6 +14,9 @@ public class ManaCatcherBehavior : MonoBehaviour
     public Sprite firstStageCatcher;
     public Sprite fullStageCatcher;
 
+    public Material firstStageMaterial;
+    public Material fullStageMaterial;
+
     private int emptyValue = 0;
     private int fullValue = 10;
 
