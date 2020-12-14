@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CosmeticProgress))]
 public class TableManager : MonoBehaviour
 {
     public static TableManager instance;
 
+    private CosmeticProgress cosmeticProgress;
+    
     public int unlockedTables = 4;
     
     public GameObject[] table;
@@ -20,6 +23,11 @@ public class TableManager : MonoBehaviour
 
             Destroy( this );
         }
+    }
+
+    private void Start()
+    {
+        cosmeticProgress = GetComponent<CosmeticProgress>();
     }
 
     private void OnEnable()
@@ -38,12 +46,22 @@ public class TableManager : MonoBehaviour
         {
             if (i <= unlockedTables - 1)
             {
+                if (table[i].activeSelf == false)
+                {
+                    cosmeticProgress.AddCosmetic();
+                }
+                
                 table[i].SetActive(true);
             }
             else
             {
                 table[i].SetActive(false);
             }
+        }
+
+        if (unlockedTables >= table.Length)
+        {
+            cosmeticProgress.AddCosmetic();
         }
     }
 }

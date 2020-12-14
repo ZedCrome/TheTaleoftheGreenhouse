@@ -23,6 +23,7 @@ TagManager:
   - CuttingNormal
   - DeliverySlot
   - Table
+  - Cosmetic
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Cosmetic
   - 
   - 
   - 
