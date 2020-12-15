@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 123942521}
   - component: {fileID: 123942522}
   - component: {fileID: 123942523}
+  - component: {fileID: 7566989164670990871}
   - component: {fileID: 794015941}
   m_Layer: 2
   m_Name: Player
@@ -269,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cuttingPrefab: {fileID: 5854508913341120964, guid: c9f23c372ef1af248b9bc0f1c9e8b4b3, type: 3}
+  normalCuttingsInInventory: 0
   MaxCuttings: 2
 --- !u!114 &123942522
 MonoBehaviour:
@@ -304,6 +306,18 @@ MonoBehaviour:
   maxInteractDistance: 3
   maxInteractDistanceModifier: {x: 0.8, y: 0.5}
   allowedTointeract: 0
+--- !u!114 &7566989164670990871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258783260372278890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e15e798dd115f04ba0644cbdaf1e55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &794015941
 AudioSource:
   m_ObjectHideFlags: 0
