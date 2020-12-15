@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class ShopBehaviourBuy : MonoBehaviour
@@ -102,6 +103,17 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         ownedTables = GameObject.FindGameObjectsWithTag("Table").Length;
     }
+
+    private void OnEnable()
+    {
+        Motherlode.instance.addGoldCheat += AddGold;
+    }
+    
+    private void OnDisable()
+    {
+        Motherlode.instance.addGoldCheat -= AddGold;
+    }
+    
     public void Update()
     {
         playerMoneyText.text = playerMoney.ToString(); 
