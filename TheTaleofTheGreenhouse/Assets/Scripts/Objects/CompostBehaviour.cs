@@ -20,7 +20,6 @@ public class CompostBehaviour : MonoBehaviour
         lidClosed = transform.Find("LidClosed").gameObject;
         interactEffect = transform.parent.GetComponent<InteractableEffect>();
         
-        interactEffect.Enable(false);
         lidOpen.SetActive(false);
         lidClosed.SetActive(true);
 
