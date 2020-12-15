@@ -18,7 +18,10 @@ public class ManaCatcherBehavior : MonoBehaviour
 
     public Material firstStageMaterial;
     public Material fullStageMaterial;
+    public Material firstStageMaterialOutline;
+    public Material fullStageMaterialOutline;
     private Material emptyMaterial;
+    private Material emptyMaterialOutline;
 
     private int emptyValue = 0;
     private int fullValue = 10;
@@ -34,27 +37,40 @@ public class ManaCatcherBehavior : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         interactableEffect = GetComponent<InteractableEffect>();
         emptyMaterial = spriteRenderer.material;
+        emptyMaterialOutline = interactableEffect.outlineActive;
         manaCubeBehavior = new ManaCubeBehavior();
     }
 
     private void Update()
     {
+        if (interactableEffect.ActiveOutline())
+        {
+            spriteRenderer.material = interactableEffect.outlineActive;
+        }
+        else
+        {
+            spriteRenderer.material = interactableEffect.outliveNotActive;
+        }
+
         if (currentMana > emptyValue && currentMana < fullValue)
         {
             spriteRenderer.sprite = firstStageCatcher;
-            interactableEffect.outliveNotActive = firstStageMaterial;
+            interactableEffect.outliveNotActive = firstStageMaterial;       
+            interactableEffect.outlineActive = firstStageMaterialOutline;
         }
 
         else if (currentMana >= fullValue)
         {
             spriteRenderer.sprite = fullStageCatcher;
             interactableEffect.outliveNotActive = fullStageMaterial;
+            interactableEffect.outlineActive = fullStageMaterialOutline;
         }
 
         else
         {
             spriteRenderer.sprite = emptyCatcher;
             interactableEffect.outliveNotActive = emptyMaterial;
+            interactableEffect.outlineActive = emptyMaterialOutline;
         }
 
 
@@ -107,7 +123,7 @@ public class ManaCatcherBehavior : MonoBehaviour
         }
     }
 
-    //Only works on ManaStorage right now.
+
     private bool AllowedToDoCubeAction()
     {
         if (PlayerInteract.instance.allowedTointeract)
@@ -126,6 +142,7 @@ public class ManaCatcherBehavior : MonoBehaviour
         return false;
     }
 
+
     private bool AllowedToDoPlantAction()
     {
         if (PlayerInteract.instance.allowedTointeract)
@@ -143,6 +160,7 @@ public class ManaCatcherBehavior : MonoBehaviour
         }
         return false;
     }
+
 
     private void LoseMana()
     {

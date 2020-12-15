@@ -13,7 +13,11 @@ public class ManaCubeBehavior : MonoBehaviour
     public Material firstStageMaterial;
     public Material seccondStageMaterial;
     public Material fullStageMaterial;
+    public Material firstStageMaterialOutline;
+    public Material seccondStageMaterialOutline;
+    public Material fullStageMaterialOutline;
     private Material emptyMaterial;
+    private Material emptyMaterialOutline;
 
     private int emptyCubeValue = 0;
     private int firstStageCubeValue = 5;
@@ -28,26 +32,39 @@ public class ManaCubeBehavior : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         interactableEffect = GetComponent<InteractableEffect>();
         emptyMaterial = spriteRenderer.material;
+        emptyMaterialOutline = interactableEffect.outlineActive;
     }
 
     private void Update()
-    {    
+    {
+        if (interactableEffect.ActiveOutline())
+        {
+            spriteRenderer.material = interactableEffect.outlineActive;
+        }
+        else
+        {
+            spriteRenderer.material = interactableEffect.outliveNotActive;
+        }
+
         if (storedMana > emptyCubeValue && storedMana < seccondStageCubeValue)
         {
             spriteRenderer.sprite = firstStageCube;
             interactableEffect.outliveNotActive = firstStageMaterial;
+            interactableEffect.outlineActive = firstStageMaterialOutline;
         }
 
         else if (storedMana > firstStageCubeValue && storedMana < fullStageCubeValue)
         {
             spriteRenderer.sprite = seccondStageCube;
             interactableEffect.outliveNotActive = seccondStageMaterial;
+            interactableEffect.outlineActive = seccondStageMaterialOutline;
         }
 
         else if (storedMana >= fullStageCubeValue)
         {
             spriteRenderer.sprite = fullStageCube;
             interactableEffect.outliveNotActive = fullStageMaterial;
+            interactableEffect.outlineActive = fullStageMaterialOutline;
             storedMana = maxMana;
         }
 
@@ -55,6 +72,7 @@ public class ManaCubeBehavior : MonoBehaviour
         {
             spriteRenderer.sprite = emptyCube;
             interactableEffect.outliveNotActive = emptyMaterial;
+            interactableEffect.outlineActive = emptyMaterialOutline;
         }
     }
 

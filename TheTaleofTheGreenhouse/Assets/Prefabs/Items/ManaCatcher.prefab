@@ -119,6 +119,10 @@ MonoBehaviour:
   emptyCatcher: {fileID: 21300000, guid: 96ffebd3e4917ae4db6ec3a8f4290c91, type: 3}
   firstStageCatcher: {fileID: 21300000, guid: 90288ed278e2b7a46890e208db318fd6, type: 3}
   fullStageCatcher: {fileID: 21300000, guid: d99e27c712c2d6442833df9817d7d718, type: 3}
+  firstStageMaterial: {fileID: 2100000, guid: 5990d4aea75c912469c493de21844c1e, type: 2}
+  fullStageMaterial: {fileID: 2100000, guid: f4597c38e68fd054f8c0f9dfedeb216b, type: 2}
+  firstStageMaterialOutline: {fileID: 2100000, guid: 0ae98395a35879842b2462f0509c21df, type: 2}
+  fullStageMaterialOutline: {fileID: 2100000, guid: d4450cab965b3ce4d9693111e67edbea, type: 2}
   currentMana: 0
 --- !u!82 &1086020604
 AudioSource:

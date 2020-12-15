@@ -1782,6 +1782,10 @@ PrefabInstance:
       propertyPath: fullStageMaterial
       value: 
       objectReference: {fileID: 2100000, guid: f4597c38e68fd054f8c0f9dfedeb216b, type: 2}
+    - target: {fileID: 1548467761439843992, guid: 671572ddcabca834b925ab567a13a727, type: 3}
+      propertyPath: currentMana
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1548467761439843993, guid: 671572ddcabca834b925ab567a13a727, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -1830,6 +1834,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
+    - target: {fileID: 1548467761439843994, guid: 671572ddcabca834b925ab567a13a727, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1548467761439843996, guid: 671572ddcabca834b925ab567a13a727, type: 3}
       propertyPath: m_Name
       value: ManaCatcher
@@ -20625,6 +20633,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 375123948}
     m_Modifications:
+    - target: {fileID: 213020064380900294, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1462616111845343355, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
       propertyPath: indexNumber
       value: 1
@@ -20671,6 +20683,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6288598847472336660, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288598847472336662, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6288598847472336663, guid: c18a355731183834c97d9e4dd108af1f, type: 3}

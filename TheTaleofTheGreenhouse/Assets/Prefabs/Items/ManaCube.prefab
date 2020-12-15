@@ -118,6 +118,12 @@ MonoBehaviour:
   firstStageCube: {fileID: 21300000, guid: d0e85c060fe2802459eb3e493e1b000f, type: 3}
   seccondStageCube: {fileID: 21300000, guid: c1ac0098b1b4aad41bad93d0a0ffdd5d, type: 3}
   fullStageCube: {fileID: 21300000, guid: 02465c79e88c826428b6ec87247e6e5b, type: 3}
+  firstStageMaterial: {fileID: 2100000, guid: d3dd2fbd007f8d3438ca12943eee2673, type: 2}
+  seccondStageMaterial: {fileID: 2100000, guid: 2a9f7f8ed73fa40459087493e3239830, type: 2}
+  fullStageMaterial: {fileID: 2100000, guid: 61828534e9ea9124f868d1f2d30d62b0, type: 2}
+  firstStageMaterialOutline: {fileID: 2100000, guid: 30b0325f54cbfc7418a214cb216eb0d3, type: 2}
+  seccondStageMaterialOutline: {fileID: 2100000, guid: 0c9a28b4242115b438c23ff9ba36949a, type: 2}
+  fullStageMaterialOutline: {fileID: 2100000, guid: 2420c132c6b728748a32305b0ae50f6d, type: 2}
   storedMana: 0
   maxMana: 15
 --- !u!114 &1462616111845343355

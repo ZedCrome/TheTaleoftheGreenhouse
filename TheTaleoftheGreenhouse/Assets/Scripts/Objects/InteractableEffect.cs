@@ -13,6 +13,8 @@ public class InteractableEffect : MonoBehaviour
     private Color mouseOverColor;
     private Color standardColor;
 
+    private bool isEnable;
+
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
@@ -70,5 +72,12 @@ public class InteractableEffect : MonoBehaviour
                 renderer.material.color = standardColor;
             }
         }
+
+        isEnable = isEnabled;
+    }
+
+    public bool ActiveOutline()
+    {
+        return isEnable;
     }
 }
