@@ -50,6 +50,7 @@ MonoBehaviour:
   knifeNote: {fileID: 0}
   deliveryNote: {fileID: 0}
   shearsNote: {fileID: 0}
-  exitButton: {fileID: 0}
+  noteArrival: {fileID: 0}
+  exitNoteButton: {fileID: 0}
   currentNote: 2
   visibleNote: {fileID: 0}

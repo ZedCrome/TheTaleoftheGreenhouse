@@ -83,7 +83,7 @@ public class DayNightCycle : MonoBehaviour
     {
         if (allowTime)
         {
-            if (GameManager.instance.currentGameState == GameManager.GameState.GameLoop)
+            if (GameManager.instance.currentGameState != GameManager.GameState.ShopMenu)
             {
                 CalculateTime();
             }
