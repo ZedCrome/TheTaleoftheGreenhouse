@@ -26,7 +26,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private int maxBuyTablesAtATime = 3;
     private int tableTotalCost;
     private int amountOfTables;
-    private int ownedTables = 0;
+    private int ownedTables = 4;
     public int currentlyBuyingTables = 0;
 
     [Header("Pot")] [Space(5)]
