@@ -30,6 +30,8 @@ public class DayNightCycle : MonoBehaviour
     public float minutesPerHour = 60f;
 
     public string hourString;
+    public string minutesString;
+    
 
     [SerializeField] Color dayColor;
     [SerializeField] Color eveningColor;
@@ -96,6 +98,8 @@ public class DayNightCycle : MonoBehaviour
         float dayNormalized = day % 1f;
         
         hourString = Mathf.Floor(dayNormalized * hoursPerDay).ToString("00");
+        
+        minutesString = Mathf.Floor(((dayNormalized * hoursPerDay) % 1f) * minutesPerHour).ToString("00");
 
         float rotationDegreesPerDay = 360f;
         hourHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
