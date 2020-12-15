@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ManaManager : MonoBehaviour
 {  
@@ -94,6 +95,12 @@ public class ManaManager : MonoBehaviour
         {
             currentRuneState = RuneState.AllRunes;
         }
+
+        else if (knifeSlider.value >= 1f)
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
         else
         {
             currentRuneState = RuneState.Empty;
