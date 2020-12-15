@@ -20,7 +20,7 @@ public class ExitCutscene : MonoBehaviour
     {
         currentTime += Time.deltaTime;
 
-        if (currentTime > timeLineLength)
+        if (currentTime > timeLineLength || Input.GetKeyDown(KeyCode.Escape))
         {
             GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
 
