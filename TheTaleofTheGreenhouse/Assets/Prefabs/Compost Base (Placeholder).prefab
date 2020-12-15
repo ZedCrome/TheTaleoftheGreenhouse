@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5319477428180441486
 Transform:
   m_ObjectHideFlags: 0
@@ -379,5 +379,4 @@ MonoBehaviour:
   lidOpen: {fileID: 5319477428180441487}
   lidClosed: {fileID: 5319477428894626995}
   tagArray: []
-  interactEffects:
-  - {fileID: 8592981295237359005}
+  interactEffect: {fileID: 8592981295237359005}
