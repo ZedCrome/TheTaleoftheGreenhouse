@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4338576283037586645
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1314,22 +1314,23 @@ MonoBehaviour:
   forcedSleepCanvas: {fileID: 1483637288308673277}
   alreadyBoughtCanvas: {fileID: 0}
   shopBuyMenu: {fileID: 0}
+  shopNoteMenu: {fileID: 0}
   sleepPrompt: {fileID: 6272742901205777343}
   forcedSleeppanel: {fileID: 1280270429409085759}
   nightPanel: {fileID: 931818890005706853}
   realSecondsPerIngameDay: 120
   nightFadeDuration: 1
   light: {fileID: 1006554520}
-  TimeAccelerator: 24
+  TimeAccelerator: 50
   hoursPerDay: 24
   minutesPerHour: 60
   hourString: 
-  minutesString: 
   dayColor: {r: 1, g: 1, b: 1, a: 0}
   eveningColor: {r: 0.9528302, g: 0.4719206, b: 0.6897291, a: 0}
   dayIntensity: 1
   eveningIntensity: 0.85
   transitionTime: 0.5
+  allowTime: 1
   hourHandTransform: {fileID: 0}
   player: {fileID: 0}
 --- !u!1 &8083494779467967200

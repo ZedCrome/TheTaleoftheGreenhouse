@@ -12,6 +12,7 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] GameObject forcedSleepCanvas;
     [SerializeField] GameObject alreadyBoughtCanvas;
     [SerializeField] GameObject shopBuyMenu;
+    [SerializeField] GameObject shopNoteMenu;
     private GameObject buyMenuCanvas;
     private GameObject deliveryManager;
     private GameObject sellBox;
@@ -38,7 +39,7 @@ public class DayNightCycle : MonoBehaviour
     private float currentIntensity;
 
     private bool firstMorning = true;
-    private bool allowTime = true;
+    public bool allowTime = true;
     private bool isSleeping = false;
     private bool isAlreadySleeping = false;
     private bool wantToSleep = false;
@@ -80,7 +81,7 @@ public class DayNightCycle : MonoBehaviour
     {
         if (allowTime)
         {
-            if (!shopBuyMenu.activeInHierarchy)
+            if (GameManager.instance.currentGameState == GameManager.GameState.GameLoop)
             {
                 CalculateTime();
             }
