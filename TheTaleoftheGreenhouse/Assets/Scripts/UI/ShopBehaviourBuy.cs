@@ -26,7 +26,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private int maxBuyTablesAtATime = 3;
     private int tableTotalCost;
     private int amountOfTables;
-    private int ownedTables = 4;
+    private int ownedTables;
     public int currentlyBuyingTables = 0;
 
     [Header("Pot")] [Space(5)]
@@ -97,6 +97,11 @@ public class ShopBehaviourBuy : MonoBehaviour
     public GameObject delivery;
     public bool hasOrderedItems;
 
+
+    public void Start()
+    {
+        ownedTables = GameObject.FindGameObjectsWithTag("Table").Length;
+    }
     public void Update()
     {
         playerMoneyText.text = playerMoney.ToString(); 
