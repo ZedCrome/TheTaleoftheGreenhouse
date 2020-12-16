@@ -226,19 +226,19 @@ PrefabInstance:
     - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
       propertyPath: fullGrownSprite
       value: 
-      objectReference: {fileID: -4807000962642994248, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
+      objectReference: {fileID: 5864037712600400069, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
     - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
       propertyPath: adultSprite
       value: 
-      objectReference: {fileID: -8035952563824040590, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
+      objectReference: {fileID: 1158470945630820453, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
     - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
       propertyPath: youngSprite
       value: 
-      objectReference: {fileID: 8591533231565066105, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
+      objectReference: {fileID: 2877602612759241710, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
     - target: {fileID: 8910795290822507584, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
       propertyPath: sproutSprite
       value: 
-      objectReference: {fileID: 7746865604754763627, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
+      objectReference: {fileID: 6542837366559049234, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
     - target: {fileID: 8910795290822507585, guid: 04b47928469dd93439acd31c83e1556b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

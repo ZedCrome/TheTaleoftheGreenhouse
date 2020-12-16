@@ -114,10 +114,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadSprite: {fileID: 0}
-  fullGrownSprite: {fileID: -4807000962642994248, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
-  adultSprite: {fileID: -8035952563824040590, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
-  youngSprite: {fileID: 8591533231565066105, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
-  sproutSprite: {fileID: 7746865604754763627, guid: dabf0ed9f85a43f4fa07c1dbd7e447ea, type: 3}
+  fullGrownSprite: {fileID: 5864037712600400069, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
+  adultSprite: {fileID: 1158470945630820453, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
+  youngSprite: {fileID: 2877602612759241710, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
+  sproutSprite: {fileID: 6542837366559049234, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
   cuttingSprite: {fileID: -3119456751628195519, guid: bd2697277267f8d43a046ba25d895966, type: 3}
   deadFullGrownSprite: {fileID: 7715311957906663002, guid: f0af37f47c5e1734eb2f89276f950730, type: 3}
   deadAdultSprite: {fileID: -639382399175197849, guid: f0af37f47c5e1734eb2f89276f950730, type: 3}
