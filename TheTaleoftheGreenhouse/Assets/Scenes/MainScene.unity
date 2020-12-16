@@ -20022,6 +20022,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotNormalPlant
       objectReference: {fileID: 0}
+    - target: {fileID: 7702503877078866733, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: outlineActive
+      value: 
+      objectReference: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
+    - target: {fileID: 7702503877078866733, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: outliveNotActive
+      value: 
+      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
 --- !u!1 &1869702213 stripped

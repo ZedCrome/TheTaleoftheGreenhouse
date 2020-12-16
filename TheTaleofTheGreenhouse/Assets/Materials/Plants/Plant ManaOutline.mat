@@ -57,10 +57,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_35B272A3: 1
-    - Vector1_12C980EB: 0.004
+    - Vector1_12C980EB: 0.0035
     - _WindIntensity: 0.8
     - _WindSpeed: 0.08
     m_Colors:
-    - Color_B6520AC: {r: 0, g: 0.6684909, b: 1, a: 1}
+    - Color_B6520AC: {r: 0, g: 1.0039216, b: 1.4980392, a: 0.69803923}
     - Color_EB9E7419: {r: 0, g: 0.05485702, b: 0.48, a: 0}
   m_BuildTextureStacks: []
