@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ambientRainAudioSource: {fileID: 1624653638064531768}
-  lightningAudioClip: {fileID: 0}
+  lightningAudioClip: {fileID: 8300000, guid: 54ff9d696c36ebf4684cbd203de8c896, type: 3}
   ambientRain: {fileID: 8300000, guid: 6f1cf353cfd177248b2346379734b293, type: 3}
   fire: 0
   lightningActive: 0
