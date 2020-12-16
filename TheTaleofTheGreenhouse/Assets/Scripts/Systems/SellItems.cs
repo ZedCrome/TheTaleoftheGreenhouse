@@ -8,8 +8,8 @@ public class SellItems : MonoBehaviour
     SellBoxBehaviour sellBox;
 
     //Items price
-    private int manaCubePrice = 4;
-    private int potPrice = 1;
+    private int manaCubePrice = 40;
+    private int potPrice = 10;
     
     //Plants price
     PlantStates.PlantState statePrice;
