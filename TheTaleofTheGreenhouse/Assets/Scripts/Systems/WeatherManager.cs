@@ -8,11 +8,13 @@ public class WeatherManager : MonoBehaviour
 {
     public static WeatherManager instance;
     
-    private AudioSource audioSource;
+    private AudioSource lightningAudioSource;
+    public AudioSource ambientRainAudioSource;
     private Animator animatorGlobal;
     private Animator[] animatorWindows;
     
-    public AudioClip audioClip;
+    public AudioClip lightningAudioClip;
+    public AudioClip ambientRain;
     public bool fire;
 
     public bool lightningActive;
@@ -29,7 +31,7 @@ public class WeatherManager : MonoBehaviour
             Destroy( this );
         }
         
-        audioSource = GetComponent<AudioSource>();
+        lightningAudioSource = GetComponent<AudioSource>();
         animatorGlobal = GetComponent<Animator>();
         animatorWindows = GetComponentsInChildren<Animator>();
         counterGoal = Random.Range(20f, 40f);
@@ -68,7 +70,7 @@ public class WeatherManager : MonoBehaviour
                 anim.SetTrigger("PlayLightning");
             }
             
-            audioSource.PlayOneShot(audioClip);
+            lightningAudioSource.PlayOneShot(lightningAudioClip);
             fire = false;
         }
 
@@ -81,10 +83,12 @@ public class WeatherManager : MonoBehaviour
         
         if (randomSeed == 0)
         {
+            ambientRainAudioSource.Play();
             lightningActive = true;
         }
         else
         {
+            ambientRainAudioSource.Stop();
             lightningActive = false;
         }
     }
