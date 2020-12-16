@@ -95,7 +95,6 @@ public class ShopBehaviourBuy : MonoBehaviour
     public int currentlyBuyingManaStorageItems = 0;
     
     [Header("Delivery")] [Space(5)]
-    public GameObject delivery;
     public bool hasOrderedItems;
 
 
@@ -353,11 +352,10 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         if (hasOrderedItems == false)
         {
-            delivery = GameObject.FindGameObjectWithTag("Delivery");
-            delivery.GetComponent<DeliveryManager>().spawnPot = currentlyBuyingPots;
-            delivery.GetComponent<DeliveryManager>().spawnPlantMana = currentlyBuyingManaPlants;
-            delivery.GetComponent<DeliveryManager>().spawnPlantNormal = currentlyBuyingPlants;
-            delivery.GetComponent<DeliveryManager>().spawnManaCube = currentlyBuyingManaStorageItems;
+            DeliveryManager.instance.spawnPot = currentlyBuyingPots;
+            DeliveryManager.instance.spawnPlantMana = currentlyBuyingManaPlants;
+            DeliveryManager.instance.spawnPlantNormal = currentlyBuyingPlants;
+            DeliveryManager.instance.spawnManaCube = currentlyBuyingManaStorageItems;
         }
 
         if (currentlyBuyingTables > 0 || currentlyBuyingPots > 0 || currentlyBuyingPlants > 0 

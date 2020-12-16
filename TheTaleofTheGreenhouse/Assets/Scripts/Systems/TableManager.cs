@@ -21,7 +21,7 @@ public class TableManager : MonoBehaviour
             instance = this;
         } else {
 
-            Destroy( this );
+            Destroy(this.gameObject);
         }
     }
 
