@@ -32,7 +32,7 @@ public class ExitCutscene : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("MainMenuScene");
+                SceneManager.LoadScene("Credits");
             }
         }
     }
