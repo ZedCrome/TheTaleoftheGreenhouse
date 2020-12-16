@@ -246,10 +246,10 @@ RectTransform:
   m_Father: {fileID: 849031723602996875}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.3007812, y: -7.5996094}
-  m_SizeDelta: {x: -948.8726, y: -332.39166}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.3007903, y: -7.5996094}
+  m_SizeDelta: {x: 971.1274, y: 747.60834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &195829178
 CanvasRenderer:
@@ -13762,6 +13762,7 @@ MonoBehaviour:
   playerMoneyText: {fileID: 3097841062966606809}
   playerMoney: 0
   hasBoughtSomething: 0
+  totalCost: 0
   tableAdd: {fileID: 3097841064248505151}
   tableReduce: {fileID: 3097841064446730703}
   tableAmount: {fileID: 3097841063861196267}
@@ -13771,6 +13772,9 @@ MonoBehaviour:
   maxTables: 4
   tableCost: 60
   maxBuyTablesAtATime: 3
+  tableTotalCost: 0
+  amountOfTables: 0
+  ownedTables: 0
   currentlyBuyingTables: 0
   potAdd: {fileID: 3097841062615306236}
   potReduce: {fileID: 3097841063671603281}
@@ -13785,24 +13789,25 @@ MonoBehaviour:
   maxPots: 16
   potCost: 10
   maxBuyPotsAtATime: 3
+  amountOfPots: 0
   currentlyBuyingPots: 0
   plantAdd: {fileID: 3097841064063860634}
   plantReduce: {fileID: 3097841063639349749}
   plantAmount: {fileID: 3097841063231151955}
   plantPriceDisplay: {fileID: 3097841063629452315}
-  plantCurrentBuy1: {fileID: 2619406623616160781}
   maxPlants: 1000000
   plantCost: 20
   maxBuyPlantsAtATime: 3
+  plantCurrentBuy1: {fileID: 2619406623616160781}
   currentlyBuyingPlants: 0
   manaPlantAdd: {fileID: 3097841062809415002}
   manaPlantReduce: {fileID: 3097841064235154479}
   manaPlantAmount: {fileID: 3097841062706618563}
   manaPlantPriceDisplay: {fileID: 3097841062420216985}
-  manaPlantCurrentBuy1: {fileID: 6231172391196580423}
   maxManaPlants: 100000
   manaPlantCost: 50
   maxBuyManaPlantsAtATime: 3
+  manaPlantCurrentBuy1: {fileID: 6231172391196580423}
   currentlyBuyingManaPlants: 0
   manaStorageItemAdd: {fileID: 3097841062981610676}
   manaStorageItemReduce: {fileID: 3097841064440994370}
