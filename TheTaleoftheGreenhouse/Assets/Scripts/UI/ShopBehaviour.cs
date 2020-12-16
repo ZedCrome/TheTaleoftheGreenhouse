@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ShopBehaviour : MonoBehaviour
 {
@@ -14,7 +15,13 @@ public class ShopBehaviour : MonoBehaviour
     [SerializeField] private RectTransform noteContentBackground;
 
     private DayNightCycle dayNightCycle;
+    private ShopBehaviourBuy shopBehaviourBuy;
 
+    void Start()
+    {
+        shopBehaviourBuy = GetComponent<ShopBehaviourBuy>();
+    }
+    
     public void Update()
     {
         if (buyMenu.activeInHierarchy)
@@ -23,6 +30,7 @@ public class ShopBehaviour : MonoBehaviour
             {
                 buyMenu.SetActive(false);
                 GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
+                shopBehaviourBuy.ClearShopOnExit();
             }
         }
     }
@@ -49,6 +57,8 @@ public class ShopBehaviour : MonoBehaviour
     {
         LeanTween.alpha(buyContentBackground, 0f, 0.15f);
         LeanTween.alpha(noteContentBackground, 0f, 0.15f).setOnComplete(TweenBuyContentFadeOut);
+        shopBehaviourBuy.ClearShopOnExit();
+        
     }
 
     
@@ -98,4 +108,6 @@ public class ShopBehaviour : MonoBehaviour
     {
         ChangeMouseCursor.instance.inputObjectTag = "Default";
     }
+
+    
 }
