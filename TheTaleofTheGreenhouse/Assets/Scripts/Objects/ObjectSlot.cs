@@ -10,8 +10,9 @@ public class ObjectSlot : MonoBehaviour
     
     private Vector3 positionOffset;
     public enum SlotType { Table, Pot, Floor, ManaCube, Delivery };
-    private Vector3 tablePositionOffset = new Vector3(0, -0.25f, -0.7f);
+    private Vector3 tablePositionOffset = new Vector3(0, 0.35f, 0);
     private Vector3 potPositionOffset = new Vector3(0, 0, -0.8f);
+    private Vector3 manaCubePositionOffset = new Vector3(0, 0.2f, -0.8f);
     private Vector3 floorPositionOffset = new Vector3(0, -0.25f, 0);
     private Vector3 deliveryPositionOffset = new Vector3(0, 0, -0.8f);
 
@@ -109,6 +110,12 @@ public class ObjectSlot : MonoBehaviour
                     {
                         positionOffset = potPositionOffset;
                         blockWaterCan = true;
+                        break;
+                    }
+                case SlotType.ManaCube:
+                    {
+                        positionOffset = manaCubePositionOffset;
+                        blockWaterCan = false;
                         break;
                     }
                 case SlotType.Floor:

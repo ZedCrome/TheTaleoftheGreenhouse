@@ -514,7 +514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1306,6 +1306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 375123948}
     m_Modifications:
+    - target: {fileID: 71017170368656477, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
+      propertyPath: slotType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1462616111845343355, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
       propertyPath: indexNumber
       value: 1
@@ -1602,6 +1606,10 @@ PrefabInstance:
     - target: {fileID: 2690574907899805408, guid: b7cad5972e6b4654a8903ac43e3ac2a5, type: 3}
       propertyPath: m_Name
       value: Shears
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077505152491622232, guid: b7cad5972e6b4654a8903ac43e3ac2a5, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7075636870562919177, guid: b7cad5972e6b4654a8903ac43e3ac2a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3155,16 +3163,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4960520131541898960, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03000012
+      value: -0.029
       objectReference: {fileID: 0}
     - target: {fileID: 4960520131541898960, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.64199996
+      value: 0.115
       objectReference: {fileID: 0}
     - target: {fileID: 4960520131541898972, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: objectInSlot
       value: 
       objectReference: {fileID: 1635643857}
+    - target: {fileID: 4960520132506860275, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960520132506860275, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4960520132897738092, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
@@ -19866,6 +19882,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 375123948}
     m_Modifications:
+    - target: {fileID: 71017170368656477, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
+      propertyPath: slotType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1462616111845343355, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
       propertyPath: indexNumber
       value: 1
@@ -20042,6 +20062,10 @@ PrefabInstance:
       propertyPath: objectInSlot
       value: 
       objectReference: {fileID: 270071925}
+    - target: {fileID: 7140724649594328373, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7322338269019238888, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
       propertyPath: m_Name
       value: TableFlipped (1)
@@ -20515,7 +20539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2034512310892021340, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_LocalRotation.x
@@ -23097,6 +23121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 375123948}
     m_Modifications:
+    - target: {fileID: 71017170368656477, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
+      propertyPath: slotType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1462616111845343355, guid: c18a355731183834c97d9e4dd108af1f, type: 3}
       propertyPath: indexNumber
       value: 1
