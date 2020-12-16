@@ -296,18 +296,18 @@ PrefabInstance:
     - target: {fileID: 6174817494622209168, guid: 91b3b2ba55bb6c0409438cfd6453b3b4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6065416de64ecd0429bec91b108a4476, type: 3}
+      objectReference: {fileID: 21300000, guid: 7d2f89cde08f37e4b826caaa2da701ef, type: 3}
     - target: {fileID: 6321324243978134283, guid: 91b3b2ba55bb6c0409438cfd6453b3b4, type: 3}
       propertyPath: slotType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7908054417849291425, guid: 91b3b2ba55bb6c0409438cfd6453b3b4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.88666666
+      value: 1.9657143
       objectReference: {fileID: 0}
     - target: {fileID: 7908054417849291425, guid: 91b3b2ba55bb6c0409438cfd6453b3b4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.47666666
+      value: 1.0057143
       objectReference: {fileID: 0}
     - target: {fileID: 7908054417849291425, guid: 91b3b2ba55bb6c0409438cfd6453b3b4, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y

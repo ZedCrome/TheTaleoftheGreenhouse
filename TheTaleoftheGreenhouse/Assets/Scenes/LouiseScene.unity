@@ -345,6 +345,11 @@ Transform:
   m_Father: {fileID: 44706503}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &39042147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2016754600, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+  m_PrefabInstance: {fileID: 1901548647}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &44706502
 GameObject:
   m_ObjectHideFlags: 0
@@ -20884,10 +20889,18 @@ PrefabInstance:
     - target: {fileID: 4960520133228835501, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 28b88a1c28b6cc44b8dc23f5cf2b9076, type: 3}
+      objectReference: {fileID: 21300000, guid: 75dd2c129de7422488acfd9d1ba98092, type: 3}
     - target: {fileID: 4960520133228835501, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960520133228835503, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.9657143
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960520133228835503, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.0057143
       objectReference: {fileID: 0}
     - target: {fileID: 8260453703462208088, guid: 1634631857bfc6d40a482d8dccc3f80f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21516,7 +21529,7 @@ PrefabInstance:
     - target: {fileID: 3472117085210243514, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1d37c979f209e354fa62fb10f1f3881c, type: 3}
+      objectReference: {fileID: 21300000, guid: 75dd2c129de7422488acfd9d1ba98092, type: 3}
     - target: {fileID: 3472117085210243514, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
       propertyPath: m_Color.r
       value: 1
@@ -21908,6 +21921,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137826206, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1339760942}
+    - target: {fileID: 137826206, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveSister
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1339760942}
+    - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitSaveSisterAskPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 3404747764753100702, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -22826,6 +22855,10 @@ PrefabInstance:
       propertyPath: extractMana
       value: 
       objectReference: {fileID: 8300000, guid: 4f50f9939b7bb3043b44fb6f6eb84f48, type: 3}
+    - target: {fileID: 4294054427765634961, guid: 11fdcc1b1124009459edef28718c81e9, type: 3}
+      propertyPath: askSaveSisterPanel
+      value: 
+      objectReference: {fileID: 39042147}
     - target: {fileID: 4294054427765634966, guid: 11fdcc1b1124009459edef28718c81e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 203.96944
@@ -23489,6 +23522,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: defaultTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 81febbfae540f904a9e0f2453ae21d43, type: 3}
+    - target: {fileID: 813255391, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: defaultTextureTransparent
+      value: 
+      objectReference: {fileID: 2800000, guid: 3ce64d2b4b81a394ca8f7ddb0293582b, type: 3}
     - target: {fileID: 887745901818256223, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: shopBehaviourBuy
       value: 
