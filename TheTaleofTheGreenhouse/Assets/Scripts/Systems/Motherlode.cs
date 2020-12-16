@@ -41,7 +41,7 @@ public class Motherlode : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.M))
             {
-                AddManaCheat(0.1f);
+                AddManaCheat(15f);
 
                 audioSource.PlayOneShot(knifeMana);
             }
