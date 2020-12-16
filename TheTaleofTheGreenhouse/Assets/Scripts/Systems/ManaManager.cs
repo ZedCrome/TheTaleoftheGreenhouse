@@ -47,7 +47,16 @@ public class ManaManager : MonoBehaviour
         manaCubes = new ManaCubeBehavior[9];
     }
 
-
+    private void OnEnable()
+    {
+        Motherlode.instance.addManaCheat += AddMana;
+    }
+    
+    private void OnDisable()
+    {
+        Motherlode.instance.addManaCheat -= AddMana;
+    }
+    
     private void Update()
     {
         knifeSlider.value = currentMana / 70;
@@ -161,6 +170,12 @@ public class ManaManager : MonoBehaviour
         askPanel.SetActive(false);
     }
 
+    public void AddMana(float newMana)
+    {
+        currentMana += newMana;
+        Debug.Log("Added mana: " + newMana + " | CurrentMana: " + currentMana);
+    }
+    
     public void SaveSister()
     {
         GameManager.instance.ChangeGameState(GameManager.GameState.Victory);

@@ -2568,6 +2568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   giveGold: {fileID: 8300000, guid: 74c4fbff53deda247ac1bb5bd2a6aefe, type: 3}
+  knifeMana: {fileID: 8300000, guid: a073f628808d52047925c07d4f6c5125, type: 3}
 --- !u!82 &6068146909319882587
 AudioSource:
   m_ObjectHideFlags: 0

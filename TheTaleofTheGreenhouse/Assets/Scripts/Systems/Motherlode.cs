@@ -10,6 +10,7 @@ public class Motherlode : MonoBehaviour
     
     private AudioSource audioSource;
     public AudioClip giveGold;
+    public AudioClip knifeMana;
     
     private void Awake()
     {
@@ -38,6 +39,12 @@ public class Motherlode : MonoBehaviour
 
                 audioSource.PlayOneShot(giveGold);
             }
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                AddManaCheat(0.1f);
+
+                audioSource.PlayOneShot(knifeMana);
+            }
         }
     }
 
@@ -45,6 +52,12 @@ public class Motherlode : MonoBehaviour
     public void AddGoldCheat(int amount)
     {
         addGoldCheat?.Invoke(amount);
+    }
+    
+    public event Action<float> addManaCheat;
+    public void AddManaCheat(float amount)
+    {
+        addManaCheat?.Invoke(amount);
     }
     
 }
