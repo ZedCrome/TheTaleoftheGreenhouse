@@ -19,6 +19,7 @@ public class ObjectSlot : MonoBehaviour
     public AudioClip[] waterCanSuccess;
     public AudioClip[] plantSuccess;
     public AudioClip[] plantFail;
+    public AudioClip[] shearsSuccess;
     private string[] plantTagArray;
     
     [Header("Options")]
@@ -146,6 +147,10 @@ public class ObjectSlot : MonoBehaviour
                 else if (newObject.CompareTag("WaterCan"))
                 {
                     audioSource.PlayOneShot(Tools.GetRandomSound(waterCanSuccess));
+                }
+                else if (newObject.CompareTag("Shears"))
+                {
+                    audioSource.PlayOneShot(Tools.GetRandomSound(shearsSuccess));
                 }
             }
             

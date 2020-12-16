@@ -35,7 +35,7 @@ public class PlayerInteract : MonoBehaviour
             Destroy( this );
         }
 
-        skipSoundTagArray = new[] {"PlantMana", "PlantNormal", "CuttingNormal", "CuttingMana", "WaterCan"};
+        skipSoundTagArray = new[] {"PlantMana", "PlantNormal", "CuttingNormal", "CuttingMana", "WaterCan", "Shears"};
         
         audioSource = GetComponent<AudioSource>();
         reachAnchor = GameObject.Find("ReachAnchor").transform;

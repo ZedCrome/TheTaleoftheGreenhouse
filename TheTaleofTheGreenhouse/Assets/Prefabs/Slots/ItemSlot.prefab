@@ -125,6 +125,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 204deadead91c2a4c8d52c233b7d9dc4, type: 3}
   - {fileID: 8300000, guid: 75eeca5f10d549e49a29d61a32463e99, type: 3}
   plantFail: []
+  shearsSuccess:
+  - {fileID: 8300000, guid: 069522c8e77fdd9419063ec356e90325, type: 3}
+  - {fileID: 8300000, guid: cc073de6737afbe4390f859fcc620139, type: 3}
+  - {fileID: 8300000, guid: e22a819df8f90f24c9c1659a2c4b7db9, type: 3}
   blockPot: 0
   blockWaterCan: 0
   blockCutting: 0
