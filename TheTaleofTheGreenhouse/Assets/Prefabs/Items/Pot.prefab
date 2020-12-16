@@ -185,6 +185,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1060988
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.74885625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.003946781
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.71064603
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
 --- !u!4 &443216915136311847 stripped
