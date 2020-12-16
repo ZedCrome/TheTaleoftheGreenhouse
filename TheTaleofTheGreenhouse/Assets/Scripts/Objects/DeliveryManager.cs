@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DeliveryManager : MonoBehaviour
 {
+    public static DeliveryManager instance;
+    
     public GameObject shopItems;
     private float preDistance;
     
@@ -13,7 +16,18 @@ public class DeliveryManager : MonoBehaviour
     //public bool spawnPlantTable;
 
     private List<ObjectSlot> objectSlot = new List<ObjectSlot>();
-    
+
+    private void Awake()
+    {
+        if( instance == null ) {
+
+            instance = this;
+        } else {
+
+            Destroy( this.gameObject );
+        }
+    }
+
     void Start()
     {
         foreach (Transform child in transform)

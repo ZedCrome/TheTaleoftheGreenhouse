@@ -14,7 +14,6 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] GameObject shopBuyMenu;
     [SerializeField] GameObject shopNoteMenu;
     private GameObject buyMenuCanvas;
-    private GameObject deliveryManager;
     private GameObject sellBox;
     public GameObject sleepPrompt;
     public GameObject forcedSleeppanel;
@@ -69,7 +68,6 @@ public class DayNightCycle : MonoBehaviour
     void Start()
     {
         buyMenuCanvas = GameObject.Find("Shop");
-        deliveryManager = GameObject.Find("Delivery");
         sellBox = GameObject.Find("SellBox");
 
         if (light == null)
@@ -246,7 +244,7 @@ public class DayNightCycle : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            deliveryManager.GetComponent<DeliveryManager>().Delivery();
+            DeliveryManager.instance.Delivery();
         }
         
         if (buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething)
