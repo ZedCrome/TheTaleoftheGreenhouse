@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 
@@ -30,7 +31,9 @@ public class DayNightCycle : MonoBehaviour
 
     public string hourString;
     public string minutesString;
-    
+    [SerializeField] private TMP_Text dayCount;
+    private int numberOfDays = 0;
+
 
     [SerializeField] Color dayColor;
     [SerializeField] Color eveningColor;
@@ -251,7 +254,10 @@ public class DayNightCycle : MonoBehaviour
             deliverySound.Play();
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething = false;
         }
-        
+
+        numberOfDays++;
+        dayCount.text = numberOfDays.ToString();
+
         yield return new WaitForSeconds(1);
 
         isAlreadySleeping = false;
@@ -268,6 +274,7 @@ public class DayNightCycle : MonoBehaviour
         }
         
         forcedSleep = false;
+      
         
         yield return null;
     }
