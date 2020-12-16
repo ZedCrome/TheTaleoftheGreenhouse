@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2268901697707906360}
   m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
-  m_LocalPosition: {x: -0.87829983, y: 0.021196097, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -132,7 +132,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3325, y: 0.17875}
+    oldSize: {x: 1.7733333, y: 0.9533333}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -140,10 +140,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0024513556, y: 0.08481149}
-      - {x: -0.15891333, y: -0.001115419}
-      - {x: 0.0033813342, y: -0.086358994}
-      - {x: 0.15942988, y: -0.0015537716}
+    - - {x: 0.0076692114, y: 0.4455578}
+      - {x: -0.86488026, y: 0.00025426573}
+      - {x: -0.011412804, y: -0.46091992}
+      - {x: 0.8501519, y: -0.00072701694}
 --- !u!82 &1497768738566659548
 AudioSource:
   m_ObjectHideFlags: 0
