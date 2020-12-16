@@ -178,7 +178,6 @@ public class DayNightCycle : MonoBehaviour
             isSleeping = true;
             StartCoroutine(GoToSleepRoutine());
         }
-        
     }
     
     
@@ -215,17 +214,17 @@ public class DayNightCycle : MonoBehaviour
             allowTime = false;
         }
 
-
-        if (sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell > 0)
+        
+        if (SellBoxBehaviour.instance.maxNumbertoSell > 0)
         {
             shopBehaviourBuy.playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
-            sellBox.GetComponent<SellBoxBehaviour>().ResetSlots();
-            for (int i = 0; i < sellBox.GetComponent<SellBoxBehaviour>().maxNumbertoSell; i++)
+            SellBoxBehaviour.instance.ResetSlots();
+            for (int i = 0; i < SellBoxBehaviour.instance.maxNumbertoSell; i++)
             {
-                if (sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] != null)
+                if (SellBoxBehaviour.instance.itemsToSell[i] != null)
                 {
-                    Destroy(sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i]);
-                    sellBox.GetComponent<SellBoxBehaviour>().itemsToSell[i] = null;
+                    Destroy(SellBoxBehaviour.instance.itemsToSell[i]);
+                    SellBoxBehaviour.instance.itemsToSell[i] = null;
                     sellBox.GetComponent<SellItems>().SetGoldBack();
                 }
                 else

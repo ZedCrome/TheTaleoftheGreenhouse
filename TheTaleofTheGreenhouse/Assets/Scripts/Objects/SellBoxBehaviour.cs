@@ -1,14 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SellBoxBehaviour : MonoBehaviour
 {
+    public static SellBoxBehaviour instance;
+    
     public GameObject[] itemsToSell;
     public int maxNumbertoSell = 9;
     private int currentSlot;
     bool firstTimeUsing;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
+    
     private void Start()
     {
         itemsToSell = new GameObject[maxNumbertoSell];
