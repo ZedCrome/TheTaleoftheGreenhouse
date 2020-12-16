@@ -28,6 +28,7 @@ public class ManaCatcherBehavior : MonoBehaviour
 
     public int currentMana;
     private int giveMana = 5;
+    public float losingManaTimer = 15f;
 
     private bool rightMouseButtonLock = false;
 
@@ -42,7 +43,18 @@ public class ManaCatcherBehavior : MonoBehaviour
     }
 
     private void Update()
-    {
+    {  
+        if (losingManaTimer <= 0)
+        {
+            currentMana -= 1;
+            losingManaTimer = 15;
+        }
+
+        if (currentMana > 0)
+        {
+            losingManaTimer -= 1 * Time.deltaTime;
+        }
+
         if (interactableEffect.ActiveOutline())
         {
             spriteRenderer.material = interactableEffect.outlineActive;
@@ -87,7 +99,14 @@ public class ManaCatcherBehavior : MonoBehaviour
                     else if (currentMana > 0)
                     {
                         audioSource.PlayOneShot(storeManaSound);
-                        PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().AddMana(giveMana);
+                        if (currentMana >= 5)
+                        {
+                            PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().AddMana(giveMana);
+                        }
+                        else
+                        {
+                            PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().AddMana(currentMana);
+                        }
                         LoseMana();
                     }
                     else
@@ -168,11 +187,13 @@ public class ManaCatcherBehavior : MonoBehaviour
         {
             currentMana -= 5;
         }
+        else if(currentMana > 0 && currentMana < 5)
+        {
+            currentMana = 0;
+        }           
         else
         {
             audioSource.PlayOneShot(noManaAction);
         }
     }
-
-
 }
