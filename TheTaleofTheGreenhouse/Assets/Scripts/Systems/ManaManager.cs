@@ -96,11 +96,6 @@ public class ManaManager : MonoBehaviour
             currentRuneState = RuneState.AllRunes;
         }
 
-        else if (knifeSlider.value >= 1f)
-        {
-            SceneManager.LoadScene("Credits");
-        }
-
         else
         {
             currentRuneState = RuneState.Empty;
