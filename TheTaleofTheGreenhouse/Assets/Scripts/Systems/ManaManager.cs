@@ -10,6 +10,7 @@ public class ManaManager : MonoBehaviour
     public GameObject finalLitRune;
 
     public GameObject askPanel;
+    public GameObject askSaveSisterPanel;
 
     private float firstRuneValue = 0.27f;
     private float seccondRuneValue = 0.63f;
@@ -109,14 +110,28 @@ public class ManaManager : MonoBehaviour
             NoteManager.instance.ActivateNote(NoteManager.NoteStates.KnifeNote);
             firstTimeUsing = false;
         }
-        
-        askPanel.SetActive(true);
-        audioSource.PlayOneShot(clickSound);
+
+        if (knifeSlider.value >= finalRuneValue)
+        {
+            askSaveSisterPanel.SetActive(true);
+            audioSource.PlayOneShot(clickSound);
+        }
+        else
+        {
+            askPanel.SetActive(true);
+            audioSource.PlayOneShot(clickSound);
+        }
     }
 
     public void ExitAskPanel()
     {
         askPanel.SetActive(false);
+        audioSource.PlayOneShot(clickSound);
+    }
+
+    public void ExitSaveSisterAskPanel()
+    {
+        askSaveSisterPanel.SetActive(false);
         audioSource.PlayOneShot(clickSound);
     }
 
@@ -144,5 +159,10 @@ public class ManaManager : MonoBehaviour
         }
         collectingMana = 0;
         askPanel.SetActive(false);
+    }
+
+    public void SaveSister()
+    {
+        GameManager.instance.ChangeGameState(GameManager.GameState.Victory);
     }
 }

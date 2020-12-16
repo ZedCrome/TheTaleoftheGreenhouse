@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 8b8d5f52a9e648c41863c4ab3933544f
   - enabled: 1
+    path: Assets/Scenes/OutroCinematic.unity
+    guid: b03183316a1db7641adb7c76ee2d726d
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: f651ce29165be164f9952feaa2d43cf2
   m_configObjects: {}

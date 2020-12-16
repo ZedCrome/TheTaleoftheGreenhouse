@@ -169,16 +169,15 @@ public class GameManager : MonoBehaviour
             
         }
 
-        if (newGameState == GameState.Victory) 
+        if (newGameState == GameState.Victory)
         {
-
+            SceneManager.LoadScene("OutroCinematic");
         }
 
         currentGameState = newGameState;
         onChangeGameSate?.Invoke(newGameState);
     }
 
-    
     public string GetActiveScene() 
     {
 
