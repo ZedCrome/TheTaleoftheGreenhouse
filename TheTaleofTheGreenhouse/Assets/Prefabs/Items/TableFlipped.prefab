@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 2359872178929361663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.029, y: 0.666, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7322338269753667594}
   m_RootOrder: 0
@@ -214,7 +214,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 0.15052631}
+    oldSize: {x: 1.7733333, y: 0.9533333}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -222,10 +222,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0024513556, y: 0.08481149}
-      - {x: -0.15891333, y: -0.001115419}
-      - {x: 0.0033813342, y: -0.086358994}
-      - {x: 0.15942988, y: -0.0015537716}
+    - - {x: 0.0128535535, y: 0.44192794}
+      - {x: -0.83066726, y: 0.022108674}
+      - {x: 0.008483015, y: -0.4332721}
+      - {x: 0.82774746, y: -0.014307855}
 --- !u!82 &787379195201625240
 AudioSource:
   m_ObjectHideFlags: 0
@@ -584,7 +584,7 @@ Transform:
   m_GameObject: {fileID: 8854896891951800338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.04, y: 0.649, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7322338268310615277}
   m_RootOrder: 0
@@ -687,7 +687,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 0.15052631}
+    oldSize: {x: 1.7733333, y: 0.9533333}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -695,10 +695,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0024513556, y: 0.08481149}
-      - {x: -0.15891333, y: -0.001115419}
-      - {x: 0.0033813342, y: -0.086358994}
-      - {x: 0.15942988, y: -0.0015537716}
+    - - {x: 0.0128535535, y: 0.44192794}
+      - {x: -0.83066726, y: 0.022108674}
+      - {x: 0.008483015, y: -0.4332721}
+      - {x: 0.82774746, y: -0.014307855}
 --- !u!82 &1995032374210182880
 AudioSource:
   m_ObjectHideFlags: 0
