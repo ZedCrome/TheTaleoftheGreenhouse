@@ -7,7 +7,7 @@ public class BackToMenu : MonoBehaviour
 {
     public void LoadMenuScene()
     {
-        GameManager.instance.currentGameState = GameManager.GameState.Menu;
+        GameManager.instance.ChangeGameState(GameManager.GameState.Menu);
         SceneManager.LoadScene("MainMenuScene");
     }
 }
