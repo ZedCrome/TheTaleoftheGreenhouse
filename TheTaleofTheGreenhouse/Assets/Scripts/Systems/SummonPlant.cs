@@ -7,8 +7,8 @@ public class SummonPlant : MonoBehaviour
     public ShopBehaviourBuy shopBehaviourBuy;
     public GameObject summonSpot;
     private SpriteRenderer spriteRenderer;
-    private int numberOfSummonPlants;
 
+    private int numberOfSummonPlants;
     private int numberOfPlants;
     private int currentGold;
 
@@ -24,6 +24,10 @@ public class SummonPlant : MonoBehaviour
             if (summonSpot.GetComponent<ObjectSlot>().objectInSlot == null)
             {
                 spriteRenderer.enabled = false;
+                if (summonSpot.transform.childCount == 0)
+                {
+                    summonSpot.SetActive(false);
+                }
             }
         }      
     }
@@ -62,6 +66,7 @@ public class SummonPlant : MonoBehaviour
         newPlant.GetComponent<PlantStates>().currentState = PlantStates.PlantState.Cutting;
         summonSpot.GetComponent<ObjectSlot>().objectInSlot = newPlant;
         summonSpot.GetComponent<ObjectSlot>().FillSlot(newPlant);
+
         if (numberOfSummonPlants < 3)
         {
             GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.PlantOfGift);
