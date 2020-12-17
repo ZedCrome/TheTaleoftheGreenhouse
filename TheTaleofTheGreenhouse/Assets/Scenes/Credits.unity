@@ -450,7 +450,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Speciall Thanks to
+  m_text: Special Thanks to
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -6241,42 +6241,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1664197584}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1495104719}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2071005431}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &963522977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7246,11 +7210,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1495104719 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8618364260633724462, guid: 6694df1751e42154494e73999a352af1, type: 3}
-  m_PrefabInstance: {fileID: 1569002424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1569002424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7260,7 +7219,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 892827598, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1352778573, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_IsActive
@@ -7268,6 +7227,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: currentGameState
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: debugActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: previousGameState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3735209151034824409, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
@@ -7332,11 +7303,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6694df1751e42154494e73999a352af1, type: 3}
---- !u!82 &1664197584 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1352778574, guid: 6694df1751e42154494e73999a352af1, type: 3}
-  m_PrefabInstance: {fileID: 1569002424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1831167718
 GameObject:
   m_ObjectHideFlags: 0
@@ -7880,11 +7846,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020289220}
   m_CullTransparentMesh: 0
---- !u!1 &2071005431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 892827598, guid: 6694df1751e42154494e73999a352af1, type: 3}
-  m_PrefabInstance: {fileID: 1569002424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2113416207
 GameObject:
   m_ObjectHideFlags: 0
