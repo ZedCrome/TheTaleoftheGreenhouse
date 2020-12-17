@@ -429,14 +429,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         else if (playerMoney < totalCost + tableCost)
         {
             tableCantAfford.SetActive(true);
-            tableAdd.enabled = false;
-            tableReduce.enabled = false;
         }
         else if (playerMoney >= tableCost)
         {
             tableCantAfford.SetActive(false);
-            tableAdd.enabled = true;
-            tableReduce.enabled = true;
         }
     }
 
@@ -450,14 +446,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         else if (playerMoney < totalCost + potCost)
         {
             potCantAfford.SetActive(true);
-            potAdd.enabled = false;
-            potReduce.enabled = false;
         }
         else if (playerMoney >= potCost)
         {
             potCantAfford.SetActive(false);
-            potAdd.enabled = true;
-            potReduce.enabled = true;
         }
     }
 
@@ -471,14 +463,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         else if (playerMoney < totalCost + plantCost)
         {
             plantCantAfford.SetActive(true);
-            plantAdd.enabled = false;
-            plantReduce.enabled = false;
         }
         else if (playerMoney >= plantCost)
         {
             plantCantAfford.SetActive(false);
-            plantAdd.enabled = true;
-            plantReduce.enabled = true;
         }
     }
 
@@ -492,14 +480,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         else if (playerMoney < totalCost + manaPlantCost)
         {
             manaPlantCantAfford.SetActive(true);
-            manaPlantAdd.enabled = false;
-            manaPlantReduce.enabled = false;
         }
         else if (playerMoney >= manaPlantCost)
         {
             manaPlantCantAfford.SetActive(false);
-            manaPlantAdd.enabled = true;
-            manaPlantReduce.enabled = true;
         }
     }
     
@@ -513,14 +497,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (playerMoney < totalCost + manaStorageItemCost)
         {
             manaStorageItemCantAfford.SetActive(true);
-            manaStorageItemAdd.enabled = false;
-            manaStorageItemReduce.enabled = false;
         }
         else if (playerMoney >= manaStorageItemCost) 
         {
             manaStorageItemCantAfford.SetActive(false);
-            manaStorageItemAdd.enabled = true;
-            manaStorageItemReduce.enabled = true;
         }
     }
     
