@@ -99,6 +99,10 @@ public class SellBoxBehaviour : MonoBehaviour
                         PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
                         PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
                     }
+                    else
+                    {
+                        GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.SellWarning);
+                    }
                 }
             }              
         }

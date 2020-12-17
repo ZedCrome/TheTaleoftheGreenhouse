@@ -59,6 +59,10 @@ public class CompostBehaviour : MonoBehaviour
                         PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
                         PlayerState.instance.ChangeInteractState(PlayerState.InteractState.@select);
                     }
+                    else
+                    {
+                        GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.CompostWarning);
+                    }
                 }
  
             }
