@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -11,7 +12,7 @@ public class TextRevealer : MonoBehaviour
 	public float charsPerSecond = 30;
 	public float smoothSeconds = 0.75f;
 	[UnityEngine.Header("References")]
-	public Text text;
+	public TMP_Text text;
 	public UnityEvent allRevealed = new UnityEvent();
 
 
@@ -21,8 +22,7 @@ public class TextRevealer : MonoBehaviour
 
 
 	public bool IsRevealing { get { return isRevealing; } }
-
-
+	
 	public void RestartWithText(string strText)
 	{
 		nRevealedCharacters = 0;
@@ -156,6 +156,7 @@ public class TextRevealer : MonoBehaviour
 	{
 		if (string.IsNullOrEmpty(originalString))
 			RestartWithText(text.text);
+		RevealNextParagraphAsync();
 	}
 	
 }
