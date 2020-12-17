@@ -5,6 +5,8 @@ public class ManaCatcherBehavior : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     InteractableEffect interactableEffect;
+    private ParticleSystem particleSystem;
+    public GameObject particelObject;
 
     public AudioClip storeManaSound;
     public AudioClip noManaAction;
@@ -40,18 +42,23 @@ public class ManaCatcherBehavior : MonoBehaviour
         emptyMaterial = spriteRenderer.material;
         emptyMaterialOutline = interactableEffect.outlineActive;
         manaCubeBehavior = new ManaCubeBehavior();
+        particleSystem = particelObject.GetComponent<ParticleSystem>();
+
     }
 
     private void Update()
     {  
         if (losingManaTimer <= 0)
         {
-            currentMana -= 1;
+            var emission = particleSystem.emission;
+            emission.burstCount = 1;
+            particleSystem.Play();
+            currentMana -= 1; 
             losingManaTimer = 15;
         }
 
         if (currentMana > 0)
-        {
+        {           
             losingManaTimer -= 1 * Time.deltaTime;
         }
 

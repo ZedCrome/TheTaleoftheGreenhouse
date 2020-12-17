@@ -1979,7 +1979,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.6857143}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &408702821
@@ -2453,22 +2453,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 375123948}
     m_Modifications:
-    - target: {fileID: 1548467761439843992, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: firstStageMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 5990d4aea75c912469c493de21844c1e, type: 2}
-    - target: {fileID: 1548467761439843992, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: fullStageMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: f4597c38e68fd054f8c0f9dfedeb216b, type: 2}
-    - target: {fileID: 1548467761439843992, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: currentMana
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548467761439843992, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: losingManaTimer
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 1548467761439843993, guid: 671572ddcabca834b925ab567a13a727, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -2513,29 +2497,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1548467761439843994, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
-    - target: {fileID: 1548467761439843994, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1548467761439843996, guid: 671572ddcabca834b925ab567a13a727, type: 3}
       propertyPath: m_Name
       value: ManaCatcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731759739631161542, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5849500127610570844, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709911485367965660, guid: 671572ddcabca834b925ab567a13a727, type: 3}
-      propertyPath: indexNumber
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 671572ddcabca834b925ab567a13a727, type: 3}
@@ -21354,7 +21318,7 @@ SpriteRenderer:
   m_Size: {x: 7.49, y: 11.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1661234887
