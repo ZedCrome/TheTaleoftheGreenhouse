@@ -11,6 +11,10 @@ public class GodTextManager : MonoBehaviour
     public TMP_Text godTextEdit;
     public godTextStates godTextState;
     private bool godTextEnabled = false;
+
+    private AudioSource audioSource;
+    public AudioClip warningSound;
+
     private void Awake()
     {
         if (instance == null)
@@ -21,6 +25,11 @@ public class GodTextManager : MonoBehaviour
         {
             Destroy(this);
         }
+    }
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -53,18 +62,21 @@ public class GodTextManager : MonoBehaviour
             
             case godTextStates.SleepWarning:
                 godTextEdit.text = "You seem VERY tired... you should probably go to bed quickly!";
+                audioSource.PlayOneShot(warningSound);
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
             
             case godTextStates.CompostWarning:
                 godTextEdit.text = "You cannot compost that item. Only plants and cuttings are allowed.";
+                audioSource.PlayOneShot(warningSound);
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
             
             case godTextStates.SellWarning:
                 godTextEdit.text = "You cannot sell that item. Only plants, cuttings and pots are sellable.";
+                audioSource.PlayOneShot(warningSound);
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
@@ -77,6 +89,7 @@ public class GodTextManager : MonoBehaviour
             
             case godTextStates.CuttingsWarning:
                 godTextEdit.text = "The plants has to be fully grown for the flowers to give a cutting.";
+                audioSource.PlayOneShot(warningSound);
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
