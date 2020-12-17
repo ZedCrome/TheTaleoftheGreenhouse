@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
         PauseGame,
         ShopMenu,
         GameOver,
-        Victory
+        Victory,
+        Intro
     }
     
     [Header("GameState")]
@@ -108,6 +109,10 @@ public class GameManager : MonoBehaviour
             case GameState.Victory:
 
                 break;
+            
+            case GameState.Intro:
+
+                break;
 
             default:
                 break;
@@ -172,6 +177,11 @@ public class GameManager : MonoBehaviour
         if (newGameState == GameState.Victory)
         {
             SceneManager.LoadScene("OutroCinematic");
+        }
+        
+        if (newGameState == GameState.Intro)
+        {
+            SceneManager.LoadScene("IntroCinematic");
         }
 
         currentGameState = newGameState;

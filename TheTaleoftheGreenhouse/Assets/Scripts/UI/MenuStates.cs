@@ -6,8 +6,7 @@ public class MenuStates : MonoBehaviour
 {
     public void StartGame()
     {
-        GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
-        SceneManager.LoadScene("IntroCinematic");
+        GameManager.instance.ChangeGameState(GameManager.GameState.Intro);
     }
 
     
