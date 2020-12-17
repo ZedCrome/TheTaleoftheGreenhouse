@@ -134,19 +134,18 @@ public class NoteManager : MonoBehaviour
         activeNote = false;
         currentNote = noteState;
     }
-
     
+    
+    public void ExitNoteTransition()
+    {            
+        LeanTween.moveY(exitNoteButton, -Screen.height/3f, 0.5f);
+        LeanTween.moveY(visibleNote, -Screen.height/2f, 0.5f).setOnComplete(ExitNote);
+    }
 
     public void ExitNote()
-    {            
+    {
         ActivateNote(NoteStates.None);
         activeNote = false;
     }
 
-
-    public void MoveNote()
-    {
-        LeanTween.moveY(exitNoteButton, -Screen.height/3f, 1f);
-        LeanTween.moveY(visibleNote, -Screen.height/2f, 1f).setOnComplete(ExitNote);
-    }
 }
