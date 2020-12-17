@@ -37,18 +37,12 @@ public class SummonPlant : MonoBehaviour
 
     private void OnEnable()
     {
-        if (GameManager.instance.currentGameState == GameManager.GameState.GameLoop)
-        {
             DayNightCycle.instance.onSleep += OnSleep;
-        }
     }
 
     private void OnDisable()
-    {
-        if (GameManager.instance.currentGameState == GameManager.GameState.GameLoop)
-        {
+    {       
             DayNightCycle.instance.onSleep -= OnSleep;
-        }
     }
 
     void OnSleep()
