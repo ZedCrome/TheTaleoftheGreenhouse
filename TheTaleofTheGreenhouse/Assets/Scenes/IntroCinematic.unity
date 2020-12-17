@@ -1382,6 +1382,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2481442164892332355, guid: 6dab453fab5fef648b9a7d0cbfa1a3b4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6259983639586318526, guid: 2640226049d18924fa7b2522269319ae, type: 3}
+    - target: {fileID: 2688974684526358941, guid: 6dab453fab5fef648b9a7d0cbfa1a3b4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6259983639586318526, guid: 2640226049d18924fa7b2522269319ae, type: 3}
     - target: {fileID: 5273508456444315219, guid: 6dab453fab5fef648b9a7d0cbfa1a3b4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
