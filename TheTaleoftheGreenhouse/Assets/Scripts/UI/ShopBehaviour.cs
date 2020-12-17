@@ -44,7 +44,7 @@ public class ShopBehaviour : MonoBehaviour
                 NoteManager.instance.ActivateNote(NoteManager.NoteStates.DeliveryNote);
                 firstTimeUsing = false;
             }
-            
+            shopBehaviourBuy.TogglePurchaseOfItems();
             buyMenu.SetActive(true);
             GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
             LeanTween.scale(buyContent, new Vector3(1, 1, 1), 0.5f).setEaseOutBack().setOnComplete(TweenBuyContentBackGroundFadeIn);

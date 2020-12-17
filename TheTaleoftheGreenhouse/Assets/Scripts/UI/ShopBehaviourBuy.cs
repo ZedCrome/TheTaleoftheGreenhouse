@@ -1,7 +1,8 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using Button = UnityEngine.UI.Button;
+using Slider = UnityEngine.UI.Slider;
+
 public class ShopBehaviourBuy : MonoBehaviour
 {
     [Header("Other")] [Space(5)] 
@@ -12,19 +13,22 @@ public class ShopBehaviourBuy : MonoBehaviour
     public int playerMoney = 99999;
     public bool hasBoughtSomething = false;
     public int totalCost;
+    private int currentlySpendingGold;
     
     [Header("Table")] [Space(5)]
     [SerializeField] private Button tableAdd;
     [SerializeField] private Button tableReduce;
-    public TMP_Text tableAmount;
-    public TMP_Text tablePriceDisplay;
-    public Slider tableCurrentyBuy2;
-    public Slider tableAlreadyBought2;
+    [SerializeField] TMP_Text tableAmount;
+    [SerializeField] TMP_Text tablePriceDisplay;
+    [SerializeField] Slider tableCurrentyBuy2;
+    [SerializeField] Slider tableAlreadyBought2;
+    [SerializeField] GameObject tableOutOfStock;
+    [SerializeField] GameObject tableCantAfford;
     [SerializeField] private int maxTables = 4;
-    public int tableCost = 60;
-    [SerializeField] private int maxBuyTablesAtATime = 3;
-    public int tableTotalCost;
-    [SerializeField] int amountOfTables;
+    [SerializeField] int tableCost = 60;
+    [SerializeField] private int maxBuyTablesAtATime = 3; 
+    private int tableTotalCost;
+    private int amountOfTables;
     [SerializeField] int ownedTables;
     public int currentlyBuyingTables = 0;
 
@@ -39,6 +43,8 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Slider potAlreadyBought2;
     [SerializeField] private Slider potCurrentBuy3;
     [SerializeField] private Slider potAlreadyBought3;
+    [SerializeField] GameObject potOutOfStock;
+    [SerializeField] GameObject potCantAfford;
     [SerializeField] private int maxPots = 10;
     [SerializeField] private int potCost = 10;
     [SerializeField] private int maxBuyPotsAtATime = 3;
@@ -52,6 +58,8 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button plantReduce;
     [SerializeField] private TMP_Text plantAmount;
     [SerializeField] private TMP_Text plantPriceDisplay;
+    [SerializeField] GameObject plantOutOfStock;
+    [SerializeField] GameObject plantCantAfford;
     [SerializeField] private int maxPlants = 10;
     [SerializeField] private int plantCost = 20;
     [SerializeField] private int maxBuyPlantsAtATime = 3;
@@ -66,8 +74,10 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Button manaPlantReduce;
     [SerializeField] private TMP_Text manaPlantAmount;
     [SerializeField] private TMP_Text manaPlantPriceDisplay;
+    [SerializeField] GameObject manaPlantOutOfStock;
+    [SerializeField] GameObject manaPlantCantAfford;
     [SerializeField] private int maxManaPlants = 10;
-    [SerializeField] private int manaPlantCost = 50;
+    public int manaPlantCost = 50;
     [SerializeField] private int maxBuyManaPlantsAtATime = 3;
     public Slider manaPlantCurrentBuy1;
     private int manaPlantTotalCost;
@@ -84,6 +94,8 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private Slider manaStorageItemAlreadyBought1;
     [SerializeField] private Slider manaStorageItemCurrentBuy2;
     [SerializeField] private Slider manaStorageItemAlreadyBought2;
+    [SerializeField] GameObject manaStorageItemOutOfStock;
+    [SerializeField] GameObject manaStorageItemCantAfford;
     [SerializeField] private int maxManaStorageItems = 9;
     [SerializeField] private int manaStorageItemCost = 40;
     [SerializeField] private int maxBuyManaStorageItemsAtATime = 3;
@@ -114,10 +126,10 @@ public class ShopBehaviourBuy : MonoBehaviour
     }
     
     
-    public void Update()
+    public void FixedUpdate()
     {
-        playerMoneyText.text = playerMoney.ToString(); 
-        DeactivateButtons();
+        playerMoneyText.text = playerMoney.ToString();
+        TogglePurchaseOfItems();
     }
 
     
@@ -237,7 +249,6 @@ public class ShopBehaviourBuy : MonoBehaviour
             plantAmount.text = currentlyBuyingPlants.ToString();
         }
     }
-
     public void reducePlant()
     {
         if (currentlyBuyingPlants > 0)
@@ -255,7 +266,6 @@ public class ShopBehaviourBuy : MonoBehaviour
         plantAmount.text = currentlyBuyingPlants.ToString();
     }
 
-    
     
     public void addManaPlant()
     {
@@ -336,12 +346,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         totalCostText.text = "Price: " + totalCost + " Gold";
         manaStorageItemAmount.text = currentlyBuyingManaStorageItems.ToString();
     }
-
-
-    public void DeactivateButtons()
-    {
-        
-    }
+    
 
     public void buy()
     {
@@ -403,7 +408,121 @@ public class ShopBehaviourBuy : MonoBehaviour
         totalCost = 0;
         totalCostText.text = "Price: " + totalCost + " Gold";
         playerMoneyText.text = playerMoney + " Gold";
-    }  
+    }
+
+    public void TogglePurchaseOfItems()
+    {
+        TableInfo();
+        PotInfo();
+        PlantInfo();
+        ManaPlantInfo();
+        ManaStorageItemInfo();
+    }
+
+
+    public void TableInfo()
+    {
+        if (maxTables <= amountOfTables)
+        {
+            tableOutOfStock.SetActive(true);
+        }
+        else if (playerMoney < totalCost + tableCost)
+        {
+            tableCantAfford.SetActive(true);
+            tableAdd.enabled = false;
+            tableReduce.enabled = false;
+        }
+        else if (playerMoney >= tableCost)
+        {
+            tableCantAfford.SetActive(false);
+            tableAdd.enabled = true;
+            tableReduce.enabled = true;
+        }
+    }
+
+    
+    public void PotInfo()
+    {
+        if (maxPots <= amountOfPots)
+        {
+            potOutOfStock.SetActive(true);
+        }
+        else if (playerMoney < totalCost + potCost)
+        {
+            potCantAfford.SetActive(true);
+            potAdd.enabled = false;
+            potReduce.enabled = false;
+        }
+        else if (playerMoney >= potCost)
+        {
+            potCantAfford.SetActive(false);
+            potAdd.enabled = true;
+            potReduce.enabled = true;
+        }
+    }
+
+
+    public void PlantInfo()
+    {
+        if (maxPlants <= amountOfPlants)
+        {
+            plantOutOfStock.SetActive(true);
+        }
+        else if (playerMoney < totalCost + plantCost)
+        {
+            plantCantAfford.SetActive(true);
+            plantAdd.enabled = false;
+            plantReduce.enabled = false;
+        }
+        else if (playerMoney >= plantCost)
+        {
+            plantCantAfford.SetActive(false);
+            plantAdd.enabled = true;
+            plantReduce.enabled = true;
+        }
+    }
+
+
+    public void ManaPlantInfo()
+    {
+        if (maxManaPlants <= amountOfManaPlants)
+        {
+            manaPlantOutOfStock.SetActive(true);
+        }
+        else if (playerMoney < totalCost + manaPlantCost)
+        {
+            manaPlantCantAfford.SetActive(true);
+            manaPlantAdd.enabled = false;
+            manaPlantReduce.enabled = false;
+        }
+        else if (playerMoney >= manaPlantCost)
+        {
+            manaPlantCantAfford.SetActive(false);
+            manaPlantAdd.enabled = true;
+            manaPlantReduce.enabled = true;
+        }
+    }
+    
+    
+    public void ManaStorageItemInfo()
+    {
+        if (maxManaStorageItems <= amountOfManaStorageItems)
+        {
+            manaStorageItemOutOfStock.SetActive(true);
+        }
+        if (playerMoney < totalCost + manaStorageItemCost)
+        {
+            manaStorageItemCantAfford.SetActive(true);
+            manaStorageItemAdd.enabled = false;
+            manaStorageItemReduce.enabled = false;
+        }
+        else if (playerMoney >= manaStorageItemCost) 
+        {
+            manaStorageItemCantAfford.SetActive(false);
+            manaStorageItemAdd.enabled = true;
+            manaStorageItemReduce.enabled = true;
+        }
+    }
     
     
     public void ClearShopOnExit()
