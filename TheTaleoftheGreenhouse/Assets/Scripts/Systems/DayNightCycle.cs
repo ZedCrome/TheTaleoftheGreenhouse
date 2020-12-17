@@ -253,6 +253,7 @@ public class DayNightCycle : MonoBehaviour
         {
             deliverySound.Play();
             buyMenuCanvas.GetComponent<ShopBehaviourBuy>().hasBoughtSomething = false;
+            GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.DeliveryInfo);
         }
 
         numberOfDays++;
