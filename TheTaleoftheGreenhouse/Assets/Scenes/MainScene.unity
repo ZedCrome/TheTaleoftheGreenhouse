@@ -20096,6 +20096,14 @@ PrefabInstance:
       propertyPath: currentState
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448480, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: -1188070514666530258, guid: f0af37f47c5e1734eb2f89276f950730, type: 3}
+    - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1188070514666530258, guid: f0af37f47c5e1734eb2f89276f950730, type: 3}
     - target: {fileID: 6035829181660896682, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: indexNumber
       value: 2
@@ -20202,22 +20210,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 137826206, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SaveSister
-      objectReference: {fileID: 0}
-    - target: {fileID: 1665240302, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.059936523
-      objectReference: {fileID: 0}
     - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitSaveSisterAskPanel
-      objectReference: {fileID: 0}
     - target: {fileID: 3404747764753100702, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -20326,26 +20322,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3404747766405261822, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458829572925898076, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6458829572925898076, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 990260336}
-    - target: {fileID: 6458829572925898076, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: NoteManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458829572925898076, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitNote
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
 --- !u!114 &1901548648 stripped
