@@ -434,6 +434,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             tableCantAfford.SetActive(false);
         }
+        else if (maxTables > amountOfTables)
+        {
+            tableOutOfStock.SetActive(false);
+        }
     }
 
     
@@ -450,6 +454,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         else if (playerMoney >= potCost)
         {
             potCantAfford.SetActive(false);
+        }
+        else if (maxPots > amountOfPots)
+        {
+            potOutOfStock.SetActive(false);
         }
     }
 
@@ -468,6 +476,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             plantCantAfford.SetActive(false);
         }
+        else if (maxPlants > amountOfPlants)
+        {
+            plantOutOfStock.SetActive(false);
+        }
     }
 
 
@@ -485,6 +497,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             manaPlantCantAfford.SetActive(false);
         }
+        else if (maxManaPlants > amountOfManaPlants)
+        {
+            manaPlantOutOfStock.SetActive(false);
+        }
     }
     
     
@@ -501,6 +517,10 @@ public class ShopBehaviourBuy : MonoBehaviour
         else if (playerMoney >= manaStorageItemCost) 
         {
             manaStorageItemCantAfford.SetActive(false);
+        }
+        if (maxManaStorageItems > amountOfManaStorageItems)
+        {
+            manaStorageItemOutOfStock.SetActive(false);
         }
     }
     
