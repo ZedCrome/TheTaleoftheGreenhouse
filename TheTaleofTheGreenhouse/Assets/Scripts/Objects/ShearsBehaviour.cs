@@ -31,6 +31,7 @@ public class ShearsBehaviour : MonoBehaviour
                     }
                     else
                     {
+                        GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.CuttingsWarning);
                         audioSource.PlayOneShot(alreadyCut);
                     }
                 }
