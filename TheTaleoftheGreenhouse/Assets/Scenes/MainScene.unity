@@ -19727,6 +19727,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3404747765991283257, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
   m_PrefabInstance: {fileID: 1901548647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1755562384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2016754600, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+  m_PrefabInstance: {fileID: 1901548647}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1795095991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20192,9 +20197,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137826206, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1339760942}
+    - target: {fileID: 137826206, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveSister
+      objectReference: {fileID: 0}
     - target: {fileID: 1665240302, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.059936523
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1339760942}
+    - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitSaveSisterAskPanel
       objectReference: {fileID: 0}
     - target: {fileID: 3404747764753100702, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -20811,6 +20832,10 @@ PrefabInstance:
       propertyPath: extractMana
       value: 
       objectReference: {fileID: 8300000, guid: 4f50f9939b7bb3043b44fb6f6eb84f48, type: 3}
+    - target: {fileID: 4294054427765634961, guid: 11fdcc1b1124009459edef28718c81e9, type: 3}
+      propertyPath: askSaveSisterPanel
+      value: 
+      objectReference: {fileID: 1755562384}
     - target: {fileID: 4294054427765634966, guid: 11fdcc1b1124009459edef28718c81e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 203.96944
