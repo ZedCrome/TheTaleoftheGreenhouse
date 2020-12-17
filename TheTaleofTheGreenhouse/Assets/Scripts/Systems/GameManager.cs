@@ -181,6 +181,9 @@ public class GameManager : MonoBehaviour
         
         if (newGameState == GameState.Intro)
         {
+            mainMenu.SetActive(false);
+            pauseMenu.SetActive(false);
+            optionsMenu.SetActive(false);
             SceneManager.LoadScene("IntroCinematic");
         }
 
