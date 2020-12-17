@@ -19,27 +19,36 @@ public class SummonPlant : MonoBehaviour
 
     private void Update()
     {
-        if (summonSpot.activeSelf)
+        if (GameManager.instance.currentGameState == GameManager.GameState.GameLoop)
         {
-            if (summonSpot.GetComponent<ObjectSlot>().objectInSlot == null)
+            if (summonSpot.activeSelf)
             {
-                spriteRenderer.enabled = false;
-                if (summonSpot.transform.childCount == 0)
+                if (summonSpot.GetComponent<ObjectSlot>().objectInSlot == null)
                 {
-                    summonSpot.SetActive(false);
+                    spriteRenderer.enabled = false;
+                    if (summonSpot.transform.childCount == 0)
+                    {
+                        summonSpot.SetActive(false);
+                    }
                 }
-            }
-        }      
+            }  
+        }
     }
 
     private void OnEnable()
     {
-        DayNightCycle.instance.onSleep += OnSleep;
+        if (GameManager.instance.currentGameState == GameManager.GameState.GameLoop)
+        {
+            DayNightCycle.instance.onSleep += OnSleep;
+        }
     }
 
     private void OnDisable()
     {
-        DayNightCycle.instance.onSleep -= OnSleep;
+        if (GameManager.instance.currentGameState == GameManager.GameState.GameLoop)
+        {
+            DayNightCycle.instance.onSleep -= OnSleep;
+        }
     }
 
     void OnSleep()
