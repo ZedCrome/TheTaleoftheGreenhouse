@@ -48,7 +48,9 @@ public class GodTextManager : MonoBehaviour
         SellWarning, 
         DeliveryInfo,
         CuttingsWarning,
-        DoneForToday
+        DoneForToday,
+        PlantOfGift,
+        PlantOfGiftRoast
     }
 
 
@@ -99,7 +101,27 @@ public class GodTextManager : MonoBehaviour
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
-                
+
+            case godTextStates.PlantOfGift:
+                godTextEdit.text = "A plant has appeared outside. It is like this is your destiny.";
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+            case godTextStates.PlantOfGiftRoast:
+                String[] roastTexts = new string[] {"Maybe this is not your destiny.",
+                                                    "Looks like you are giving 100%",
+                                                    "You smell bad... I think?",
+                                                    "Are you even trying?",
+                                                    "Are you playing on a console?",
+                                                    "Your hands are bleeding"};
+                String randomString;
+                int randomValue = UnityEngine.Random.Range(0,roastTexts.Length);
+                randomString = roastTexts[randomValue];
+                godTextEdit.text = randomString;
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+
             default:
                 break;
         }

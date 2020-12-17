@@ -134,7 +134,6 @@ public class DeliveryManager : MonoBehaviour
 
             spawnManaCube -= 1;
         }
-        GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.DeliveryInfo);
     }
 
 
