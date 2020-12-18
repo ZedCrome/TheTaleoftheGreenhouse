@@ -143,7 +143,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         if (playerMoney - (totalCost + tableCost) >= 0)
         {
-            if (currentlyBuyingTables < maxBuyTablesAtATime && amountOfTables < maxTables)
+            if (currentlyBuyingTables < maxBuyTablesAtATime && (ownedTables + currentlyBuyingTables) < maxTables)
             {
                 amountOfTables++;
                 currentlyBuyingTables++;
@@ -429,9 +429,16 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void TableInfo()
     {
-        if (!(maxTables <= ownedTables + currentlyBuyingTables))
-        {
-            if (playerMoney < totalCost + tableCost)
+        
+            if (maxTables <= ownedTables + currentlyBuyingTables)
+            {
+                tableOutOfStock.SetActive(true);
+            }
+            else if (maxTables > ownedTables + currentlyBuyingTables)
+            {
+                tableOutOfStock.SetActive(false);
+            }
+            else if (playerMoney < totalCost + tableCost)
             {
                 tableCantAfford.SetActive(true);
             }
@@ -439,7 +446,8 @@ public class ShopBehaviourBuy : MonoBehaviour
             {
                 tableCantAfford.SetActive(false);
             }
-        }
+            
+        
         
         
     }
