@@ -24,7 +24,7 @@ public class TextRevealer : MonoBehaviour
             "I don't want to loose you to...",
             "",
             "",
-            "I felt hopeless...",
+            "I felt hopeless....",
             "",
             "But now i know what to do.",
             ""
