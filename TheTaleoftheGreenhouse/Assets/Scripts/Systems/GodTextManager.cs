@@ -46,6 +46,7 @@ public class GodTextManager : MonoBehaviour
         SleepWarning,
         CompostWarning,
         SellWarning, 
+        PotSellWarning,
         DeliveryInfo,
         CuttingsWarning,
         DoneForToday,
@@ -82,7 +83,14 @@ public class GodTextManager : MonoBehaviour
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
-            
+
+            case godTextStates.PotSellWarning:
+                godTextEdit.text = "The pot needs to be empty to sell.";
+                audioSource.PlayOneShot(warningSound);
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+
             case godTextStates.DeliveryInfo:
                 godTextEdit.text = "Your delivery has arrived!";
                 StartCoroutine(SleepWarning());
