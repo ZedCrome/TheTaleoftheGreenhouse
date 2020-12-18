@@ -19,14 +19,18 @@ public class TextRevealer : MonoBehaviour
     {
         texts = new string[]
         {
-            "I'm back home because you need me...",
+            "",
+            "Sister, I'm back home because you need me...",
             "Your sickness is spreading each day...",
-            "I don't want to loose you to...",
+            "I don't want to lose you too...",
+            "Only the magical knife can cut the sickness away...",
+            "For some reason, the knife has appeared in our parent's old greenhouse",
+            "I felt hopeless... But now I know what to do",
+            "Get enough mana to the knife",
+            "It's known that some plants can absorb mana from the air",
+            "I just need to get the right plants.",
             "",
             "",
-            "I felt hopeless....",
-            "",
-            "But now i know what to do.",
             ""
         };
         StartCoroutine(StartDelay());
@@ -52,7 +56,7 @@ public class TextRevealer : MonoBehaviour
         text12.alpha = 0.45f;
         text13.alpha = 1f;
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.33f);
 
         for (int i = 0; i < letters.Length + 2; i++)
         {
@@ -79,7 +83,7 @@ public class TextRevealer : MonoBehaviour
     
     public IEnumerator FadeText()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.33f);
 
         while (text13.alpha > 0)
         {
@@ -92,7 +96,6 @@ public class TextRevealer : MonoBehaviour
         text11.text = "";
         text12.text = "";
         text13.text = "";
-        Debug.Log("END");
         NextLine();
     }
 }
