@@ -379,6 +379,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1711431357, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
   m_PrefabInstance: {fileID: 1901548647}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &82768813 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8472855595014869681, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+  m_PrefabInstance: {fileID: 140450328}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &85574863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 30948424, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
@@ -635,6 +640,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catAudioSource
+      value: 
+      objectReference: {fileID: 82768813}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: df7c77a1aa554884abd1f1886620ea2a, type: 3}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 86b82af0521621745a3e82bdd0111b1f, type: 3}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ba42c6f10a3e564ea766de518a3b5f9, type: 3}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d7446855a0ba8741a2b3d92e0162bac, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
 --- !u!82 &150271015 stripped
@@ -21330,6 +21359,10 @@ PrefabInstance:
     - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: debugActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2518050415119969928, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: currentGameState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_Name
