@@ -86,7 +86,13 @@ public class DayNightCycle : MonoBehaviour
         {
             if (GameManager.instance.currentGameState != GameManager.GameState.ShopMenu)
             {
-                CalculateTime();
+                if (GameManager.instance.currentGameState != GameManager.GameState.PauseGame)
+                {
+                    if (GameManager.instance.currentGameState != GameManager.GameState.Options)
+                    {
+                        CalculateTime(); 
+                    }
+                }
             }
         }
         lightChange();
