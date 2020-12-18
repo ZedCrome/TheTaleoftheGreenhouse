@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class SellBoxBehaviour : MonoBehaviour
@@ -57,8 +58,6 @@ public class SellBoxBehaviour : MonoBehaviour
                     PlayerInteract.instance.inventoryItem.CompareTag("ManaStorage"))
                     {
                         GameObject sellItem = PlayerInteract.instance.inventoryItem;
-                        PlayerInteract.instance.inventoryItem = null;
-                        sellItem.GetComponent<InteractableEffect>().Enable(false);
 
                         if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
                         {
@@ -70,6 +69,11 @@ public class SellBoxBehaviour : MonoBehaviour
                         }
                         else if (sellItem.tag == "Pot")
                         {
+                            if (Tools.GetSplitStackSize(sellItem) > 1)
+                            {
+                                GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.PotSellWarning);
+                                return;
+                            }
                             sellItem.transform.GetChild(0).gameObject.SetActive(false);                          
                             sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
@@ -77,6 +81,9 @@ public class SellBoxBehaviour : MonoBehaviour
                         {
                             sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
+
+                        PlayerInteract.instance.inventoryItem = null;
+                        sellItem.GetComponent<InteractableEffect>().Enable(false);
 
                         if (currentSlot < maxNumbertoSell)
                         {
