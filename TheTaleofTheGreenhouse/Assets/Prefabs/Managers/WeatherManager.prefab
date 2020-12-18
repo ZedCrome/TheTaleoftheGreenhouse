@@ -326,9 +326,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13de283ba7654a74789c9991dc66dc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientRainAudioSource: {fileID: 1624653638064531768}
+  ambientAudioSource: {fileID: 1624653638064531768}
   lightningAudioClip: {fileID: 8300000, guid: 54ff9d696c36ebf4684cbd203de8c896, type: 3}
   ambientRain: {fileID: 8300000, guid: 6f1cf353cfd177248b2346379734b293, type: 3}
+  otherAmbients:
+  - {fileID: 8300000, guid: 97579a0761e30214a83843012e7d4438, type: 3}
+  - {fileID: 8300000, guid: a7326bcd9e37dbc4ea8d9f4ff5a89d98, type: 3}
+  - {fileID: 8300000, guid: 5cd590f8b8bb41641a74a348602f927e, type: 3}
+  - {fileID: 8300000, guid: 3a3788ca1d71232488a6538f60b25620, type: 3}
   fire: 0
   lightningActive: 0
   counter: 0
@@ -499,7 +504,7 @@ GameObject:
   - component: {fileID: 6275801279172342446}
   - component: {fileID: 1624653638064531768}
   m_Layer: 0
-  m_Name: AmbientRain
+  m_Name: AmbientLoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
