@@ -88,8 +88,6 @@ public class WeatherManager : MonoBehaviour
         if (randomSeed == 0)
         {
             ambientAudioSource.Stop();
-            ambientAudioSource.clip = lightningAudioClip;
-            ambientAudioSource.Play();
             lightningActive = true;
         }
         else
