@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SummonPlant : MonoBehaviour
 {
@@ -51,7 +49,7 @@ public class SummonPlant : MonoBehaviour
                          + GameObject.FindGameObjectsWithTag("PlantMana").Length;
         currentGold = shopBehaviourBuy.playerMoney;
 
-        if (numberOfPlants == 0 && currentGold <= 10)
+        if (numberOfPlants == 0 && currentGold <= 10 && shopBehaviourBuy.hasBoughtSomething == false) 
         {
             summonSpot.SetActive(true);
             ActivatePlant();
