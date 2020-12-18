@@ -54,7 +54,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8472855594288465253}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.6399999, y: 1.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -615,7 +615,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5de4e7fb010834e83883a906dc2781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  catMeowing: {fileID: 8472855595014869681}
+  catAudioSource: {fileID: 8472855595014869681}
+  catMeows:
+  - {fileID: 8300000, guid: df7c77a1aa554884abd1f1886620ea2a, type: 3}
+  - {fileID: 8300000, guid: 86b82af0521621745a3e82bdd0111b1f, type: 3}
+  - {fileID: 8300000, guid: 7ba42c6f10a3e564ea766de518a3b5f9, type: 3}
+  - {fileID: 8300000, guid: 7d7446855a0ba8741a2b3d92e0162bac, type: 3}
 --- !u!1 &8472855595014869683
 GameObject:
   m_ObjectHideFlags: 0
