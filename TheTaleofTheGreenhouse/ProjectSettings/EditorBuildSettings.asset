@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: df2e3aa77c899da458305ae5bccc2de3
   - enabled: 1
     path: Assets/Scenes/IntroCinematic.unity
-    guid: 15e366fdf83e18047ac74edfa897fa4a
+    guid: e91bcfb3f0985054c8ed9d7838b876cc
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 8b8d5f52a9e648c41863c4ab3933544f
