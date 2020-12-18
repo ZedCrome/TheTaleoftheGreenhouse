@@ -20543,5 +20543,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catAudioSource
+      value: 
+      objectReference: {fileID: 8472855594084952464}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: df7c77a1aa554884abd1f1886620ea2a, type: 3}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 86b82af0521621745a3e82bdd0111b1f, type: 3}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ba42c6f10a3e564ea766de518a3b5f9, type: 3}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: catMeows.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d7446855a0ba8741a2b3d92e0162bac, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+--- !u!82 &8472855594084952464 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8472855595014869681, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+  m_PrefabInstance: {fileID: 8472855594084952463}
+  m_PrefabAsset: {fileID: 0}
