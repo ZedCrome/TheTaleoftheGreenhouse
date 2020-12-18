@@ -664,6 +664,14 @@ PrefabInstance:
       propertyPath: catMeows.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 7d7446855a0ba8741a2b3d92e0162bac, type: 3}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: BuyMenu
+      value: 
+      objectReference: {fileID: 896259541}
+    - target: {fileID: 8472855594802818285, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
+      propertyPath: NotesMenu
+      value: 
+      objectReference: {fileID: 165234513}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6add8a7473e109e428d2541e1160d914, type: 3}
 --- !u!82 &150271015 stripped

@@ -7,14 +7,20 @@ using UnityEngine;
 public class MeowingCat : MonoBehaviour
 {
     public AudioSource catAudioSource;
-
     public AudioClip[] catMeows;
+
+    [SerializeField] private GameObject BuyMenu;
+    
+    [SerializeField] private GameObject NotesMenu;
        
     private void OnMouseOver()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Mouse0))
         {
-            catAudioSource.PlayOneShot(Tools.GetRandomSound(catMeows));
+            if (!NotesMenu.activeInHierarchy && !BuyMenu.activeInHierarchy)
+            {
+                catAudioSource.PlayOneShot(Tools.GetRandomSound(catMeows));
+            }
         }
     }
 }

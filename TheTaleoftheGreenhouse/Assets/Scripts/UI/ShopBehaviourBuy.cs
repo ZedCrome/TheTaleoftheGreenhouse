@@ -379,9 +379,9 @@ public class ShopBehaviourBuy : MonoBehaviour
         tableAlreadyBought2.value = tableCurrentyBuy2.value;
         if (maxTables <= ownedTables)
         {
+            tableOutOfStock.SetActive(true);
             tableAdd.enabled = false;
             tableReduce.enabled = false;
-
         }
         
         currentlyBuyingPots = 0;
@@ -429,22 +429,19 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void TableInfo()
     {
-        if (maxTables <= ownedTables + currentlyBuyingTables)
+        if (!(maxTables <= ownedTables + currentlyBuyingTables))
         {
-            tableOutOfStock.SetActive(true);
+            if (playerMoney < totalCost + tableCost)
+            {
+                tableCantAfford.SetActive(true);
+            }
+            else if (playerMoney >= tableCost)
+            {
+                tableCantAfford.SetActive(false);
+            }
         }
-        else if (playerMoney < totalCost + tableCost)
-        {
-            tableCantAfford.SetActive(true);
-        }
-        else if (playerMoney >= tableCost)
-        {
-            tableCantAfford.SetActive(false);
-        }
-        else if (maxTables > amountOfTables)
-        {
-            tableOutOfStock.SetActive(false);
-        }
+        
+        
     }
 
     
