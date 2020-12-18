@@ -375,7 +375,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         currentlyBuyingTables = 0;
         tableTotalCost = 0;
         tablePriceDisplay.text = tableTotalCost + " Gold";
-        tableAmount.text = currentlyBuyingTables.ToString();
+        tableAmount.text = "0";
         tableAlreadyBought2.value = tableCurrentyBuy2.value;
         if (maxTables <= ownedTables)
         {
@@ -387,27 +387,33 @@ public class ShopBehaviourBuy : MonoBehaviour
         currentlyBuyingPots = 0;
         potTotalCost = 0;
         potPriceDisplay.text = potTotalCost + " Gold";
-        potAmount.text = currentlyBuyingPots.ToString();
-        potAlreadyBought1.value = potCurrentBuy1.value;
-        potAlreadyBought2.value = potCurrentBuy2.value;
-        potAlreadyBought3.value = potCurrentBuy3.value;
+        potAmount.text = "0";
+        // potAlreadyBought1.value = potCurrentBuy1.value;
+        // potAlreadyBought2.value = potCurrentBuy2.value;
+        // potAlreadyBought3.value = potCurrentBuy3.value;
+        potCurrentBuy1.value = 0;
+        potCurrentBuy2.value = 0;
+        potCurrentBuy3.value = 0;
         
         currentlyBuyingPlants = 0;
         plantTotalCost = 0;
         plantPriceDisplay.text = plantTotalCost + " Gold";
-        plantAmount.text = amountOfPlants.ToString();
+        plantAmount.text = "0";
         
         currentlyBuyingManaPlants = 0;
         manaPlantTotalCost = 0;
         manaPlantPriceDisplay.text = manaPlantTotalCost + " Gold";
-        manaPlantAmount.text = amountOfManaPlants.ToString();
+        manaPlantAmount.text = "0";
         
         currentlyBuyingManaStorageItems = 0;
         manaStorageItemTotalCost = 0;
         manaStorageItemPriceDisplay.text = manaStorageItemTotalCost + " Gold";
-        manaStorageItemAmount.text = currentlyBuyingManaStorageItems.ToString();
-        manaStorageItemAlreadyBought1.value = manaStorageItemCurrentBuy1.value;
-        manaStorageItemAlreadyBought2.value = manaStorageItemCurrentBuy2.value;
+        manaStorageItemAmount.text = "0";
+        // manaStorageItemAlreadyBought1.value = manaStorageItemCurrentBuy1.value;
+        // manaStorageItemAlreadyBought2.value = manaStorageItemCurrentBuy2.value;
+        manaStorageItemCurrentBuy1.value = 0;
+        manaStorageItemCurrentBuy2.value = 0;
+        
         
         hasOrderedItems = true;
         
