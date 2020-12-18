@@ -10,7 +10,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private GameObject alreadyBoughtOverlay;
     public TMP_Text totalCostText;
     [SerializeField] private TMP_Text playerMoneyText;
-    public int playerMoney = 99999;
+    public int playerMoney = 20;
     public bool hasBoughtSomething = false;
     public int totalCost;
     private int currentlySpendingGold;
