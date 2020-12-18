@@ -365,6 +365,7 @@ public class ShopBehaviourBuy : MonoBehaviour
             {
                 ownedTables += amountOfTables;
                 TableManager.instance.unlockedTables = ownedTables;
+                amountOfTables = 0;
             }
             alreadyBoughtOverlay.SetActive(true);
             LeanTween.scale(alreadyBoughtOverlay, new Vector3(1f, 1f, 1f), 0.1f).setEaseLinear();
