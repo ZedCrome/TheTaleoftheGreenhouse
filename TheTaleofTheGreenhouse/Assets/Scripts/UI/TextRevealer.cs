@@ -1,162 +1,98 @@
 ﻿using System.Collections;
-using System.Text;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
+using TMPro;
 
 public class TextRevealer : MonoBehaviour
 {
-	[UnityEngine.Header("Configuration")]
-	public int numCharactersFade = 3;
-	public float charsPerSecond = 30;
-	public float smoothSeconds = 0.75f;
-	[UnityEngine.Header("References")]
-	public TMP_Text text;
-	public UnityEvent allRevealed = new UnityEvent();
+    public TMP_Text text11;
+    public TMP_Text text12;
+    public TMP_Text text13;
+    public string[] texts;
+    private char[] letters;
+    public float textTime = 0.05f;
+    private float timeUntillChange = 2f;
+    private float timer;
 
+    private int LineCounter;
+    
+    void Start()
+    {
+        texts = new string[]
+        {
+            "I'm back home because you need me...",
+            "Your sickness is spreading each day...",
+            "I don't want to loose you to...",
+            "",
+            "",
+            "I felt hopeless...",
+            "",
+            "But now i know what to do.",
+            ""
+        };
+        StartCoroutine(StartDelay());
+    }
 
-	private string originalString;
-	private int nRevealedCharacters;
-	private bool isRevealing = false;
+    public IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(1);
+        NextLine();
+    }
+    
+    void NextLine()
+    {
+        letters = texts[LineCounter].ToCharArray();
+        LineCounter++;
+        StartCoroutine(ShowText(texts[LineCounter]));
+    }
+    
+    public IEnumerator ShowText(string txt)
+    {
+        
+        text11.alpha = 0.2f;
+        text12.alpha = 0.45f;
+        text13.alpha = 1f;
+        
+        yield return new WaitForSeconds(1f);
 
+        for (int i = 0; i < letters.Length + 2; i++)
+        {
+            timer += textTime;
+            if (i < letters.Length)
+            { 
+                text11.text += letters[i];
+            }
+            if (i > 0 && i < letters.Length + 1)
+            { 
+                text12.text += letters[i - 1];
+            }
+            if (i > 1 && i < letters.Length + 2)
+            { 
+                text13.text += letters[i - 2];
+            }
+            yield return new WaitForSeconds(textTime);
+        }
+        yield return new WaitForSeconds( timeUntillChange - timer);
+        timer = 0f;
+        StartCoroutine(FadeText());
+    }
 
-	public bool IsRevealing { get { return isRevealing; } }
-	
-	public void RestartWithText(string strText)
-	{
-		nRevealedCharacters = 0;
-		originalString = strText;
-		text.text = BuildPartiallyRevealedString(originalString, keyCharIndex: -1, minIndex: 0, maxIndex: 0, fadeLength: 1);
-	}
+    
+    public IEnumerator FadeText()
+    {
+        yield return new WaitForSeconds(2.5f);
 
-	public void ShowEverythingWithoutAnimation()
-	{
-		StopAllCoroutines();
+        while (text13.alpha > 0)
+        {
+            text11.alpha--;
+            text12.alpha--;
+            text13.alpha -= 0.01f;
+            yield return new WaitForSeconds(0.005f);
+        }
 
-		text.text = originalString;
-		nRevealedCharacters = originalString.Length;
-		isRevealing = false;
-
-		allRevealed.Invoke();
-	}
-
-	public void ShowNextParagraphWithoutAnimation()
-	{
-		if (IsAllRevealed()) return;
-
-		StopAllCoroutines();
-
-		var paragraphEnd = GetNextParagraphEnd(nRevealedCharacters);
-		text.text = BuildPartiallyRevealedString(original: originalString,
-										keyCharIndex: paragraphEnd,
-										minIndex: nRevealedCharacters,
-										maxIndex: paragraphEnd,
-										fadeLength: 0);
-
-		nRevealedCharacters = paragraphEnd + 1;
-		while (nRevealedCharacters < originalString.Length && originalString[nRevealedCharacters] == '\n')
-			nRevealedCharacters += 1;
-
-		if (IsAllRevealed())
-			allRevealed.Invoke();
-
-		isRevealing = false;
-	}
-
-	public void RevealNextParagraphAsync()
-	{
-		StartCoroutine(RevealNextParagraph());
-	}
-	public IEnumerator RevealNextParagraph()
-	{
-		if (IsAllRevealed() || isRevealing) yield break;
-
-		var paragraphEnd = GetNextParagraphEnd(nRevealedCharacters);
-		if (paragraphEnd < 0) yield break;
-
-		isRevealing = true;
-
-		var keyChar = (float)(nRevealedCharacters - numCharactersFade);
-		var keyCharEnd = paragraphEnd;
-		var speed = 0f;
-		var secondsElapsed = 0f;
-
-		while (keyChar < keyCharEnd)
-		{
-			secondsElapsed += Time.deltaTime;
-			if (secondsElapsed <= smoothSeconds)
-				speed = Mathf.Lerp(0f, charsPerSecond, secondsElapsed / smoothSeconds);
-			else
-			{
-				var secondsLeft = (keyCharEnd - keyChar) / charsPerSecond;
-				if (secondsLeft < smoothSeconds)
-					speed = Mathf.Lerp(charsPerSecond, 0.1f * charsPerSecond, 1f - secondsLeft / smoothSeconds);
-			}
-
-			keyChar = Mathf.MoveTowards(keyChar, keyCharEnd, speed * Time.deltaTime);
-			text.text = BuildPartiallyRevealedString(original: originalString,
-											keyCharIndex: keyChar,
-											minIndex: nRevealedCharacters,
-											maxIndex: paragraphEnd,
-											fadeLength: numCharactersFade);
-
-			yield return null;
-		}
-
-		nRevealedCharacters = paragraphEnd + 1;
-
-		while (nRevealedCharacters < originalString.Length && originalString[nRevealedCharacters] == '\n')
-			nRevealedCharacters += 1;
-
-		if (IsAllRevealed())
-			allRevealed.Invoke();
-
-		isRevealing = false;
-	}
-
-	public bool IsAllRevealed()
-	{
-		return nRevealedCharacters >= originalString.Length;
-	}
-
-
-	private int GetNextParagraphEnd(int startingFrom)
-	{
-		var paragraphEnd = originalString.IndexOf('\n', startingFrom);
-		if (paragraphEnd < 0 && startingFrom < originalString.Length) paragraphEnd = originalString.Length - 1;
-		return paragraphEnd;
-	}
-
-	private string BuildPartiallyRevealedString(string original, float keyCharIndex, int minIndex, int maxIndex, int fadeLength)
-	{
-		var lastFullyVisibleChar = Mathf.Max(Mathf.CeilToInt(keyCharIndex), minIndex - 1);
-		var firstFullyInvisibleChar = (int)Mathf.Min(keyCharIndex + fadeLength, maxIndex) + 1;
-
-		var revealed = original.Substring(0, lastFullyVisibleChar + 1);
-		var unrevealed = original.Substring(firstFullyInvisibleChar);
-
-		var sb = new StringBuilder();
-		sb.Append(revealed);
-
-		for (var i = lastFullyVisibleChar + 1; i < firstFullyInvisibleChar; ++i)
-		{
-			var c = original[i];
-			var originalColorRGB = ColorUtility.ToHtmlStringRGB(text.color);
-			var alpha = Mathf.RoundToInt(255 * (keyCharIndex - i) / (float)fadeLength);
-			sb.AppendFormat("<color=#{0}{1:X2}>{2}</color>", originalColorRGB, (byte)alpha, c);
-		}
-
-		sb.AppendFormat("<color=#00000000>{0}</color>", unrevealed);
-		return sb.ToString();
-	}
-
-
-	void Start()
-	{
-		if (string.IsNullOrEmpty(originalString))
-			RestartWithText(text.text);
-		RevealNextParagraphAsync();
-	}
-	
+        text11.text = "";
+        text12.text = "";
+        text13.text = "";
+        Debug.Log("END");
+        NextLine();
+    }
 }
