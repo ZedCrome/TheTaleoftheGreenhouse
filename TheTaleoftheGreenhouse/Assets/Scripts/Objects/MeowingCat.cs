@@ -12,7 +12,7 @@ public class MeowingCat : MonoBehaviour
        
     private void OnMouseOver()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Mouse0))
         {
             catAudioSource.PlayOneShot(Tools.GetRandomSound(catMeows));
         }
