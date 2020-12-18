@@ -14458,9 +14458,10 @@ MonoBehaviour:
   tableAlreadyBought2: {fileID: 3097841062520653537}
   tableOutOfStock: {fileID: 1075210290153906091}
   tableCantAfford: {fileID: 4301594975543398753}
-  maxTables: 4
+  maxTables: 7
   tableCost: 60
   maxBuyTablesAtATime: 3
+  amountOfTables: 0
   ownedTables: 0
   currentlyBuyingTables: 0
   potAdd: {fileID: 3097841062615306236}
@@ -14475,7 +14476,7 @@ MonoBehaviour:
   potAlreadyBought3: {fileID: 3097841063902311034}
   potOutOfStock: {fileID: 5475236419610514617}
   potCantAfford: {fileID: 5022358216027071473}
-  maxPots: 16
+  maxPots: 1600000
   potCost: 10
   maxBuyPotsAtATime: 3
   amountOfPots: 0
@@ -14512,7 +14513,7 @@ MonoBehaviour:
   manaStorageItemAlreadyBought2: {fileID: 3097841063948973374}
   manaStorageItemOutOfStock: {fileID: 7575680770118868517}
   manaStorageItemCantAfford: {fileID: 819739744279773873}
-  maxManaStorageItems: 9
+  maxManaStorageItems: 900000
   manaStorageItemCost: 40
   maxBuyManaStorageItemsAtATime: 3
   currentlyBuyingManaStorageItems: 0

@@ -24,11 +24,11 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] Slider tableAlreadyBought2;
     [SerializeField] GameObject tableOutOfStock;
     [SerializeField] GameObject tableCantAfford;
-    [SerializeField] private int maxTables = 4;
+    [SerializeField] private int maxTables = 7;
     [SerializeField] int tableCost = 60;
     [SerializeField] private int maxBuyTablesAtATime = 3; 
     private int tableTotalCost;
-    private int amountOfTables;
+    [SerializeField] int amountOfTables;
     [SerializeField] int ownedTables;
     public int currentlyBuyingTables = 0;
 
@@ -377,6 +377,12 @@ public class ShopBehaviourBuy : MonoBehaviour
         tablePriceDisplay.text = tableTotalCost + " Gold";
         tableAmount.text = currentlyBuyingTables.ToString();
         tableAlreadyBought2.value = tableCurrentyBuy2.value;
+        if (maxTables <= ownedTables)
+        {
+            tableAdd.enabled = false;
+            tableReduce.enabled = false;
+
+        }
         
         currentlyBuyingPots = 0;
         potTotalCost = 0;
@@ -423,7 +429,7 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void TableInfo()
     {
-        if (maxTables <= amountOfTables)
+        if (maxTables <= ownedTables + currentlyBuyingTables)
         {
             tableOutOfStock.SetActive(true);
         }

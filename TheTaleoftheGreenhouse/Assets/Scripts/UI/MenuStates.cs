@@ -41,7 +41,16 @@ public class MenuStates : MonoBehaviour
 
     public void ToggleFullscreen()
     {
-        Screen.fullScreen = !Screen.fullScreen;
+        if (Screen.fullScreen)
+        {
+            Screen.SetResolution(1280, 720, FullScreenMode.Windowed);
+        }
+        
+        if (Screen.fullScreen == false)
+        {
+            Screen.SetResolution(Screen.width, Screen.height, FullScreenMode.ExclusiveFullScreen);
+        }
+        
     }
     
     public void MasterVolume(float newVolume)
