@@ -19,6 +19,7 @@ public class PlayerRenderer : MonoBehaviour
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private PlayerMovement playerMovement;
     
     private int lastDirection;
     private int lastDirectionCache;
@@ -31,6 +32,7 @@ public class PlayerRenderer : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
 
@@ -39,7 +41,7 @@ public class PlayerRenderer : MonoBehaviour
         verticalMove = Input.GetAxisRaw("Vertical");
         horizontalMove = Input.GetAxisRaw("Horizontal");
 
-        if (verticalMove != 0 || horizontalMove != 0)
+        if (playerMovement.movement.magnitude > 0.5 || playerMovement.movement.magnitude < -0.5)
         {
             moving = true;
             animator.SetBool("Moving", true);
@@ -49,7 +51,7 @@ public class PlayerRenderer : MonoBehaviour
             moving = false;
             animator.SetBool("Moving", false);
         }
-        Debug.Log(lastDirection);
+        Debug.Log(playerMovement.movement.magnitude);
     }
 
     public void SetDirection(Vector2 direction)

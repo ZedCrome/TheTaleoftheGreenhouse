@@ -3,8 +3,8 @@
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private int speed = 5;
-    [SerializeField] private Vector2 rotationOffset;
     private PlayerRenderer playerRenderer;
+    public Vector2 movement;
     private Rigidbody2D rb2d;
 
     private void Start()
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 inputVector = new Vector2(horizontalInput, verticalInpunt);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         
-        Vector2 movement = inputVector * speed;
+         movement = inputVector * speed;
         Vector2 newPosition = currentPosition + movement * Time.fixedDeltaTime;
         
         playerRenderer.SetDirection(movement);
