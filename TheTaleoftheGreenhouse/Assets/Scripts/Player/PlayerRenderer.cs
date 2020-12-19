@@ -49,7 +49,7 @@ public class PlayerRenderer : MonoBehaviour
             moving = false;
             animator.SetBool("Moving", false);
         }
-
+        Debug.Log(lastDirection);
     }
 
     public void SetDirection(Vector2 direction)
@@ -58,7 +58,7 @@ public class PlayerRenderer : MonoBehaviour
         string[] directionArray;
         int directionValue;
 
-        if (direction.magnitude < 0.01f)
+        if (direction.magnitude < 0.1f)
         {
             directionArray = staticDirections;
             directionValue = Array.IndexOf(directionArray, 8);

@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Runtime.InteropServices;
+using TMPro;
 using UnityEngine;
 using Button = UnityEngine.UI.Button;
 using Slider = UnityEngine.UI.Slider;
@@ -435,16 +436,21 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void TableInfo()
     {
-        
-            if (maxTables <= ownedTables + currentlyBuyingTables)
-            {
-                tableOutOfStock.SetActive(true);
-            }
-            else if (maxTables > ownedTables + currentlyBuyingTables)
-            {
-                tableOutOfStock.SetActive(false);
-            }
-            else if (playerMoney < totalCost + tableCost)
+        bool full = false;
+        if (maxTables <= ownedTables + currentlyBuyingTables)
+        {
+            tableOutOfStock.SetActive(true);
+            full = true;
+        }
+        else if (maxTables > ownedTables + currentlyBuyingTables)
+        {
+            tableOutOfStock.SetActive(false);
+            full = false;
+        }
+
+        if (!full)
+        {
+            if (playerMoney < totalCost + tableCost)
             {
                 tableCantAfford.SetActive(true);
             }
@@ -452,10 +458,7 @@ public class ShopBehaviourBuy : MonoBehaviour
             {
                 tableCantAfford.SetActive(false);
             }
-            
-        
-        
-        
+        }
     }
 
     
