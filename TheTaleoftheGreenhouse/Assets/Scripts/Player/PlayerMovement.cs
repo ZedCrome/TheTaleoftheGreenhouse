@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     }
     
     
-    void FixedUpdate()
+    void Update()
     {
         if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
         {
