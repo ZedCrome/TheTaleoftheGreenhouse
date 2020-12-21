@@ -40,7 +40,7 @@ public class Earnings : MonoBehaviour
     
     public void EarningsNotification()
     {
-        gainedGold = sellItems.GetGold() / 2;
+        gainedGold = sellItems.GetGold() / 3;
 
         soldValue.text = gainedGold.ToString();
         gold.text = shopBehaviourBuy.playerMoney.ToString();
