@@ -20,6 +20,11 @@ public class ShopBehaviour : MonoBehaviour
     void Start()
     {
         shopBehaviourBuy = GetComponent<ShopBehaviourBuy>();
+        
+        if (buyMenu.activeSelf)
+        {
+            buyMenu.SetActive(false);
+        }
     }
     
     public void Update()
