@@ -185,6 +185,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         if (TotalAmountToBuy() >= DeliveryManager.instance.GetFreeSlots())
         {
+            GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.DeliveryFull);
             return;
         }
         
@@ -241,6 +242,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         if (TotalAmountToBuy() >= DeliveryManager.instance.GetFreeSlots())
         {
+            GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.DeliveryFull);
             return;
         }
         
@@ -283,6 +285,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         if (TotalAmountToBuy() >= DeliveryManager.instance.GetFreeSlots())
         {
+            GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.DeliveryFull);
             return;
         }
         
@@ -324,6 +327,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     {
         if (TotalAmountToBuy() >= DeliveryManager.instance.GetFreeSlots())
         {
+            GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.DeliveryFull);
             return;
         }
         
