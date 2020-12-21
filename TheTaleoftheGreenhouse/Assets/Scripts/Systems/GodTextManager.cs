@@ -75,7 +75,7 @@ public class GodTextManager : MonoBehaviour
                 break;
             
             case godTextStates.FirstWarning:
-                godTextEdit.text = "This Greenhouse is filthy, you should throw away the dead plants...";
+                godTextEdit.text = "Clean out the dead plants from the greenhouse.";
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
