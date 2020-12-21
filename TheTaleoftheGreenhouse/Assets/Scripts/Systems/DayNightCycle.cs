@@ -7,6 +7,7 @@ using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 [DefaultExecutionOrder(-9)]
 public class DayNightCycle : MonoBehaviour
 {
+    public Earnings earnings;
     [SerializeField] private AudioSource deliverySound;
     [SerializeField] GameObject nightCanvas;
     [SerializeField] GameObject sleepPromptCanvas;
@@ -70,6 +71,7 @@ public class DayNightCycle : MonoBehaviour
 
     void Start()
     {
+        earnings = FindObjectOfType<Earnings>();
         buyMenuCanvas = GameObject.Find("Shop");
         sellBox = GameObject.Find("SellBox");
 
@@ -225,6 +227,8 @@ public class DayNightCycle : MonoBehaviour
         if (SellBoxBehaviour.instance.maxNumbertoSell > 0)
         {
             shopBehaviourBuy.playerMoney+= sellBox.GetComponent<SellItems>().GetGold();
+            earnings.ActivateNotification();
+            earnings.EarningsNotification();
             SellBoxBehaviour.instance.ResetSlots();
             for (int i = 0; i < SellBoxBehaviour.instance.maxNumbertoSell; i++)
             {

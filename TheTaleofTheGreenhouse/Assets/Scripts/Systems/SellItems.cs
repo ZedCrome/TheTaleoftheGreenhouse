@@ -17,16 +17,16 @@ public class SellItems : MonoBehaviour
     private int manaPlantPrice;
     private int normalPlantPrice;
 
-    private int cuttingPrice = 5;
-    private int manaSproutPrice = 60;
-    private int normalSproutPrice = 30;
-    private int manaYoungPrice = 80;
-    private int normalYoungPrice = 40;
-    private int manaAdultPrice = 100;
-    private int normalAdultPrice = 50;
-    private int manaFullGrownPrice = 120;
-    private int normalFullGrownPrice = 60;
-    private int deadPlantPrice = 0;
+    public int cuttingPrice = 5;
+    public int manaSproutPrice = 60;
+    public int normalSproutPrice = 30;
+    public int manaYoungPrice = 80;
+    public int normalYoungPrice = 40;
+    public int manaAdultPrice = 100;
+    public int normalAdultPrice = 50;
+    public int manaFullGrownPrice = 120;
+    public int normalFullGrownPrice = 60;
+    public int deadPlantPrice = 0;
 
     private int goldBack;
 
@@ -45,7 +45,7 @@ public class SellItems : MonoBehaviour
         goldBack = 0;
     }
 
-    private int CalculateGold(GameObject[] gameObjects)
+    public int CalculateGold(GameObject[] gameObjects)
     {
         for (int i = 0; 0 < sellBox.maxNumbertoSell; i++)
         {         

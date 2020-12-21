@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class removeStartInfo : MonoBehaviour
 {
-    public RectTransform beginnerInfo;
+    public GameObject beginnerInfo;
     public bool exitInfo;
     private void Start()
     {

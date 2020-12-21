@@ -15,7 +15,9 @@ public class ShopbehaviourNotes : MonoBehaviour
     [SerializeField] private Button manaCatcher;
     [SerializeField] private Button manaStorageItem;
     [SerializeField] private Button manaUI;
-    
+    [SerializeField] private Button Stacking;
+    [SerializeField] private Button SellValues;
+
     [Header("Notes")] [Space(5)]
     [SerializeField] private GameObject shearNote;
     [SerializeField] private GameObject wateringCanNote;
@@ -27,6 +29,8 @@ public class ShopbehaviourNotes : MonoBehaviour
     [SerializeField] private GameObject manaCatcherNote;
     [SerializeField] private GameObject manaStorageItemNote;
     [SerializeField] private GameObject manaUINote;
+    [SerializeField] private GameObject StackingNote;
+    [SerializeField] private GameObject SellValuesNote;
 
     [Header("Other")] [Space(5)] 
     [SerializeField] GameObject previousNote;
@@ -104,5 +108,19 @@ public class ShopbehaviourNotes : MonoBehaviour
         previousNote.SetActive(false);
         previousNote = manaUINote;
         manaUINote.SetActive(true);
+    }
+
+    public void ItemStack()
+    {
+        previousNote.SetActive(false);
+        previousNote = StackingNote;
+        StackingNote.SetActive(true);
+    }
+
+    public void SellingValues()
+    {
+        previousNote.SetActive(false);
+        previousNote = SellValuesNote;
+        SellValuesNote.SetActive(true);
     }
 }
