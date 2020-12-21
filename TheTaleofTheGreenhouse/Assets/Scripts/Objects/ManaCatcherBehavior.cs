@@ -109,6 +109,7 @@ public class ManaCatcherBehavior : MonoBehaviour
                         if (currentMana >= 5)
                         {
                             PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaCubeBehavior>().AddMana(giveMana);
+                            losingManaTimer = 15;
                         }
                         else
                         {
@@ -133,6 +134,7 @@ public class ManaCatcherBehavior : MonoBehaviour
                         audioSource.PlayOneShot(storeManaSound);
                         currentMana = PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<ManaPlantBehavior>().GiveMana(currentMana);
                         PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>().objectInSlot.GetComponent<PlantStates>().hasMana = false;
+                        losingManaTimer = 15;
                     }
                     else
                     {
