@@ -183,6 +183,11 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void addPot()
     {
+        if (TotalAmountToBuy() >= DeliveryManager.instance.GetFreeSlots())
+        {
+            return;
+        }
+        
         if (playerMoney - (totalCost + potCost) >= 0)
         {
             if (currentlyBuyingPots < maxBuyPotsAtATime && amountOfPots < maxPots)
@@ -234,6 +239,11 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void addPlant()
     {
+        if (TotalAmountToBuy() >= DeliveryManager.instance.GetFreeSlots())
+        {
+            return;
+        }
+        
         if (playerMoney - (totalCost + plantCost) >= 0)
         {
             if (currentlyBuyingPlants < maxBuyPlantsAtATime && amountOfPlants < maxPlants)
@@ -271,6 +281,11 @@ public class ShopBehaviourBuy : MonoBehaviour
     
     public void addManaPlant()
     {
+        if (TotalAmountToBuy() >= DeliveryManager.instance.GetFreeSlots())
+        {
+            return;
+        }
+        
         if (playerMoney - (totalCost + manaPlantCost) >= 0)
         {
             if (currentlyBuyingManaPlants < maxBuyManaPlantsAtATime && amountOfManaPlants < maxManaPlants)
@@ -307,6 +322,11 @@ public class ShopBehaviourBuy : MonoBehaviour
     
     public void addManaStorageItem()
     {
+        if (TotalAmountToBuy() >= DeliveryManager.instance.GetFreeSlots())
+        {
+            return;
+        }
+        
         if (playerMoney - (totalCost + manaStorageItemCost) >= 0)
         {
             if (currentlyBuyingManaStorageItems < maxBuyManaStorageItemsAtATime && amountOfManaStorageItems < maxManaStorageItems)
@@ -347,6 +367,18 @@ public class ShopBehaviourBuy : MonoBehaviour
         manaStorageItemPriceDisplay.text = manaStorageItemTotalCost + " Gold";
         totalCostText.text = "Price: " + totalCost + " Gold";
         manaStorageItemAmount.text = currentlyBuyingManaStorageItems.ToString();
+    }
+
+    private int TotalAmountToBuy()
+    {
+        int returnValue = 0;
+
+        returnValue = currentlyBuyingPlants
+                      + currentlyBuyingPots
+                      + currentlyBuyingManaPlants
+                      + currentlyBuyingManaStorageItems;
+        
+        return returnValue;
     }
     
 
