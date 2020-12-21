@@ -51,7 +51,6 @@ public class PlayerRenderer : MonoBehaviour
             moving = false;
             animator.SetBool("Moving", false);
         }
-        Debug.Log(playerMovement.movement.magnitude);
     }
 
     public void SetDirection(Vector2 direction)
