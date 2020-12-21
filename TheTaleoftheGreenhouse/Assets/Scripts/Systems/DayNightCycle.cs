@@ -22,6 +22,7 @@ public class DayNightCycle : MonoBehaviour
     public RectTransform nightPanel;
     public static DayNightCycle instance;
     public float realSecondsPerIngameDay;
+    private float initRealSecondsPerIngameDay;
     public float nightFadeDuration;
     public Light2D light;
     public int TimeAccelerator = 24;
@@ -75,6 +76,8 @@ public class DayNightCycle : MonoBehaviour
         buyMenuCanvas = GameObject.Find("Shop");
         sellBox = GameObject.Find("SellBox");
 
+        initRealSecondsPerIngameDay = realSecondsPerIngameDay;
+        
         if (light == null)
         {
             light = FindObjectOfType<Light2D>();
@@ -298,7 +301,7 @@ public class DayNightCycle : MonoBehaviour
         {
             float multiplier = TableManager.instance.unlockedTables - 3;
 
-            realSecondsPerIngameDay += multiplier * 10;
+            realSecondsPerIngameDay = initRealSecondsPerIngameDay + (multiplier * 10);
         }
         
         yield return null;
