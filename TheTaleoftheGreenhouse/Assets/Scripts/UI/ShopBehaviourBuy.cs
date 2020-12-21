@@ -548,27 +548,30 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             SetManaPlantOutOfStock(true);
         }
-        else if (maxManaPlants <= amountOfManaPlants)
+        else
         {
-            manaPlantOutOfStock.SetActive(true);
-        }
-        else if (maxManaPlants > amountOfManaPlants)
-        {
-            SetManaPlantOutOfStock(false);
-        }
-        else if (playerMoney < totalCost + manaPlantCost)
-        {
-            manaPlantCantAfford.SetActive(true);
-        }
-        else if (playerMoney >= manaPlantCost)
-        {
-            manaPlantCantAfford.SetActive(false);
+            if (maxManaPlants <= amountOfManaPlants)
+            {
+                manaPlantOutOfStock.SetActive(true);
+            }
+            else if (playerMoney < totalCost + manaPlantCost)
+            {
+                manaPlantCantAfford.SetActive(true);
+            }
+            else if (maxManaPlants > amountOfManaPlants)
+            {
+                SetManaPlantOutOfStock(false);
+            }
+            else if (playerMoney >= manaPlantCost)
+            {
+                manaPlantCantAfford.SetActive(false);
+            }
         }
     }
 
     void SetManaPlantOutOfStock(bool setValue)
     {
-        if (setValue)
+        if (setValue == true)
         {
             manaPlantOutOfStock.SetActive(true);
             manaPlantAdd.enabled = false;
@@ -588,21 +591,24 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             SetManaStorageOutOfStock(true);
         }
-        else if (maxManaStorageItems <= amountOfManaStorageItems)
+        else
         {
-            manaStorageItemOutOfStock.SetActive(true);
-        }
-        else if (maxManaStorageItems > amountOfManaStorageItems)
-        {
-            SetManaStorageOutOfStock(false);
-        }
-        else if (playerMoney < totalCost + manaStorageItemCost)
-        {
-            manaStorageItemCantAfford.SetActive(true);
-        }
-        else if (playerMoney >= manaStorageItemCost) 
-        {
-            manaStorageItemCantAfford.SetActive(false);
+            if (maxManaStorageItems <= amountOfManaStorageItems)
+            {
+                manaStorageItemOutOfStock.SetActive(true);
+            }
+            else if (playerMoney < totalCost + manaStorageItemCost)
+            {
+                manaStorageItemCantAfford.SetActive(true);
+            }
+            if (maxManaStorageItems > amountOfManaStorageItems)
+            {
+                SetManaStorageOutOfStock(false);
+            }
+            else if (playerMoney >= manaStorageItemCost) 
+            {
+                manaStorageItemCantAfford.SetActive(false);
+            }
         }
     }
 
