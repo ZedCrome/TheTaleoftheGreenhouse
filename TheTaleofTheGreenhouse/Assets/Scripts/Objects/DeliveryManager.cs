@@ -32,7 +32,10 @@ public class DeliveryManager : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            objectSlot.Add(child.GetComponent<ObjectSlot>());
+            if (child.gameObject.HasComponent<ObjectSlot>())
+            {
+                objectSlot.Add(child.GetComponent<ObjectSlot>());
+            }
         }
 
         shopItems = GameObject.FindGameObjectWithTag("Shop");
@@ -62,8 +65,7 @@ public class DeliveryManager : MonoBehaviour
             
             spawnPot -= 1;
         }
-
-
+        
         if (spawnPlantMana > 0)
         {
             foreach (ObjectSlot slot in objectSlot)
@@ -136,6 +138,20 @@ public class DeliveryManager : MonoBehaviour
         }
     }
 
+    public int GetFreeSlots()
+    {
+        int returnValue = 0;
+        
+        foreach (ObjectSlot slot in objectSlot)
+        {
+            if (slot.objectInSlot == null)
+            {
+                returnValue++;
+            }
+        }
+
+        return returnValue;
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {

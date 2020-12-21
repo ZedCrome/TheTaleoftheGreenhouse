@@ -52,7 +52,8 @@ public class GodTextManager : MonoBehaviour
         DoneForToday,
         PlantOfGift,
         PlantOfGiftRoast,
-        WaterDeadPlant
+        WaterDeadPlant,
+        DeliveryFull
     }
 
 
@@ -134,6 +135,12 @@ public class GodTextManager : MonoBehaviour
 
             case godTextStates.WaterDeadPlant:
                 godTextEdit.text = "This plant is dead and nothing can save it.";
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+            
+            case godTextStates.DeliveryFull:
+                godTextEdit.text = "Clean up delivery if you want to buy more items.";
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
