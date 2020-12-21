@@ -102,7 +102,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private int manaStorageItemCost = 40;
     [SerializeField] private int maxBuyManaStorageItemsAtATime = 3;
     private int manaStorageItemTotalCost;
-    private int amountOfManaStorageItems = 0;
+    public int amountOfManaStorageItems = 0;
     private int ownedManaStorageItems = 0;
     public int currentlyBuyingManaStorageItems = 0;
     
@@ -511,10 +511,18 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (TableManager.instance.unlockedTables < 5)
         {
             manaPlantOutOfStock.SetActive(true);
+            manaPlantAdd.enabled = false;
+            manaPlantReduce.enabled = false;
         }
         else if (maxManaPlants <= amountOfManaPlants)
         {
             manaPlantOutOfStock.SetActive(true);
+        }
+        else if (maxManaPlants > amountOfManaPlants)
+        {
+            manaPlantOutOfStock.SetActive(false);
+            manaPlantAdd.enabled = true;
+            manaPlantReduce.enabled = true;
         }
         else if (playerMoney < totalCost + manaPlantCost)
         {
@@ -524,10 +532,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             manaPlantCantAfford.SetActive(false);
         }
-        else if (maxManaPlants > amountOfManaPlants)
-        {
-            manaPlantOutOfStock.SetActive(false);
-        }
+        
     }
     
     
@@ -536,12 +541,20 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (TableManager.instance.unlockedTables < 6)
         {
             manaStorageItemOutOfStock.SetActive(true);
+            manaStorageItemAdd.enabled = false;
+            manaStorageItemReduce.enabled = false;
         }
         else if (maxManaStorageItems <= amountOfManaStorageItems)
         {
             manaStorageItemOutOfStock.SetActive(true);
         }
-        if (playerMoney < totalCost + manaStorageItemCost)
+        else if (maxManaStorageItems > amountOfManaStorageItems)
+        {
+            manaStorageItemOutOfStock.SetActive(false);
+            manaStorageItemAdd.enabled = true;
+            manaStorageItemReduce.enabled = true;
+        }
+        else if (playerMoney < totalCost + manaStorageItemCost)
         {
             manaStorageItemCantAfford.SetActive(true);
         }
@@ -549,10 +562,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         {
             manaStorageItemCantAfford.SetActive(false);
         }
-        if (maxManaStorageItems > amountOfManaStorageItems)
-        {
-            manaStorageItemOutOfStock.SetActive(false);
-        }
+        
     }
     
     
