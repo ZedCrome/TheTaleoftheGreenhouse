@@ -61,7 +61,8 @@ public class GodTextManager : MonoBehaviour
         PlantOfGift,
         PlantOfGiftRoast,
         WaterDeadPlant,
-        DeliveryFull
+        DeliveryFull,
+        ManaCatcherLeaking,
     }
 
 
@@ -155,6 +156,12 @@ public class GodTextManager : MonoBehaviour
             
             case godTextStates.DeliveryFull:
                 godTextEdit.text = "Clean up delivery if you want to buy more items.";
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+
+            case godTextStates.ManaCatcherLeaking:
+                godTextEdit.text = "The mana catcher is leaking mana.";
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;

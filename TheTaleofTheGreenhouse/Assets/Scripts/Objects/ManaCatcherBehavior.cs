@@ -55,11 +55,12 @@ public class ManaCatcherBehavior : MonoBehaviour
             particleSystem.Play();
             currentMana -= 1; 
             losingManaTimer = 15;
+            GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.ManaCatcherLeaking);
         }
 
         if (currentMana > 0)
         {           
-            losingManaTimer -= 1 * Time.deltaTime;
+            losingManaTimer -= 1 * Time.deltaTime;           
         }
 
         if (interactableEffect.ActiveOutline())

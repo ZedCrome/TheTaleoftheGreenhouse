@@ -35,11 +35,13 @@ public class WatercanBehaviour : MonoBehaviour
                         PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();                       
                     }
                     ObjectSlot currentPotSlot = PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>();
-                    if (currentPotSlot.objectInSlot.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Dead)
+                    if (currentPotSlot.objectInSlot != null)
                     {
-                        GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.WaterDeadPlant);
-                    }
-
+                        if (currentPotSlot.objectInSlot.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Dead)
+                        {
+                            GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.WaterDeadPlant);
+                        }
+                    }                   
                 }
 
                 rightMouseButtonLock = true;
