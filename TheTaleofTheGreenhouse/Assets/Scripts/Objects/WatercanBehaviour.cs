@@ -32,9 +32,14 @@ public class WatercanBehaviour : MonoBehaviour
                     else
                     {
                         audioSource.PlayOneShot(wateringSound);
-                        PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();
+                        PlayerInteract.instance.interactObject.transform.parent.GetComponent<PotBehaviour>().FillWater();                       
                     }
-                    
+                    ObjectSlot currentPotSlot = PlayerInteract.instance.interactObject.GetComponent<ObjectSlot>();
+                    if (currentPotSlot.objectInSlot.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Dead)
+                    {
+                        GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.WaterDeadPlant);
+                    }
+
                 }
 
                 rightMouseButtonLock = true;
