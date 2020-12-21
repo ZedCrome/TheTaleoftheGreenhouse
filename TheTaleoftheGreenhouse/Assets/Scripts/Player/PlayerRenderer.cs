@@ -41,7 +41,7 @@ public class PlayerRenderer : MonoBehaviour
         verticalMove = Input.GetAxisRaw("Vertical");
         horizontalMove = Input.GetAxisRaw("Horizontal");
 
-        if (playerMovement.movement.magnitude > 0.5 || playerMovement.movement.magnitude < -0.5)
+        if (playerMovement.movement.magnitude > 0.1 || playerMovement.movement.magnitude < -0.1)
         {
             moving = true;
             animator.SetBool("Moving", true);
