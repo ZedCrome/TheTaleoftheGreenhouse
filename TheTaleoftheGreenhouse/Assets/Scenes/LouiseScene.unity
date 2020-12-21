@@ -1514,6 +1514,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3409257997699328309, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7619255260594604707, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Name
       value: PotManaPlant (2)

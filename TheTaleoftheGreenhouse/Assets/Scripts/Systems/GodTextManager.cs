@@ -51,7 +51,8 @@ public class GodTextManager : MonoBehaviour
         CuttingsWarning,
         DoneForToday,
         PlantOfGift,
-        PlantOfGiftRoast
+        PlantOfGiftRoast,
+        WaterDeadPlant
     }
 
 
@@ -115,6 +116,7 @@ public class GodTextManager : MonoBehaviour
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
+
             case godTextStates.PlantOfGiftRoast:
                 String[] roastTexts = new string[] {"Maybe this is not your destiny.",
                                                     "Looks like you are giving 100%",
@@ -126,6 +128,12 @@ public class GodTextManager : MonoBehaviour
                 int randomValue = UnityEngine.Random.Range(0,roastTexts.Length);
                 randomString = roastTexts[randomValue];
                 godTextEdit.text = randomString;
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+
+            case godTextStates.WaterDeadPlant:
+                godTextEdit.text = "This plant is dead and nothing can save it.";
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
