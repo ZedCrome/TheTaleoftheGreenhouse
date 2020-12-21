@@ -9,6 +9,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [Header("Other")] [Space(5)] 
     [SerializeField] private RectTransform buyMenu;
     [SerializeField] private GameObject alreadyBoughtOverlay;
+    [SerializeField] private AudioSource buySound;
     public TMP_Text totalCostText;
     [SerializeField] private TMP_Text playerMoneyText;
     public int playerMoney = 20;
@@ -362,6 +363,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         if (currentlyBuyingTables > 0 || currentlyBuyingPots > 0 || currentlyBuyingPlants > 0 
             || currentlyBuyingManaPlants > 0 || currentlyBuyingManaStorageItems > 0)
         {
+            buySound.Play();
             if (amountOfTables > 0)
             {
                 ownedTables += amountOfTables;
@@ -421,7 +423,7 @@ public class ShopBehaviourBuy : MonoBehaviour
         playerMoney = playerMoney - totalCost;
         totalCost = 0;
         totalCostText.text = "Price: " + totalCost + " Gold";
-        playerMoneyText.text = playerMoney + " Gold";
+        playerMoneyText.text = playerMoney.ToString();
     }
 
     public void TogglePurchaseOfItems()
