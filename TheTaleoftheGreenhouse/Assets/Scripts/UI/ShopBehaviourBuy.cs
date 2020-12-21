@@ -508,7 +508,11 @@ public class ShopBehaviourBuy : MonoBehaviour
 
     public void ManaPlantInfo()
     {
-        if (maxManaPlants <= amountOfManaPlants)
+        if (TableManager.instance.unlockedTables < 5)
+        {
+            manaPlantOutOfStock.SetActive(true);
+        }
+        else if (maxManaPlants <= amountOfManaPlants)
         {
             manaPlantOutOfStock.SetActive(true);
         }
@@ -529,7 +533,11 @@ public class ShopBehaviourBuy : MonoBehaviour
     
     public void ManaStorageItemInfo()
     {
-        if (maxManaStorageItems <= amountOfManaStorageItems)
+        if (TableManager.instance.unlockedTables < 6)
+        {
+            manaStorageItemOutOfStock.SetActive(true);
+        }
+        else if (maxManaStorageItems <= amountOfManaStorageItems)
         {
             manaStorageItemOutOfStock.SetActive(true);
         }
