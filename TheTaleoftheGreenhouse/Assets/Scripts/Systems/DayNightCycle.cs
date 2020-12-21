@@ -176,8 +176,6 @@ public class DayNightCycle : MonoBehaviour
     
     
     public event Action onSleep;
-
-
     public void Sleep()
     {
         if (!isAlreadySleeping)
@@ -281,7 +279,14 @@ public class DayNightCycle : MonoBehaviour
         }
         
         forcedSleep = false;
-      
+
+        // Increase time of day depending on how many tables owned
+        if (TableManager.instance.unlockedTables - 3 > 0)
+        {
+            float multiplier = TableManager.instance.unlockedTables - 3;
+
+            realSecondsPerIngameDay += multiplier * 10;
+        }
         
         yield return null;
     }
