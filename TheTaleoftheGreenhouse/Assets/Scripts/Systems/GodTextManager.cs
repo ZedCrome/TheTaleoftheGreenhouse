@@ -11,6 +11,7 @@ public class GodTextManager : MonoBehaviour
     public TMP_Text godTextEdit;
     public godTextStates godTextState;
     private bool godTextEnabled = false;
+    private bool firstWarning = false;
 
     private AudioSource audioSource;
     public AudioClip warningSound;
@@ -34,8 +35,14 @@ public class GodTextManager : MonoBehaviour
 
     private void Update()
     {
+        
         if (!godTextEnabled)
         {
+            if (firstWarning == false)
+            {
+                StartCoroutine(FirstWarning());
+                firstWarning = true;
+            }
             GodText();
         }
     }
@@ -43,6 +50,7 @@ public class GodTextManager : MonoBehaviour
     public enum godTextStates
     {
         Default,
+        FirstWarning,
         SleepWarning,
         CompostWarning,
         SellWarning, 
@@ -63,6 +71,12 @@ public class GodTextManager : MonoBehaviour
         {
             case godTextStates.Default:
                 godTextEdit.text = "";
+                break;
+            
+            case godTextStates.FirstWarning:
+                godTextEdit.text = "This Greenhouse is filthy, you should throw away the dead plants...";
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
                 break;
             
             case godTextStates.SleepWarning:
@@ -161,6 +175,11 @@ public class GodTextManager : MonoBehaviour
         godTextEnabled = false;
     }
 
+    public IEnumerator FirstWarning()
+    {
+        godTextState = godTextStates.FirstWarning;
+        yield return null;
+    }
 
     
     public IEnumerator SleepWarning()

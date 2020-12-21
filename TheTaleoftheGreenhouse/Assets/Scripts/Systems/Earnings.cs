@@ -34,7 +34,7 @@ public class Earnings : MonoBehaviour
     
     public void DeactivateNotification()
     {
-        LeanTween.moveX(earnings, Screen.width * 1.5f, 2f).setEaseLinear();
+        LeanTween.moveX(earnings, Screen.width * 3f, 2f).setEaseLinear();
     }
     
     
@@ -45,8 +45,4 @@ public class Earnings : MonoBehaviour
         soldValue.text = gainedGold.ToString();
         gold.text = shopBehaviourBuy.playerMoney.ToString();
     }
-    
-    
-    
-    
 }

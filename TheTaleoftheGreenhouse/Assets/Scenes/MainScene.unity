@@ -20042,11 +20042,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3404747766204360879, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
   m_PrefabInstance: {fileID: 1901548647}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1822306466 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2134253250, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-  m_PrefabInstance: {fileID: 1901548647}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1834782230
 GameObject:
   m_ObjectHideFlags: 0
@@ -20414,30 +20409,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 623032481, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 623032482, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1292.5
+      value: 3763
       objectReference: {fileID: 0}
-    - target: {fileID: 623032482, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+    - target: {fileID: 1101191001, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 345
+      value: 142
       objectReference: {fileID: 0}
-    - target: {fileID: 623032485, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_CullTransparentMesh
+    - target: {fileID: 1101191001, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101191001, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1276.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300769755, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_text
+      value: This Greenhouse is filthy! You should remove all dead plants...
       objectReference: {fileID: 0}
     - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 2134253254, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: beginnerInfo
-      value: 
-      objectReference: {fileID: 1822306466}
     - target: {fileID: 3404747764753100702, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

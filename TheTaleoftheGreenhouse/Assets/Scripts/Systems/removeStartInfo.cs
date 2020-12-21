@@ -25,7 +25,7 @@ public class removeStartInfo : MonoBehaviour
 
     public void ExitInfo()
     {
-        LeanTween.moveX(beginnerInfo, Screen.width * 1.5f, 3f).setEaseLinear();
+        LeanTween.moveX(beginnerInfo, Screen.width * 3f, 3f).setEaseLinear();
     }
 
 }
