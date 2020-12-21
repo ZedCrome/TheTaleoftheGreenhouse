@@ -558,13 +558,14 @@ public class ShopBehaviourBuy : MonoBehaviour
             {
                 manaPlantCantAfford.SetActive(true);
             }
-            else if (maxManaPlants > amountOfManaPlants)
-            {
-                SetManaPlantOutOfStock(false);
-            }
             else if (playerMoney >= manaPlantCost)
             {
                 manaPlantCantAfford.SetActive(false);
+            }
+            
+            if (maxManaPlants > amountOfManaPlants)
+            {
+                SetManaPlantOutOfStock(false);
             }
         }
     }
@@ -601,13 +602,14 @@ public class ShopBehaviourBuy : MonoBehaviour
             {
                 manaStorageItemCantAfford.SetActive(true);
             }
-            if (maxManaStorageItems > amountOfManaStorageItems)
-            {
-                SetManaStorageOutOfStock(false);
-            }
             else if (playerMoney >= manaStorageItemCost) 
             {
                 manaStorageItemCantAfford.SetActive(false);
+            }
+            
+            if (maxManaStorageItems > amountOfManaStorageItems)
+            {
+                SetManaStorageOutOfStock(false);
             }
         }
     }
