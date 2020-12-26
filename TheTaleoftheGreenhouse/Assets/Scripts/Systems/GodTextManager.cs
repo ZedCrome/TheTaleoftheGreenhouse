@@ -12,6 +12,7 @@ public class GodTextManager : MonoBehaviour
     public godTextStates godTextState;
     private bool godTextEnabled = false;
     private bool firstWarning = false;
+    private bool guideInfo = false;
 
     private AudioSource audioSource;
     public AudioClip warningSound;
@@ -51,6 +52,7 @@ public class GodTextManager : MonoBehaviour
     {
         Default,
         FirstWarning,
+        GuideInfo,
         SleepWarning,
         CompostWarning,
         SellWarning, 
@@ -75,7 +77,13 @@ public class GodTextManager : MonoBehaviour
                 break;
             
             case godTextStates.FirstWarning:
-                godTextEdit.text = "Clean out the dead plants from the greenhouse.";
+                godTextEnabled = true;
+                StartCoroutine(FirstWarning());
+                break;
+            
+            case godTextStates.GuideInfo:
+                godTextEdit.text =
+                    "Great, now buy and grow some plants! If you get stuck, all help you need can be found in the book";
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
@@ -185,6 +193,15 @@ public class GodTextManager : MonoBehaviour
     public IEnumerator FirstWarning()
     {
         godTextState = godTextStates.FirstWarning;
+        LeanTween.moveY(godTextTransform, 35, 0.4f).setEaseLinear();
+        godTextEdit.text = "You should clean out the dead plants from the greenhouse.";
+        yield return new WaitForSeconds(6);
+        LeanTween.moveY(godTextTransform, 140, 0.4f).setEaseLinear();
+        yield return new WaitForSeconds(0.5f);
+        LeanTween.moveY(godTextTransform, 35, 0.4f).setEaseLinear();
+        godTextEdit.text = "All help you need can be found in the book! Happy Planting!";
+        yield return new WaitForSeconds(6);
+        LeanTween.moveY(godTextTransform, 140, 0.4f).setEaseLinear();
         yield return null;
     }
 

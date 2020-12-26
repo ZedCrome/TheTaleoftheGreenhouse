@@ -14,6 +14,12 @@ public class ShopBehaviour : MonoBehaviour
     [SerializeField] private RectTransform notesContent;
     [SerializeField] private RectTransform noteContentBackground;
 
+    [Header("QUEST")] [Space(5)] 
+    [SerializeField] private GameObject questLog;
+    [SerializeField] private RectTransform questContent;
+    [SerializeField] private RectTransform questContentBackground;
+    
+
     private DayNightCycle dayNightCycle;
     private ShopBehaviourBuy shopBehaviourBuy;
 
@@ -54,6 +60,7 @@ public class ShopBehaviour : MonoBehaviour
             GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
             LeanTween.scale(buyContent, new Vector3(1, 1, 1), 0.5f).setEaseOutBack().setOnComplete(TweenBuyContentBackGroundFadeIn);
             LeanTween.scale(notesContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInBack();
+            LeanTween.scale(questContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInBack();
         }
     }
     
@@ -61,6 +68,7 @@ public class ShopBehaviour : MonoBehaviour
     public void ExitShop()
     {
         LeanTween.alpha(buyContentBackground, 0f, 0.15f);
+        LeanTween.alpha(questContentBackground, 0f, 0.15f);
         LeanTween.alpha(noteContentBackground, 0f, 0.15f).setOnComplete(TweenBuyContentFadeOut);
         shopBehaviourBuy.ClearShopOnExit();
         
@@ -71,13 +79,22 @@ public class ShopBehaviour : MonoBehaviour
     {
         notesMenu.SetActive(true);
         buyMenu.SetActive(false);
+        questLog.SetActive(false);
     }
 
     
     public void ActivateShopMenu()
     {
         notesMenu.SetActive(false);
+        questLog.SetActive(false);
         buyMenu.SetActive(true);
+    }
+
+    public void ActivateQuestMenu()
+    {
+        questLog.SetActive(true);
+        notesMenu.SetActive(false);
+        buyMenu.SetActive(false);
     }
     
     
@@ -85,12 +102,14 @@ public class ShopBehaviour : MonoBehaviour
     {
         LeanTween.alpha(buyContentBackground, 0.8f, 0.5f);
         LeanTween.alpha(noteContentBackground, 0.8f, 0.5f);
+        LeanTween.alpha(questContentBackground, 0.8f, 0.5f);
     }
     
     
     private void TweenBuyContentFadeOut()
     {
         LeanTween.scale(buyContent, new Vector3(0f, 0f, 0f), 0.5f).setEaseInBack();
+        LeanTween.scale(questContent, new Vector3(0f, 0f, 0f), 0.5f).setEaseInBack();
         LeanTween.scale(notesContent, new Vector3(0f, 0f, 0f), 0.5f).setEaseInBack().setOnComplete(CloseShop);
     }
 
@@ -99,6 +118,7 @@ public class ShopBehaviour : MonoBehaviour
     {
         buyMenu.SetActive(false);
         notesMenu.SetActive(false);
+        questLog.SetActive(false);
         GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
     }
     
