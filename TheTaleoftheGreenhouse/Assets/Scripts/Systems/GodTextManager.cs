@@ -57,6 +57,7 @@ public class GodTextManager : MonoBehaviour
         CompostWarning,
         SellWarning,
         StackSellWarning,
+        SellDeadWarning,
         DeliveryInfo,
         CuttingsWarning,
         DoneForToday,
@@ -96,14 +97,14 @@ public class GodTextManager : MonoBehaviour
                 break;
             
             case godTextStates.CompostWarning:
-                godTextEdit.text = "You cannot compost that item. Only plants and cuttings are allowed.";
+                godTextEdit.text = "You cannot compost that item. Only plants are allowed.";
                 audioSource.PlayOneShot(warningSound);
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
             
             case godTextStates.SellWarning:
-                godTextEdit.text = "You cannot sell that item. Only plants, cuttings and pots are sellable.";
+                godTextEdit.text = "You cannot sell that item. Only plants, pots and cubes are sellable.";
                 audioSource.PlayOneShot(warningSound);
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
@@ -111,6 +112,13 @@ public class GodTextManager : MonoBehaviour
 
             case godTextStates.StackSellWarning:
                 godTextEdit.text = "The pot or cube needs to be empty to sell.";
+                audioSource.PlayOneShot(warningSound);
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+
+            case godTextStates.SellDeadWarning:
+                godTextEdit.text = "Dead plants are not for sale.";
                 audioSource.PlayOneShot(warningSound);
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;

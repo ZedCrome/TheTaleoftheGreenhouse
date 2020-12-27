@@ -65,6 +65,14 @@ public class SellBoxBehaviour : MonoBehaviour
                             sellItem.transform.GetChild(0).gameObject.SetActive(false);                          
                             sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
+                        if (sellItem.tag == "PlantNormal" || sellItem.tag == "PlantMana")
+                        {
+                            if (sellItem.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Dead)
+                            {
+                                GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.SellDeadWarning);
+                                return;
+                            }
+                        }
                         else
                         {
                             sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
