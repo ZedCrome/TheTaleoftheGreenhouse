@@ -55,8 +55,8 @@ public class GodTextManager : MonoBehaviour
         GuideInfo,
         SleepWarning,
         CompostWarning,
-        SellWarning, 
-        PotSellWarning,
+        SellWarning,
+        StackSellWarning,
         DeliveryInfo,
         CuttingsWarning,
         DoneForToday,
@@ -109,8 +109,8 @@ public class GodTextManager : MonoBehaviour
                 godTextEnabled = true;
                 break;
 
-            case godTextStates.PotSellWarning:
-                godTextEdit.text = "The pot needs to be empty to sell.";
+            case godTextStates.StackSellWarning:
+                godTextEdit.text = "The pot or cube needs to be empty to sell.";
                 audioSource.PlayOneShot(warningSound);
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
@@ -202,7 +202,7 @@ public class GodTextManager : MonoBehaviour
         godTextEdit.text = "All help you need can be found in the book! Happy Planting!";
         yield return new WaitForSeconds(6);
         LeanTween.moveY(godTextTransform, 140, 0.4f).setEaseLinear();
-        yield return null;
+        LeanTween.moveY(godTextTransform, 140, 0.4f).setEaseLinear().setOnComplete(BacktoDefault);
     }
 
     

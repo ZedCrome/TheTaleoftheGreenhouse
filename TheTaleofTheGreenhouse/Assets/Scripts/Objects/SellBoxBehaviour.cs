@@ -53,17 +53,13 @@ public class SellBoxBehaviour : MonoBehaviour
                     PlayerInteract.instance.inventoryItem.CompareTag("Pot") ||
                     PlayerInteract.instance.inventoryItem.CompareTag("ManaStorage"))
                     {
-                        GameObject sellItem = PlayerInteract.instance.inventoryItem;
-
-                        if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
-                        {
-                            sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                        }
-                        else if (sellItem.tag == "Pot")
+                        GameObject sellItem = PlayerInteract.instance.inventoryItem;  
+                        
+                        if (sellItem.tag == "Pot" || sellItem.tag == "ManaStorage")
                         {
                             if (Tools.GetSplitStackSize(sellItem) > 1)
                             {
-                                GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.PotSellWarning);
+                                GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.StackSellWarning);
                                 return;
                             }
                             sellItem.transform.GetChild(0).gameObject.SetActive(false);                          
@@ -73,7 +69,7 @@ public class SellBoxBehaviour : MonoBehaviour
                         {
                             sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
-
+                     
                         PlayerInteract.instance.inventoryItem = null;
                         sellItem.GetComponent<InteractableEffect>().Enable(false);
 
@@ -100,6 +96,7 @@ public class SellBoxBehaviour : MonoBehaviour
                     }
                     else
                     {
+                        Debug.Log("Tryibng to do sellwarning");
                         GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.SellWarning);
                     }
                 }
