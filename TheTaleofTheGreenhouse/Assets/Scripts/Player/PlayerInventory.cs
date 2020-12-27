@@ -6,7 +6,6 @@ public class PlayerInventory : MonoBehaviour
 
     public GameObject cuttingPrefab;
     
-    private GameObject item;
     public int normalCuttingsInInventory;
     private int manaCuttingsInInventory;
     public int MaxCuttings = 2;
@@ -46,9 +45,8 @@ public class PlayerInventory : MonoBehaviour
         {
             GameObject newNormalCutting = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
             newNormalCutting.GetComponent<PlantStates>().currentState = PlantStates.PlantState.Cutting;
-            newNormalCutting.transform.localScale = new Vector3(1f, 1f, 1f);
             normalCuttingsInInventory -= 1;
-            PlayerInteract.instance.inventoryItem = newNormalCutting;            
+            PlayerInteract.instance.inventoryItem = newNormalCutting;
         }
         else if (manaCuttingsInInventory > 0)
         {

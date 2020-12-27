@@ -57,10 +57,6 @@ public class SellBoxBehaviour : MonoBehaviour
 
                         if (sellItem.tag == "PlantMana" || sellItem.tag == "PlantNormal")
                         {
-                            if (sellItem.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Cutting)
-                            {                               
-                                PlayerState.instance.ChangeHandState(PlayerState.HandState.None);
-                            }
                             sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
                         else if (sellItem.tag == "Pot")
