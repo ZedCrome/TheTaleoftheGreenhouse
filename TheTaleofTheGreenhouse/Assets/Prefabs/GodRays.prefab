@@ -102,6 +102,23 @@ MonoBehaviour:
   minRange: 0.7
   maxRange: 1
   rangeStepModifier: 0.2
+  useTime: 0
+  currentTime: 0
+  dayTimeBlockStart: 0
+  dayTimeBlockEnd: 0
+  eveningTimeBlockStart: 0
+  eveningTimeBlockEnd: 0
+  useIntensity: 0
+  intensityTransitionTime: 0.1
+  currentIntensityModifier: 0
+  dayIntensityModifier: 0
+  eveningIntensityModifier: 0
+  useColor: 0
+  colorTransitionTime: 0.1
+  colorTimer: 0
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  dayColor: {r: 0, g: 0, b: 0, a: 0}
+  eveningColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1413697826996206925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +262,23 @@ MonoBehaviour:
   minRange: 0.7
   maxRange: 1
   rangeStepModifier: 0.2
+  useTime: 0
+  currentTime: 0
+  dayTimeBlockStart: 0
+  dayTimeBlockEnd: 0
+  eveningTimeBlockStart: 0
+  eveningTimeBlockEnd: 0
+  useIntensity: 0
+  intensityTransitionTime: 0.1
+  currentIntensityModifier: 0
+  dayIntensityModifier: 0
+  eveningIntensityModifier: 0
+  useColor: 0
+  colorTransitionTime: 0.1
+  colorTimer: 0
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  dayColor: {r: 0, g: 0, b: 0, a: 0}
+  eveningColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &7323680402514310572
 MonoBehaviour:
   m_ObjectHideFlags: 0

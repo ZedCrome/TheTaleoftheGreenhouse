@@ -1575,7 +1575,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: maxIntensity
-      value: 0.3
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: useTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayTimeBlockEnd
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningTimeBlockStart
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningTimeBlockEnd
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: useIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayIntensityModifier
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningIntensityModifier
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: useColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningColor.r
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningColor.g
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningColor.b
+      value: 0.6901961
       objectReference: {fileID: 0}
     - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: minIntensity
@@ -1583,7 +1639,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: maxIntensity
-      value: 0.3
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: useTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: useColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: useIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayTimeBlockEnd
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningTimeBlockStart
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningTimeBlockEnd
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningColor.r
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningColor.g
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningColor.b
+      value: 0.6901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: dayIntensityModifier
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: eveningIntensityModifier
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5906955985058975816, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2018,7 +2130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 81746645058005389, guid: 2ccbc25890179b6498d88cadffd7c4a4, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 81746645058005389, guid: 2ccbc25890179b6498d88cadffd7c4a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8090,6 +8202,23 @@ MonoBehaviour:
   minRange: 0.8
   maxRange: 1
   rangeStepModifier: 0.8
+  useTime: 0
+  currentTime: 0
+  dayTimeBlockStart: 0
+  dayTimeBlockEnd: 0
+  eveningTimeBlockStart: 0
+  eveningTimeBlockEnd: 0
+  useIntensity: 0
+  intensityTransitionTime: 0.1
+  currentIntensityModifier: 0
+  dayIntensityModifier: 0
+  eveningIntensityModifier: 0
+  useColor: 0
+  colorTransitionTime: 0.1
+  colorTimer: 0
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  dayColor: {r: 0, g: 0, b: 0, a: 0}
+  eveningColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1238316455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13913,7 +14042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7241649203280427814, guid: 3c6461f53af2bdb48920f505d296f11b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7241649203280427814, guid: 3c6461f53af2bdb48920f505d296f11b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18791,7 +18920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1147233667631105593, guid: 0572163cd609c164da8de2e394fbae1b, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1147233667631105593, guid: 0572163cd609c164da8de2e394fbae1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
