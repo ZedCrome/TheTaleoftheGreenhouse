@@ -72,6 +72,7 @@ public class SellBoxBehaviour : MonoBehaviour
                                 GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.SellDeadWarning);
                                 return;
                             }
+                            sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
                         else
                         {
