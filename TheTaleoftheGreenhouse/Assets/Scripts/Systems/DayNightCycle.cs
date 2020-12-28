@@ -235,7 +235,7 @@ public class DayNightCycle : MonoBehaviour
 
             if (sellBox.GetComponent<SellItems>().GetGold() > 0)
             {
-                earnings.ActivateNotification();
+                StartCoroutine(earnings.ActivateNotification());
                 earnings.EarningsNotification();
             }
 

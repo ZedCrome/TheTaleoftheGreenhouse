@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -20,15 +21,16 @@ public class Earnings : MonoBehaviour
     }
 
     
-    public void ActivateNotification()
+    public IEnumerator ActivateNotification()
     {
         
         if (_removeStartInfo.beginnerInfo.activeInHierarchy)
         {
             _removeStartInfo.ExitInfo();
         }
-
         LeanTween.moveX(earnings, Screen.width * 0.91f, 0.5f).setEaseLinear();
+        yield return new WaitForSeconds(12);
+        DeactivateNotification();
     }
 
     
