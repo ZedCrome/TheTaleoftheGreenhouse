@@ -7,6 +7,7 @@ using Light2D = UnityEngine.Experimental.Rendering.Universal.Light2D;
 [DefaultExecutionOrder(-9)]
 public class DayNightCycle : MonoBehaviour
 {
+    public static DayNightCycle instance;
     public Earnings earnings;
     [SerializeField] private AudioSource deliverySound;
     [SerializeField] GameObject nightCanvas;
@@ -20,7 +21,6 @@ public class DayNightCycle : MonoBehaviour
     public GameObject sleepPrompt;
     public GameObject forcedSleeppanel;
     public RectTransform nightPanel;
-    public static DayNightCycle instance;
     public float realSecondsPerIngameDay;
     private float initRealSecondsPerIngameDay;
     public float nightFadeDuration;
