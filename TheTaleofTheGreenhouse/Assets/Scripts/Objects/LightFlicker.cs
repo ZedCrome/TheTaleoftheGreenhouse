@@ -33,7 +33,7 @@ public class LightFlicker : MonoBehaviour
     [Space(5)] 
     public bool useIntensity;
     private float intensityTimer;
-    public float intensityTransitionTime;
+    public float intensityTransitionTime = 0.1f;
     [SerializeField]
     private float currentIntensityModifier;
     public float dayIntensityModifier;
