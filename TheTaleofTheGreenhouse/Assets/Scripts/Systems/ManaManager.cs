@@ -50,11 +50,13 @@ public class ManaManager : MonoBehaviour
     private void OnEnable()
     {
         Motherlode.instance.addManaCheat += AddMana;
+        Motherlode.instance.removeManaCheat += RemoveMana;
     }
     
     private void OnDisable()
     {
         Motherlode.instance.addManaCheat -= AddMana;
+        Motherlode.instance.removeManaCheat -= RemoveMana;
     }
     
     private void Update()
@@ -174,6 +176,12 @@ public class ManaManager : MonoBehaviour
     {
         currentMana += newMana;
         Debug.Log("Added mana: " + newMana + " | CurrentMana: " + currentMana);
+    }
+
+    public void RemoveMana(float mana)
+    {
+        currentMana -= mana;
+        Debug.Log("Removed mana: " + mana + " | CurrentMana: " + currentMana);
     }
     
     public void SaveSister()

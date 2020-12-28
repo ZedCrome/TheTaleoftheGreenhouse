@@ -39,9 +39,21 @@ public class Motherlode : MonoBehaviour
 
                 audioSource.PlayOneShot(giveGold);
             }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                RemoveGoldCheat(10);
+
+                audioSource.PlayOneShot(giveGold);
+            }
             if (Input.GetKeyDown(KeyCode.M))
             {
                 AddManaCheat(15f);
+
+                audioSource.PlayOneShot(knifeMana);
+            }
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                RemoveManaCheat(5f);
 
                 audioSource.PlayOneShot(knifeMana);
             }
@@ -53,11 +65,23 @@ public class Motherlode : MonoBehaviour
     {
         addGoldCheat?.Invoke(amount);
     }
+
+    public event Action<int> removeGoldCheat;
+    public void RemoveGoldCheat(int amount)
+    {
+        removeGoldCheat?.Invoke(amount);
+    }
     
     public event Action<float> addManaCheat;
     public void AddManaCheat(float amount)
     {
         addManaCheat?.Invoke(amount);
     }
-    
+
+    public event Action<float> removeManaCheat;
+    public void RemoveManaCheat(float amout)
+    {
+        removeManaCheat?.Invoke(amout);
+    }
+
 }
