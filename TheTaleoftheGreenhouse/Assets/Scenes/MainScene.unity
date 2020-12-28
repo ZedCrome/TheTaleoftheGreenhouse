@@ -1561,6 +1561,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 902747929163216577, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fc18c74e190f48b49afef7e50518cdbf, type: 3}
     - target: {fileID: 1413697826996206925, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1569,6 +1573,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0.34
       objectReference: {fileID: 0}
+    - target: {fileID: 1413697826996206925, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: m_LightCookieSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea0478597e3e5994c9761d253bfe49ef, type: 3}
     - target: {fileID: 1855614215481963551, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: minIntensity
       value: 0.2
@@ -1691,19 +1699,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: dayIntensityModifier
-      value: 0.05
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3033295848942333655, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: eveningIntensityModifier
       value: -0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 5064553459526632148, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea0478597e3e5994c9761d253bfe49ef, type: 3}
     - target: {fileID: 5906955985058975816, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.77
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: 5906955985058975816, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.91
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 5906955985058975816, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1765,6 +1777,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0.34
       objectReference: {fileID: 0}
+    - target: {fileID: 7323680402514310572, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: m_LightCookieSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fc18c74e190f48b49afef7e50518cdbf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
 --- !u!1 &620089825 stripped
@@ -21846,6 +21862,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 902747929163216577, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cb55ebd4ece0d7341972d0f0616f5c3f, type: 3}
+    - target: {fileID: 1413697826996206925, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: m_LightCookieSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ad4b7a4ff8fd30429bda483e65c7b0a, type: 3}
+    - target: {fileID: 5064553459526632148, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ad4b7a4ff8fd30429bda483e65c7b0a, type: 3}
     - target: {fileID: 5906955985058975816, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.07
@@ -21894,5 +21922,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: GodRays
       objectReference: {fileID: 0}
+    - target: {fileID: 7323680402514310572, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
+      propertyPath: m_LightCookieSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cb55ebd4ece0d7341972d0f0616f5c3f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368a1934ed12309408c643084a0fea9c, type: 3}
