@@ -587,7 +587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &292331762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3473,7 +3473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Clean out the dead plants from greenhouse.
+  m_text: This Greenhouse is filthy! You should remove all dead plants...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -7471,7 +7471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7080273934947333724
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7756,7 +7756,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.11
+  m_Value: 0.011
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7903,6 +7903,7 @@ GameObject:
   - component: {fileID: 3404747764933322850}
   - component: {fileID: 3404747764933322852}
   - component: {fileID: 3404747764933322853}
+  - component: {fileID: 1092426173}
   m_Layer: 2
   m_Name: KnifePanel
   m_TagString: Untagged
@@ -7975,6 +7976,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1092426173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404747764933322851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5e9a88ad4f8a64289231f734158035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knifeUI: {fileID: 3404747764933322851}
+  manaSlider: {fileID: 3404747764568042050}
+  askPanel: {fileID: 3404747765226954320}
+  askPanelSister: {fileID: 2016754600}
 --- !u!1 &3404747764942166558
 GameObject:
   m_ObjectHideFlags: 0
