@@ -846,6 +846,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3775137312368484a94b3dd984d67a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &275460410 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 664991445, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+  m_PrefabInstance: {fileID: 1088609157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &293741794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3404747764999992721, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
@@ -7634,10 +7639,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248942542}
     m_Modifications:
-    - target: {fileID: 2264928498734812777, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
-      propertyPath: m_Name
-      value: TransferMana
-      objectReference: {fileID: 0}
     - target: {fileID: 3097841064511172186, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.96
@@ -7685,14 +7686,6 @@ PrefabInstance:
     - target: {fileID: 3097841064511172187, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
       propertyPath: m_Name
       value: Shop
-      objectReference: {fileID: 0}
-    - target: {fileID: 7420617910114377964, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7587511640829956139, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
-      propertyPath: m_text
-      value: Transfer 3 manacubes at once!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
@@ -20516,46 +20509,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 292331761, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 623032482, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 3763
-      objectReference: {fileID: 0}
-    - target: {fileID: 1101191001, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 142
-      objectReference: {fileID: 0}
-    - target: {fileID: 1101191001, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1101191001, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1276.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 1300769755, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: Clean out the dead plants from greenhouse.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1773151850, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1773151850, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1773151850, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1773151850, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -20672,6 +20625,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 990260336}
+    - target: {fileID: 6458829572925898076, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 275460410}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
 --- !u!114 &1901548648 stripped
@@ -21336,6 +21293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd4ba3297ef8e3a4eb8b9dba41282802, type: 3}
+--- !u!82 &2063219413 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7866771370530819259, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+  m_PrefabInstance: {fileID: 1088609157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2081725338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21711,9 +21673,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 61768599}
     - target: {fileID: 13060473328005369, guid: 21c020d221161014192768b83be874a0, type: 3}
-      propertyPath: exitButton
+      propertyPath: noteArrival
       value: 
-      objectReference: {fileID: 545778900}
+      objectReference: {fileID: 150271015}
+    - target: {fileID: 13060473328005369, guid: 21c020d221161014192768b83be874a0, type: 3}
+      propertyPath: paperFolding
+      value: 
+      objectReference: {fileID: 2063219413}
     - target: {fileID: 13060473328005369, guid: 21c020d221161014192768b83be874a0, type: 3}
       propertyPath: exitNoteButton
       value: 
@@ -21722,13 +21688,5 @@ PrefabInstance:
       propertyPath: visibleNote
       value: 
       objectReference: {fileID: 427418561}
-    - target: {fileID: 13060473328005369, guid: 21c020d221161014192768b83be874a0, type: 3}
-      propertyPath: noteArrival
-      value: 
-      objectReference: {fileID: 150271015}
-    - target: {fileID: 13060473328005369, guid: 21c020d221161014192768b83be874a0, type: 3}
-      propertyPath: currentNote
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21c020d221161014192768b83be874a0, type: 3}
