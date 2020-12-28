@@ -137,9 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fc733ec0dbcfa4d9d987c7b3cd5cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minIntensity: 0.3
-  maxIntensity: 0.5
-  intensityStepModifier: 0.3
-  minRange: 0.5
+  minIntensity: 0.5
+  maxIntensity: 0.8
+  intensityStepModifier: 0.2
+  minRange: 0.7
   maxRange: 1
   rangeStepModifier: 0.2
