@@ -12,6 +12,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     [SerializeField] private AudioSource buySound;
     public TMP_Text totalCostText;
     [SerializeField] private TMP_Text playerMoneyText;
+    [SerializeField] private TMP_Text hudMoneyText;
     public int playerMoney = 20;
     public bool hasBoughtSomething = false;
     public int totalCost;
@@ -131,6 +132,7 @@ public class ShopBehaviourBuy : MonoBehaviour
     public void FixedUpdate()
     {
         playerMoneyText.text = playerMoney.ToString();
+        hudMoneyText.text = playerMoneyText.text;
         TogglePurchaseOfItems();
     }
 
