@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class NoteManager : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject deliveryNote;
     [SerializeField] GameObject shearsNote;
     [SerializeField] AudioSource noteArrival;
+    [SerializeField] AudioSource paperFolding;
 
     [SerializeField] GameObject exitNoteButton;
+    
 
     private float exitButtonStartPosition;
 
@@ -23,7 +26,6 @@ public class NoteManager : MonoBehaviour
     public GameObject visibleNote;
 
     private bool activeNote;
-
     private void Start()
     {
         if (instance == null)
@@ -40,9 +42,10 @@ public class NoteManager : MonoBehaviour
         exitButtonStartPosition = exitNoteButton.transform.position.y;
     }
 
-
+    
     public void Update()
     {
+
         if (!activeNote)
         {
             switch (currentNote)
@@ -58,8 +61,8 @@ public class NoteManager : MonoBehaviour
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
                     noteArrival.Play();
-                    LeanTween.moveY(visibleNote, Screen.height / 3.75f, 1.5f).setEaseOutBack();
-                    LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(visibleNote, Screen.height / 2.1f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(exitNoteButton, Screen.height/1.55f, 1.5f).setEaseOutBack();
                     break;
 
                 case NoteStates.ManaNote:
@@ -68,8 +71,8 @@ public class NoteManager : MonoBehaviour
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
                     noteArrival.Play();
-                    LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
-                    LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(visibleNote, Screen.height/2.1f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(exitNoteButton, Screen.height/1.55f, 1.5f).setEaseOutBack();
                     break;
 
                 case NoteStates.SellBasketNote:
@@ -78,8 +81,8 @@ public class NoteManager : MonoBehaviour
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
                     noteArrival.Play();
-                    LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
-                    LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(visibleNote, Screen.height/2.1f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(exitNoteButton, Screen.height/1.55f, 1.5f).setEaseOutBack();
                     break;
 
                 case NoteStates.KnifeNote:
@@ -88,8 +91,8 @@ public class NoteManager : MonoBehaviour
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
                     noteArrival.Play();
-                    LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
-                    LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(visibleNote, Screen.height/2.1f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(exitNoteButton, Screen.height/1.55f, 1.5f).setEaseOutBack();
                     break;
 
                 case NoteStates.CompostNote:
@@ -98,8 +101,8 @@ public class NoteManager : MonoBehaviour
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
                     noteArrival.Play();
-                    LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
-                    LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(visibleNote, Screen.height/2.1f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(exitNoteButton, Screen.height/1.55f, 1.5f).setEaseOutBack();
                     break;
 
                 case NoteStates.DeliveryNote:
@@ -108,8 +111,8 @@ public class NoteManager : MonoBehaviour
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
                     noteArrival.Play();
-                    LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
-                    LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(visibleNote, Screen.height/2.1f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(exitNoteButton, Screen.height/1.55f, 1.5f).setEaseOutBack();
                     break;
 
                 case NoteStates.ShearsNote:
@@ -118,8 +121,8 @@ public class NoteManager : MonoBehaviour
                     exitNoteButton.SetActive(true);
                     visibleNote.SetActive(true);
                     noteArrival.Play();
-                    LeanTween.moveY(visibleNote, Screen.height/3.75f, 1.5f).setEaseOutBack();
-                    LeanTween.moveY(exitNoteButton, Screen.height/2.35f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(visibleNote, Screen.height/2.1f, 1.5f).setEaseOutBack();
+                    LeanTween.moveY(exitNoteButton, Screen.height/1.55f, 1.5f).setEaseOutBack();
                     break;
             }
         }      
@@ -138,14 +141,16 @@ public class NoteManager : MonoBehaviour
     
     public void ExitNoteTransition()
     {            
-        LeanTween.moveY(exitNoteButton, -Screen.height/3f, 0.5f);
-        LeanTween.moveY(visibleNote, -Screen.height/2f, 0.5f).setOnComplete(ExitNote);
+        exitNoteButton.SetActive(false);
+        LeanTween.scale(visibleNote, new Vector3(0, 0, 0), 0.5f);
+        LeanTween.moveY(visibleNote, Screen.height / 2f, 0.5f).setEaseOutQuad();
+        LeanTween.moveX(visibleNote, Screen.width/3.8f, 0.5f).setEaseOutQuad().setOnComplete(ExitNote);
     }
 
     public void ExitNote()
     {
+        paperFolding.Play();
         ActivateNote(NoteStates.None);
         activeNote = false;
     }
-
 }
