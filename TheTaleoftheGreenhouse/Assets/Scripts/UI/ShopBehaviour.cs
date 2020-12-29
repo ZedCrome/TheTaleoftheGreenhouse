@@ -35,11 +35,13 @@ public class ShopBehaviour : MonoBehaviour
     
     public void Update()
     {
-        if (buyMenu.activeInHierarchy)
+        if (buyMenu.activeInHierarchy || notesMenu.activeInHierarchy || questLog.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 buyMenu.SetActive(false);
+                notesMenu.SetActive(false);
+                questLog.SetActive(false);
                 GameManager.instance.ChangeGameState(GameManager.GameState.GameLoop);
                 shopBehaviourBuy.ClearShopOnExit();
             }
