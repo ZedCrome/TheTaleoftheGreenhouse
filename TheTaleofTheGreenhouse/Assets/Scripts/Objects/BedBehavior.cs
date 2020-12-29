@@ -43,7 +43,7 @@ public class BedBehavior : MonoBehaviour
         {
             interactEffect.Enable(true);
             
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
                 if (PlayerState.instance.currentHandState == PlayerState.HandState.None)
                 {
