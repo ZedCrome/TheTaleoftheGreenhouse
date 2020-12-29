@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class NoteManager : MonoBehaviour
