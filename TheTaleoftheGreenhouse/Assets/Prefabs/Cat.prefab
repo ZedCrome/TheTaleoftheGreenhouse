@@ -621,6 +621,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 86b82af0521621745a3e82bdd0111b1f, type: 3}
   - {fileID: 8300000, guid: 7ba42c6f10a3e564ea766de518a3b5f9, type: 3}
   - {fileID: 8300000, guid: 7d7446855a0ba8741a2b3d92e0162bac, type: 3}
+  BuyMenu: {fileID: 0}
+  NotesMenu: {fileID: 0}
+  TaskMenu: {fileID: 0}
 --- !u!1 &8472855595014869683
 GameObject:
   m_ObjectHideFlags: 0

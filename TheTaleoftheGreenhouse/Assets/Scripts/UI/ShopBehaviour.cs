@@ -50,20 +50,24 @@ public class ShopBehaviour : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        if (GameManager.instance.currentGameState != GameManager.GameState.ShopMenu)
         {
-            if (firstTimeUsing)
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
-                NoteManager.instance.ActivateNote(NoteManager.NoteStates.DeliveryNote);
-                firstTimeUsing = false;
+                if (firstTimeUsing)
+                {
+                    NoteManager.instance.ActivateNote(NoteManager.NoteStates.DeliveryNote);
+                    firstTimeUsing = false;
+                }
+                shopBehaviourBuy.TogglePurchaseOfItems();
+                buyMenu.SetActive(true);
+                GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
+                LeanTween.scale(buyContent, new Vector3(1, 1, 1), 0.5f).setEaseOutBack().setOnComplete(TweenBuyContentBackGroundFadeIn);
+                LeanTween.scale(notesContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInBack();
+                LeanTween.scale(questContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInBack();
             }
-            shopBehaviourBuy.TogglePurchaseOfItems();
-            buyMenu.SetActive(true);
-            GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
-            LeanTween.scale(buyContent, new Vector3(1, 1, 1), 0.5f).setEaseOutBack().setOnComplete(TweenBuyContentBackGroundFadeIn);
-            LeanTween.scale(notesContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInBack();
-            LeanTween.scale(questContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInBack();
         }
+        
     }
     
     
