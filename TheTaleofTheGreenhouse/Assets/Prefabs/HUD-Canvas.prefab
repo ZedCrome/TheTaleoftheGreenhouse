@@ -7465,6 +7465,7 @@ GameObject:
   - component: {fileID: 685159600456285186}
   - component: {fileID: 3812645014531518567}
   - component: {fileID: 6458829572925898076}
+  - component: {fileID: 8961364297513216828}
   m_Layer: 2
   m_Name: ExitNoteButton
   m_TagString: Untagged
@@ -7597,6 +7598,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8961364297513216828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982652611458728285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5ba058cab690f439ec1800a7322760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3267042368375038690
 GameObject:
   m_ObjectHideFlags: 0
