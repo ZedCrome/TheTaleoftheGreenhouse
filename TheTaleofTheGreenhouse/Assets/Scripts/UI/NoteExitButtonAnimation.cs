@@ -5,23 +5,27 @@ using UnityEngine;
 
 public class NoteExitButtonAnimation : MonoBehaviour
 {
+    private GameObject exitButton;
+
+    private void Start()
+    {
+        exitButton = this.gameObject;
+    }
+
     private void OnEnable()
     {
-        throw new NotImplementedException();
+        StartCoroutine(AnimateButton());
     }
 
     private void OnDisable()
     {
-        throw new NotImplementedException();
+        StopCoroutine(AnimateButton());
     }
 
     private IEnumerator AnimateButton()
     {
-        while (exitInfo == false)
+        while (exitButton.activeSelf == true)
         {
-            LeanTween.scale(beginnerInfo, new Vector3(1.05f, 1.05f, 1.05f), 1).setEaseInOutSine();
-            yield return new WaitForSeconds(1);
-            LeanTween.scale(beginnerInfo, new Vector3(1f, 1f, 1f), 1).setEaseInOutSine();
             yield return new WaitForSeconds(1);
         }
     }
