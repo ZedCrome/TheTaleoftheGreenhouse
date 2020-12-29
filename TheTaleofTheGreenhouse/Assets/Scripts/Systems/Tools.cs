@@ -9,7 +9,11 @@ public class Tools : MonoBehaviour
     {
         if (audioClip.Length == 0)
         {
-            Debug.LogError("AudioClip does not contain any audio files");
+            if (GameManager.instance.debugActive)
+            {
+                Debug.Log(audioClip + " does not contain any audio files");
+            }
+            
             return null;
         }
         
