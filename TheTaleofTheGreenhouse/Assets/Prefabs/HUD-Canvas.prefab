@@ -1696,6 +1696,7 @@ GameObject:
   - component: {fileID: 623032485}
   - component: {fileID: 623032484}
   - component: {fileID: 623032483}
+  - component: {fileID: 703883156}
   m_Layer: 2
   m_Name: Reciept
   m_TagString: Untagged
@@ -1783,6 +1784,21 @@ MonoBehaviour:
   earnings: {fileID: 623032481}
   soldValue: {fileID: 336701676}
   gold: {fileID: 2012762318}
+--- !u!114 &703883156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623032481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5ba058cab690f439ec1800a7322760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitButton: {fileID: 468239807}
+  scaleOffset: 0.1
+  startScale: {x: 1.1, y: 1.1, z: 1.1}
 --- !u!1 &687146338
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,9 +6801,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5ba058cab690f439ec1800a7322760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitButton: {fileID: 0}
-  scaleOffset: 0
-  startScale: {x: 0, y: 0, z: 0}
+  exitButton: {fileID: 2982652611458728285}
+  scaleOffset: 0.1
+  startScale: {x: 1.1, y: 1.1, z: 1.1}
 --- !u!1 &3267042368375038690
 GameObject:
   m_ObjectHideFlags: 0
@@ -9457,7 +9473,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -125.86, y: -204}
+  m_AnchoredPosition: {x: -159, y: -210}
   m_SizeDelta: {x: 251.71777, y: 174.21387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5197956616045683744
