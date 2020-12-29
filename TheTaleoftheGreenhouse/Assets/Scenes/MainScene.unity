@@ -19342,17 +19342,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1611349583 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1006554520, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-  m_PrefabInstance: {fileID: 1642335332}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1621165538
 GameObject:
   m_ObjectHideFlags: 0
@@ -19480,70 +19469,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1006554519, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 545974321740895728, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 931818890005706853, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 931818890005706853, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 931818890005706853, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 931818890005706853, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 931818890005706853, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 16000
-      objectReference: {fileID: 0}
-    - target: {fileID: 931818890005706853, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 16000
-      objectReference: {fileID: 0}
     - target: {fileID: 7261686874708260484, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: m_Name
       value: TimeManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7261686874708260484, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: light
+      propertyPath: earnings
       value: 
-      objectReference: {fileID: 1611349583}
-    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: hourHandTransform
-      value: 
-      objectReference: {fileID: 163280798}
-    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: minuteHandTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: sleepText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 50891271}
-    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: realSecondsPerIngameDay
-      value: 120
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 623032483}
     - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: alreadyBoughtCanvas
       value: 
@@ -19553,14 +19486,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 896259541}
     - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: hoursPerDay
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: TimeAccelerator
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: shopNoteMenu
       value: 
       objectReference: {fileID: 165234513}
@@ -19569,9 +19494,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1373030002}
     - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: earnings
+      propertyPath: hourHandTransform
       value: 
-      objectReference: {fileID: 623032483}
+      objectReference: {fileID: 163280798}
+    - target: {fileID: 7261686874708260485, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 50891271}
     - target: {fileID: 7261686874708260490, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4215006
@@ -20767,10 +20696,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 990260336}
-    - target: {fileID: 6458829572925898076, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1339671094}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
 --- !u!114 &1901548648 stripped
@@ -21649,6 +21574,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6455221381640956469, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618364260633724462, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
