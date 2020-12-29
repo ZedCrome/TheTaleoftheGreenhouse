@@ -2074,8 +2074,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    The shears can take cuttings from full grown plants, which can 
-    be used to grow more plants.'
+    The shears can take cuttings from full grown Unella plants, which
+    can  be used to grow more plants.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -2502,8 +2502,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    The Mana catcher can take mana from the Sandrap flower and transport
-    it to a Mana Storage Item. It looses mana over time if it is not emptied.'
+    The mana catcher can take mana from the Sandrap flower and transport
+    it to a mana cube. It looses mana over time if it is not emptied.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -2639,7 +2639,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Some Items, like pots and Mana Cubes can stack to allow for better
+    Some Items, like pots and mana cubes can stack to allow for better
     organization.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -20019,8 +20019,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    The Mana cube can store mana over long periods of time, as well
-    as fuse mana into the Magical knife. '
+    The mana cube can store mana over long periods of time, as well
+    as fuse mana into the magical knife. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -27520,7 +27520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5952402472784316468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27720,10 +27720,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Magical knife has been inherited  from generation to generation since
+  m_text: The magical knife has been inherited  from generation to generation since
     before we can remember. When fully infused with the mana extracted from the Sandrap
     flower, it can cure any disease. No one knows where or when it was created, but
-    we have our suspicions that the cat knows...
+    we have our suspicions that the cat knows something...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -32384,12 +32384,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Unella plant is a rare breed of the Dwarf Umbrella Tree that can only
-    be found on the most remote parts of the world. It does not have any magical
-    properties but it is said that the flowers can be used to make a tea so delicious
-    people literally die.
+  m_text: 'The Unella plant is a rare breed of the Dwarf Umbrella Tree. The Unella
+    plant is a great source of income and  can only be found on the most remote parts
+    of the world. It does not have any magical properties but it is said that the
+    flowers can be used to make a tea so delicious people literally die.
 
-    Also, the Unella plant is a great source of income.'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}

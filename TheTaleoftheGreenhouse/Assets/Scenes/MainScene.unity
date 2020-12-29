@@ -7764,6 +7764,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248942542}
     m_Modifications:
+    - target: {fileID: 1734190843, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_text
+      value: '
+
+        The shears can take cuttings from full grown Unella plants,
+        which can  be used to grow more plants.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 785154543720346873, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877541811915283695, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_text
+      value: '
+
+        The mana cube can store mana over long periods of time, as
+        well as fuse mana into the magical knife. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404821959948800287, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_text
+      value: '
+
+        Some Items, like pots and mana cubes can stack to allow for
+        better organization.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504638167983592983, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_text
+      value: The magical knife has been inherited  from generation to generation
+        since before we can remember. When fully infused with the mana extracted
+        from the Sandrap flower, it can cure any disease. No one knows where or when
+        it was created, but we have our suspicions that the cat knows something...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918045379168087683, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3097841064511172186, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.96
@@ -7816,6 +7852,71 @@ PrefabInstance:
       propertyPath: hudMoneyText
       value: 
       objectReference: {fileID: 1365896306}
+    - target: {fileID: 3217149210095181618, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989271029120864409, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317624421149411915, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030195247354826190, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084825325265591564, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157772388088207558, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374304838483050505, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_text
+      value: 'The Unella plant is a rare breed of the Dwarf Umbrella Tree. The Unella
+        plant is a great source of income and  can only be found on the most remote
+        parts of the world. It does not have any magical properties but it is said
+        that the flowers can be used to make a tea so delicious people literally
+        die.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924677274853611835, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172337864594226390, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_text
+      value: '
+
+        The mana catcher can take mana from the Sandrap flower and
+        transport it to a mana cube. It looses mana over time if it is not emptied.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279218193424388449, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420617910114377964, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747635565522860135, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211143621219251142, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718045166031603019, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c3a045255fe8eb4b88c52fd9b3dcc90, type: 3}
 --- !u!1 &1109898743
@@ -20667,77 +20768,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 30948424, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 137826206, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 292331761, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 381123337, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: Shop orders from the book arrives the next morning.
-      objectReference: {fileID: 0}
-    - target: {fileID: 386276296, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 547738336, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: 'The compost lets you throw away dead plants and cuttings.
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 550237306, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 933561331, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: The knife can absorb mana from the mana cubes.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711431357, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1854277351, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1860435741, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: Plants and pots placed in the basket are sold the next morning.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877364272, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: The shears can take cuttings from full grown Unella plants.
-      objectReference: {fileID: 0}
     - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 2017139571, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: The mana catcher can take mana from some flowers and move that mana
-        to the mana cube.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2017139571, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142207886, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2982652611458728285, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3404747764753100702, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
