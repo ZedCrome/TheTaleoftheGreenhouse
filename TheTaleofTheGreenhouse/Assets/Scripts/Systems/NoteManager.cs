@@ -125,7 +125,12 @@ public class NoteManager : MonoBehaviour
                     LeanTween.moveY(exitNoteButton, Screen.height/1.5f, 1.5f).setEaseOutBack();
                     break;
             }
-        }      
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && activeNote == true)
+        {
+            ExitNoteTransition();
+        }
     }
 
 

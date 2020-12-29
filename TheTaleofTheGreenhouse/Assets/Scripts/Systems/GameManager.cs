@@ -74,8 +74,11 @@ public class GameManager : MonoBehaviour
             case GameState.GameLoop:
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    previousGameState = GameState.GameLoop;
-                    ChangeGameState(GameState.PauseGame);
+                    if (NoteManager.instance.currentNote == NoteManager.NoteStates.None)
+                    {
+                        previousGameState = GameState.GameLoop;
+                        ChangeGameState(GameState.PauseGame);
+                    }
                 }
                 
                 break;
