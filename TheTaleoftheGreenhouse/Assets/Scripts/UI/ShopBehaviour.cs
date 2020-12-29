@@ -50,7 +50,7 @@ public class ShopBehaviour : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
         {
             if (firstTimeUsing)
             {
