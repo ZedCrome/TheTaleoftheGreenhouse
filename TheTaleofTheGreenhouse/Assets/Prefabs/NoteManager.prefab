@@ -53,5 +53,6 @@ MonoBehaviour:
   noteArrival: {fileID: 0}
   paperFolding: {fileID: 0}
   exitNoteButton: {fileID: 0}
+  storeBook: {fileID: 0}
   currentNote: 0
   visibleNote: {fileID: 0}

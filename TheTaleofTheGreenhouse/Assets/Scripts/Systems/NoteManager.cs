@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class NoteManager : MonoBehaviour
@@ -16,7 +17,8 @@ public class NoteManager : MonoBehaviour
     [SerializeField] AudioSource paperFolding;
 
     [SerializeField] GameObject exitNoteButton;
-    
+
+    public GameObject storeBook;
 
     private float exitButtonStartPosition;
 
@@ -149,7 +151,7 @@ public class NoteManager : MonoBehaviour
         LeanTween.moveY(exitNoteButton, -Screen.height/3f, 0.01f);
         LeanTween.scale(visibleNote, new Vector3(0, 0, 0), 0.5f);
         LeanTween.moveY(visibleNote, Screen.height / 2f, 0.5f).setEaseOutQuad();
-        LeanTween.moveX(visibleNote, Screen.width/3.8f, 0.5f).setEaseOutQuad().setOnComplete(ExitNote);
+        LeanTween.moveX(visibleNote, Camera.main.WorldToScreenPoint(storeBook.transform.position).x, 0.5f).setEaseOutQuad().setOnComplete(ExitNote);
     }
 
     public void ExitNote()
