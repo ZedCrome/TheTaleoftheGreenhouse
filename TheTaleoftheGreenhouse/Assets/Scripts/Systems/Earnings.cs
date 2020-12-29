@@ -5,13 +5,18 @@ using TMPro;
 
 public class Earnings : MonoBehaviour
 {
-     [SerializeField] GameObject earnings;
+    [SerializeField] GameObject earnings;
     private ShopBehaviourBuy shopBehaviourBuy;
     private removeStartInfo _removeStartInfo;
     private SellItems sellItems;
     private int gainedGold;
     [SerializeField] private TMP_Text soldValue;
     [SerializeField] private TMP_Text gold;
+
+    [SerializeField] 
+    private AudioSource audioSource;
+    [SerializeField] 
+    private AudioClip goldSound;
     
     private void Start()
     {
@@ -23,13 +28,13 @@ public class Earnings : MonoBehaviour
     
     public IEnumerator ActivateNotification()
     {
-        
+        audioSource.PlayOneShot(goldSound);
         if (_removeStartInfo.beginnerInfo.activeInHierarchy)
         {
             _removeStartInfo.ExitInfo();
         }
         LeanTween.moveX(earnings, Screen.width * 0.91f, 0.5f).setEaseLinear();
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(30);
         DeactivateNotification();
     }
 
