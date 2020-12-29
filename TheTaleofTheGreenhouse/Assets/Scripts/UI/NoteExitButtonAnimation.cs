@@ -8,14 +8,9 @@ public class NoteExitButtonAnimation : MonoBehaviour
     [SerializeField]
     private GameObject exitButton;
     public float scaleOffset;
-    private Vector3 startScale;
+    public Vector3 startScale;
     private bool loopLock;
-
-    private void Start()
-    {
-        startScale = exitButton.transform.localScale;
-    }
-
+    
     private void OnEnable()
     {
         StartCoroutine(AnimateButton());
