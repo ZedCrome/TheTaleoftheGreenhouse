@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class NoteExitButtonAnimation : MonoBehaviour
 {
+    [SerializeField]
     private GameObject exitButton;
+    public float scaleOffset;
+    private Vector3 startScale;
+    private bool loopLock;
 
     private void Start()
     {
-        exitButton = this.gameObject;
+        startScale = exitButton.transform.localScale;
     }
 
     private void OnEnable()
@@ -24,8 +28,11 @@ public class NoteExitButtonAnimation : MonoBehaviour
 
     private IEnumerator AnimateButton()
     {
-        while (exitButton.activeSelf == true)
+        while (loopLock == false)
         {
+            LeanTween.scale(exitButton, new Vector3(startScale.x - scaleOffset, startScale.y - scaleOffset, startScale.z), 1).setEaseInOutSine();
+            yield return new WaitForSeconds(1);
+            LeanTween.scale(exitButton, new Vector3(startScale.x, startScale.y, startScale.z), 1).setEaseInOutSine();
             yield return new WaitForSeconds(1);
         }
     }
