@@ -408,6 +408,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 35718533, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -348.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 70215185, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -348
+      objectReference: {fileID: 0}
+    - target: {fileID: 633695133, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -348
+      objectReference: {fileID: 0}
+    - target: {fileID: 892827599, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 311
+      objectReference: {fileID: 0}
+    - target: {fileID: 892827601, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 892827601, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 892827601, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 734197408}
+    - target: {fileID: 2005931614, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -348
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 68.1001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 202.58643
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 51.19995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 432.9513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814810513397173100, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -861.30005
+      objectReference: {fileID: 0}
     - target: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -469,7 +521,7 @@ GameObject:
   - component: {fileID: 1752477296}
   - component: {fileID: 1752477295}
   - component: {fileID: 1752477294}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Fireflies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,9 +566,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -641391543
+  m_SortingLayer: 2
+  m_SortingOrder: 16
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
