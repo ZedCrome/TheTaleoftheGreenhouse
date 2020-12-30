@@ -7,6 +7,7 @@ public class InteractableEffect : MonoBehaviour
     public Material outlineActive;
     public Material outliveNotActive;
     public Material manaOutlineActive;
+    public Material manaNoOutlineDead;
     
     private SpriteRenderer renderer;
     
@@ -58,7 +59,11 @@ public class InteractableEffect : MonoBehaviour
         {
             if (useShader)
             {
-                if (outliveNotActive != null)
+                if (gameObject.CompareTag("PlantMana") && gameObject.GetComponent<PlantStates>().currentState == PlantStates.PlantState.Dead)
+                {
+                    renderer.material = manaNoOutlineDead;
+                }
+                else if (outliveNotActive != null)
                 {
                     renderer.material = outliveNotActive;
                 }

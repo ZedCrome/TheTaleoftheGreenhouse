@@ -4915,6 +4915,7 @@ MonoBehaviour:
   outlineActive: {fileID: 2100000, guid: 5b21499c8cf63cb4598bfe5e8363a4be, type: 2}
   outliveNotActive: {fileID: 2100000, guid: f8c53197921bfde4eb5c43f6b86607f6, type: 2}
   manaOutlineActive: {fileID: 2100000, guid: 73e3dce6136536247853f94f7faaeb98, type: 2}
+  manaNoOutlineDead: {fileID: 2100000, guid: ada0bc9451b4ae74b9a54a692f3aa4ef, type: 2}
 --- !u!114 &7786478845608756235
 MonoBehaviour:
   m_ObjectHideFlags: 0
