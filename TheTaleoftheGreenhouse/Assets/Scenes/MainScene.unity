@@ -19553,106 +19553,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 486841018413623232, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486841018413623232, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486841018413623232, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436995969110650053, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436995969110650053, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436995969110650053, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436995969110650053, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436995969110650053, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436995969110650053, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2667266417708818684, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2718257651751717409, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2718257651751717409, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2718257651751717409, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2718257651751717409, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2718257651751717409, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2718257651751717409, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 6771481846114310629, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6771481846114310629, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6771481846114310629, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6915964154564934007, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 6915964154564934007, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 6915964154564934007, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 6915964154564934007, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 6915964154564934007, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 6915964154564934007, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.5764706
-      objectReference: {fileID: 0}
     - target: {fileID: 7261686874708260484, guid: 50410211a6974bc46b2ac3ff502fa0a6, type: 3}
       propertyPath: m_Name
       value: TimeManager
@@ -20658,6 +20558,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1188070514666530258, guid: f0af37f47c5e1734eb2f89276f950730, type: 3}
+    - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8057143
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_Size.y
+      value: 0.70285714
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6035829181660896682, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: indexNumber
       value: 2
@@ -20760,15 +20672,64 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 30948424, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 137826206, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
+    - target: {fileID: 381123337, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_text
+      value: Shop orders from the book will arrive the next morning.
+      objectReference: {fileID: 0}
+    - target: {fileID: 386276296, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550237306, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 933561331, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_text
+      value: The knife can absorb mana from the manacubes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711431357, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854277351, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860435741, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_text
+      value: Plants and pots placed in the basket will be sold the next morning.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1877364272, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_text
+      value: The shears can take cuttings from fully grown Unella plants.
+      objectReference: {fileID: 0}
     - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
     - target: {fileID: 2016754600, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017139571, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_text
+      value: The manacatcher can take mana from some flowers and move that mana to
+        the manacube.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114855264, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
+      propertyPath: m_text
+      value: Plants grow during the night if they get watered the day before.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142207886, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
