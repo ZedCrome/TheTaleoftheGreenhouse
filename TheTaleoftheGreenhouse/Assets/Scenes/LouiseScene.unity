@@ -22485,6 +22485,22 @@ PrefabInstance:
       propertyPath: currentState
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6542837366559049234, guid: a9ba7a1244b5d8449b5f1bb5fa1b2f92, type: 3}
+    - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9371428
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894503349630448482, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7619255260594604707, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_Name
       value: PotNormalPlant
@@ -24205,6 +24221,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6455221381640956469, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618364260633724462, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
