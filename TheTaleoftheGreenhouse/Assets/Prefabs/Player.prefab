@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  rotationOffset: {x: 0, y: 45}
+  movement: {x: 0, y: 0}
 --- !u!50 &3258783260372278903
 Rigidbody2D:
   serializedVersion: 4
@@ -218,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4561785871059343576, guid: 0e86bf7e630be2441bae040bed87c577, type: 3}
+  m_Sprite: {fileID: 7492955102086665146, guid: 0b35c5526f6b7cd48bd40e61933e2a4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cuttingPrefab: {fileID: 5854508913341120964, guid: c9f23c372ef1af248b9bc0f1c9e8b4b3, type: 3}
   normalCuttingsInInventory: 0
-  MaxCuttings: 2
+  MaxCuttings: 1
 --- !u!114 &123942522
 MonoBehaviour:
   m_ObjectHideFlags: 0

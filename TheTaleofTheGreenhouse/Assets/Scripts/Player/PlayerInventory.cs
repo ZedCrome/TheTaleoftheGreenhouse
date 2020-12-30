@@ -8,7 +8,7 @@ public class PlayerInventory : MonoBehaviour
     
     public int normalCuttingsInInventory;
     private int manaCuttingsInInventory;
-    public int MaxCuttings = 2;
+    public int MaxCuttings = 1;
     
     void Start()
     {
