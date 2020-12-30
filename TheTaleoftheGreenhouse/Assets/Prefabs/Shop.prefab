@@ -1384,8 +1384,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    The Compst lets you throw away plants and cuttings. Be careful not
-    to throw away the living plants!'
+    The Compost lets you throw away plants and cuttings. Be careful
+    not to throw away the living plants!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -2074,8 +2074,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    The shears can take cuttings from full grown Unella plants, which
-    can  be used to grow more plants.'
+    The shears can take cuttings from fully grown Unella plants, which
+    can be used to grow more plants.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -2502,8 +2502,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    The mana catcher can take mana from the Sandrap flower and transport
-    it to a mana cube. It looses mana over time if it is not emptied.'
+    The manacatcher can take mana from the Sandrap flower and transport
+    it to a manacube. It loses mana over time if it is not emptied.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -2639,7 +2639,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Some Items, like pots and mana cubes can stack to allow for better
+    Some items, like pots and manacubes, can stack to allow for better
     organization.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -18707,7 +18707,7 @@ MonoBehaviour:
   totalCostText: {fileID: 3097841063228425397}
   playerMoneyText: {fileID: 3097841062966606809}
   hudMoneyText: {fileID: 0}
-  playerMoney: 0
+  playerMoney: 20
   hasBoughtSomething: 0
   totalCost: 0
   tableAdd: {fileID: 3097841064248505151}
@@ -20034,8 +20034,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    The mana cube can store mana over long periods of time, as well
-    as fuse mana into the magical knife. '
+    The manacube can store mana over long periods, as well as fuse mana
+    into the magical knife. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -25859,7 +25859,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Sandrap flower is an ancient plant, thought to be extinct for hundreds
     of years. Its pollen contains magical properties that can give some items special
-    powers. Its special properties gives it a high price on the market.
+    powers. Its special properties give it a high price on the market.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -26837,7 +26837,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mana Catcher
+  m_text: Manacatcher
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -27752,10 +27752,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The magical knife has been inherited  from generation to generation since
-    before we can remember. When fully infused with the mana extracted from the Sandrap
-    flower, it can cure any disease. No one knows where or when it was created, but
-    we have our suspicions that the cat knows something...
+  m_text: The magical knife is a mystical knife that only appears to those who truly
+    need it. When fully infused with the mana extracted from the Sandrap flower,
+    it can cure any disease. No one knows where or when it was created, but we have
+    our suspicions that the cat knows something...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -31058,7 +31058,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Shop orders from the Book arrives the next morning.'
+    Shop orders from this book will arrive the next morning.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -31624,7 +31624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mana Cube
+  m_text: Manacube
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -32567,9 +32567,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'The Unella plant is a rare breed of the Dwarf Umbrella Tree. The Unella
-    plant is a great source of income and  can only be found on the most remote parts
+    plant is a great source of income and can only be found in the most remote parts
     of the world. It does not have any magical properties but it is said that the
-    flowers can be used to make a tea so delicious people literally die.
+    flowers can be used to make tea so delicious people literally die.
 
 '
   m_isRightToLeft: 0

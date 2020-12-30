@@ -20672,67 +20672,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 30948424, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 137826206, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 381123337, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: Shop orders from the book will arrive the next morning.
-      objectReference: {fileID: 0}
-    - target: {fileID: 386276296, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 550237306, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 933561331, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: The knife can absorb mana from the manacubes.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711431357, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1854277351, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1860435741, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: Plants and pots placed in the basket will be sold the next morning.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877364272, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: The shears can take cuttings from fully grown Unella plants.
-      objectReference: {fileID: 0}
     - target: {fileID: 1964485846, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1339760942}
-    - target: {fileID: 2016754600, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2017139571, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: The manacatcher can take mana from some flowers and move that mana to
-        the manacube.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114855264, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_text
-      value: Plants grow during the night if they get watered the day before.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142207886, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3404747764753100702, guid: 14db2a366c91a2544b31942da24730e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
