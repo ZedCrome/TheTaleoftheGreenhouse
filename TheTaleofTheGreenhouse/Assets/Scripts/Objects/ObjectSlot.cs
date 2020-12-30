@@ -16,6 +16,9 @@ public class ObjectSlot : MonoBehaviour
     private Vector3 floorPositionOffset = new Vector3(0, -0.25f, 0);
     private Vector3 deliveryPositionOffset = new Vector3(0, 0, -0.8f);
 
+    [Header("Prefabs")] 
+    public ParticleSystem dustParticles;
+    
     [Header("Sounds")] 
     public AudioClip[] waterCanSuccess;
     public AudioClip[] plantSuccess;
@@ -105,6 +108,7 @@ public class ObjectSlot : MonoBehaviour
                     {
                         positionOffset = tablePositionOffset;
                         blockWaterCan = false;
+                        dustParticles.Emit(9);
                         break;
                     }
                 case SlotType.Pot:
