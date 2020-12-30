@@ -442,19 +442,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 68.1001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 202.58643
+      value: 347.18115
       objectReference: {fileID: 0}
     - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 51.19995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 432.9513
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552696887729312244, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3814810513397173100, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -463,6 +479,14 @@ PrefabInstance:
     - target: {fileID: 4045832010462871539, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948762616039049841, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948762616039049841, guid: 6694df1751e42154494e73999a352af1, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6455221381640956469, guid: 6694df1751e42154494e73999a352af1, type: 3}
       propertyPath: m_LocalPosition.x
