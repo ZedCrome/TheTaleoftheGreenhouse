@@ -109,7 +109,7 @@ public class ObjectSlot : MonoBehaviour
                 case SlotType.Pot:
                     {
                         positionOffset = potPositionOffset;
-                        blockWaterCan = true;
+                        //blockWaterCan = true;
                         break;
                     }
                 case SlotType.ManaCube:

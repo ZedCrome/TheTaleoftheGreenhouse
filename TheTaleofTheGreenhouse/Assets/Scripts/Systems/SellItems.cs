@@ -8,8 +8,8 @@ public class SellItems : MonoBehaviour
     SellBoxBehaviour sellBox;
 
     //Items price
-    private int manaCubePrice = 50;
-    private int potPrice = 20;
+    private int manaCubePrice = 40;
+    private int potPrice = 10;
     
     //Plants price
     PlantStates.PlantState statePrice;
@@ -18,14 +18,14 @@ public class SellItems : MonoBehaviour
     private int normalPlantPrice;
 
     public int cuttingPrice = 5;
-    public int manaSproutPrice = 60;
-    public int normalSproutPrice = 30;
-    public int manaYoungPrice = 80;
-    public int normalYoungPrice = 40;
-    public int manaAdultPrice = 100;
-    public int normalAdultPrice = 50;
-    public int manaFullGrownPrice = 120;
-    public int normalFullGrownPrice = 60;
+    public int manaSproutPrice = 50;
+    public int normalSproutPrice = 20;
+    public int manaYoungPrice = 70;
+    public int normalYoungPrice = 30;
+    public int manaAdultPrice = 90;
+    public int normalAdultPrice = 40;
+    public int manaFullGrownPrice = 110;
+    public int normalFullGrownPrice = 50;
     public int deadPlantPrice = 0;
 
     private int goldBack;
