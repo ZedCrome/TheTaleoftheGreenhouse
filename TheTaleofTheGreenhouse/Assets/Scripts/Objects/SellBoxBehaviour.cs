@@ -62,6 +62,15 @@ public class SellBoxBehaviour : MonoBehaviour
                                 GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.StackSellWarning);
                                 return;
                             }
+                            if (sellItem.tag == "ManaStorage")
+                            {
+                                if (sellItem.GetComponent<ManaCubeBehavior>().storedMana != 0)
+                                {
+                                    GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.StackSellWarning);
+                                    return;
+                                }
+                            }
+
                             sellItem.transform.GetChild(0).gameObject.SetActive(false);                          
                             sellItem.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
