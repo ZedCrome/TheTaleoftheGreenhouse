@@ -24,6 +24,9 @@ public class PlantStates : MonoBehaviour
     public GameObject particelObject;
     public float numberOfParticles = 0;
 
+    public ParticleSystem leafParticles;
+    public int emitAmount;
+
     SpriteRenderer spriteRenderer;
 
     public enum PlantState {Cutting, Sprout, Young, Adult, FullGrown, Dead};
@@ -148,6 +151,18 @@ public class PlantStates : MonoBehaviour
                     lostMana = true;                   
                     break;
                 }
+        }
+    }
+
+    public void ReleaseLeafParticles()
+    {
+        if (gameObject.CompareTag("PlantNormal"))
+        {
+            if (currentState == PlantState.Young || currentState == PlantState.Adult ||
+                currentState == PlantState.FullGrown)
+            {
+                leafParticles.Emit(emitAmount);
+            }
         }
     }
 

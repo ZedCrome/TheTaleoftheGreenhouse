@@ -156,6 +156,7 @@ public class PlayerInteract : MonoBehaviour
 
             case "PlantNormal":
                 PlayerState.instance.ChangeHandState(PlayerState.HandState.Plant);
+                pickedObject.GetComponent<PlantStates>().ReleaseLeafParticles();
                 break;
 
             case "PlantMana":
@@ -177,6 +178,11 @@ public class PlayerInteract : MonoBehaviour
 
         if(result)
         {
+            if (placeObject.CompareTag("PlantNormal"))
+            {
+                placeObject.GetComponent<PlantStates>().ReleaseLeafParticles();
+            }
+            
             if(Tools.LookForTagInArray(inventoryItem.tag, skipSoundTagArray) == false)
             {
                 interactSound.Play();
