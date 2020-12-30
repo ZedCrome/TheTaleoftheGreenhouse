@@ -200,6 +200,7 @@ MonoBehaviour:
   outlineActive: {fileID: 2100000, guid: f460a00f564ffd4478fbdacf41ed80b2, type: 2}
   outliveNotActive: {fileID: 2100000, guid: 96c046b874211f840aed14b76339aa7b, type: 2}
   manaOutlineActive: {fileID: 0}
+  manaNoOutlineDead: {fileID: 0}
 --- !u!114 &3880217062820342808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +284,10 @@ PrefabInstance:
     - target: {fileID: 3834041468695749191, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
       propertyPath: m_Size.x
       value: 0.583062
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321324243978134283, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
+      propertyPath: blockShears
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732923d519fdbd84b9d91d66ac2d2cc0, type: 3}
