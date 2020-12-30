@@ -28,6 +28,7 @@ public class ObjectSlot : MonoBehaviour
     public bool blockPot;
     public bool blockWaterCan;
     public bool blockCutting;
+    public bool blockShears;
 
     public SlotType slotType;
 
@@ -211,6 +212,12 @@ public class ObjectSlot : MonoBehaviour
             case "CuttingNormal":
 
                 if (blockCutting)
+                    return true;
+                break;
+            
+            case "Shears":
+
+                if (blockShears)
                     return true;
                 break;
         }
