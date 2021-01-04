@@ -99,6 +99,7 @@ public class SellBoxBehaviour : MonoBehaviour
                                 {
                                     itemsToSell[i] = sellItem;
                                     sellItem.transform.parent = gameObject.transform;
+                                    sellItem.transform.position = sellItem.transform.position + new Vector3(0, 0, 0.2f);
                                     currentSlot++;
                                 }
                                 break;
