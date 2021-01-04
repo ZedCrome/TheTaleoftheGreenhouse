@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class ShopBehaviour : MonoBehaviour
 {
+    [Header("OTHER")] [Space(5)] 
+    [SerializeField] private GameObject shopItem;
+    
     [Header("SHOP")] [Space(5)]
     [SerializeField] private GameObject buyMenu;
     [SerializeField] private RectTransform buyContent;
     [SerializeField] private RectTransform buyContentBackground;
     bool firstTimeUsing = true;
+    private bool oneAtATime = true;
 
     [Header("NOTES")] [Space(5)] 
     [SerializeField] private GameObject notesMenu;
@@ -35,6 +40,12 @@ public class ShopBehaviour : MonoBehaviour
     
     public void Update()
     {
+        if (firstTimeUsing && oneAtATime)
+        {
+            StartCoroutine(StartAttentionScaler());
+            oneAtATime = false;
+        }
+        
         if (buyMenu.activeInHierarchy || notesMenu.activeInHierarchy || questLog.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -63,13 +74,20 @@ public class ShopBehaviour : MonoBehaviour
                 buyMenu.SetActive(true);
                 GameManager.instance.ChangeGameState(GameManager.GameState.ShopMenu);
                 LeanTween.scale(buyContent, new Vector3(1, 1, 1), 0.5f).setEaseOutBack().setOnComplete(TweenBuyContentBackGroundFadeIn);
-                LeanTween.scale(notesContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInBack();
-                LeanTween.scale(questContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInBack();
+                LeanTween.scale(notesContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInOutBack();
+                LeanTween.scale(questContent, new Vector3(1f, 1f, 1f), 0.5f).setEaseInOutBack();
             }
         }
-        
     }
-    
+
+    public IEnumerator StartAttentionScaler()
+    {
+        LeanTween.moveY(shopItem, 0.05f, 2f).setEaseInOutBack();
+        yield return new WaitForSeconds(2f);
+        LeanTween.moveY(shopItem, 0f, 2f).setEaseInOutBack();
+        yield return new WaitForSeconds(2f);
+        oneAtATime = true;
+    }
     
     public void ExitShop()
     {

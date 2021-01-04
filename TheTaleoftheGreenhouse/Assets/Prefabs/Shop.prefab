@@ -18804,6 +18804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0645e7d1715bc94b9fd2c85b6bb60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopItem: {fileID: 3097841064511172187}
   buyMenu: {fileID: 3097841064373663086}
   buyContent: {fileID: 849031723602996875}
   buyContentBackground: {fileID: 3097841063191931738}
@@ -18841,6 +18842,7 @@ MonoBehaviour:
   outlineActive: {fileID: 2100000, guid: d2490d8f95c436f4c892d1605026ef26, type: 2}
   outliveNotActive: {fileID: 2100000, guid: f4499dd41581a64448cf4c41b4f3f7d9, type: 2}
   manaOutlineActive: {fileID: 0}
+  manaNoOutlineDead: {fileID: 0}
 --- !u!60 &3097841064511172513
 PolygonCollider2D:
   m_ObjectHideFlags: 0
