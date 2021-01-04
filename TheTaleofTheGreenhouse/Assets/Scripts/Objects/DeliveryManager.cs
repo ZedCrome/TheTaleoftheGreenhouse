@@ -13,7 +13,6 @@ public class DeliveryManager : MonoBehaviour
     public int spawnPlantMana;
     public int spawnPlantNormal;
     public int spawnManaCube;
-    //public bool spawnPlantTable;
 
     private List<ObjectSlot> objectSlot = new List<ObjectSlot>();
 
@@ -74,8 +73,8 @@ public class DeliveryManager : MonoBehaviour
                 {
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("PlantMana");
 
-                    clone.transform.localScale = new Vector3(1, 1, 1);
                     bool result = slot.FillSlot(clone);
+                    clone.transform.position = clone.transform.position + new Vector3(0, 0.4f, -0.4f);
 
                     if (result == false)
                     {
@@ -98,7 +97,6 @@ public class DeliveryManager : MonoBehaviour
                 {
                     GameObject clone = PrefabManager.instance.CreateNewObjectInstance("PlantNormal");
 
-                    clone.transform.localScale = new Vector3(1, 1, 1);
                     bool result = slot.FillSlot(clone);
 
                     if (result == false)

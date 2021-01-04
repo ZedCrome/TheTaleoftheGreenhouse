@@ -14,7 +14,7 @@ public class ObjectSlot : MonoBehaviour
     private Vector3 potPositionOffset = new Vector3(0, 0, -0.8f);
     private Vector3 manaCubePositionOffset = new Vector3(0, 0.2f, -0.8f);
     private Vector3 floorPositionOffset = new Vector3(0, -0.25f, 0);
-    private Vector3 deliveryPositionOffset = new Vector3(0, 0, -0.8f);
+    private Vector3 deliveryPositionOffset = new Vector3(0, -0.4f, -0.4f);
 
     [Header("Prefabs")] 
     public ParticleSystem dustParticles;
@@ -114,7 +114,6 @@ public class ObjectSlot : MonoBehaviour
                 case SlotType.Pot:
                     {
                         positionOffset = potPositionOffset;
-                        //blockWaterCan = true;
                         break;
                     }
                 case SlotType.ManaCube:
@@ -143,8 +142,7 @@ public class ObjectSlot : MonoBehaviour
             {
                 objectInSlot.transform.parent = transform;
             }
-            //Else code is for Table only.
-            //May create bugs for floor. Import table and floor transforms later.
+
             else
             {
                 objectInSlot.transform.parent = transform;
