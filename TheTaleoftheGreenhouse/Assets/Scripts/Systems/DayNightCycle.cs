@@ -95,7 +95,10 @@ public class DayNightCycle : MonoBehaviour
                 {
                     if (GameManager.instance.currentGameState != GameManager.GameState.Options)
                     {
-                        CalculateTime(); 
+                        if (NoteManager.instance.activeNote == false)
+                        {
+                            CalculateTime(); 
+                        }
                     }
                 }
             }

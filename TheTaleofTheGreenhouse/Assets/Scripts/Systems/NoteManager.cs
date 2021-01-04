@@ -26,7 +26,7 @@ public class NoteManager : MonoBehaviour
 
     public GameObject visibleNote;
 
-    private bool activeNote;
+    public bool activeNote = false;
     private void Start()
     {
         if (instance == null)

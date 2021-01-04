@@ -40,7 +40,7 @@ public class ShopBehaviour : MonoBehaviour
     
     public void Update()
     {
-        if (firstTimeUsing && oneAtATime)
+        if (oneAtATime)
         {
             StartCoroutine(StartAttentionScaler());
             oneAtATime = false;

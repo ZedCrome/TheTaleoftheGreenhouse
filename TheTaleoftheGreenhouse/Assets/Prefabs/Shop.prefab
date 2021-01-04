@@ -5226,7 +5226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 60
+  m_text: = 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -6376,7 +6376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 20
+  m_text: = 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -19551,7 +19551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 80
+  m_text: = 70
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -20037,7 +20037,7 @@ MonoBehaviour:
   m_text: '
 
     The manacube can store mana over long periods, as well as fuse mana
-    into the magical knife. '
+    into the magical knife. Each cube can be filled 3 times.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
   m_sharedMaterial: {fileID: 2381371865482917923, guid: 3186f5f9b910daa4ba4f5e6b11fa548d, type: 2}
@@ -20064,8 +20064,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -22239,7 +22239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 100
+  m_text: = 90
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -22881,7 +22881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 120
+  m_text: = 110
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -26626,7 +26626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 50
+  m_text: = 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -27109,7 +27109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 60
+  m_text: = 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -30774,7 +30774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 30
+  m_text: = 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
@@ -32277,7 +32277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 40
+  m_text: = 30
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
   m_sharedMaterial: {fileID: -6970584624898059759, guid: aedfa5ed4fe274346bcc3ce66399da97, type: 2}
