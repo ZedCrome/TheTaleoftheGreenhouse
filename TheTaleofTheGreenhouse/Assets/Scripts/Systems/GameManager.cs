@@ -52,10 +52,10 @@ public class GameManager : MonoBehaviour
     
     void Update() 
     {
-        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.D))
-        {
-            debugActive = !debugActive;
-        }
+        //if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.D))
+        //{
+        //    debugActive = !debugActive;
+        //}
 
         if (debugActive)
         {
