@@ -34,7 +34,7 @@ public class Earnings : MonoBehaviour
             _removeStartInfo.ExitInfo();
         }
         LeanTween.moveX(earnings, Screen.width * 0.91f, 0.5f).setEaseLinear();
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(12);
         DeactivateNotification();
     }
 
