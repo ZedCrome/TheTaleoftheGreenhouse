@@ -204,14 +204,14 @@ public class GameManager : MonoBehaviour
 
         if (newGameState == GameState.Victory)
         {
-            // if (debugActive == false)
-            // {
-            //     Analytics.CustomEvent("Victory", new Dictionary<string, object>
-            //     {
-            //         {"Days", DayNightCycle.instance.numberOfDays},
-            //         {"Tables", TableManager.instance.unlockedTables}
-            //     });
-            // }
+            if (debugActive == false)
+            {
+                Analytics.CustomEvent("Victory", new Dictionary<string, object>
+                {
+                    {"Days", DayNightCycle.instance.numberOfDays},
+                    {"Tables", TableManager.instance.unlockedTables}
+                });
+            }
             SceneManager.LoadScene("OutroCinematic");
         }
         
