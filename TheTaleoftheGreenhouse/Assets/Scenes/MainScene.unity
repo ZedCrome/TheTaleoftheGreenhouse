@@ -25331,6 +25331,10 @@ PrefabInstance:
       propertyPath: indexNumber
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7109801632415630886, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
+      propertyPath: blockShears
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7619255260594604707, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: m_Name
       value: PotNormalPlant
@@ -25832,6 +25836,10 @@ PrefabInstance:
       propertyPath: objectInSlot
       value: 
       objectReference: {fileID: 349702947}
+    - target: {fileID: 7109801632415630886, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
+      propertyPath: blockShears
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7619255260594604707, guid: 5fd5cf7728134e842b0073a1bdcf8075, type: 3}
       propertyPath: m_Name
       value: PotWithPlant (2)
