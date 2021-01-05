@@ -75,6 +75,7 @@ public class PlayerInventory : MonoBehaviour
     {
         if (normalCuttingsInInventory + manaCuttingsInInventory == MaxCuttings)
         {
+            GodTextManager.instance.ChangeGodTextState(GodTextManager.godTextStates.CuttingsWarning2);
             return false;
         }
 

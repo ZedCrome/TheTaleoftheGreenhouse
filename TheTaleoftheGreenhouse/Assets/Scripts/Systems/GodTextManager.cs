@@ -60,12 +60,14 @@ public class GodTextManager : MonoBehaviour
         SellDeadWarning,
         DeliveryInfo,
         CuttingsWarning,
+        CuttingsWarning2,
         DoneForToday,
         PlantOfGift,
         PlantOfGiftRoast,
         WaterDeadPlant,
         DeliveryFull,
         ManaCatcherLeaking,
+        NewItemsInStock,
     }
 
 
@@ -136,7 +138,14 @@ public class GodTextManager : MonoBehaviour
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
-            
+
+            case godTextStates.CuttingsWarning2:
+                godTextEdit.text = "You are already holding a cutting.";
+                audioSource.PlayOneShot(warningSound);
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+
             case godTextStates.DoneForToday:
                 godTextEdit.text = "You seem done for today, go to sleep to proceed to the next day!";
                 StartCoroutine(SleepWarning());
@@ -178,6 +187,12 @@ public class GodTextManager : MonoBehaviour
 
             case godTextStates.ManaCatcherLeaking:
                 godTextEdit.text = "The mana catcher is leaking mana.";
+                StartCoroutine(SleepWarning());
+                godTextEnabled = true;
+                break;
+
+            case godTextStates.NewItemsInStock:
+                godTextEdit.text = "New items are in stock in the shop!";
                 StartCoroutine(SleepWarning());
                 godTextEnabled = true;
                 break;
