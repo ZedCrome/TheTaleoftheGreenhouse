@@ -207,6 +207,7 @@ public class DayNightCycle : MonoBehaviour
         yield return new WaitForSeconds(1);
         
         player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerMovement>().movement = new Vector2(0f, 0f);
         
 
         ShopBehaviourBuy shopBehaviourBuy = buyMenuCanvas.GetComponent<ShopBehaviourBuy>();
@@ -311,6 +312,7 @@ public class DayNightCycle : MonoBehaviour
     public void SleepPrompt()
     {
         player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerMovement>().movement = new Vector2(0f, 0f);
         sleepPromptCanvas.SetActive(true);
         sleepPrompt.SetActive(true);
         LeanTween.scale(sleepPrompt, new Vector3(1, 1, 1), 0.5f).setEaseOutBack();
