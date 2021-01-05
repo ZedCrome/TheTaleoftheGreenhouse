@@ -34,7 +34,7 @@ public class DayNightCycle : MonoBehaviour
     public string hourString;
     public string minutesString;
     [SerializeField] private TMP_Text dayCount;
-    private int numberOfDays = 0;
+    public int numberOfDays = 0;
 
 
     [SerializeField] Color dayColor;

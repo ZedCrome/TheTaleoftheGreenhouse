@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
@@ -202,6 +204,14 @@ public class GameManager : MonoBehaviour
 
         if (newGameState == GameState.Victory)
         {
+            if (debugActive == false)
+            {
+                Analytics.CustomEvent("Victory", new Dictionary<string, object>
+                {
+                    {"Days", DayNightCycle.instance.numberOfDays},
+                    {"Tables", TableManager.instance.unlockedTables}
+                });
+            }
             SceneManager.LoadScene("OutroCinematic");
         }
         
