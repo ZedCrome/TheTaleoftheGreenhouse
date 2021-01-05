@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject optionsMenu;
+    [SerializeField] private GameObject controlsMenu;
     
     
     public enum GameState 
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
         GameNight,
         GameLoop,
         Options,
+        ControlsMenu,
         PauseGame,
         ShopMenu,
         GameOver,
@@ -91,6 +93,14 @@ public class GameManager : MonoBehaviour
                 
                 break;
 
+            case GameState.ControlsMenu:
+                if (currentGameState == GameState.ControlsMenu)
+                {
+                    ChangeGameState(GameState.ControlsMenu);
+                }
+
+                break;
+
             case GameState.PauseGame:
                 
                 if (Input.GetKeyDown(KeyCode.Escape))
@@ -136,6 +146,7 @@ public class GameManager : MonoBehaviour
         {
             mainMenu.SetActive(true);
             pauseMenu.SetActive(false);
+            controlsMenu.SetActive(false);
             optionsMenu.SetActive(false);
             previousGameState = GameState.Menu;
         }
@@ -149,6 +160,7 @@ public class GameManager : MonoBehaviour
         {
             mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
+            controlsMenu.SetActive(false);
             optionsMenu.SetActive(false);
         }
 
@@ -156,7 +168,17 @@ public class GameManager : MonoBehaviour
         {
             mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
+            controlsMenu.SetActive(false);
             optionsMenu.SetActive(true);
+
+        }
+
+        if (newGameState == GameState.ControlsMenu)
+        {
+            mainMenu.SetActive(false);
+            pauseMenu.SetActive(false);
+            controlsMenu.SetActive(true);
+            optionsMenu.SetActive(false);
 
         }
 
@@ -164,6 +186,7 @@ public class GameManager : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             optionsMenu.SetActive(false);
+            controlsMenu.SetActive(false);
             previousGameState = GameState.PauseGame;
         }
 
@@ -187,6 +210,7 @@ public class GameManager : MonoBehaviour
             mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
             optionsMenu.SetActive(false);
+            controlsMenu.SetActive(false);
             SceneManager.LoadScene("IntroCinematic");
         }
 

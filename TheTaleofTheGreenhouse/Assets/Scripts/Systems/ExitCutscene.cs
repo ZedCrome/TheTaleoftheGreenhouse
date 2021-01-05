@@ -31,7 +31,7 @@ public class ExitCutscene : MonoBehaviour
     {
         currentTime += Time.deltaTime;
 
-        if(Input.GetKey(KeyCode.Escape))
+        if(Input.anyKey)
         {
             skipCounter += Time.deltaTime;
 
