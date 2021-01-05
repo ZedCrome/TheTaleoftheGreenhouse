@@ -115,6 +115,7 @@ MonoBehaviour:
   outlineActive: {fileID: 2100000, guid: 78a2391ed7824564d85d2a8d29db19d7, type: 2}
   outliveNotActive: {fileID: 2100000, guid: 5f83e52369c5a9749aed200ffc7164db, type: 2}
   manaOutlineActive: {fileID: 0}
+  manaNoOutlineDead: {fileID: 0}
 --- !u!60 &673699331360182186
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 412a652501ad5624bb9e966d5861a499
+guid: 9d0195141b9db694bbf441964a92f0b4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8057834620721326432
-    second: rug_0
+      213: -4972485839315054438
+    second: rug_top_half_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -88,26 +88,62 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rug_0
+      name: rug_top_half_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 19
-        width: 493
-        height: 271
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 107
+        y: 154
+        width: 452
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06960f235ed23df60800000000000000
-      internalID: 8057834620721326432
+      spriteID: a9057f8797e2efab0800000000000000
+      internalID: -4972485839315054438
       vertices: []
       indices: 
       edges: []
