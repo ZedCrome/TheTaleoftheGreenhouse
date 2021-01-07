@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
@@ -35,6 +36,12 @@ public class MenuStates : MonoBehaviour
     
     public void ExitGame()
     {
+        // Analytics.CustomEvent("Quit", new Dictionary<string, object>
+        // {
+        //     {"Days", DayNightCycle.instance.numberOfDays},
+        //     {"Tables", TableManager.instance.unlockedTables},
+        //     {"DebugActive", GameManager.instance.debugActive}
+        // });
         Application.Quit();
     }
 
