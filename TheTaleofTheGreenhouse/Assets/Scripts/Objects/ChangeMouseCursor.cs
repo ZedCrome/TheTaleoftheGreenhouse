@@ -23,7 +23,7 @@ public class ChangeMouseCursor : MonoBehaviour
     public Texture2D bedTextureTransparent;
 
 
-    public CursorMode cursMode;
+    public CursorMode cursMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
     private string objectTag;
@@ -89,13 +89,13 @@ public class ChangeMouseCursor : MonoBehaviour
     
     void Start()
     {
-        #if UNITY_STANDALONE_OSX
-            cursMode = CursorMode.ForceSoftware;
-        #endif
-        
-        #if UNITY_STANDALONE_WIN
-            cursMode= CursorMode.Auto;
-        #endif
+        // #if UNITY_STANDALONE_OSX
+        //     cursMode = CursorMode.ForceSoftware;
+        // #endif
+        //
+        // #if UNITY_STANDALONE_WIN
+        //     cursMode = CursorMode.Auto;
+        // #endif
         
         Cursor.SetCursor(defaultTexture, hotSpot, cursMode);
     }
