@@ -2,10 +2,11 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private int speed = 5;
+    [SerializeField] private float speed = 5f;
     private PlayerRenderer playerRenderer;
     public Vector2 movement;
     private Rigidbody2D rb2d;
+    private Vector2 newPosition;
 
     private void Start()
     {
@@ -21,21 +22,25 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         
+        
         Vector2 currentPosition = rb2d.position;
         
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInpunt = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInpunt = Input.GetAxisRaw("Vertical");
 
         Vector2 inputVector = new Vector2(horizontalInput, verticalInpunt);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         
-         movement = inputVector * speed;
-        Vector2 newPosition = currentPosition + movement * Time.deltaTime;
+        movement = inputVector * speed;
+        newPosition = currentPosition + (movement / 225);
         
         playerRenderer.SetDirection(movement);
         
+        
+    }
+
+    void FixedUpdate()
+    {
         rb2d.MovePosition(newPosition);
-        
-        
     }
 }
