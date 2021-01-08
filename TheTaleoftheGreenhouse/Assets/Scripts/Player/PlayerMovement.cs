@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         
          movement = inputVector * speed;
-        Vector2 newPosition = currentPosition + movement * Time.fixedDeltaTime;
+        Vector2 newPosition = currentPosition + movement * Time.deltaTime;
         
         playerRenderer.SetDirection(movement);
         
