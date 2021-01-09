@@ -25224,7 +25224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3894503349630448480, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: currentState
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3894503349630448480, guid: 2c7ecd57e3a52d24c8f68a51399f4769, type: 3}
       propertyPath: deadSprite

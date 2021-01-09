@@ -7,6 +7,7 @@ public class ObjectSlotTrigger : MonoBehaviour
 {
     public bool ignoreHandState;
     [SerializeField] private PlayerState.HandState setHandStateTrigger;
+    [SerializeField] private PlantStates.PlantState setPlantState;
     [SerializeField] private ObjectSlot objectSlot;
     [SerializeField] private Collider2D collider;
     private void OnEnable()
@@ -33,7 +34,9 @@ public class ObjectSlotTrigger : MonoBehaviour
         {
             if (objectSlot.objectInSlot.CompareTag("PlantMana") || objectSlot.objectInSlot.CompareTag("PlantNormal"))
             {
-                if (setHandStateTrigger == PlayerState.HandState.WaterCan)
+                PlantStates plantStates = objectSlot.objectInSlot.GetComponent<PlantStates>();
+                
+                if (setPlantState == plantStates.currentState)
                 {
                     collider.enabled = true;
                 }
