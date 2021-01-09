@@ -24,30 +24,30 @@ public class ObjectSlotTrigger : MonoBehaviour
         objectSlot = this.transform.parent.GetComponent<ObjectSlot>();
         collider = GetComponent<Collider2D>();
 
-        if (ignoreHandState == false)
-        {
-            if (setHandStateTrigger == PlayerState.instance.currentHandState)
-            {
-                collider.enabled = true;
-            }
-            else
-            {
-                collider.enabled = false;
-            }
-        }
+        OnChangeHandState(PlayerState.instance.currentHandState);
     }
     
     void OnChangeHandState(PlayerState.HandState state)
     {
-        if (ignoreHandState == false)
+        if (objectSlot.objectInSlot.CompareTag("PlantMana") || objectSlot.objectInSlot.CompareTag("PlantNormal"))
         {
-            if (setHandStateTrigger == state)
+            if (setHandStateTrigger == PlayerState.HandState.Plant)
             {
                 collider.enabled = true;
             }
-            else
+        }
+        else
+        {
+            if (ignoreHandState == false)
             {
-                collider.enabled = false;
+                if (setHandStateTrigger == state)
+                {
+                    collider.enabled = true;
+                }
+                else
+                {
+                    collider.enabled = false;
+                }
             }
         }
     }
