@@ -283,6 +283,8 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 1
+  blockPlantMana: 1
   slotType: 0
   objectToPut: {fileID: 0}
   maxStackAmount: 3
@@ -847,6 +849,8 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 1
+  blockPlantMana: 1
   slotType: 0
   objectToPut: {fileID: 0}
   maxStackAmount: 3

@@ -32,6 +32,8 @@ public class ObjectSlot : MonoBehaviour
     public bool blockWaterCan;
     public bool blockCutting;
     public bool blockShears;
+    public bool blockPlantNormal;
+    public bool blockPlantMana;
 
     public SlotType slotType;
 
@@ -142,7 +144,6 @@ public class ObjectSlot : MonoBehaviour
             {
                 objectInSlot.transform.parent = transform;
             }
-
             else
             {
                 objectInSlot.transform.parent = transform;
@@ -222,6 +223,18 @@ public class ObjectSlot : MonoBehaviour
                 if (blockShears)
                     return true;
                 break;
+            
+            case "PlantNormal":
+
+                if (blockPlantNormal)
+                    return true;
+                break;
+            
+            case "PlantMana":
+
+                if (blockPlantMana)
+                    return true;
+                break;
         }
 
         return false;
@@ -285,8 +298,8 @@ public class ObjectSlot : MonoBehaviour
             }
         }
     }
-    
-    private void OnMouseOver()
+
+    public void MouseOver()
     {
         if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
         {
@@ -334,8 +347,7 @@ public class ObjectSlot : MonoBehaviour
         }
     }
 
-    
-    private void OnMouseExit()
+    public void MouseExit()
     {
         if (GameManager.instance.currentGameState != GameManager.GameState.GameLoop)
         {
@@ -346,7 +358,7 @@ public class ObjectSlot : MonoBehaviour
         {
             if (isFree == false && objectInSlot != null)
             {
-               objectInSlot.GetComponent<InteractableEffect>().Enable(false);
+                objectInSlot.GetComponent<InteractableEffect>().Enable(false);
                 PlayerInteract.instance.interactObject = null;
             }
         }
