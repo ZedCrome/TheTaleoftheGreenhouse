@@ -24,6 +24,7 @@ TagManager:
   - DeliverySlot
   - Table
   - Cosmetic
+  - Trowel
   layers:
   - Default
   - TransparentFX
