@@ -29,24 +29,31 @@ public class ObjectSlotTrigger : MonoBehaviour
     
     void OnChangeHandState(PlayerState.HandState state)
     {
-        if (objectSlot.objectInSlot.CompareTag("PlantMana") || objectSlot.objectInSlot.CompareTag("PlantNormal"))
+        if (objectSlot.objectInSlot != null)
         {
-            if (setHandStateTrigger == PlayerState.HandState.Plant)
+            if (objectSlot.objectInSlot.CompareTag("PlantMana") || objectSlot.objectInSlot.CompareTag("PlantNormal"))
             {
-                collider.enabled = true;
-            }
-        }
-        else
-        {
-            if (ignoreHandState == false)
-            {
-                if (setHandStateTrigger == state)
+                if (setHandStateTrigger == PlayerState.HandState.WaterCan)
                 {
                     collider.enabled = true;
                 }
                 else
                 {
                     collider.enabled = false;
+                }
+            }
+            else
+            {
+                if (ignoreHandState == false)
+                {
+                    if (setHandStateTrigger == state)
+                    {
+                        collider.enabled = true;
+                    }
+                    else
+                    {
+                        collider.enabled = false;
+                    }
                 }
             }
         }
