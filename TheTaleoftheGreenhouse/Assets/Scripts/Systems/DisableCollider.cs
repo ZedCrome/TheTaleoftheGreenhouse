@@ -5,14 +5,14 @@ using UnityEngine;
 public class DisableCollider : MonoBehaviour
 {
     ObjectSlot objetslot;
-    Collider2D collider;
+    [SerializeField] Collider2D collider;
     GameObject savedPot;
     bool savedItem;
 
     private void Start()
     {
         objetslot = GetComponent<ObjectSlot>();
-        collider = GetComponent<Collider2D>();
+        collider = transform.Find("ObjectSlotTrigger").GetComponent<Collider2D>();
     }
 
 
@@ -30,11 +30,8 @@ public class DisableCollider : MonoBehaviour
                     savedPot.GetComponentInChildren<Collider2D>().enabled = false;
                     savedItem = true;                
                 }
-           
             }
-           
         }
-       
         else
         {
             collider.enabled = false;
@@ -45,7 +42,6 @@ public class DisableCollider : MonoBehaviour
                 savedPot = null;
                 savedItem = false;
             }
-
         }
     }
 }

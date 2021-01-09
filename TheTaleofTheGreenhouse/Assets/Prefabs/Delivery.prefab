@@ -250,6 +250,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &289217451011416145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8521928752454269318}
+  - component: {fileID: 265445425606280889}
+  - component: {fileID: 867836751468945644}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8521928752454269318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289217451011416145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4506876299386221318}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265445425606280889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289217451011416145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &867836751468945644
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289217451011416145}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
+--- !u!1 &1463135453063506981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6205071168530737905}
+  - component: {fileID: 8264096898956063340}
+  - component: {fileID: 1240647167514818473}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6205071168530737905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463135453063506981}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301667999395062}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8264096898956063340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463135453063506981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &1240647167514818473
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463135453063506981}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
 --- !u!1 &2268901697012904708
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +389,6 @@ GameObject:
   - component: {fileID: 470301667794961955}
   - component: {fileID: 6174817494176768684}
   - component: {fileID: 6321324243350226231}
-  - component: {fileID: 561464961}
   - component: {fileID: 561464963}
   m_Layer: 0
   m_Name: ItemSpot10
@@ -280,7 +407,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.206, y: -1.355, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 397682517912627560}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -357,25 +485,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &561464961
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901697012904708}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.034596145, y: 0.27406025}
-  m_Size: {x: 0.65604913, y: 1.1631851}
-  m_Direction: 0
 --- !u!114 &561464963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +513,6 @@ GameObject:
   - component: {fileID: 470301667999395062}
   - component: {fileID: 6174817493838186617}
   - component: {fileID: 6321324243143716834}
-  - component: {fileID: 1282119985}
   - component: {fileID: 1282119987}
   m_Layer: 0
   m_Name: ItemSpot12
@@ -418,7 +531,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.739, y: -1.582, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6205071168530737905}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -495,25 +609,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &1282119985
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901697351702993}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0019313097, y: 0.13795686}
-  m_Size: {x: 0.61249614, y: 0.97808504}
-  m_Direction: 0
 --- !u!114 &1282119987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +637,6 @@ GameObject:
   - component: {fileID: 470301668114697307}
   - component: {fileID: 6174817493722818772}
   - component: {fileID: 6321324243259084623}
-  - component: {fileID: 120079703}
   - component: {fileID: 120079705}
   m_Layer: 0
   m_Name: ItemSpot1
@@ -556,7 +655,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.137, y: -1.035, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5994835112761689135}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -633,25 +733,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &120079703
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901697534130556}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0367406, y: 0.19239831}
-  m_Size: {x: 0.78195286, y: 1.086967}
-  m_Direction: 0
 --- !u!114 &120079705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +761,6 @@ GameObject:
   - component: {fileID: 470301668489939255}
   - component: {fileID: 6174817494573428152}
   - component: {fileID: 6321324244027836963}
-  - component: {fileID: 364191220}
   - component: {fileID: 364191222}
   m_Layer: 0
   m_Name: ItemSpot9
@@ -694,7 +779,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.602, y: -1.256, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4559980916321477391}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -771,25 +857,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &364191220
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901697689533456}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.028918624, y: 0.3466487}
-  m_Size: {x: 0.6451609, y: 1.1777029}
-  m_Direction: 0
 --- !u!114 &364191222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,7 +885,6 @@ GameObject:
   - component: {fileID: 470301669011441717}
   - component: {fileID: 6174817495124552890}
   - component: {fileID: 6321324242402446113}
-  - component: {fileID: 1540668545}
   - component: {fileID: 1540668547}
   m_Layer: 0
   m_Name: ItemSpot11
@@ -832,7 +903,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.127, y: -1.424, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 378440365067013055}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -909,25 +981,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &1540668545
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901698212609298}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.03254819, y: 0.14703059}
-  m_Size: {x: 0.66693735, y: 1.13415}
-  m_Direction: 0
 --- !u!114 &1540668547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,7 +1009,6 @@ GameObject:
   - component: {fileID: 470301668960029285}
   - component: {fileID: 6174817495041814250}
   - component: {fileID: 6321324242485315953}
-  - component: {fileID: 1183141914}
   - component: {fileID: 1183141916}
   m_Layer: 0
   m_Name: ItemSpot6
@@ -970,7 +1027,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.477, y: -1.796, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4716325076807380896}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1047,25 +1105,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &1183141914
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901698295545666}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.014401138, y: 0.15791893}
-  m_Size: {x: 0.6524197, y: 0.9381609}
-  m_Direction: 0
 --- !u!114 &1183141916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1089,7 +1133,6 @@ GameObject:
   - component: {fileID: 470301668916984358}
   - component: {fileID: 6174817495068090025}
   - component: {fileID: 6321324242458917170}
-  - component: {fileID: 1428324706}
   - component: {fileID: 1428324704}
   m_Layer: 0
   m_Name: ItemSpot2
@@ -1108,7 +1151,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.658, y: -1.232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8992509478105955488}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1185,25 +1229,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &1428324706
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901698336231169}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0016981661, y: 0.112550974}
-  m_Size: {x: 0.6560491, y: 1.0651908}
-  m_Direction: 0
 --- !u!114 &1428324704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,7 +1257,6 @@ GameObject:
   - component: {fileID: 470301669204604560}
   - component: {fileID: 6174817494780465695}
   - component: {fileID: 6321324242209305988}
-  - component: {fileID: 392885790}
   - component: {fileID: 392885792}
   m_Layer: 0
   m_Name: ItemSpot8
@@ -1246,7 +1275,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.882, y: -1.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6365188289132677555}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1323,25 +1353,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &392885790
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901698556380087}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.010771692, y: 0.16336298}
-  m_Size: {x: 0.8338907, y: 1.224885}
-  m_Direction: 0
 --- !u!114 &392885792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,7 +1381,6 @@ GameObject:
   - component: {fileID: 470301669664650918}
   - component: {fileID: 6174817495545090601}
   - component: {fileID: 6321324242518914482}
-  - component: {fileID: 572818144}
   - component: {fileID: 572818146}
   m_Layer: 0
   m_Name: ItemSpot7
@@ -1384,7 +1399,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.387, y: -0.817, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2285993580259774004}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1461,25 +1477,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &572818144
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268901698933031809}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.010771692, y: 0.25228357}
-  m_Size: {x: 0.8338907, y: 1.1123734}
-  m_Direction: 0
 --- !u!114 &572818146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,6 +1494,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b262813f99e73b4fb4f1ef0ee674553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2434172695340342130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4559980916321477391}
+  - component: {fileID: 6153843345247136510}
+  - component: {fileID: 4284451521125695227}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4559980916321477391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434172695340342130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301668489939255}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6153843345247136510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434172695340342130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &4284451521125695227
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434172695340342130}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
 --- !u!1 &2501732153718772592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,6 +1590,70 @@ Transform:
   m_Father: {fileID: 788529243}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2738735019050963167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791077581845341410}
+  - component: {fileID: 2775673067125061013}
+  - component: {fileID: 4292156646117172276}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &791077581845341410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738735019050963167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4506876300597902415}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2775673067125061013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738735019050963167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &4292156646117172276
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738735019050963167}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
 --- !u!1 &2842262774108096033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1665,6 @@ GameObject:
   - component: {fileID: 4506876299386221318}
   - component: {fileID: 7907238159660717961}
   - component: {fileID: 8049241047224496146}
-  - component: {fileID: 1166409492}
   - component: {fileID: 1166409494}
   m_Layer: 0
   m_Name: ItemSpot5
@@ -1554,7 +1683,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.863, y: -1.629, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8521928752454269318}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1631,25 +1761,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &1166409492
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2842262774108096033}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.023707807, y: 0.083515644}
-  m_Size: {x: 0.6270139, y: 1.0869675}
-  m_Direction: 0
 --- !u!114 &1166409494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1673,7 +1789,6 @@ GameObject:
   - component: {fileID: 4506876300597902415}
   - component: {fileID: 7907238160595474624}
   - component: {fileID: 8049241046280208219}
-  - component: {fileID: 1387207118}
   - component: {fileID: 1387207120}
   m_Layer: 0
   m_Name: ItemSpot4
@@ -1692,7 +1807,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.965, y: -1.533, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 791077581845341410}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1769,25 +1885,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &1387207118
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2842262775320725864}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.018030584, y: 0.29402184}
-  m_Size: {x: 0.7032317, y: 0.99986124}
-  m_Direction: 0
 --- !u!114 &1387207120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1811,7 +1913,6 @@ GameObject:
   - component: {fileID: 4506876300737700541}
   - component: {fileID: 7907238160305718834}
   - component: {fileID: 8049241046042616233}
-  - component: {fileID: 1983474181}
   - component: {fileID: 1983474183}
   m_Layer: 0
   m_Name: ItemSpot3
@@ -1830,7 +1931,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.356, y: -1.451, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6138152641827236230}
   m_Father: {fileID: 4039021870531704218}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1907,25 +2009,11 @@ MonoBehaviour:
   blockWaterCan: 0
   blockCutting: 0
   blockShears: 0
+  blockPlantNormal: 0
+  blockPlantMana: 0
   slotType: 4
   objectToPut: {fileID: 0}
   maxStackAmount: 3
---- !u!70 &1983474181
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2842262775677687706}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.012586415, y: 0.4264958}
-  m_Size: {x: 0.7649317, y: 1.0905967}
-  m_Direction: 0
 --- !u!114 &1983474183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2102,6 +2190,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &3436514331327513108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 378440365067013055}
+  - component: {fileID: 6951681271140412209}
+  - component: {fileID: 6313297264830714432}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &378440365067013055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436514331327513108}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301669011441717}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6951681271140412209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436514331327513108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &6313297264830714432
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436514331327513108}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
 --- !u!1 &3446958533584042306
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,6 +2429,70 @@ PolygonCollider2D:
       - {x: -2.0361242, y: -0.9901154}
       - {x: 0.5068116, y: -1.9750402}
       - {x: 2.8134546, y: -0.88939625}
+--- !u!1 &4113085176152088921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8992509478105955488}
+  - component: {fileID: 4951328782799631405}
+  - component: {fileID: 6177384802748727677}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8992509478105955488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113085176152088921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301668916984358}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4951328782799631405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113085176152088921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &6177384802748727677
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113085176152088921}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
 --- !u!1 &4750885003687700260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,6 +2525,70 @@ Transform:
   m_Father: {fileID: 570708416}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5230505351592579926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6138152641827236230}
+  - component: {fileID: 736006495352200753}
+  - component: {fileID: 3528216334020616176}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6138152641827236230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5230505351592579926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4506876300737700541}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &736006495352200753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5230505351592579926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &3528216334020616176
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5230505351592579926}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
 --- !u!1 &5513988515554310454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,6 +2671,198 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &5606548686757616374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2285993580259774004}
+  - component: {fileID: 1186567999434406109}
+  - component: {fileID: 8466160640662445658}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2285993580259774004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606548686757616374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301669664650918}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1186567999434406109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606548686757616374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &8466160640662445658
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606548686757616374}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
+--- !u!1 &5791255879447962333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6365188289132677555}
+  - component: {fileID: 8297069884147395626}
+  - component: {fileID: 760292788908803746}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6365188289132677555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791255879447962333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301669204604560}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8297069884147395626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791255879447962333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &760292788908803746
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791255879447962333}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
+--- !u!1 &5994835112761689170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5994835112761689135}
+  - component: {fileID: 5994835112761689168}
+  - component: {fileID: 7828921500925068818}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5994835112761689135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994835112761689170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301668114697307}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5994835112761689168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994835112761689170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &7828921500925068818
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994835112761689170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
 --- !u!1 &6398219687880179490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,6 +2895,70 @@ Transform:
   m_Father: {fileID: 788529243}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6520709908939933269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4716325076807380896}
+  - component: {fileID: 8877716819292505076}
+  - component: {fileID: 776892996637319430}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4716325076807380896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520709908939933269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301668960029285}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8877716819292505076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520709908939933269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &776892996637319430
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520709908939933269}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
 --- !u!1 &7030345548947433070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,3 +3237,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &8930953475829972795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397682517912627560}
+  - component: {fileID: 7990603906626531946}
+  - component: {fileID: 6913148168156681142}
+  m_Layer: 0
+  m_Name: ObjectSlotTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397682517912627560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8930953475829972795}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470301667794961955}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7990603906626531946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8930953475829972795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c7ca7c3145cda43b46a3427eebfa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreHandState: 1
+  setHandStateTrigger: 0
+  objectSlot: {fileID: 0}
+  collider: {fileID: 0}
+--- !u!70 &6913148168156681142
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8930953475829972795}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0367406, y: 0.19239831}
+  m_Size: {x: 0.78195286, y: 1.086967}
+  m_Direction: 0
