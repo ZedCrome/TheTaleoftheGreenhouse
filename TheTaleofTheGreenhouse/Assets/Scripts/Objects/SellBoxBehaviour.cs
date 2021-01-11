@@ -5,7 +5,7 @@ public class SellBoxBehaviour : MonoBehaviour
     public static SellBoxBehaviour instance;
     
     public GameObject[] itemsToSell;
-    public int maxNumbertoSell = 9;
+    public int maxNumbertoSell = 30;
     private int currentSlot;
     bool firstTimeUsing;
 
@@ -99,7 +99,17 @@ public class SellBoxBehaviour : MonoBehaviour
                                 {
                                     itemsToSell[i] = sellItem;
                                     sellItem.transform.parent = gameObject.transform;
-                                    sellItem.transform.position = sellItem.transform.position + new Vector3(0, 0, 0.2f);
+                                    sellItem.transform.localPosition = new Vector3(0, 0, 0);
+                                    if (sellItem.tag == "PlantMana")
+                                    {
+                                        sellItem.transform.position = sellItem.transform.position
+                                                                    + new Vector3(Random.Range(-0.07f, 0.175f), Random.Range(0.4f, 0.5f), -0.58f);
+                                    }
+                                    else
+                                    {
+                                        sellItem.transform.position = sellItem.transform.position
+                                                                    + new Vector3(Random.Range(-0.076f, 0.2f), Random.Range(0.080f, 0.145f), -0.15f);
+                                    }
                                     currentSlot++;
                                 }
                                 break;
