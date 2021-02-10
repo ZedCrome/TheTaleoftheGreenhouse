@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInpunt = Input.GetAxisRaw("Vertical");
 
-        Vector2 inputVector = new Vector2(horizontalInput, verticalInpunt);
+        Vector2 inputVector = new Vector2(horizontalInput, verticalInpunt * 0.5f).normalized;
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         
         movement = inputVector * speed;
